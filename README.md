@@ -1,12 +1,12 @@
 # HackIIITV 20 Submission
 
-This repository is archive of hacks created during HackIIITV 2020.
+This repository contains the rules and code of conduct for __HackIIITV 2020__.
 
 ## Requirements
 
 - GitHub account
-- Install [git](https://git-scm.com/) for your repsective OS.
-- Make sure you are part of IIITV organisation on GitHub, else join [here](http://getmein.glitch.me/)
+- Install __[git](https://git-scm.com/)__ for your repsective OS.
+- Make sure you are part of IIITV organisation on GitHub, else join __[here](http://getmein.glitch.me/)__
 
 ## Few pointers
 
@@ -15,7 +15,7 @@ This repository is archive of hacks created during HackIIITV 2020.
 - No commits after Hackathon ends will be entertained.
 - It is recommended to make one commit/hour to keep your hack backed up.
 - Make sure your whole project is inside the folder of your team.
-- If you have time left, make sure you make a README.md 😉(it will help others to understand your code)
+- If you have time left, make sure you make a README.md 📄 😉(it will help others to understand your code)
 
 ## How to submit?
 
@@ -56,4 +56,12 @@ For making changes to PR, just keep on repeating Step 6-9.
 - Keep your content as original as possible.
 - It is allowed to use available softwares/packages as a module, but they can't be your project.
 
-Happy Hacking! 🖖
+## Contact / Support
+- Write to us at: __[technical.committee@iiitvadodara.ac.in](mailto:technical.committee@iiitvadodara.ac.in)__
+- Join the discord server: __[HackIIITV](https://discord.gg/dNF8hWdH)__
+
+__Happy Hacking!__ 🖖
+
+ ***
+
+<p align='center'>Made With ❤️ By <a href="https://github.com/iiitv">Team HackIIITV</a></p>
