@@ -1,14 +1,23 @@
 # HackIIITV 20 Submission
-
 This repository contains the rules and code of conduct for __HackIIITV 2020__.
 
-## Requirements
+## Contents
+- __[Contents](#contents)__
+- __[Requirements](#requirements-)__
+- __[Few pointers](#few-pointers-)__
+- __[How to submit?](#how-to-submit?-)__
+- __[Rules](HackIIITV_rules_and_timeline.pdf)__
+- __[Code of Conduct](CODE_OF_CONDUCT.md)__
+- __[Our Community](#our-community)__
+- __[Contact / Support](#contact--support)__
+
+### Requirements
 
 - GitHub account
 - Install __[git](https://git-scm.com/)__ for your repsective OS.
 - Make sure you are part of IIITV organisation on GitHub, else join __[here](http://getmein.glitch.me/)__
 
-## Few pointers
+### Few pointers
 
 - You can make at max one commit per hour.
 - Don't close your PR.
@@ -17,7 +26,7 @@ This repository contains the rules and code of conduct for __HackIIITV 2020__.
 - Make sure your whole project is inside the folder of your team.
 - If you have time left, make sure you make a README.md 📄 😉(it will help others to understand your code)
 
-## How to submit?
+### How to submit?
 
 One member from each team have to follow this instructions:
 Follow the instructions in order:
@@ -51,16 +60,23 @@ Follow the instructions in order:
 
 For making changes to PR, just keep on repeating Step 6-9.
 
-## Rules
+### Rules
 
 - Keep your content as original as possible.
 - It is allowed to use available softwares/packages as a module, but they can't be your project.
 
-## Contact / Support
+### Contact / Support
+
 - Write to us at: __[technical.committee@iiitvadodara.ac.in](mailto:technical.committee@iiitvadodara.ac.in)__
 - Join the discord server: __[HackIIITV](https://discord.gg/dNF8hWdH)__
 
-__Happy Hacking!__ 🖖
+### Our Community
+
+- Open source projects created by students at IIITV : [IIITV Open Source Org](https://github.com/iiitv)
+- Discord channel where we discuss topics related to DSA and Competitive Programming: [IIITVCC Discord Server Invite](https://discord.gg/pUPbVHF)
+- Join the Open Source Org and our Slack Channel to ask your doubts and discussion: [Get Me In](https://getmein.glitch.me/), [Slack](https://join.slack.com/t/iiitvadodara/shared_invite/zt-gx92qvc2-X_NREKMxP6f7DlyZuxzM_g)
+
+### Happy Hacking! 🖖
 
  ***
 
