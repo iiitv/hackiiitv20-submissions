@@ -13,7 +13,7 @@ This repository contains the rules and code of conduct for __HackIIITV 2020__.
 
 ### Requirements
 
-- GitHub account
+- __[GitHub account](https://github.com/login)__
 - Install __[git](https://git-scm.com/)__ for your repsective OS.
 - Make sure you are part of IIITV organisation on GitHub, else join __[here](http://getmein.glitch.me/)__
 
