@@ -68,7 +68,7 @@ For making changes to PR, just keep on repeating Step 6-9.
 ### Contact / Support
 
 - Write to us at: __[technical.committee@iiitvadodara.ac.in](mailto:technical.committee@iiitvadodara.ac.in)__
-- Join the discord server: __[HackIIITV](https://discord.gg/dNF8hWdH)__
+- Join the discord server: __[HackIIITV](https://discord.gg/Rw4X9rYZgR)__
 
 ### Our Community
 
