@@ -37,18 +37,18 @@ Follow the instructions in order:
     `git clone https://github.com/<your-username>/hackiiitv20-submissions.git`
 
 3. Change Directory to `hackiiitv20-submissions`, using
-    `cd hackiiitv19-submissions`
+    `cd hackiiitv20-submissions`
 
 4. Set remote to original repository using
     `git remote add ups https://github.com/iiitv/hackiiitv20-submissions.git`
 
-5. Create a branch named `team#x`, where x is your team number, using
+5. Create a branch named `team#x`, where __"x"__ is your team number, using
     `git checkout -b team#x`
 
-6. Add a folder with name `team#x - {Chosen_Theme}` in root directory. Make sure your whole hack is in folder `team#x - {Chosen_Theme}`.
+6. Add a folder with name `team#x - {Chosen_Theme_number}` in root directory. Make sure your whole hack is in folder `team#x - {Chosen_Theme_number}`.
 
 7. Now add this folder to your staging area, using
-    `git add "team#x - {Chosen_Theme}"`
+    `git add "team#x - {Chosen_Theme_number}"`
 
 8. Now commit the changes using,
     `git commit -m "Add team#x"`
