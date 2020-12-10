@@ -13,4 +13,4 @@ Section 1: Header
 
 Section 2: Feeds/Posts
 
-Section 3: Show Members/Doctors
+Section 3: Show Members/Doctors.
