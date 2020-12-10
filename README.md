@@ -22,7 +22,7 @@ This repository contains the rules and code of conduct for __HackIIITV 2020__.
 - You can make at max one commit per hour.
 - Don't close your PR.
 - No commits after Hackathon ends will be entertained.
-- It is recommended to make one commit/hour to keep your hack backed up.
+- It is required from the teams to keep committing within __three__ hours of the previous commit to keep your hack backed up.  
 - Make sure your whole project is inside the folder of your team.
 - If you have time left, make sure you make a README.md 📄 😉(it will help others to understand your code)
 
