@@ -5,25 +5,6 @@ class index extends Component {
   render() {
     return (
       <div>
-        {/* <ul>
-          <NavLink exact activeClassName="current" to="/">
-            <li>
-              <button className="home__btn">Home</button>
-            </li>
-          </NavLink>
-          <NavLink exact activeClassName="current" to="/Sign_up">
-            <li>
-              <button className="home__btn">Sign up</button>
-            </li>
-          </NavLink>
-          <NavLink exact activeClassName="current" to="/login">
-            <li>
-              <button className="home__btn">Login</button>
-            </li>
-          </NavLink>
-        </ul> */}
-
-        {/* making the midsection */}
         <div className="mid__section">
           <div className="content">
             <h1 className="head">

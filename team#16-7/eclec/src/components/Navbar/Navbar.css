@@ -8,13 +8,14 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: #333;
   }
-  
   li {
     padding-top: 10px;
     float: right;
     font-family: 'montserrat';
     margin-right: 3%;
+    padding-bottom: 10px;
   }
   
   .home__btn {

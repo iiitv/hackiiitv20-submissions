@@ -1,5 +1,9 @@
-.input
-{
+.right{
+    width: 75%;
+    margin-left: 25%;
+    position: absolute;
+}
+.input{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -27,4 +31,12 @@
 .table
 {
     width:100%;
+}
+th{
+    font-size: 17px;
+    color: white;
+    background-color: lawngreen;
+}
+td{
+    background-color: wheat;
 }

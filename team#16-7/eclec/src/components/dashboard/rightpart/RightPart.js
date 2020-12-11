@@ -47,10 +47,10 @@ function RightPart() {
         <button type="submit" onClick={addMore} className="btn">Add Appliance in list </button>    
         <table className="table">
             <tr className="row">
-            <td>Appliance Name</td>
-            <td>Minimum Hours</td>
-            <td>Maximum Hours</td>
-            <td>Power Usage(in Watt)</td>
+            <th>Appliance Name</th>
+            <th>Minimum Hours</th>
+            <th>Maximum Hours</th>
+            <th>Power Usage(in Watt)</th>
             </tr>
             {
                 arr.map((value,i)=>{

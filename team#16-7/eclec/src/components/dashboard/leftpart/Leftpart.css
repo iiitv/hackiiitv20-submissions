@@ -6,11 +6,7 @@ html,body{
     margin: 0px;
     padding: 0px;
 }
-.lady__img{
-    width: 100px;
-    height: 100px;
-    border-radius: 100%;
-}
+
 .left
 {
     display: flex;
