@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+//This questionnaire is for the patient to fill and doctors to detect
 class Questionnaire extends Component {
     constructor(props) {
         super(props);
@@ -17,7 +18,7 @@ class Questionnaire extends Component {
         return (
         <form>
         <h1>Hello {this.state.username} {this.state.age}</h1>
-        <p>Enter your name:</p>
+        <p>Enter your nickname:</p>
         <input
           type='text'
           name='name'
@@ -30,6 +31,8 @@ class Questionnaire extends Component {
           onChange={this.myChangeHandler}
         />
         </form>
+
+        //take problem, past, diagnosis etc
         );
     }
 }
