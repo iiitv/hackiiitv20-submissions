@@ -1,0 +1,30 @@
+.input
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 70%;
+    margin:2% auto;
+}
+.btn
+{
+    display: block;
+    padding:1% 5%;
+    margin:1% auto;
+    color:#fff;
+    background-color: rgb(240, 3, 51);
+}
+.row
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin:2% auto;
+}
+.table
+{
+    width:100%;
+}
