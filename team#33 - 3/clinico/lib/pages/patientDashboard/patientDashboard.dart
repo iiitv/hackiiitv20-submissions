@@ -1,3 +1,4 @@
+import 'package:clinico/pages/patientDashboard/hospitalCard.dart';
 import 'package:clinico/services/auth.dart';
 import 'package:clinico/services/backend.dart';
 import 'package:flutter/material.dart';
