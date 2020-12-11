@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
@@ -47,6 +48,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
     AlertDialog.Builder builder;
 
+    Button impBtn;
 
     Spinner spinner;
     String Type;
@@ -65,6 +67,8 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
         courseRecycler = findViewById(R.id.courseRecycler);
         spinner = findViewById(R.id.spinnerMenu);
+        impBtn = (Button) findViewById(R.id.important_button);
+
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("EduFree");
@@ -81,7 +85,6 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         courseRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
         databaseActivities();
-
 
 
     }
@@ -190,4 +193,6 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
+
+
 }
