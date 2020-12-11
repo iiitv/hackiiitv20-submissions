@@ -15,4 +15,10 @@ Images -
 
 ![alt text](https://github.com/Chaitanya-Soni/hackiiitv20-submissions/blob/team%2328/team%2328%20-%206/SafeTravel/Hackathon/IMG-20201211-WA0027.jpg?raw=true)
 
-❮img src="https://github.com/Chaitanya-Soni/hackiiitv20-submissions/blob/team%2328/team%2328%20-%206/SafeTravel/Hackathon/IMG-20201211-WA0027.jpg" width="100" ❯
+![alt text](https://github.com/Chaitanya-Soni/hackiiitv20-submissions/blob/team%2328/team%2328%20-%206/SafeTravel/Hackathon/IMG-20201211-WA0030.jpg?raw=true)
+
+![alt text](https://github.com/Chaitanya-Soni/hackiiitv20-submissions/blob/team%2328/team%2328%20-%206/SafeTravel/Hackathon/IMG-20201211-WA0028.jpg?raw=true)
+
+![alt text](https://github.com/Chaitanya-Soni/hackiiitv20-submissions/blob/team%2328/team%2328%20-%206/SafeTravel/Hackathon/IMG-20201211-WA0029.jpg?raw=true)
+
+![alt text](https://github.com/Chaitanya-Soni/hackiiitv20-submissions/blob/team%2328/team%2328%20-%206/SafeTravel/Hackathon/IMG-20201211-WA0026.jpg?raw=true)
