@@ -1,4 +1,3 @@
-# Team2
 # HackIIITV 20 Submission
 This repository contains the rules and code of conduct for __HackIIITV 2020__.
 
