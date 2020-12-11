@@ -17,8 +17,6 @@ class SignButton extends StatelessWidget {
       onPressed: () {
         toggleLoading();
         _auth.signInWithGoogle();
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Role()));
       },
       fillColor: Colors.white,
       splashColor: Colors.grey,
