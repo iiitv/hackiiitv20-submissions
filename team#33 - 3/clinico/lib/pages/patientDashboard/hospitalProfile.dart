@@ -41,7 +41,11 @@ class HospitalProfile extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 50,
+                height: 30,
+              ),
+              Divider(),
+              SizedBox(
+                height: 30,
               ),
               Center(
                 child: Text(
