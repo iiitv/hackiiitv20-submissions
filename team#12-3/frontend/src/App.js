@@ -5,6 +5,11 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import NotFoundPage from './pages/NotFoundPage';
 import Navbar from './components/Navbar';
+import UserRegistration from './pages/UserRegistration';
+import DoctorRegistration from './pages/DoctorRegistration';
+import Login from './pages/Login';
+import DonateBlood from './pages/DonateBlood';
+import Logout from './pages/Logout';
 
 function App() {
   return (
@@ -12,6 +17,11 @@ function App() {
       <Navbar/>
       <Switch>
         <Route path="/home" component={Home} />
+        <Route path="/userRegistration" component={UserRegistration} />
+        <Route path="/doctorRegistration" component={DoctorRegistration} />
+        <Route path="/login" component={Login} />
+        <Route path="/donateBlood" component={DonateBlood} />
+        <Route path="/logout" component={Logout} />
         <Route path="/:path" component={NotFoundPage} />
         <Route path="/" component={Home} />
         <Redirect to='/:path' />
