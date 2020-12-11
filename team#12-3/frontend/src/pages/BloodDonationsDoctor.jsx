@@ -28,21 +28,16 @@ class BloodDonationsDoctor extends Component {
                         <Table.HeaderCell>{item.userName}</Table.HeaderCell>
                         <Table.HeaderCell>
                             <Button color="olive" size="tiny" >
-                                <Link to={{
-                                        pathname: `/admin/question/edit/${item._id}` ,
-                                        state: {
-                                            quizId: this.props.match.params.id ,
-                                            item: item
-                                        } }} className="text-white" >    
-                                    Edit
+                                <Link to={`/doctor/bloodDonations/${item._id}`} className="text-white" >    
+                                    View
                                 </Link>
                             </Button>
                         </Table.HeaderCell>
-                        <Table.HeaderCell>
+                        {/* <Table.HeaderCell>
                             <Button color="red" size="tiny" onClick={() => {this.deleteQuestion(item._id)}} disabled={ this.state.stage > 1 } >
                                 Delete
                             </Button>
-                        </Table.HeaderCell>
+                        </Table.HeaderCell> */}
                     </Table.Row>
                 )
             });
@@ -52,8 +47,9 @@ class BloodDonationsDoctor extends Component {
     render() { 
         return ( 
             <div className="container">
+                <h2 className="mt-3 text-center">Requests for Blood Donations</h2>
                 { this.state.requests.length>0 ? (
-                <Table celled selectable textAlign="center" verticalAlign="middle" unstackable className="font-weight-light" style={{background: 'linear-gradient(to right bottom, rgba(254,230,104,1), rgba(242,37,212,1))'}}>
+                <Table celled selectable textAlign="center" verticalAlign="middle" unstackable className="font-weight-light my-3" style={{background: 'linear-gradient(to right bottom, rgba(254,230,104,1), rgba(242,37,212,1))'}}>
                     <Table.Header>
                         <Table.Row>
                             <Table.HeaderCell className="bg-dark text-white">Name</Table.HeaderCell>

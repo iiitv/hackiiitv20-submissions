@@ -13,6 +13,8 @@ import Logout from './pages/Logout';
 import ProtectedRoute from './utilities/ProtectedRoute';
 import DonateBloodDetails from './pages/DonateBloodDetails';
 import BloodDonationsDoctor from './pages/BloodDonationsDoctor';
+import BloodDonationSlot from './pages/BloodDonationSlot';
+import UserNotifications from './pages/UserNotifications';
 
 function App(props) {
   return (
@@ -26,6 +28,8 @@ function App(props) {
         <Route path="/logout" component={Logout} />
         <ProtectedRoute path="/user/donateBloodHospitals" component={DonateBloodHospitals} role="user" {...props} />
         <ProtectedRoute path="/user/donateBlood/:id" component={DonateBloodDetails} role="user" {...props} />
+        <ProtectedRoute path="/user/notifications" component={UserNotifications} role="user" {...props} />
+        <ProtectedRoute path="/doctor/bloodDonations/:id" component={BloodDonationSlot} role="doctor" {...props} />
         <ProtectedRoute path="/doctor/bloodDonations" component={BloodDonationsDoctor} role="doctor" {...props} />
         <Route path="/:path" component={NotFoundPage} />
         <Route path="/" component={Home} />
