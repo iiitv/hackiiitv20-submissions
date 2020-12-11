@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "155542197685",
+    "project_id": "safetravel-8ff99",
+    "storage_bucket": "safetravel-8ff99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:155542197685:android:ed8404987eac6cb45b35fc",
+        "android_client_info": {
+          "package_name": "com.breejemodi.safetravel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "155542197685-k2pm0roo20ok3bbkg8dnf49rh9uh39t2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.breejemodi.safetravel",
+            "certificate_hash": "8f93328a2972e1deaeea1ff40bfeb2fc78e38087"
+          }
+        },
+        {
+          "client_id": "155542197685-7217382h8ct8b1ufphk3jrhe0jubdlsf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPg4tQkJbngFtAlHuLz-ps70WjF3MtQvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "155542197685-7217382h8ct8b1ufphk3jrhe0jubdlsf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
