@@ -1,0 +1,1 @@
+Our idea is based on theme 6 which is Intelligent transportation system for smart cities
