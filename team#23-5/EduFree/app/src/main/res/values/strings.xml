@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">EduFree</string>
+
+    <string-array name="courseList">
+
+        <item>Programming</item>
+        <item>Chemistry</item>
+        <item>Electronics</item>
+        <item>Engineering Mathematics</item>
+        <item>Mathematics</item>
+
+        <item>Physics</item>
+        <item>General Knowledge</item>
+        <item>Economics</item>
+        <item>Electrical</item>
+
+    </string-array>
+
 </resources>
