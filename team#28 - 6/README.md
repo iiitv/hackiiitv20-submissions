@@ -14,3 +14,5 @@ In future, we would also like to integrate payment gateway in our app to make it
 Images - 
 
 ![alt text](https://github.com/Chaitanya-Soni/hackiiitv20-submissions/blob/team%2328/team%2328%20-%206/SafeTravel/Hackathon/IMG-20201211-WA0027.jpg?raw=true)
+
+❮img src="https://github.com/Chaitanya-Soni/hackiiitv20-submissions/blob/team%2328/team%2328%20-%206/SafeTravel/Hackathon/IMG-20201211-WA0027.jpg" width="100" ❯
