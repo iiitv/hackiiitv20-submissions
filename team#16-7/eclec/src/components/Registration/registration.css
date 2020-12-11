@@ -42,6 +42,7 @@ input{
 {
     padding:0.4% 1%;
     display: block;
+    background-color: #ff8e71;
     margin:1% auto;
     text-align: center;
     border-radius: 3px;
@@ -60,5 +61,6 @@ input{
     flex-direction: column;
     justify-items: center;
     align-items: center;
+    margin-top: 10%;
     
 }
