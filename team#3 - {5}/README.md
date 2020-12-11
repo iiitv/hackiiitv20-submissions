@@ -6,3 +6,4 @@ team#3  theme 5(Online Education)
 - markdown
 - git bash
 - python
+- Leadership quality
