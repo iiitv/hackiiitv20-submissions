@@ -1,9 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.facebook.fresco:animated-base-support:0.14.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dfea653ba4199d579a55c3ff006ced38/jetified-animated-base-support-0.14.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dfea653ba4199d579a55c3ff006ced38/jetified-animated-base-support-0.14.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/dfea653ba4199d579a55c3ff006ced38/jetified-animated-base-support-0.14.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5187a9235ca1dd715e6b39a40f6e408/jetified-animated-base-support-0.14.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5187a9235ca1dd715e6b39a40f6e408/jetified-animated-base-support-0.14.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f5187a9235ca1dd715e6b39a40f6e408/jetified-animated-base-support-0.14.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.facebook.fresco/animated-base-support/0.14.1/636542acdbe14dfcfb8d3d799ed1e57ac2c93e41/animated-base-support-0.14.1-javadoc.jar!/" />
