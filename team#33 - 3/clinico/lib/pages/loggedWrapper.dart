@@ -42,6 +42,6 @@ class _LoggedWrapperState extends State<LoggedWrapper> {
 
   @override
   Widget build(BuildContext context) {
-    return isLoading?Loading():(isDoctor?DoctorDashboard():(isPatient?PatientDashboard():Role()));
+    return isLoading?Loading():(isDoctor?DoctorDashboard():(isPatient?PatientDashboard():Role(user:widget.user)));
   }
 }

@@ -1,6 +1,11 @@
+import 'package:clinico/model/user.dart';
+import 'package:clinico/pages/doctorProfileForm.dart';
+import 'package:clinico/pages/patientDashboard/patientDashboard.dart';
 import 'package:flutter/material.dart';
 
 class Role extends StatelessWidget {
+  MyUser user;
+  Role({this.user});
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -34,7 +39,9 @@ class Role extends StatelessWidget {
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,MaterialPageRoute(builder:(BuildContext context)=>DoctorProfileForm(user:user)));
+                },
               ),
               GestureDetector(
                 child: Container(
@@ -55,11 +62,13 @@ class Role extends StatelessWidget {
                         const Color(0xFF2A75BC),
                       ])),
                   child: Text(
-                    "I am a patient",
+                    "I am looking for a doctor",
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                 ),
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,MaterialPageRoute(builder:(BuildContext context)=>PatientDashboard()));
+                },
               )
             ],
           ),

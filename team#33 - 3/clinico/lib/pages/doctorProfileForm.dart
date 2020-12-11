@@ -1,17 +1,48 @@
+import 'package:clinico/model/user.dart';
 import 'package:flutter/material.dart';
 
 class DoctorProfileForm extends StatefulWidget {
+  MyUser user;
+  DoctorProfileForm({this.user});
   @override
   _DoctorProfileFormState createState() => _DoctorProfileFormState();
 }
 
 class _DoctorProfileFormState extends State<DoctorProfileForm> {
+  TextEditingController clinicNameController = new TextEditingController();
+  TextEditingController educationalQualificationController = new TextEditingController();
+  TextEditingController timingController = new TextEditingController();
+  TextEditingController addressController = new TextEditingController();
+  TextEditingController feeController = new TextEditingController();
+  TextEditingController paymentMethodController = new TextEditingController();
+  TextEditingController bioController = new TextEditingController();
+  bool validClinicName = true,validTiming = true,validAdd = true,validFee = true,validPayMeth = true;
+
+  void saveDoctorDetail(){
+    String clinicName = clinicNameController.text.trim();
+    String educationalQualification = educationalQualificationController.text.trim();
+    String timing = timingController.text.trim();
+    String address = addressController.text.trim();
+    String fee = feeController.text.trim();
+    String paymentMethod = paymentMethodController.text.trim();
+    String bio = bioController.text.trim();
+    setState((){
+      validClinicName = clinicName.isNotEmpty;
+      validTiming = timing.isNotEmpty;
+      validAdd = address.isNotEmpty;
+      validFee = fee.isNotEmpty;
+      validPayMeth = paymentMethod.isNotEmpty;
+    });
+    if(validClinicName && validTiming &&validAdd &&validFee &&validPayMeth){
+
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Doctor's Profile Form"),
+          title: Text("Create Your Profile"),
         ),
         body: Container(
           child: Padding(
@@ -22,27 +53,42 @@ class _DoctorProfileFormState extends State<DoctorProfileForm> {
                   Center(
                     child: Container(
                       margin: EdgeInsets.only(top: 20),
-                      child: Hero(
-                        tag: 'profile photo',
-                        child: CircleAvatar(
-                          backgroundImage: NetworkImage(''),
-                          radius: 50,
-                        ),
+                      child: CircleAvatar(
+                        backgroundImage: NetworkImage(widget.user.photoURL),
+                        radius: 50,
                       ),
                     ),
                   ),
-                  SizedBox(height: 50),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.grey[50],
-                      hintText: "Enter your full Name",
-                      border: OutlineInputBorder(),
-                      labelText: "Name",
+                  Center(
+                    child: Container(
+                      margin: EdgeInsets.only(top: 20),
+                      child: Text(widget.user.displayName)
+                    ),
+                  ),
+                  Center(
+                    child: Container(
+                      margin: EdgeInsets.only(top: 20),
+                      child: Text(widget.user.email)
                     ),
                   ),
                   SizedBox(height: 40),
                   TextFormField(
+                    controller: clinicNameController,
+                    maxLines: null,
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.grey[50],
+                      hintText: "Enter your clinic Name",
+                      border: OutlineInputBorder(),
+                      labelText: "Clinic Name",
+                      errorText: validClinicName?null:"Clinic Name can't be empty"
+                    ),
+                  ),
+                  SizedBox(height: 40),
+                  TextFormField(
+                    controller: educationalQualificationController,
+                    keyboardType: TextInputType.multiline,
+                    maxLines: null,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.grey[50],
@@ -53,36 +99,71 @@ class _DoctorProfileFormState extends State<DoctorProfileForm> {
                   ),
                   SizedBox(height: 40),
                   TextFormField(
+                     controller: timingController,
+                    keyboardType: TextInputType.multiline,
+                    maxLines: null,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.grey[50],
-                      hintText: "Enter the number of years of experience",
+                      hintText: "Enter Your Clinic Timing",
                       border: OutlineInputBorder(),
-                      labelText: "Years of Professional Experience",
+                      labelText: "Timing",
+                      errorText: validTiming?null:"Timing can't be empty"
                     ),
                   ),
                   SizedBox(height: 40),
                   TextFormField(
+                    controller: addressController,
                     keyboardType: TextInputType.multiline,
                     maxLines: null,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.grey[50],
                       hintText:
-                          "Workplaces where you have worked and are working.",
+                          "Enter Full Address of Your Clinic",
                       border: OutlineInputBorder(),
-                      labelText: "Workplaces",
+                      labelText: "Address",
+                      errorText:validAdd?null:"Address can't be empty"
                     ),
                   ),
                   SizedBox(height: 40),
                   TextFormField(
+                    controller: feeController,
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.grey[50],
+                      hintText:
+                          "Enter Your Fee Amount.",
+                      border: OutlineInputBorder(),
+                      labelText: "Fee",
+                      errorText:validFee?null:"Fees can't be empty"
+                    ),
+                  ),
+                  SizedBox(height: 40),
+                  TextFormField(
+                    controller: paymentMethodController,
                     keyboardType: TextInputType.multiline,
                     maxLines: null,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.grey[50],
                       hintText:
-                          "Write a bio about reflecting your professional career.",
+                          "Enter Your Upi Id.",
+                      border: OutlineInputBorder(),
+                      labelText: "Payment Method",
+                      errorText:validPayMeth?null:"PayMent Method can't be empty"
+                    ),
+                  ),
+                  SizedBox(height: 40),
+                  TextFormField(
+                    controller: bioController,
+                    keyboardType: TextInputType.multiline,
+                    maxLines: null,
+                    decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.grey[50],
+                      hintText:
+                          "Write a short bio about you.",
                       border: OutlineInputBorder(),
                       labelText: "Bio",
                     ),
@@ -111,8 +192,11 @@ class _DoctorProfileFormState extends State<DoctorProfileForm> {
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
                     ),
-                    onTap: () {},
-                  )
+                    onTap: () {
+                      saveDoctorDetail();
+                    },
+                  ),
+                  SizedBox(height:40)
                 ],
               )),
         ),
