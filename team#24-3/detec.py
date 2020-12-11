@@ -1,6 +1,9 @@
 from tkinter import *
 from PIL import ImageTk,Image
 from tkinter import messagebox
+import cv2
+import numpy as np
+from food_detect import *
 
 # Main frame of the UI
 mainFrame = Tk()
@@ -9,9 +12,9 @@ mainFrame = Tk()
 frame1 = LabelFrame(mainFrame, text = "HealthCare", padx = 30, pady = 30)
 frame1.pack()
 
-mainImage = ImageTk.PhotoImage(Image.open("a.PNG"))
-labelImg = Label(frame1, image = mainImage)
-labelImg.pack()
+# mainImage = ImageTk.PhotoImage(Image.open("a.jpg"))
+# labelImg = Label(frame1, image = mainImage)
+# labelImg.pack()
 
 
 # first feature - for checking the stock
@@ -55,7 +58,7 @@ def checkStore():
     entry3 = Entry(inframe3, width = 30)
     entry3.pack()
     inframe3.pack()
-    
+
     inframe4 = LabelFrame(storeFrame, text = "Deficiency 4", padx = 30, pady = 30)
     entry4 = Entry(inframe4, width = 30)
     entry4.pack()
@@ -85,7 +88,7 @@ frame2.pack()
 
 # second feature - for trying out the ML thing 
 frame3 = LabelFrame(mainFrame, text = "Check out the main function", padx = 100, pady = 30)
-but2 = Button(frame3, text = "Main Feature", padx = "20")
+but2 = Button(frame3, text = "Main Feature", padx = "20",command = scan_item)
 but2.pack()
 frame3.pack()
 
