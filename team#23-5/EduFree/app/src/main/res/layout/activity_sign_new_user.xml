@@ -21,7 +21,7 @@
     <TextView
         android:id="@+id/title"
         android:layout_above="@+id/rlLogin"
-        android:text="User Login"
+        android:text="User Registration"
         android:textColor="@android:color/white"
         android:textSize="36sp"
         android:layout_marginTop="10dp"
@@ -92,13 +92,13 @@
 
 
         <Button
-            android:text="Login"
+            android:text="Register"
             android:textAllCaps="false"
             android:textSize="18sp"
             android:textColor="@android:color/white"
             android:layout_marginEnd="40dp"
             android:layout_marginStart="40dp"
-            android:id="@+id/LoginUser"
+            android:id="@+id/RegisterUser"
             android:layout_centerHorizontal="true"
             android:layout_below="@+id/userP"
             android:layout_marginTop="15dp"
@@ -109,9 +109,9 @@
         <TextView
             android:layout_centerHorizontal="true"
             android:layout_margin="10dp"
-            android:layout_below="@+id/LoginUser"
-            android:id="@+id/signInToUp"
-            android:text="New user click to register"
+            android:layout_below="@+id/RegisterUser"
+            android:id="@+id/signUpToIn"
+            android:text="Existing user ? SignIn here"
             android:textColor="@android:color/holo_blue_dark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">793323301506-pdrl3hch4gjv7ffttfci5htm2t3hd4e5.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://hackiiitv-1de6f-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">793323301506</string>
+    <string name="google_api_key" translatable="false">AIzaSyCZ1Pc_m3P3RCTPUzaHoGc46UzaZAaAfNw</string>
+    <string name="google_app_id" translatable="false">1:793323301506:android:66a4c2a920f5a3082ee29b</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCZ1Pc_m3P3RCTPUzaHoGc46UzaZAaAfNw</string>
+    <string name="google_storage_bucket" translatable="false">hackiiitv-1de6f.appspot.com</string>
+    <string name="project_id" translatable="false">hackiiitv-1de6f</string>
+</resources>
