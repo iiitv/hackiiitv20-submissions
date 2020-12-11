@@ -34,6 +34,16 @@ input{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width:50%;
+    max-width:30%;
     margin:0 auto;
+}
+.btn 
+{
+    padding:0.4% 1%;
+    display: block;
+    margin:1% auto;
+    text-align: center;
+    background-color: black;
+    color:#fff;
+    border-radius: 3px;
 }
