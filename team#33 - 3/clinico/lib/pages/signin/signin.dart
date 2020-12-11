@@ -8,16 +8,19 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         child: Column(
           children: [
-            SizedBox(height: 40,),
-            SignButton(name: "Sign in as Paitent "),
-            SizedBox(height: 40,),
+            SizedBox(
+              height: 40,
+            ),
+            SignButton(name: "Sign in as Patient "),
+            SizedBox(
+              height: 40,
+            ),
             SignButton(name: "Sign in as Doctor "),
           ],
         ),
