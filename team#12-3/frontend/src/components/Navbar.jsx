@@ -39,6 +39,15 @@ class Navbar extends Component {
                             { doctor && 
                             <React.Fragment>
                                 <NavLink className="nav-link" to="/doctor/jobs">Jobs</NavLink>
+                                <li className="nav-item dropdown">
+                                    <a className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Donations
+                                    </a>
+                                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <Link className="dropdown-item" to="/doctor/bloodDonations">Blood Donations</Link>
+                                    <Link className="dropdown-item" to="/doctor/organDonations">Organ Donations</Link>
+                                    </div>
+                                </li>
                                 <NavLink className="nav-link" to="/logout" style={{position: 'fixed', right: '15px'}}>
                                     <Button inverted color="red"><Icon name="sign-out" />Logout</Button>
                                 </NavLink>
@@ -51,9 +60,10 @@ class Navbar extends Component {
                                     </a>
                                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <Link className="dropdown-item" to="/user/donateBloodHospitals">Donate Blood</Link>
-                                    <Link className="dropdown-item" to="/donateOrgan">Donate Organ</Link>
+                                    <Link className="dropdown-item" to="/user/donateOrganHospitals">Donate Organ</Link>
                                     </div>
                                 </li>
+                                <NavLink className="nav-link" to="/user/coins">My Coins</NavLink>
                                 <NavLink className="nav-link" to="/logout" style={{position: 'fixed', right: '15px'}}>
                                     <Button inverted color="red"><Icon name="sign-out" />Logout</Button>
                                 </NavLink>

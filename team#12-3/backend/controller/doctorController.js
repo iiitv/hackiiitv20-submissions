@@ -84,7 +84,7 @@ const login = async (req,res) => {
                     'error': 'Wrong Password'
                 });
             
-            const token = jwt.sign({ doctorId: doctor._id ,email: doctor.email, role: "doctor"}, 'TOKEN_SECRET');
+            const token = jwt.sign({ _id: doctor._id ,email: doctor.email, role: "doctor"}, 'TOKEN_SECRET');
             res.status(200).json({"token": token});
         }
         else{

@@ -24,11 +24,17 @@ class DonateBloodDetails extends Component {
         console.log('Blood donated');
         try {
             const { _id } = jwtDecode(localStorage.getItem('token'));
-            const obj = {
+            const obj1 = {
                 _id,
                 hospital: this.state.doctor.name
             }
-            await axios.post(`http://localhost:9000/api/user/donateBlood/${_id}`, obj);
+            const obj2 = {
+                hospitalId: this.props.match.params.id,
+                userId: _id,
+            }
+            const updatedUser = await axios.post(`http://localhost:9000/api/user/donateBlood/${_id}`, obj1);
+            const res = await axios.post(`http://localhost:9000/api/bloodDonation/new`, obj2);
+            this.setState({ disabled: true });
         } catch (error) {
             console.log(error);
         }

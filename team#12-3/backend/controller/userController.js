@@ -98,11 +98,6 @@ const donateBloodRequest = async (req,res) => {
     try{
         console.log('in donateBloodRequest api');
         console.log(req.body);
-        // const obj = {
-        //     hospitalId: req.body.hospitalId,
-        //     userId: req.body.userId,
-        //     hospital: req.body.hospital
-        // }
         const updatedUser = await User.findByIdAndUpdate(req.body._id, 
             { $set: {
                 currentBloodDonationHospital: req.body.hospital,

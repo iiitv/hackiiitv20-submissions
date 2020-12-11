@@ -5,6 +5,7 @@ require('dotenv').config();
 
 const doctorRoutes = require('./routes/doctorRoutes');
 const userRoutes = require('./routes/userRoutes');
+const bloodDonationRoutes = require('./routes/bloodDonationRoutes');
 
 mongoose.connect(process.env.URI, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 const con = mongoose.connection
@@ -28,3 +29,4 @@ app.listen(process.env.PORT,() => {
 
 app.use('/api/doctor', doctorRoutes);
 app.use('/api/user', userRoutes);
+app.use('/api/bloodDonation', bloodDonationRoutes);
