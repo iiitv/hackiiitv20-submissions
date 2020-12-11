@@ -38,6 +38,28 @@ if(isset($_SESSION['login_user_connect'])){
 				
 			echo "Community created";
 			$last_id = $conn->insert_id;
+			
+			$c_id = $last_id;
+			
+			$qry1 = "INSERT INTO chat_room (admin_id) VALUES ($id)";
+			
+			if($conn->query($qry1)){
+				
+				$room_id = $conn->insert_id;
+				$qry2 = "INSERT INTO room_commu VALUES($room_id, $c_id)";
+				
+				if($conn->query($qry2)){
+					
+				}
+				else{
+					echo "Something went wrong ";
+				}
+				
+			}
+			else{
+				echo "Something went wrong";
+			}
+			
 			$url = base64_encode($c_name."&".$last_id);
 			
 			$qry = "INSERT INTO community_user VALUES ($last_id, $id)";

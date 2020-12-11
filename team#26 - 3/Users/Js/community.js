@@ -35,7 +35,7 @@ $(document).ready(function(){
 
 let addPost = (c_id) => {
 	
-	let data = document.getElementById("post_data").value;
+	let data = document.getElementById("post_data").innerHTML;
 	let str = "c_id="+c_id+"&data="+data;
 	let error = document.getElementById('post-error');
 	
@@ -56,6 +56,31 @@ let addPost = (c_id) => {
 		}
 	}
 	xhttp.open("POST", "Action/addPost.php", true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send(str);
+	
+}
+
+let like = (p_id) => {
+	
+	let likes = document.getElementById(p_id).innerHTML;
+	
+	let xhttp = new XMLHttpRequest();
+	let str = "p_id="+p_id;
+	xhttp.onreadystatechange = function() {
+
+		if(this.readyState == 4 && this.status == 200){
+			
+			if(this.responseText == ""){
+				
+			}
+			else{
+				document.getElementById(p_id).innerHTML = this.responseText;
+				
+			}
+		}
+	}
+	xhttp.open("POST", "Action/likePost.php", true);
 	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	xhttp.send(str);
 	

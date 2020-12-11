@@ -62,22 +62,34 @@ Community: <b><?php echo $c_name ?></b>
 
 <?php
 
-	$qry = "SELECT users.u_id, users.real_name, post.p_data, post.likes, post.time FROM post INNER JOIN users ON post.u_id = users.u_id WHERE c_id = $c_id ORDER BY time";
-	echo $qry;
+	$qry = "SELECT users.u_id, users.real_name, post.p_id, post.p_data, post.likes, post.time FROM post INNER JOIN users ON post.u_id = users.u_id WHERE c_id = $c_id ORDER BY time DESC LIMIT 10";
+	
 	if($data = $conn->query($qry)){
 
 		while($result = $data->fetch_assoc()){
 ?>
         <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-          <img src="" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
-          <span class="w3-right w3-opacity">1 min</span>
-          <h4>John Doe</h4><br>
+          <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+          <span class="w3-right w3-opacity"></span>
+          <h5><?php echo $result['real_name'] ?></h5><br>
           <hr class="w3-clear">
           <p>
-		  
+		  <?php echo htmlspecialchars_decode($result['p_data']) ?>
 		  </p>
-          <button type="button" class="w3-button w3-theme-d1 w3-margin-bottom"><i class="fa fa-thumbs-up"></i>  
-		  Like</button>
+<?php
+	$p_id = $result['p_id'];
+	$qry1 = "SELECT u_id FROM post_user_like WHERE p_id = $p_id";
+	$x = false;
+	if($data2 = $conn->query($qry1)){
+		
+		if($data2->num_rows >= 1){
+			$x = true;
+		}
+		
+	}
+?>
+          <button type="button" class="w3-button w3-blue w3-hover-green w3-margin-bottom <?php if($x){echo "w3-green";} ?>" onclick="like(<?php echo $result['p_id'] ?>)">
+		  <span id="<?php echo $result['p_id'] ?>"><?php echo $result['likes'] ?></span> <i class="fa fa-thumbs-up"></i> Like<?php if($x){echo "d";} ?></button>
         </div>
 <?php
 		}
