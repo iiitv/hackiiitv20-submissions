@@ -1,5 +1,6 @@
 import 'package:clinico/model/user.dart';
-import 'package:clinico/pages/doctorDashboard/doctorDashboard.dart';
+import 'package:clinico/pages/doctorDashboard/doctorBottomBar.dart';
+import 'package:clinico/pages/role.dart';
 import 'package:clinico/services/backend.dart';
 import 'package:clinico/shared/loading.dart';
 import 'package:flutter/material.dart';
@@ -37,6 +38,8 @@ class _DoctorProfileFormState extends State<DoctorProfileForm> {
       validPayMeth = paymentMethod.isNotEmpty;
     });
     if(validClinicName && validTiming &&validAdd &&validFee &&validPayMeth){
+      currentUser = widget.user;
+      currentUser.isDoctor = true;
       setState(()=>isLoading = true);
        Doctor doctor = new Doctor(
          uid:widget.user.uid,
@@ -54,7 +57,7 @@ class _DoctorProfileFormState extends State<DoctorProfileForm> {
        await Backend().addDoctorInDataBase(doctor);
        Navigator.pop(context);
        Navigator.pop(context);
-       Navigator.push(context,MaterialPageRoute(builder:(BuildContext context)=>DoctorDashboard()));
+       Navigator.push(context,MaterialPageRoute(builder:(BuildContext context)=>DoctorBottom()));
     }
   }
   @override

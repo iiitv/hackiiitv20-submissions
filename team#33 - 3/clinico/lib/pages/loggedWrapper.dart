@@ -1,6 +1,6 @@
 import 'package:clinico/model/user.dart';
-import 'package:clinico/pages/doctorDashboard/doctorDashboard.dart';
-import 'package:clinico/pages/patientDashboard/patientDashboard.dart';
+import 'package:clinico/pages/doctorDashboard/doctorBottomBar.dart';
+import 'package:clinico/pages/patientDashboard/patientBottomBar.dart';
 import 'package:clinico/pages/role.dart';
 import 'package:clinico/services/backend.dart';
 import 'package:clinico/shared/loading.dart';
@@ -32,6 +32,13 @@ class _LoggedWrapperState extends State<LoggedWrapper> {
     if(!temdoc){
       DocumentSnapshot patColl = await patientCollection.doc(widget.user.uid).get();
       temPat = patColl.exists;
+      if(temPat){
+        currentUser = widget.user;
+        currentUser.isDoctor = false;
+      }
+    }else{
+      currentUser = widget.user;
+      currentUser.isDoctor = true;
     }
     setState((){
       isDoctor = temdoc;
@@ -42,6 +49,6 @@ class _LoggedWrapperState extends State<LoggedWrapper> {
 
   @override
   Widget build(BuildContext context) {
-    return isLoading?Loading():(isDoctor?DoctorDashboard():(isPatient?PatientDashboard():Role(user:widget.user)));
+    return isLoading?Loading():(isDoctor?DoctorBottom():(isPatient?Patientbottonbar():Role(user:widget.user)));
   }
 }

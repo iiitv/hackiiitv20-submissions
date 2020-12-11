@@ -19,7 +19,8 @@ class Backend{
          "bio":doctor.bio,
          "displayName":doctor.displayName,
          "email":doctor.email,
-         "photoURL":doctor.photoURL
+         "photoURL":doctor.photoURL,
+         "searchedText":doctor.clinicName.toLowerCase()
       });
     }
 
@@ -53,5 +54,51 @@ class Backend{
         "email":user.email,
         "photoURL":user.photoURL,
       });
+    }
+
+    SearchHospital(String key){
+      return StreamBuilder(
+        stream: doctorCollection.where("searchedText",isGreaterThanOrEqualTo: key).snapshots(),
+        builder: (context,snapshot){
+          if(!snapshot.hasData){
+            return Loading();
+          }
+          List<HospitalCard> allhospital = new List();
+          snapshot.data.docs.forEach((doc){
+              allhospital.add(
+                HospitalCard(
+                  clinicName:doc.data()["clinicName"],
+                  doctorName: doc.data()["displayName"],
+                  uid:doc.id
+                )
+              );
+          });
+          if(allhospital.isEmpty){
+            return Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(13.0),
+                  child: Center(
+                    child:Text(
+                      "Look like there is no great match according to your search.",
+                      style: TextStyle(fontSize: 18)
+                    )
+                  ),
+                ),
+                Center(
+                  child:Text(
+                    "Other Hospital",
+                    style: TextStyle(fontSize: 18)
+                  )
+                ),
+                showAllHospitalCard()
+              ],
+            );
+          }
+          return Column(
+            children: allhospital,
+          );
+        }
+      );
     }
 }

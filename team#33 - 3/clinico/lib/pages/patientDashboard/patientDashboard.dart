@@ -1,12 +1,41 @@
-import 'package:clinico/pages/patientDashboard/hospitalCard.dart';
 import 'package:clinico/services/auth.dart';
 import 'package:clinico/services/backend.dart';
 import 'package:flutter/material.dart';
 
-class PatientDashboard extends StatelessWidget {
+class PatientDashboard extends StatefulWidget {
+  @override
+  _PatientDashboardState createState() => _PatientDashboardState();
+}
+
+class _PatientDashboardState extends State<PatientDashboard> {
   final AuthServices _auth = AuthServices();
+  String search;
+  bool showSearchResult = false;
   Backend backend = new Backend();
+
+  checkClearSearchResult(String key){
+      if(search.trim().isEmpty){
+        setState(()=>showSearchResult = false);
+      }
+  }
+
+  handleSearchResult(String key){
+      if(key.trim().isNotEmpty){
+        setState((){
+          showSearchResult = true;
+          search = key.trim().toLowerCase();
+        });
+      }else{
+         setState(()=>showSearchResult = false);
+      }
+  }
+
+  showHospitalAccordingly(){
+     return showSearchResult?backend.SearchHospital(search):backend.showAllHospitalCard();
+  }
+
   TextEditingController searchController = new TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +50,8 @@ class PatientDashboard extends StatelessWidget {
               ),
               child: TextField(
                 controller: searchController,
+                onChanged: (val){checkClearSearchResult(val);},
+                onSubmitted: (val){handleSearchResult(val);},
                 cursorColor: Colors.black,
                 style: TextStyle(color: Colors.black, fontSize: 16),
                 decoration: InputDecoration(
@@ -33,12 +64,12 @@ class PatientDashboard extends StatelessWidget {
                       color:Colors.black,
                       onPressed: (){searchController.clear();},
                     ),
-                    hintText: "Search With Clinic Name or city",
+                    hintText: "Search By Clinic Name",
                     hintStyle: TextStyle(color: Colors.grey),
                     border: InputBorder.none),
               ),
             ),
-            backend.showAllHospitalCard()
+            showHospitalAccordingly(),
           ]
         ),
         onTap: (){
