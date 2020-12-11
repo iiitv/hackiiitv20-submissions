@@ -38,7 +38,7 @@ function capture1() {
     canvas.getContext('2d').drawImage(video, 0, 0, video.videoWidth, video.videoHeight);  
 
     var img1 = canvas.toDataURL();
-    console.log(img1)
+    conv.sendMessage('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg');
 
 
     // canvas.toBlob() = (blob) => {
@@ -100,6 +100,7 @@ function connect(username) {
             room.on('participantDisconnected', participantDisconnected);
             connected = true;
             updateParticipantCount();
+            alert("Connect Chat Called");
             connectChat(data.token, data.conversation_sid);
             resolve();
         }).catch(e => {
@@ -244,10 +245,12 @@ function connectChat(token, conversationSid) {
         return chat.getConversationBySid(conversationSid).then((_conv) => {
             conv = _conv;
             conv.on('messageAdded', (message) => {
+                parseURL(message.body);
                 addMessageToChat(message.author, message.body);
             });
             return conv.getMessages().then((messages) => {
                 chatContent.innerHTML = '';
+                alert("Let See");
                 for (let i = 0; i < messages.items.length; i++) {
                     addMessageToChat(messages.items[i].author, messages.items[i].body);
                 }
@@ -281,6 +284,15 @@ function onChatInputKey(ev) {
         chatInput.value = '';
     }
 };
+
+function parseURL(message) {
+    // if(something)
+    var par = document.getElementById('imageDiv');
+    var img = document.createElement('img');
+    img.src = message;
+    par.appendChild(img);
+}
+
 
 addLocalVideo();
 button.addEventListener('click', connectButtonHandler);
