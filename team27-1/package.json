@@ -1,0 +1,28 @@
+{
+  "name": "bogusawkwardnetframework",
+  "version": "1.0.0",
+  "description": "its boring",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Shreyansh-Mishra, vikiwarrior, yagya-rawal, vatsal-08",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "crypto-js": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.0",
+    "multer": "^1.4.2",
+    "multer-gridfs-storage": "^4.2.0",
+    "nodemailer": "^6.4.16",
+    "socket.io": "^2.3.0",
+    "validator": "^13.1.17"
+  }
+}
