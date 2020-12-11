@@ -1,6 +1,7 @@
 import 'package:clinico/model/user.dart';
 import 'package:clinico/pages/doctorProfileForm.dart';
 import 'package:clinico/pages/role.dart';
+import 'package:clinico/services/auth.dart';
 import 'package:clinico/services/backend.dart';
 import 'package:clinico/shared/loading.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -176,6 +177,17 @@ class _DoctorDashboardState extends State<DoctorDashboard> {
                     SizedBox(
                       height: 70,
                     ),
+                     Center(
+                      child:RaisedButton(
+                        child: Text("Log Out",style: TextStyle(fontSize:16,color:Colors.white),),
+                        onPressed: (){
+                          // Navigator.pop(context);
+                          AuthServices().signOutGoogle();
+                        },
+                        color: Colors.indigo,
+                      ),
+                    ),
+                    SizedBox(height:30)
                   ],
                 ),
               ),

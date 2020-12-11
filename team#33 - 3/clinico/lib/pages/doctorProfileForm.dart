@@ -72,7 +72,7 @@ class _DoctorProfileFormState extends State<DoctorProfileForm> {
          email:widget.isEdit?widget.doctor.email:widget.user.email,
          photoURL:widget.isEdit?widget.doctor.photoURL:widget.user.photoURL
        );
-       await Backend().addDoctorInDataBase(doctor);
+       widget.isEdit?await Backend().updateDoctorData(doctor):await Backend().addDoctorInDataBase(doctor);
        Navigator.pop(context);
        Navigator.pop(context);
        Navigator.push(context,MaterialPageRoute(builder:(BuildContext context)=>DoctorBottom()));
