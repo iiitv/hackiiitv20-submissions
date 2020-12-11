@@ -5,8 +5,11 @@
 html,body{
     margin: 0px;
     padding: 0px;
-    height:100%;
-    width:100%;
+}
+.lady__img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
 }
 .left
 {
@@ -16,14 +19,17 @@ html,body{
     height: 100vh;
     padding:7% 0;
     justify-content: space-around;
+    align-items: center;
     width:25%;
 }
-.btn 
+.leftComp
 {
 background-color:#fff;
 color: #FF8E71;
 border-radius: 15px;
-padding:3% 10%;
+padding:3% 1%;
+width: 50%;
+border: none;
 font-size: 130%;
 font-weight: bolder;
 
