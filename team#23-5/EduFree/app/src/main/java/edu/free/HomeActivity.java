@@ -20,6 +20,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -143,43 +144,16 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Courses").child(Type).child("Topic");
-
-        databaseReference.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-                String fileName = snapshot.getKey().toString();
-
-                ((CourseAdapter) courseRecycler.getAdapter()).update(fileName);
+        Toast.makeText(this, "Loading Topics", Toast.LENGTH_SHORT).show();
 
 
-            }
 
-            @Override
-            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
     }
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         Type = adapterView.getItemAtPosition(i).toString();
+        Toast.makeText(this, "Course Selected", Toast.LENGTH_SHORT).show();
         databaseActivities();
     }
 
