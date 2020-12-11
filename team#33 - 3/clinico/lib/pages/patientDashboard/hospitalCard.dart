@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 class HospitalCard extends StatelessWidget {
   double pad = 70;
+  String clinicName,doctorName,uid;
+  HospitalCard({this.clinicName,this.doctorName,this.uid});
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -14,7 +16,7 @@ class HospitalCard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
               Text(
-                'Hospital Name',
+                clinicName,
                 style: TextStyle(
                   fontSize: 24.0,
                   color: Colors.grey[800],
@@ -23,7 +25,7 @@ class HospitalCard extends StatelessWidget {
               SizedBox(height: pad),
               GestureDetector(
                 child: Text(
-                  "Doctor's Name",
+                  doctorName,
                   style: TextStyle(
                     fontSize: 14.0,
                     color: Colors.grey[600],

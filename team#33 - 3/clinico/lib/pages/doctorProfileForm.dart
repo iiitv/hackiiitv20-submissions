@@ -1,4 +1,7 @@
 import 'package:clinico/model/user.dart';
+import 'package:clinico/pages/doctorDashboard/doctorDashboard.dart';
+import 'package:clinico/services/backend.dart';
+import 'package:clinico/shared/loading.dart';
 import 'package:flutter/material.dart';
 
 class DoctorProfileForm extends StatefulWidget {
@@ -16,9 +19,9 @@ class _DoctorProfileFormState extends State<DoctorProfileForm> {
   TextEditingController feeController = new TextEditingController();
   TextEditingController paymentMethodController = new TextEditingController();
   TextEditingController bioController = new TextEditingController();
-  bool validClinicName = true,validTiming = true,validAdd = true,validFee = true,validPayMeth = true;
+  bool validClinicName = true,validTiming = true,validAdd = true,validFee = true,validPayMeth = true,isLoading = false;
 
-  void saveDoctorDetail(){
+  void saveDoctorDetail()async{
     String clinicName = clinicNameController.text.trim();
     String educationalQualification = educationalQualificationController.text.trim();
     String timing = timingController.text.trim();
@@ -34,7 +37,24 @@ class _DoctorProfileFormState extends State<DoctorProfileForm> {
       validPayMeth = paymentMethod.isNotEmpty;
     });
     if(validClinicName && validTiming &&validAdd &&validFee &&validPayMeth){
-
+      setState(()=>isLoading = true);
+       Doctor doctor = new Doctor(
+         uid:widget.user.uid,
+         clinicName:clinicName,
+         educationalQualification:educationalQualification,
+         timing:timing,
+         address:address,
+         fee:fee,
+         paymentMethod:paymentMethod, 
+         bio:bio,
+         displayName:widget.user.displayName,
+         email:widget.user.email,
+         photoURL:widget.user.photoURL
+       );
+       await Backend().addDoctorInDataBase(doctor);
+       Navigator.pop(context);
+       Navigator.pop(context);
+       Navigator.push(context,MaterialPageRoute(builder:(BuildContext context)=>DoctorDashboard()));
     }
   }
   @override
@@ -44,7 +64,7 @@ class _DoctorProfileFormState extends State<DoctorProfileForm> {
         appBar: AppBar(
           title: Text("Create Your Profile"),
         ),
-        body: Container(
+        body: isLoading?Loading():Container(
           child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: ListView(

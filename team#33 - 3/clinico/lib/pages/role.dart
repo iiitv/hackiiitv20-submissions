@@ -1,6 +1,7 @@
 import 'package:clinico/model/user.dart';
 import 'package:clinico/pages/doctorProfileForm.dart';
 import 'package:clinico/pages/patientDashboard/patientDashboard.dart';
+import 'package:clinico/services/backend.dart';
 import 'package:flutter/material.dart';
 
 class Role extends StatelessWidget {
@@ -80,7 +81,8 @@ class Role extends StatelessWidget {
                     ),
                   ),
                   onTap: () {
-                    Navigator.push(context,MaterialPageRoute(builder:(BuildContext context)=>PatientDashboard()));
+                    Backend().AddPatient(user);
+                    Navigator.pushReplacement(context,MaterialPageRoute(builder:(BuildContext context)=>PatientDashboard()));
                   },
                 ),
               )
