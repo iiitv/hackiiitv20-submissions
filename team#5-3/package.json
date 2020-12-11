@@ -5,13 +5,14 @@
   "main": "app.js",
   "scripts": {
     "start": "node src/app.js",
-    "dev":"nodemon src/app.js -L -e js,html",
+    "dev": "nodemon src/app.js -L -e js,html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "face-api.js": "^0.22.2",
     "nodemon": "^2.0.6"
   }
 }
