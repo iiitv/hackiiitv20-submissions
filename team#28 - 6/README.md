@@ -10,3 +10,7 @@ We will build an app which will help people to check the Public Transport (Buses
 So Basically people will not have to come early to stops and wait for buses, if some buses are full, then they have the option to know about it earlier and hence can take the next bus.
 
 In future, we would also like to integrate payment gateway in our app to make it complete Contactless Experience for travellers in the global pandemic.
+
+Images - 
+
+![alt text](https://github.com/Chaitanya-Soni/hackiiitv20-submissions/blob/team%2328/team%2328%20-%206/SafeTravel/Hackathon/IMG-20201211-WA0027.jpg?raw=true)
