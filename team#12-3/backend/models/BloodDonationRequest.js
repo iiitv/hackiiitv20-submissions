@@ -9,8 +9,17 @@ const bloodDonationRequestSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
+    userName: {
+        type: String
+    },
     result: {
         type: Boolean
+    },
+    appointmentDate: {
+        type: String
+    },
+    appointmentTime: {
+        type: String
     },
     details: {
         type: String

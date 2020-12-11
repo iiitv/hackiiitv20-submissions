@@ -28,7 +28,8 @@ const donateBloodRequest = async (req,res) => {
         console.log(req.body);
         const newRequest = new BloodDonationRequest({
             hospitalId: req.body.hospitalId,
-            userId: req.body.userId
+            userId: req.body.userId,
+            userName: req.body.userName
         });
         const obj = await newRequest.save();
         res.json(obj);

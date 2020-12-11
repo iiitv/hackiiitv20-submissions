@@ -6,6 +6,7 @@ import { Button } from 'semantic-ui-react';
 class DonateBloodDetails extends Component {
     state = { 
         doctor: '',
+        user: '',
         disabled: false
      }
 
@@ -14,7 +15,7 @@ class DonateBloodDetails extends Component {
             const { _id } = jwtDecode(localStorage.getItem('token'));
             const doctor = await axios.get(`http://localhost:9000/api/doctor/${this.props.match.params.id}`);
             const user = await axios.get(`http://localhost:9000/api/user/${_id}`);
-            this.setState({ doctor: doctor.data, disabled: user.data.currentBloodDonationRequest });
+            this.setState({ doctor: doctor.data, user: user.data, disabled: user.data.currentBloodDonationRequest });
         } catch (error) {
             console.log(error);
         }
@@ -31,6 +32,7 @@ class DonateBloodDetails extends Component {
             const obj2 = {
                 hospitalId: this.props.match.params.id,
                 userId: _id,
+                userName: this.state.user.name
             }
             const updatedUser = await axios.post(`http://localhost:9000/api/user/donateBlood/${_id}`, obj1);
             const res = await axios.post(`http://localhost:9000/api/bloodDonation/new`, obj2);
