@@ -1,0 +1,100 @@
+.form{
+
+
+    &__group:not(:last-child){
+        margin-bottom: 2rem;
+    }
+
+    &__input{
+        font-size: 1.5rem;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color-white,0.5);
+        border: none;
+        font-family: inherit;
+        color: inherit;
+        border-bottom: 3px solid transparent;
+        width: 90%;
+        display: block;
+        transition: all 0.3s;
+        @include respond(tab-port){
+            width: 100%;
+        }
+        
+        &:focus{
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black, .1);
+            border-bottom: 3px solid $color-primary;
+        }
+
+        &::-webkit-input-placeholder{
+            color: $color-grey-dark-2;
+        }
+
+        &:focus:invalid{
+            border-bottom: 3px solid $color-secondary-dark;
+        }
+    }
+
+    &__label{
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin: .7rem 0 0 2rem;
+        display: block;
+        transition: all .3s;
+    }
+
+    &__input:placeholder-shown + &__label{
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    &__radio--group{
+        width: 49%;
+        display: inline-block;
+
+        @include respond(tab-port){
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__radio--label{
+        font-size: $font-size-default;
+        cursor: pointer;
+        position: relative;
+        padding-left: 5rem;
+    }
+
+    &__radio--button{
+        height: 3rem;
+        width: 3rem;
+        border: 5px solid $color-primary;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        top: -0.5rem;
+        left: 0;
+
+        &::after{
+            height: 1.3rem;
+            width: 1.3rem;
+            content: "";
+            display: block;
+            border-radius: 50%;
+            @include absCenter;
+            background-color: $color-primary;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+    }
+    
+    &__radio--input:checked ~ &__radio--label &__radio--button::after{
+        opacity: 1;
+    }
+
+    &__radio--input{
+        display: none;
+    }
+}

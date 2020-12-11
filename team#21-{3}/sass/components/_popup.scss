@@ -1,0 +1,122 @@
+.popup{
+    z-index: 15;
+    background-color: rgba($color-black,0.3);
+    backdrop-filter: blur(10px);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+
+    &__scroll{
+        height: auto;
+        width: auto;
+        overflow: auto;
+
+        @include respond(tab-land){
+            height: 10rem;
+            margin-bottom: 3rem;
+        }
+
+        @include respond(tab-port){
+            height: 20rem;
+            margin-bottom: 3rem;
+        }
+
+        @include respond(phone){
+            height: 10rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__content{
+        width: 75%;
+        max-height: 50%;
+        box-shadow: 0 2rem 4rem rgba($color-black,0.2);
+        background-color: $color-grey-light-1;
+        border-radius: 3px;
+        @include absCenter;
+        z-index: 16;
+        display: table;
+        overflow: hidden;
+        opacity: 0;
+        transform: translate(-50%,-50%) scale(0.25);
+        transition: all .4s .2s;
+
+        @include respond(tab-port){
+            text-align: center;
+        }
+    }
+
+    
+    &__left{
+        width: 33.3333%;
+        display: table-cell;
+
+        @include respond(tab-port){
+            display: none;
+        }
+    }
+    
+    &__right{
+        width: 66.666667%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 3rem 5rem;
+    }
+    
+    &__img{
+        display: table;
+        width: 100%;
+    }
+
+    &__text{
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid $color-grey-light-2;
+        
+        @include respond(tab-land){
+            column-count: 0;
+            column-gap: 0;
+            column-rule: none;
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content{
+        opacity: 1;
+        transform: translate(-50%,-50%) scale(1);
+    }
+
+    &__close--cross{
+        &:link,&:visited{
+            color: $color-grey-dark;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 3rem;
+            display: inline-block;
+            text-decoration: none;
+            line-height: 1;
+        }
+
+        &:hover{
+            color: $color-primary;
+        }
+
+    }
+}
+
+
