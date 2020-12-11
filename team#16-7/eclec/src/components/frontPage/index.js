@@ -5,7 +5,7 @@ class index extends Component {
   render() {
     return (
       <div>
-        <ul>
+        {/* <ul>
           <NavLink exact activeClassName="current" to="/">
             <li>
               <button className="home__btn">Home</button>
@@ -21,7 +21,7 @@ class index extends Component {
               <button className="home__btn">Login</button>
             </li>
           </NavLink>
-        </ul>
+        </ul> */}
 
         {/* making the midsection */}
         <div className="mid__section">

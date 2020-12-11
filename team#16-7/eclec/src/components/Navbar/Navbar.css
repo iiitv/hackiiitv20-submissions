@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  ul {
+    padding-top: 40px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    padding-top: 10px;
+    float: right;
+    font-family: 'montserrat';
+    margin-right: 3%;
+  }
+  
+  .home__btn {
+    display: block;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 8px 20px;
+    font-size: 15px;
+    font-family: 'montserrat';
+    text-decoration: none;
+    background-color: #ff8e71;
+    border-radius: 20px;
+  }
+  .home__btn:hover {
+    cursor: pointer;
+  }
