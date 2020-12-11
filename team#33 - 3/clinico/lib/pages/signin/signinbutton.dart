@@ -1,4 +1,4 @@
-import 'package:clinico/pages/doctorProfileForm.dart';
+import 'package:clinico/services/auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +8,8 @@ class SignButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final AuthServices _auth = AuthServices();
+
     return RawMaterialButton(
       shape: StadiumBorder(),
       onPressed: () {
