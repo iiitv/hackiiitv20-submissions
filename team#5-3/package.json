@@ -1,0 +1,11 @@
+{
+  "name": "team5",
+  "version": "1.0.0",
+  "description": "Our project is based on theme Smart Healthcare. Main idea of our project is to provide data so that fast treatment will available.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
