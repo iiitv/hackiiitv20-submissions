@@ -16,6 +16,8 @@ let chat;
 let conv;
 let screenTrack;
 
+const capture = document.getElementById('capture');
+
 
 function addLocalVideo() {
     Twilio.Video.createLocalVideoTrack().then(track => {
@@ -25,6 +27,25 @@ function addLocalVideo() {
         video.appendChild(trackElement);
     });
 };
+
+
+function capture1() {
+    var canvas = document.getElementById('canvas');     
+    var video = document.getElementById('local').firstChild.firstChild;
+    console.log(video);
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    canvas.getContext('2d').drawImage(video, 0, 0, video.videoWidth, video.videoHeight);  
+
+    var img1 = canvas.toDataURL();
+    console.log(img1)
+
+
+    // canvas.toBlob() = (blob) => {
+    //   const img = new Image();
+    //   img.src = window.URL.createObjectUrl(blob);
+    //   console.log(window.URL.createObjectUrl(blob));
+    };
 
 function connectButtonHandler(event) {
     event.preventDefault();
@@ -41,6 +62,7 @@ function connectButtonHandler(event) {
             button.innerHTML = 'Leave call';
             button.disabled = false;
             shareScreen.disabled = false;
+            capture.disabled = false;
         }).catch(() => {
             alert('Connection failed. Is the backend running?');
             button.innerHTML = 'Join call';
@@ -53,6 +75,7 @@ function connectButtonHandler(event) {
         connected = false;
         shareScreen.innerHTML = 'Share screen';
         shareScreen.disabled = true;
+        capture.disabled = true;
     }
 };
 
