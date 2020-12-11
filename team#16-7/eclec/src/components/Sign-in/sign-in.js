@@ -6,9 +6,9 @@ class signin extends Component {
       <div>
        <div className="signin__form">
        <img className=" logo__img" src="./Images/eclec.png"></img>
-         <input type="text" placeholder="Enter your name" name="usrname" />
-         <input type="email" placeholder="Enter your email" name="usremail" />
-         <input type="password" placeholder="Enter password" name="uspassword" />
+         <input className="login__in" type="text" placeholder="Enter your name" name="usrname" />
+         <input  className="login__in" type="email" placeholder="Enter your email" name="usremail" />
+         <input  className="login__in" type="password" placeholder="Enter password" name="uspassword" />
          <button className="submit__btn" type="submit">Submit</button>
        </div>
       </div>
