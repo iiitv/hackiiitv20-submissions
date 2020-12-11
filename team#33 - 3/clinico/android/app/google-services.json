@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "311606054915-10l0v0tlgftdle8v6o4lhehccsf8u0qj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.s2ke4.clinico",
+            "certificate_hash": "c6b888d4760876828c0e475de66df4e545eab632"
+          }
+        },
+        {
           "client_id": "311606054915-73hf3qp1qdf6nj5au80tamsnd7hbh6dm.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
