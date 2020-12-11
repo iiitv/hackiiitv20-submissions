@@ -49,6 +49,8 @@ async function recognizeFaces() {
                 const box = resizedDetections[i].detection.box
                 const drawBox = new faceapi.draw.DrawBox(box, { label: result.toString() })
                 drawBox.draw(canvas)
+                var res = result.toString();
+                //console.log(x);
             })
         }, 100)
 
@@ -59,7 +61,7 @@ async function recognizeFaces() {
 
 
 function loadLabeledImages() {
-    const labels = ['Prakhar'] // for WebCam
+    const labels = ['Prakhar'] 
     return Promise.all(
         labels.map(async (label)=>{
             const descriptions = []
@@ -74,3 +76,5 @@ function loadLabeledImages() {
         })
     )
 }
+
+module.exports = res
