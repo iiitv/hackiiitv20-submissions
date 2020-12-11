@@ -22,6 +22,8 @@ import "./App.css";
 import Logo from "../assets/images.png";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+const ipfsClient = require('ipfs-http-client')
+const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' })
 
 toast.configure();
 
@@ -80,6 +82,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      buffer: null,
       account: "",
       healthCare: null,
       //1
@@ -97,6 +100,7 @@ class App extends Component {
       writeNotepaddr: "",
       writeNotetitle: "",
       writeNotedesc: "",
+      FileHash: "QmPAraKFw2RVPrTpUybE7zzvQv6AbMuTJDMRrxaNZrfXkH",
       //7
       showhealthNoteaddr: "",
     };
@@ -105,6 +109,23 @@ class App extends Component {
     this.setState({
       [e.target.name]: e.target.value,
     });
+
+    captureFile = (e) => {
+      e.preventDefault()
+      console.log("file captured")
+
+      const file = e.target.files[0]
+      console.log(e.target.files)
+
+      const reader = new window.FileReader()
+      reader.readAsArrayBuffer(file)
+      reader.onloadend =() => {
+        this.setState({
+          buffer: Buffer(reader.result),
+        })
+      }
+      console.log('buffer', this.state.buffer)
+    }
 
   dCount = () => {
     this.state.healthCare.methods
@@ -183,18 +204,40 @@ class App extends Component {
       .send({ from: this.state.account });
   };
   //6
-  writeNote = (e) => {
+  writeNote =  async (e) => {
     e.preventDefault();
+     ipfs.add(this.state.buffer, (error,result)=>{
+      console.log('ipfs result', result)
+
+      if(error){
+        console.log(error)
+        return
+      }
+
+      const FileHash = result[0].hash
+      this.setState({FileHash})
+      console.log(FileHash)
+      // this.setState({
+      //   writeFile: {FileHash}
+      // })
+      // this.setState({
+      //   [e.target.writeFile]: FileHash
+      // })
+
+    })
     this.setState({
       writeNotepaddr: "",
       writeNotetitle: "",
       writeNotedesc: "",
+      FileHash: "",
     });
+    console.log(this.state.FileHash)
     this.state.healthCare.methods
       .writeNote(
         this.state.writeNotepaddr,
         this.state.writeNotetitle,
-        this.state.writeNotedesc
+        this.state.writeNotedesc,
+        this.state.FileHash
       )
       .send({ from: this.state.account });
   };
@@ -234,6 +277,7 @@ class App extends Component {
       writeNotepaddr,
       writeNotetitle,
       writeNotedesc,
+      writeFile,
       showhealthNoteaddr,
     } = this.state;
     return (
@@ -466,6 +510,17 @@ class App extends Component {
                   placeholder="Description*"
                   value={writeNotedesc}
                   onChange={this.changeHandler}
+                />
+              </div>
+              <div class="form-group">
+                Add file:
+                <input
+                  type="file"
+                  class="form-control"
+                  name="writeFile"
+                  placeholder="Add file*"
+                  // value={writeFile}
+                  onChange={this.captureFile}
                 />
               </div>
 
