@@ -60,7 +60,7 @@ class _DoctorBottomState extends State<DoctorBottom> {
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home,),label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.notifications_active),label: "Notifications"),
-          BottomNavigationBarItem(icon: Icon(Icons.account_circle),label: "User"),
+          BottomNavigationBarItem(icon: Icon(Icons.ac_unit),label: "Counter"),
         ],
       ),
     );

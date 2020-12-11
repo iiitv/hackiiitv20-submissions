@@ -55,7 +55,7 @@ class Role extends StatelessWidget {
                         // height: 300,
                       )),
                   onTap: () {
-                    Navigator.push(context,MaterialPageRoute(builder:(BuildContext context)=>DoctorProfileForm(user:user)));
+                    Navigator.push(context,MaterialPageRoute(builder:(BuildContext context)=>DoctorProfileForm(user:user,isEdit:false)));
                   },
                 ),
               ),

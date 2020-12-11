@@ -22,7 +22,8 @@ class Backend{
          "displayName":doctor.displayName,
          "email":doctor.email,
          "photoURL":doctor.photoURL,
-         "searchedText":doctor.clinicName.toLowerCase()
+         "searchedText":doctor.clinicName.toLowerCase(),
+         "counter":0
       });
     }
 
@@ -49,6 +50,7 @@ class Backend{
                 photoURL: doc.data()["photoURL"],
                 timing: doc.data()["timing"],
                 uid: doc.id,
+                counter:doc.data()["counter"]
               ),
             ));
           });
