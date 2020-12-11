@@ -5,6 +5,9 @@
 
 #extention files
 *.vscode
+*.py
+*.lock
+*.cpp
 
 # Module 
 *.mod*
