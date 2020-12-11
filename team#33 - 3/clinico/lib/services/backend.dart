@@ -4,8 +4,10 @@ import 'package:clinico/shared/loading.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-final CollectionReference doctorCollection = FirebaseFirestore.instance.collection('doctors');
-final CollectionReference patientCollection = FirebaseFirestore.instance.collection('patients');
+final CollectionReference doctorCollection =
+    FirebaseFirestore.instance.collection('doctors');
+final CollectionReference patientCollection =
+    FirebaseFirestore.instance.collection('patients');
 
 class Backend{
     Future<void> addDoctorInDataBase(Doctor doctor)async{
@@ -24,29 +26,35 @@ class Backend{
       });
     }
 
-    showAllHospitalCard(){
-      return StreamBuilder(
+  showAllHospitalCard() {
+    return StreamBuilder(
         stream: doctorCollection.snapshots(),
-        builder: (context,snapshot){
-          if(!snapshot.hasData){
+        builder: (context, snapshot) {
+          if (!snapshot.hasData) {
             return Loading();
           }
           List<HospitalCard> allhospital = new List();
-          snapshot.data.docs.forEach((doc){
-              allhospital.add(
-                HospitalCard(
-                  clinicName:doc.data()["clinicName"],
-                  doctorName: doc.data()["displayName"],
-                  uid:doc.id
-                )
-              );
+          snapshot.data.docs.forEach((doc) {
+            allhospital.add(HospitalCard(
+              doctor: Doctor(
+                address: doc.data()["address"],
+                bio: doc.data()["bio"],
+                clinicName: doc.data()["clinicName"],
+                displayName: doc.data()["displayName"],
+                educationalQualification:
+                    doc.data()["educationalQualification"],
+                email: doc.data()["email"],
+                fee: doc.data()["fee"],
+                paymentMethod: doc.data()["paymentMethod"],
+                photoURL: doc.data()["photoURL"],
+                timing: doc.data()["timing"],
+                uid: doc.id,
+              ),
+            ));
           });
-          return Column(
-            children:allhospital
-          );
-        }
-      );
-    }
+          return Column(children: allhospital);
+        });
+  }
 
     Future<void> AddPatient(MyUser user)async{
       await patientCollection.doc(user.uid).set({
@@ -67,9 +75,20 @@ class Backend{
           snapshot.data.docs.forEach((doc){
               allhospital.add(
                 HospitalCard(
-                  clinicName:doc.data()["clinicName"],
-                  doctorName: doc.data()["displayName"],
-                  uid:doc.id
+                  doctor: Doctor(
+                    address: doc.data()["address"],
+                    bio: doc.data()["bio"],
+                    clinicName: doc.data()["clinicName"],
+                    displayName: doc.data()["displayName"],
+                    educationalQualification:
+                        doc.data()["educationalQualification"],
+                    email: doc.data()["email"],
+                    fee: doc.data()["fee"],
+                    paymentMethod: doc.data()["paymentMethod"],
+                    photoURL: doc.data()["photoURL"],
+                    timing: doc.data()["timing"],
+                    uid: doc.id,
+                  ),
                 )
               );
           });
