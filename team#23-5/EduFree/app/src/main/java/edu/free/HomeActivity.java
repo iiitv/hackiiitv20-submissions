@@ -52,7 +52,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
     Spinner spinner;
     String Type;
-    String appShare;
+    String appShare = "https://drive.google.com/file/d/14vqbflEnoGbVPm_kTWyLoNE7RSMtS3mn/view?usp=sharing";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

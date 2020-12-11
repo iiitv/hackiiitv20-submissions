@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -27,6 +28,7 @@ public class TopicActivity extends AppCompatActivity {
     String courseName,topicName;
     FirebaseAuth mAuth;
     FirebaseUser user;
+    Toolbar toolbar;
 
     DatabaseReference databaseReference;
 
@@ -41,6 +43,10 @@ public class TopicActivity extends AppCompatActivity {
         Intent intent = getIntent();
         courseName = intent.getStringExtra("cName");
         topicName = intent.getStringExtra("tName");
+
+        toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle(topicName);
+        setSupportActionBar(toolbar);
 
         topicRecycler = findViewById(R.id.topicRecycler);
 

@@ -1,4 +1,4 @@
-#Sat Dec 12 00:36:04 IST 2020
+#Sat Dec 12 01:14:56 IST 2020
 base.2=G\:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team\#23-5\\EduFree\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
 path.2=classes2.dex
 base.1=G\:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team\#23-5\\EduFree\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex

@@ -114,7 +114,7 @@ class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ViewHolder> {
                 + "\" "
                 + "src=\"http://www.youtube.com/embed/videoseries?list="
                 + vid.trim()
-                + "frameborder=\"0\" allow=\"autoplay;encrpted-media\" allowfullscreen></iframe>"
+                + "\" frameborder=\"0\" allow=\"autoplay;encrpted-media\" allowfullscreen></iframe>"
                 + "</body>"
                 + "</html>";
 
