@@ -1,9 +1,10 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.firebase:firebase-components:16.0.1@aar">
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ab68b99212dbe97baf2bf51ae812924/jetified-firebase-components-16.0.1/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ab68b99212dbe97baf2bf51ae812924/jetified-firebase-components-16.0.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7ab68b99212dbe97baf2bf51ae812924/jetified-firebase-components-16.0.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ac82592a24e48a563cbc16a2b7b52d3d/jetified-firebase-components-16.0.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ac82592a24e48a563cbc16a2b7b52d3d/jetified-firebase-components-16.0.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ac82592a24e48a563cbc16a2b7b52d3d/jetified-firebase-components-16.0.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-components/16.0.1/67afc07f26d4596a73287f8b2b605aa77e060f15/firebase-components-16.0.1-javadoc.jar!/" />
