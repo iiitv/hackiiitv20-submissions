@@ -1,1 +1,14 @@
-{}
+*{
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    height: 10vh;
+}
+
+.info{
+    height: 25vh;
+    align-items:center;
+    text-align: center;
+}
