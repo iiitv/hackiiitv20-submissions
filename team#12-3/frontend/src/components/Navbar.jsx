@@ -64,6 +64,7 @@ class Navbar extends Component {
                                     </div>
                                 </li>
                                 <NavLink className="nav-link" to="/user/coins">My Coins</NavLink>
+                                <NavLink className="nav-link" to="/user/reportDoctor">Report Doctor</NavLink>
                                 <NavLink className="nav-link" to="/user/notifications">Notifications</NavLink>
                                 <NavLink className="nav-link" to="/logout" style={{position: 'fixed', right: '15px'}}>
                                     <Button inverted color="red"><Icon name="sign-out" />Logout</Button>
