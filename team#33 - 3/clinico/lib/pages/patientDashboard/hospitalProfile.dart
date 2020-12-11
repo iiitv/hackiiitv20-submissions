@@ -4,109 +4,127 @@ import 'package:flutter/material.dart';
 class HospitalProfile extends StatelessWidget {
   Doctor doctor;
   HospitalProfile({this.doctor});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
-        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          title: Text(doctor.clinicName),
+          backgroundColor: Colors.indigo,
+        ),
         body: Container(
-          child: CustomScrollView(
-            slivers: [
-              SliverAppBar(
-                iconTheme: IconThemeData(
-                  color: Colors.white,
-                ),
-                backgroundColor: Colors.grey[700],
-                pinned: true,
-                expandedHeight: 300.0,
-                flexibleSpace: FlexibleSpaceBar(
-                  background: Hero(
-                    tag: 'location',
-                    child: Image.network(
-                      'doctor.photoURL',
-                      height: 300,
-                      fit: BoxFit.cover,
-                    ),
+          child: ListView(
+            children: [
+              SizedBox(
+                height: 40,
+              ),
+              Center(
+                child: Container(
+                  margin: EdgeInsets.only(top: 20),
+                  child: CircleAvatar(
+                    backgroundImage: NetworkImage(doctor.photoURL),
+                    radius: 60,
                   ),
                 ),
               ),
-              SliverFixedExtentList(
-                itemExtent: MediaQuery.of(context).size.height * 8,
-                delegate: SliverChildListDelegate([
-                  Container(
-                    child: Column(
-                      children: [
-                        SizedBox(
-                          height: 40,
-                        ),
-                        Text(
-                          'Doctor.clinicName',
-                          style: TextStyle(
-                            fontSize: 35,
-                            fontStyle: FontStyle.italic,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 50,
-                        ),
-                        Text(
-                          'Dr. ' + 'doctor.displayName',
-                          style: TextStyle(
-                            fontSize: 24,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        Text(
-                          'doctor.qualifications',
-                          style: TextStyle(
-                            fontSize: 24,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        Text(
-                          'doctor.bio',
-                          style: TextStyle(
-                            fontSize: 24,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        Text(
-                          'doctor.address',
-                          style: TextStyle(
-                            fontSize: 24,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        Text(
-                          'doctor.timing',
-                          style: TextStyle(
-                            fontSize: 24,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        Text(
-                          'Ruppes ' + 'doctor.fees' + ' at clinic',
-                          style: TextStyle(
-                            fontSize: 24,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 30,
-                        ),
-                      ],
+              SizedBox(
+                height: 40,
+              ),
+              Center(
+                child: Text(
+                  doctor.clinicName,
+                  style: TextStyle(
+                    fontSize: 35,
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              Center(
+                child: Text(
+                  'Dr. ' + doctor.displayName,
+                  style: TextStyle(
+                    fontSize: 24,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Center(
+                child: Text(
+                  doctor.educationalQualification,
+                  style: TextStyle(
+                    fontSize: 24,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Center(
+                child: Text(
+                  doctor.bio,
+                  style: TextStyle(
+                    fontSize: 24,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Center(
+                child: Text(
+                  'Address : ' + doctor.address,
+                  style: TextStyle(
+                    fontSize: 24,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Center(
+                child: Text(
+                  'Timing : ' + doctor.timing,
+                  style: TextStyle(
+                    fontSize: 24,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Center(
+                child: Text(
+                  'Fees : ' + doctor.fee + ' rs. at clinic',
+                  style: TextStyle(
+                    fontSize: 24,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 70,
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(20, 8, 20, 8),
+                child: FlatButton(
+                  color: Colors.indigoAccent,
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Text(
+                      'Book Appointment',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                      ),
                     ),
                   ),
-                ]),
+                  onPressed: () {},
+                ),
               ),
             ],
           ),
