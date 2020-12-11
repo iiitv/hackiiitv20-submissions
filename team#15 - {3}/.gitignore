@@ -1,0 +1,17 @@
+#compilation files
+*.out
+*.exe
+*.hex
+
+#extention files
+*.vscode
+
+# Module 
+*.mod*
+*.cmd
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
