@@ -14,6 +14,22 @@
       },
       "oauth_client": [
         {
+          "client_id": "311606054915-73hf3qp1qdf6nj5au80tamsnd7hbh6dm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.s2ke4.clinico",
+            "certificate_hash": "1afaf0a9d9ceb064b6debb42a765253cf7cebc8b"
+          }
+        },
+        {
+          "client_id": "311606054915-qngre7tmh6e40voq4rf559s97m429p8l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.s2ke4.clinico",
+            "certificate_hash": "fc6bdd8fcf5c9fdfa1129acf388aaa6b95d62806"
+          }
+        },
+        {
           "client_id": "311606054915-e2t4ddtenm1kuvd2uoo4lgmjvmttj6gj.apps.googleusercontent.com",
           "client_type": 3
         }
