@@ -8,3 +8,5 @@ Our app name is SafeTravel.
 We will build an app which will help people to check the Public Transport (Buses) timings and track them in real time for total number of seats which are used by people and also live location of the Bus.
 
 So Basically people will not have to come early to stops and wait for buses, if some buses are full, then they have the option to know about it earlier and hence can take the next bus.
+
+In future, we would also like to integrate payment gateway in our app to make it complete Contactless Experience for travellers in the global pandemic.
