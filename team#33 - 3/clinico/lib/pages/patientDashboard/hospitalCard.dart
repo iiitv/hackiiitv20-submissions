@@ -14,7 +14,7 @@ class HospitalCard extends StatelessWidget {
             context,
             MaterialPageRoute(
               builder: (context) => HospitalProfile(
-                doctor: doctor,
+                uid: doctor.uid,
               ),
             ));
       },

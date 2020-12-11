@@ -47,7 +47,7 @@ class Backend {
                 paymentMethod: doc.data()["paymentMethod"],
                 photoURL: doc.data()["photoURL"],
                 timing: doc.data()["timing"],
-                uid: doc.data()["uid"],
+                uid: doc.id,
               ),
             ));
           });
