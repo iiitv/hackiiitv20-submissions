@@ -17,9 +17,10 @@ class _SignInPageState extends State<SignInPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return isLoading?Loading():Scaffold(
       body: SafeArea(
         child: Container(
+          color: Colors.indigo,
           child: Column(
             children: [
               Stack(
@@ -44,11 +45,11 @@ class _SignInPageState extends State<SignInPage> {
               ),
               SizedBox(height: 40,),
               Center(
-                child: SignButton(name: "Sign in as Patient ",status: "Patient",toggleLoading: toggleLoading,),
+                child: Text("Join Us From Google",),
               ),
-              SizedBox(height: 40,),
+              SizedBox(height: 20,),
               Center(
-                child: SignButton(name: "Sign in as Doctor ",status:"Doctor",toggleLoading: toggleLoading,),
+                child: SignButton(name: "Sign in Wigh Google ",toggleLoading: toggleLoading,),
               ),
             ],
           ),

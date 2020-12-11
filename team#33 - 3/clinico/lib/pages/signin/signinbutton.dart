@@ -2,25 +2,22 @@ import 'package:clinico/services/auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-String stat;
 
 class SignButton extends StatelessWidget {
   final String name;
   Function toggleLoading;
-  String status;
-  SignButton({this.name,this.status,this.toggleLoading});
+  SignButton({this.name,this.toggleLoading});
 
   @override
   Widget build(BuildContext context) {
 
-    final AuthServices _auth = AuthServices(status:status);
+    final AuthServices _auth = AuthServices();
 
     return RawMaterialButton(
       shape: StadiumBorder(),
-      onPressed: () {
-        stat = status;
+      onPressed:() {
         toggleLoading();
-        _auth.singInWithGoogle();
+        _auth.signInWithGoogle();
       },
       fillColor: Colors.white,
       splashColor: Colors.grey,

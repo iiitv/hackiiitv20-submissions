@@ -12,12 +12,7 @@ class Wrapper extends StatelessWidget {
     final user = Provider.of<MyUser>(context);
     if(user==null){
       return SignInPage();
-    }else if(user.status=="Patient"){
-
-      return PatientDashboard();
     }else{
-      print(user.email);
-      print(user.status);
       return  DoctorDashboard();
     }
   }
