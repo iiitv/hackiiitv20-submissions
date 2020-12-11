@@ -8,7 +8,9 @@ contract HealthCare {
         admin = msg.sender;
     }
 
+
     modifier adminCheck() {
+
         require(msg.sender == admin);
         _;
     }
@@ -62,18 +64,22 @@ contract HealthCare {
         address doctor;
         string title;
         string description;
+        string file;
     }
 
     function HealthNoteCounter() internal {
         HealthNoteCount += 1;
     }
     
+    
     function writeNote(
         address _patient,
         string memory _title,
-        string memory _description
+        string memory _description,
+        string memory _file
     ) public {
         
+
         require(doctors[msg.sender].isVerified == true);
         
         HealthNoteCounter();
@@ -82,7 +88,8 @@ contract HealthCare {
             _patient,
             msg.sender,
             _title,
-            _description
+            _description,
+            _file
         );
     }
 }
