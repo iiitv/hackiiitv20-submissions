@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1031787891449:android:e0e897fa8174e0b3003028",
+        "mobilesdk_app_id": "1:1031787891449:android:3384e5188757a1c8003028",
         "android_client_info": {
-          "package_name": "com.example.xyz"
+          "package_name": "com.example.health"
         }
       },
       "oauth_client": [
