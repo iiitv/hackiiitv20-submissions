@@ -1,1 +1,0 @@
-Our team no. 14 have chosen theme no-5 and we started working on it.
