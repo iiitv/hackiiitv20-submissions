@@ -1,0 +1,42 @@
+html{
+    background-color: 	#00ffff
+}
+
+body {
+  background-image: "images/hero-bg.jpg";
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  font-family: "Montserrat";
+  text-align: center;
+  background-color: 	#00ffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat-Bold";
+  background-color: 	#00ffff
+}
+.big-heading{
+  text-align: center;
+  margin-top: 5%;
+  margin-right: 5%;
+}
+.colored{
+  background-color: 	#00ffff
+}
+.doc{
+  margin-top: 120px;
+  margin-left: 38%;
+    background-color: 	#00ffff;
+}
+.pat{
+  margin-top: 60px;
+  margin-left: 38%;
+  background-color: 	#00ffff
+}
+.home-button-sign{
+    background-color: 	#00ffff
+}
+.home-button-log{
+    background-color: 	#00ffff
+}
