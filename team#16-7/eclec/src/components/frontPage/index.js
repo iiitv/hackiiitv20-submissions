@@ -16,7 +16,7 @@ class index extends Component {
               <button className="home__btn">Sign up</button>
             </li>
           </NavLink>
-          <NavLink exact activeClassName="current" to="/Login">
+          <NavLink exact activeClassName="current" to="/login">
             <li>
               <button className="home__btn">Login</button>
             </li>
