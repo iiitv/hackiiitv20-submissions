@@ -15,7 +15,8 @@ class AuthServices {
 
 
   MyUser _userFromFirebase(User user){
-      return user!=null?MyUser(uid:user.uid,photoURL: user.photoURL,displayName: user.displayName,email: user.email,status: stat):null;
+
+      return user!=null?MyUser(uid:user.uid,photoURL: user.photoURL,displayName: user.displayName,email: user.email,status: status):null;
   }
 
   //stream for auth state change
@@ -24,7 +25,7 @@ class AuthServices {
   }
 
   //code for signin with google goes here
-  Future<String> singInWithGoogle() async{
+  Future<String> signInWithGoogle() async{
     try{
       final GoogleSignInAccount _googleSignInAccount = await _googleSignIn.signIn();
       final GoogleSignInAuthentication _googleSignInAuthentication = await _googleSignInAccount.authentication;

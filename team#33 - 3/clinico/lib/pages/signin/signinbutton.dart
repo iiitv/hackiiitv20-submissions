@@ -20,7 +20,7 @@ class SignButton extends StatelessWidget {
       onPressed: () {
         stat = status;
         toggleLoading();
-        _auth.singInWithGoogle();
+        _auth.signInWithGoogle();
       },
       fillColor: Colors.white,
       splashColor: Colors.grey,
