@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignNewUserActivity"
+    android:background="@android:color/holo_blue_dark">
+    <ImageView
+        android:layout_alignParentTop="true"
+        android:id="@+id/logo"
+        android:background="@drawable/app_logo"
+        android:layout_width="170dp"
+        android:layout_marginTop="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="170dp"/>
+
+
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_above="@+id/rlLogin"
+        android:text="User Login"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlLogin"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/round_white_no_border_20r"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/emailProfile"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:drawableStart="@drawable/ic_email_black_24dp"
+            android:drawablePadding="10dp"
+            android:paddingStart="5dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="5dp"
+            android:paddingStart="9dp"
+            android:singleLine="true"
+            android:layout_below="@+id/emailProfile"/>
+
+
+
+        <TextView
+            android:id="@+id/passwordT"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:drawableStart="@drawable/ic_baseline_vpn_key_24"
+            android:drawablePadding="10dp"
+            android:paddingStart="5dp"
+            android:singleLine="true"
+            android:layout_below="@id/email"/>
+
+        <EditText
+            android:id="@+id/userP"
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="5dp"
+            android:password="true"
+            android:paddingStart="9dp"
+            android:singleLine="true"
+            android:layout_below="@+id/passwordT"/>
+
+
+
+        <Button
+            android:text="Login"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:id="@+id/LoginUser"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/userP"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/round_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:layout_below="@+id/LoginUser"
+            android:id="@+id/signInToUp"
+            android:text="New user click to register"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+
+
+
+    <ProgressBar
+        android:id="@+id/progBar"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

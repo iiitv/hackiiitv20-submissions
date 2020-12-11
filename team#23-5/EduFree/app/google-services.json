@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "793323301506",
+    "firebase_url": "https://hackiiitv-1de6f-default-rtdb.firebaseio.com",
+    "project_id": "hackiiitv-1de6f",
+    "storage_bucket": "hackiiitv-1de6f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793323301506:android:66a4c2a920f5a3082ee29b",
+        "android_client_info": {
+          "package_name": "edu.free"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "793323301506-pdrl3hch4gjv7ffttfci5htm2t3hd4e5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZ1Pc_m3P3RCTPUzaHoGc46UzaZAaAfNw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "793323301506-pdrl3hch4gjv7ffttfci5htm2t3hd4e5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
