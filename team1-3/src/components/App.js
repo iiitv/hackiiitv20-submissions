@@ -231,6 +231,7 @@ class App extends Component {
       writeNotedesc: "",
       FileHash: "",
     });
+    
     console.log(this.state.FileHash)
     this.state.healthCare.methods
       .writeNote(
@@ -277,7 +278,6 @@ class App extends Component {
       writeNotepaddr,
       writeNotetitle,
       writeNotedesc,
-      writeFile,
       showhealthNoteaddr,
     } = this.state;
     return (
@@ -471,6 +471,7 @@ class App extends Component {
                   placeholder="Add file*"
                   // value={writeFile}
                   onChange={this.captureFile}
+                  multiple
                 />
               </div>
 
