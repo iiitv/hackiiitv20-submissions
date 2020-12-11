@@ -40,8 +40,8 @@ html, body {
     border: 1px solid black;
 }
 .participant div video:not(.trackZoomed) {
-    width: 240px;
-    height: 180px;
+    width: 400px;
+    height: 400px;
 }
 .participant .label {
     background-color: #ddd;
@@ -92,4 +92,10 @@ html, body {
     margin-bottom: 10px;
     line-height: 1em;
     max-height: 1px;
+}
+
+.imageDiv img{
+    z-index: 2;
+    position: absolute;
+    opacity: 0.5;
 }
