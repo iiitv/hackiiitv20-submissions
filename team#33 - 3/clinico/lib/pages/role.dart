@@ -11,44 +11,59 @@ class Role extends StatelessWidget {
     return Container(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Your Role'),
+          title: Text('Choose Your Role'),
+          backgroundColor:  Colors.indigoAccent,
         ),
         body: Container(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              GestureDetector(
-                child: Container(
-                  alignment: Alignment.center,
-                  width: MediaQuery.of(context).size.width,
-                  padding: EdgeInsets.symmetric(vertical: 12),
-                  decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          offset: const Offset(3.0, 3.0),
-                          color: Colors.grey,
-                          blurRadius: 4.0,
-                          spreadRadius: 2.0,
-                        )
-                      ],
-                      gradient: LinearGradient(colors: [
-                        const Color(0xff007EF4),
-                        const Color(0xFF2A75BC),
-                      ])),
-                  child: Text(
-                    "I am a Doctor",
-                    style: TextStyle(color: Colors.white, fontSize: 18),
-                  ),
+              Container(
+                child: Image.asset(
+                  'assets/doctor.png',
+                  height: 300,
                 ),
-                onTap: () {
-                  Navigator.push(context,MaterialPageRoute(builder:(BuildContext context)=>DoctorProfileForm(user:user)));
-                },
               ),
-              GestureDetector(
-                child: Container(
-                  alignment: Alignment.center,
-                  width: MediaQuery.of(context).size.width,
-                  padding: EdgeInsets.symmetric(vertical: 12),
-                  decoration: BoxDecoration(
+              Container(
+                child: GestureDetector(
+                  child: Padding(
+                      padding: const EdgeInsets.fromLTRB(15.0, 0, 15, 0),
+                      child: Container(
+                        alignment: Alignment.center,
+                        width: MediaQuery.of(context).size.width,
+                        padding: EdgeInsets.symmetric(vertical: 12),
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              offset: const Offset(3.0, 3.0),
+                              color: Colors.grey,
+                              blurRadius: 4.0,
+                              spreadRadius: 2.0,
+                            )
+                          ],
+                          color: Colors.indigoAccent,
+                        ),
+                        child: Text(
+                          "I am a Doctor",
+                          style: TextStyle(color: Colors.white, fontSize: 18),
+                        ),
+                        //   child: Image.asset(
+                        // 'assets/doctor.png',
+                        // height: 300,
+                      )),
+                  onTap: () {
+                    Navigator.push(context,MaterialPageRoute(builder:(BuildContext context)=>DoctorProfileForm(user:user)));
+                  },
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(15.0, 0, 15, 0),
+                child: GestureDetector(
+                  child: Container(
+                    alignment: Alignment.center,
+                    width: MediaQuery.of(context).size.width,
+                    padding: EdgeInsets.symmetric(vertical: 12),
+                    decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
                           offset: const Offset(3.0, 3.0),
@@ -57,18 +72,17 @@ class Role extends StatelessWidget {
                           spreadRadius: 2.0,
                         )
                       ],
-                      gradient: LinearGradient(colors: [
-                        const Color(0xff007EF4),
-                        const Color(0xFF2A75BC),
-                      ])),
-                  child: Text(
-                    "I am looking for a doctor",
-                    style: TextStyle(color: Colors.white, fontSize: 18),
+                      color: Colors.indigoAccent,
+                    ),
+                    child: Text(
+                      "I am looking for a doctor",
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
                   ),
+                  onTap: () {
+                    Navigator.push(context,MaterialPageRoute(builder:(BuildContext context)=>PatientDashboard()));
+                  },
                 ),
-                onTap: () {
-                  Navigator.push(context,MaterialPageRoute(builder:(BuildContext context)=>PatientDashboard()));
-                },
               )
             ],
           ),
