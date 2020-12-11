@@ -3,3 +3,4 @@ multiple login
 death rate monitor
 adding facility to communicate with doctors
 calculating risk factor
+jframe
