@@ -5,10 +5,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
+import './homePage.dart';
 import '../widgets/auth_forms_widget.dart';
 
 class AuthScreen extends StatefulWidget {
-  static const String routeName='/authscreen';
+  static const String routeName = '/authscreen';
   @override
   _AuthScreenState createState() => _AuthScreenState();
 }
@@ -28,10 +29,11 @@ class _AuthScreenState extends State<AuthScreen> {
       if (isLogin) {
         authResult = await _auth.signInWithEmailAndPassword(
             email: email, password: password);
+        Navigator.of(context).pushNamed(HomePage.routeName);
       } else {
         authResult = await _auth.createUserWithEmailAndPassword(
             email: email, password: password);
-
+        Navigator.of(context).pushNamed(HomePage.routeName);
         // final ref = FirebaseStorage.instance
         //     .ref()
         //     .child('userImages')

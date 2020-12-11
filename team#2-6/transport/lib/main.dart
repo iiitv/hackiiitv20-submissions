@@ -8,7 +8,7 @@ import './screens/auth_screen.dart';
 import 'screens/auth_screen.dart';
 
 void main() {
-  // WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized();
   // Firebase.initializeApp();
   runApp(MyApp());
 }
@@ -22,22 +22,25 @@ class MyApp extends StatelessWidget {
       home: FutureBuilder(
         future: _initialization,
         builder: (context, projectSnap) {
-          if (projectSnap.hasData)
-            return StreamBuilder<User>(
-                stream: FirebaseAuth.instance.authStateChanges(),
-                builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.active) {
-                    if (snapshot.hasData) {
-                      return HomePage();
-                    }
-                  }
-                  return AuthScreen();
-                });
-          return CircularProgressIndicator();
+          //     if (projectSnap.hasData)
+          //       return StreamBuilder<User>(
+          //           stream: FirebaseAuth.instance.authStateChanges(),
+          //           builder: (context, snapshot) {
+          //             if (snapshot.connectionState == ConnectionState.active) {
+          //               if (snapshot.hasData) {
+          //                 print('ascdsadasd');
+          //                 return HomePage();
+          //               }
+          //             }
+          // return
+          return AuthScreen();
+          //       });
+          // return CircularProgressIndicator();
         },
       ),
       routes: {
         AuthScreen.routeName: (context) => AuthScreen(),
+        HomePage.routeName: (ctx) => HomePage(),
         // EventDetailsPage.routeName: (context) => EventDetailsPage(),
       },
       // StreamBuilder(
