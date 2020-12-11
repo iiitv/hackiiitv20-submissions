@@ -29,8 +29,8 @@ function Registration()
     {
         console.log(state);
     }
-return <>
-    <h1 className="heading">Welcome to Eclec</h1>
+return <div className="center">
+    <img src="./Images/eclec.png" alt="logo" className="myimg"></img>
     <div className="row">
         <input type="text" name="fname" placeholder="Enter First Name" value={state.fname} onChange={handleChange}/>
     </div>
@@ -71,6 +71,6 @@ return <>
     </div>
     <button type="submit" onClick={handleSubmit} className="btn">Submit</button>
     
-</>
+</div>
 }
 export default Registration;
