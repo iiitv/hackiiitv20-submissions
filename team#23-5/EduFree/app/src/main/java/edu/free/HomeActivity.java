@@ -86,6 +86,13 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
         databaseActivities();
 
+        impBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
 
     }
 
