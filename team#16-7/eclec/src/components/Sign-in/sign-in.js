@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./sign-in.css"
+import {NavLink} from "react-router-dom"
 class signin extends Component {
   constructor(props) {
     super(props)
@@ -36,7 +37,7 @@ class signin extends Component {
          <input className="login__in" type="text" placeholder="Enter your name" value={this.state.usrname} name="usrname" onChange={this.handleUsernameChange} />
          <input  className="login__in" type="email" placeholder="Enter your email" value={this.state.usremail} name="usremail" onChange={this.handleEmail} />
          <input  className="login__in" type="password" placeholder="Enter password" value={this.state.password} name="uspassword" onChange={this.handlePassword} />
-         <button className="submit__btn" type="submit">Submit</button>
+         <NavLink exact activeClassName="current" to="/dashboard"><button className="submit__btn" type="submit">Submit</button></NavLink>
        </div>
       </div>
     );
