@@ -84,7 +84,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
         courseRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
-        databaseActivities();
+        //databaseActivities();
 
         impBtn.setOnClickListener(new View.OnClickListener() {
             @Override
