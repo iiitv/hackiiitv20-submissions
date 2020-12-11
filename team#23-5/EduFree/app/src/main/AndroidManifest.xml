@@ -17,6 +17,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".CourseActivity"/>
         <activity android:name=".HomeActivity" />
         <activity android:name=".SignNewUserActivity" />
         <meta-data

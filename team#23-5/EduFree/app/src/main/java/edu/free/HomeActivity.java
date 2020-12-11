@@ -17,9 +17,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -29,6 +31,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -45,6 +48,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
     AlertDialog.Builder builder;
 
+    Button impBtn;
 
     Spinner spinner;
     String Type;
@@ -63,6 +67,8 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
         courseRecycler = findViewById(R.id.courseRecycler);
         spinner = findViewById(R.id.spinnerMenu);
+        impBtn = (Button) findViewById(R.id.important_button);
+
 
         toolbar = findViewById(R.id.toolbar);
         toolbar.setTitle("EduFree");
@@ -79,7 +85,6 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         courseRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
         databaseActivities();
-
 
 
     }
@@ -143,15 +148,14 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
         databaseReference = FirebaseDatabase.getInstance().getReference("Courses").child(Type).child("Topic");
+        Toast.makeText(this, "Loading Topics", Toast.LENGTH_SHORT).show();
 
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
 
-                String fileName = snapshot.getKey().toString();
-
-                ((CourseAdapter) courseRecycler.getAdapter()).update(fileName);
-
+                String courseName = snapshot.getKey();
+                ((CourseAdapter)courseRecycler.getAdapter()).update(courseName);
 
             }
 
@@ -175,11 +179,13 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
             }
         });
+
     }
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         Type = adapterView.getItemAtPosition(i).toString();
+        Toast.makeText(this, "Course Selected", Toast.LENGTH_SHORT).show();
         databaseActivities();
     }
 
@@ -187,4 +193,6 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
+
+
 }
