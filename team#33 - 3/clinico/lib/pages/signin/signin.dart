@@ -1,4 +1,5 @@
 import 'package:clinico/pages/signin/signinbutton.dart';
+import 'package:clinico/shared/loading.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +9,12 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
+
+  bool isLoading = false;
+  void toggleLoading(){
+    setState(()=>isLoading = !isLoading);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,15 +44,16 @@ class _SignInPageState extends State<SignInPage> {
               ),
               SizedBox(height: 40,),
               Center(
-                child: SignButton(name: "Sign In as Paitent "),
+                child: SignButton(name: "Sign in as Patient ",status: "Patient",toggleLoading: toggleLoading,),
               ),
               SizedBox(height: 40,),
               Center(
-                child: SignButton(name: "Sign in as Doctor "),
+                child: SignButton(name: "Sign in as Doctor ",status:"Doctor",toggleLoading: toggleLoading,),
               ),
             ],
           ),
         ),
       ),
     );
-  }}
+  }
+}
