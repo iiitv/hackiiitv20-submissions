@@ -89,7 +89,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         impBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                startActivity(new Intent(getApplicationContext(),ImportantActivity.class));
             }
         });
 

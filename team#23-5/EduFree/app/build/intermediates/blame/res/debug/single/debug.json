@@ -28,6 +28,10 @@
         "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\drawable\\spinner_bg.xml"
     },
     {
+        "merged": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_topic.xml.flat",
+        "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\layout\\activity_topic.xml"
+    },
+    {
         "merged": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\build\\intermediates\\res\\merged\\debug\\drawable_more_next.xml.flat",
         "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\drawable\\more_next.xml"
     },

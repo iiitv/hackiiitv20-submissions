@@ -1111,6 +1111,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id important_button
 id important_text
 id important_website_web
 id info
@@ -1152,6 +1153,7 @@ id percent
 id position
 id postLayout
 id progBar
+id progress_bar
 id progress_circular
 id progress_horizontal
 id radio
@@ -1226,6 +1228,7 @@ id toggle
 id toolbar
 id top
 id topPanel
+id topic_text
 id transitionToEnd
 id transitionToStart
 id triangle
@@ -1287,6 +1290,7 @@ layout activity_home
 layout activity_important
 layout activity_main
 layout activity_sign_new_user
+layout activity_topic
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog

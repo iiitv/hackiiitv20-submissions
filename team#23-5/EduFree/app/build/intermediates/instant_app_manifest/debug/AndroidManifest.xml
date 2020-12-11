@@ -43,6 +43,8 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity android:name="edu.free.ImportantActivity" />
+        <activity android:name="edu.free.CourseActivity" />
         <activity android:name="edu.free.HomeActivity" />
         <activity android:name="edu.free.SignNewUserActivity" />
 

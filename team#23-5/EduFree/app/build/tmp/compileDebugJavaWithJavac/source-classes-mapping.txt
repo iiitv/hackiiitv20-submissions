@@ -7,8 +7,8 @@ edu/free/SignNewUserActivity.java
  edu.free.SignNewUserActivity$1
  edu.free.SignNewUserActivity$2
  edu.free.SignNewUserActivity$3
-edu/free/ImportantActivity.java
- edu.free.ImportantActivity
+edu/free/CourseActivity.java
+ edu.free.CourseActivity
 edu/free/MainActivity.java
  edu.free.MainActivity
  edu.free.MainActivity$1
@@ -16,9 +16,15 @@ edu/free/MainActivity.java
  edu.free.MainActivity$3
 edu/free/BuildConfig.java
  edu.free.BuildConfig
-edu/free/CourseActivity.java
- edu.free.CourseActivity
+edu/free/TopicActivity.java
+ edu.free.TopicActivity
+edu/free/ImportantActivity.java
+ edu.free.ImportantActivity
+ edu.free.ImportantActivity$1
+ edu.free.ImportantActivity$2
+ edu.free.ImportantActivity$MyWebViewClient
 edu/free/HomeActivity.java
  edu.free.HomeActivity
  edu.free.HomeActivity$1
  edu.free.HomeActivity$2
+ edu.free.HomeActivity$3
