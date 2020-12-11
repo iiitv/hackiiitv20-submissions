@@ -15,3 +15,5 @@ We can also attach the current measurer with each electronic device so that if u
 We can also add features in which user’s family will get ranked in their colony on the basis of minimum household energy consumption they may be rewarded(by government) for their prime indeed.
 
 Extended to this idea if the whole colony start using this website then we may provide this data to electricity supplier to maintain the demand of electricity supply after considering  the colony household needs. 
+
+  
