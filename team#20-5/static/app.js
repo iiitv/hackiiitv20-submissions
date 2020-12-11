@@ -30,16 +30,17 @@ function addLocalVideo() {
 
 
 function capture1() {
-    var canvas = document.getElementById('canvas');     
+    var canvas = document.getElementById('canvas');
+    // var canvas1 = document.getElementById('canvas1');     
     var video = document.getElementById('local').firstChild.firstChild;
+    // var video1 = document.getElementById('local');
     console.log(video);
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     canvas.getContext('2d').drawImage(video, 0, 0, video.videoWidth, video.videoHeight);  
-
+    // canvas1.getContext('2d').drawImage(video1, 0, 0, video1.videoWidth, video1.videoHeight);
     var img1 = canvas.toDataURL();
-    conv.sendMessage('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg');
-
+    conv.sendMessage("https://i.pinimg.com/originals/83/f9/37/83f937b69f30bb886ab8a03390da6771.jpg");
 
     // canvas.toBlob() = (blob) => {
     //   const img = new Image();
@@ -100,7 +101,7 @@ function connect(username) {
             room.on('participantDisconnected', participantDisconnected);
             connected = true;
             updateParticipantCount();
-            alert("Connect Chat Called");
+            // alert("Connect Chat Called");
             connectChat(data.token, data.conversation_sid);
             resolve();
         }).catch(e => {
@@ -250,7 +251,7 @@ function connectChat(token, conversationSid) {
             });
             return conv.getMessages().then((messages) => {
                 chatContent.innerHTML = '';
-                alert("Let See");
+                // alert("Let See");
                 for (let i = 0; i < messages.items.length; i++) {
                     addMessageToChat(messages.items[i].author, messages.items[i].body);
                 }
@@ -285,12 +286,22 @@ function onChatInputKey(ev) {
     }
 };
 
+document.getElementById('toggle_camera').addEventListener('click', event => {
+  const videoConstraints = {
+    facingMode: 'environment'
+  };
+  const constraints = {
+    video: videoConstraints,
+    audio: false
+  };
+});
+
+
+
 function parseURL(message) {
     // if(something)
-    var par = document.getElementById('imageDiv');
-    var img = document.createElement('img');
-    img.src = message;
-    par.appendChild(img);
+    
+    document.getElementById("myImg").src = message;
 }
 
 
@@ -298,4 +309,4 @@ addLocalVideo();
 button.addEventListener('click', connectButtonHandler);
 shareScreen.addEventListener('click', shareScreenHandler);
 toggleChat.addEventListener('click', toggleChatHandler);
-chatInput.addEventListener('keyup', onChatInputKey);
+chatInput.addEventListener('keyup', onChatInputKey)
