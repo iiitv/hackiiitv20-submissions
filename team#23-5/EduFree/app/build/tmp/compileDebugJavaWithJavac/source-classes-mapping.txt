@@ -2,29 +2,33 @@ edu/free/CourseAdapter.java
  edu.free.CourseAdapter
  edu.free.CourseAdapter$ViewHolder
  edu.free.CourseAdapter$ViewHolder$1
-edu/free/BuildConfig.java
- edu.free.BuildConfig
-edu/free/CourseActivity.java
- edu.free.CourseActivity
-edu/free/TopicActivity.java
- edu.free.TopicActivity
 edu/free/SignNewUserActivity.java
  edu.free.SignNewUserActivity
  edu.free.SignNewUserActivity$1
  edu.free.SignNewUserActivity$2
  edu.free.SignNewUserActivity$3
-edu/free/ImportantActivity.java
- edu.free.ImportantActivity
- edu.free.ImportantActivity$1
- edu.free.ImportantActivity$2
- edu.free.ImportantActivity$MyWebViewClient
+edu/free/CourseActivity.java
+ edu.free.CourseActivity
 edu/free/MainActivity.java
  edu.free.MainActivity
  edu.free.MainActivity$1
  edu.free.MainActivity$2
  edu.free.MainActivity$3
+edu/free/BuildConfig.java
+ edu.free.BuildConfig
+edu/free/ImportantActivity.java
+ edu.free.ImportantActivity
+ edu.free.ImportantActivity$1
+ edu.free.ImportantActivity$2
+ edu.free.ImportantActivity$MyWebViewClient
 edu/free/HomeActivity.java
  edu.free.HomeActivity
  edu.free.HomeActivity$1
  edu.free.HomeActivity$2
  edu.free.HomeActivity$3
+edu/free/TopicAdapter.java
+ edu.free.TopicAdapter
+ edu.free.TopicAdapter$ViewHolder
+edu/free/TopicActivity.java
+ edu.free.TopicActivity
+ edu.free.TopicActivity$1

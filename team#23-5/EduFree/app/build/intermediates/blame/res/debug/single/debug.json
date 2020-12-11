@@ -76,6 +76,10 @@
         "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\build\\intermediates\\res\\merged\\debug\\layout_video_item.xml.flat",
+        "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\layout\\video_item.xml"
+    },
+    {
         "merged": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },

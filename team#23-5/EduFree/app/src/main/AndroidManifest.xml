@@ -18,6 +18,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
 
+        <activity android:name=".TopicActivity"/>
+
         <activity android:name=".ImportantActivity"/>
         <activity android:name=".CourseActivity"/>
         <activity android:name=".HomeActivity" />

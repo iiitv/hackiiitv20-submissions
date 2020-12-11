@@ -84,7 +84,8 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
         courseRecycler.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
-        //databaseActivities();
+        //
+        // databaseActivities();
 
         impBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -162,7 +163,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
 
                 String courseName = snapshot.getKey();
-                ((CourseAdapter)courseRecycler.getAdapter()).update(courseName);
+                ((CourseAdapter)courseRecycler.getAdapter()).update(courseName,Type);
 
             }
 

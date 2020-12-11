@@ -1037,6 +1037,7 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id buttonPanel
 id cache_measures
+id cardView_video
 id center
 id centerCrop
 id centerInside
@@ -1228,6 +1229,7 @@ id toggle
 id toolbar
 id top
 id topPanel
+id topicRecycler
 id topic_text
 id transitionToEnd
 id transitionToStart
@@ -1244,6 +1246,7 @@ id wide
 id withText
 id wrap
 id wrap_content
+id youtubeWebembedItem
 integer abc_config_activityDefaultDur
 integer abc_config_activityShortDur
 integer cancel_button_image_alpha
@@ -1304,6 +1307,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout video_item
 layout website_item
 menu menumain
 mipmap ic_launcher

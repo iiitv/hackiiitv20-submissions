@@ -21,6 +21,7 @@ class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder> {
     RecyclerView recyclerView;
     ArrayList<String> courseName = new ArrayList<>();
     Context context;
+    String cName;
 
 
     public CourseAdapter(RecyclerView recyclerView, Context context, ArrayList<String> coursrName) {
@@ -50,9 +51,10 @@ class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder> {
         return courseName.size();
     }
 
-    public void update(String name){
+    public void update(String name,String cn){
 
         courseName.add(name);
+        cName = cn;
 
         notifyDataSetChanged();
 
@@ -72,10 +74,10 @@ class CourseAdapter extends RecyclerView.Adapter<CourseAdapter.ViewHolder> {
                 public void onClick(View view) {
 
                     int position = recyclerView.getChildLayoutPosition(view);
-                    Intent intent = new Intent(context,CourseActivity.class);
+                    Intent intent = new Intent(context,TopicActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-                    intent.putExtra("Name",courseName.get(position));
+                    intent.putExtra("cName",cName);
+                    intent.putExtra("tName",courseName.get(position));
                     context.startActivity(intent);
 
                 }

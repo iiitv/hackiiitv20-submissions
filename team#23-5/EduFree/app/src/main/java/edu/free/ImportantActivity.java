@@ -30,7 +30,7 @@ public class ImportantActivity extends AppCompatActivity {
         webView = (WebView) findViewById(R.id.important_website_web);
         progressBar = findViewById(R.id.progress_bar);
 
-        url = "https://gyani.bitaam.online/linksite.html";
+        url = "https://devparmar1.github.io/linksite";
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setAllowFileAccess(true);
