@@ -9,5 +9,6 @@ router.post('/register', userController.register);
 router.put('/', userController.update);
 router.delete('/:id', userController.remove);
 router.post('/login', userController.login);
+router.post('/donateBlood/:id', userController.donateBloodRequest);
 
 module.exports = router;

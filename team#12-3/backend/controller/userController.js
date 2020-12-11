@@ -79,7 +79,7 @@ const login = async (req,res) => {
                     'error': 'Wrong Password'
                 });
             
-            const token = jwt.sign({email: user.email, role: "user"}, 'TOKEN_SECRET');
+            const token = jwt.sign({_id: user._id, email: user.email, role: "user"}, 'TOKEN_SECRET');
             res.status(200).json({"token": token});
         }
         else{
@@ -94,4 +94,24 @@ const login = async (req,res) => {
     }
 }
 
-module.exports = { getList, get, register, update, remove, login};
+const donateBloodRequest = async (req,res) => {
+    try{
+        console.log('in donateBloodRequest api');
+        console.log(req.body);
+        // const obj = {
+        //     hospitalId: req.body.hospitalId,
+        //     userId: req.body.userId,
+        //     hospital: req.body.hospital
+        // }
+        const updatedUser = await User.findByIdAndUpdate(req.body._id, 
+            { $set: {
+                currentBloodDonationHospital: req.body.hospital,
+                currentBloodDonationRequest: true
+            } } );
+        res.json(updatedUser);
+    }catch(err){
+        res.json(err);
+    }
+}
+
+module.exports = { getList, get, register, update, remove, login, donateBloodRequest};

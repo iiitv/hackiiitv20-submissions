@@ -1,23 +1,37 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import jwtDecode from 'jwt-decode';
 import { Button } from 'semantic-ui-react';
 
 class DonateBloodDetails extends Component {
     state = { 
-        doctor: ''
+        doctor: '',
+        disabled: false
      }
 
     async componentDidMount() {
         try {
+            const { _id } = jwtDecode(localStorage.getItem('token'));
             const doctor = await axios.get(`http://localhost:9000/api/doctor/${this.props.match.params.id}`);
-            this.setState({ doctor: doctor.data });
+            const user = await axios.get(`http://localhost:9000/api/user/${_id}`);
+            this.setState({ doctor: doctor.data, disabled: user.data.currentBloodDonationRequest });
         } catch (error) {
             console.log(error);
         }
     }
 
-    donateBlood = () => {
+    donateBlood = async () => {
         console.log('Blood donated');
+        try {
+            const { _id } = jwtDecode(localStorage.getItem('token'));
+            const obj = {
+                _id,
+                hospital: this.state.doctor.name
+            }
+            await axios.post(`http://localhost:9000/api/user/donateBlood/${_id}`, obj);
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     render() { 
@@ -29,7 +43,7 @@ class DonateBloodDetails extends Component {
                 <h4>Email : <span className="text-white">{email}</span></h4>
                 <h4>Contact : <span className="text-white">{contact}</span></h4>
                 <h4>Address : <span className="text-white">{address}, {city}</span></h4>
-                <Button color='purple' onClick={this.donateBlood}>Donate Blood</Button>
+                <Button color='purple' onClick={this.donateBlood} disabled={this.state.disabled}>Donate Blood</Button>
             </div>
          );
     }
