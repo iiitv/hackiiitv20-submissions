@@ -6,3 +6,6 @@ Currently working on the database part of this application. Fetching local's loc
 
 
 Adding a form to register into the application. Working on two paths i.e. registering as a user or as a local helper.
+
+
+Pincode fetched from the address of the location and search executed in the model, in order to find helping hands quickly in the area whose pincode is returned.
