@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "311606054915",
+    "project_id": "clinico-eac2e",
+    "storage_bucket": "clinico-eac2e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:311606054915:android:8dd21011ecfddaccb3fe36",
+        "android_client_info": {
+          "package_name": "com.s2ke4.clinico"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "311606054915-e2t4ddtenm1kuvd2uoo4lgmjvmttj6gj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbPQJK9mm66oRg9JdfRDltYrc6I2_ljNs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "311606054915-e2t4ddtenm1kuvd2uoo4lgmjvmttj6gj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
