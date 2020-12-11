@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 String stat;
 
 class SignButton extends StatelessWidget {
-
   final String name;
   Function toggleLoading;
   String status;
@@ -30,7 +29,7 @@ class SignButton extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.symmetric(vertical: 15,horizontal: 15),
+            padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
             child: Text(
               '$name',
               style: TextStyle(
