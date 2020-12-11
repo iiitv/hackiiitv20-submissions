@@ -1,3 +1,4 @@
+import 'package:clinico/pages/patientDashboard/hospitalCard.dart';
 import 'package:clinico/services/auth.dart';
 import 'package:flutter/material.dart';
 
@@ -7,10 +8,15 @@ class PatientDashboard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title:Text("patient")),
+      appBar: AppBar(
+        title: Text("Patient"),
+        backgroundColor: Colors.indigo,
+      ),
       body: RaisedButton(
         child: Text("Logout"),
-        onPressed: (){_auth.signOutGoogle();},
+        onPressed: () {
+          _auth.signOutGoogle();
+        },
       ),
     );
   }

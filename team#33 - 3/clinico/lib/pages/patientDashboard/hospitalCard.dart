@@ -1,3 +1,4 @@
+import 'package:clinico/pages/patientDashboard/hospitalProfile.dart';
 import 'package:flutter/material.dart';
 
 class HospitalCard extends StatelessWidget {
@@ -5,7 +6,13 @@ class HospitalCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => HospitalProfile(),
+            ));
+      },
       child: Card(
         margin: EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
         child: Padding(
@@ -21,15 +28,12 @@ class HospitalCard extends StatelessWidget {
                 ),
               ),
               SizedBox(height: pad),
-              GestureDetector(
-                child: Text(
-                  "Doctor's Name",
-                  style: TextStyle(
-                    fontSize: 14.0,
-                    color: Colors.grey[600],
-                  ),
+              Text(
+                "Doctor's Name",
+                style: TextStyle(
+                  fontSize: 18.0,
+                  color: Colors.grey[600],
                 ),
-                onTap: () {},
               ),
               SizedBox(
                 height: 2.0,
