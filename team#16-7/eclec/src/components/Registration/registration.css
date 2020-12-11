@@ -32,8 +32,33 @@ input{
 .row1
 {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    max-width:50%;
+    max-width:30%;
     margin:0 auto;
+}
+.btn 
+{
+    padding:0.4% 1%;
+    display: block;
+    margin:1% auto;
+    text-align: center;
+    border-radius: 3px;
+}
+.myimg
+{
+    width: 5%;
+    height: 5%;
+    display: block;
+    margin: auto;
+    margin-bottom: 0.5%;
+}
+.center
+{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    
 }
