@@ -14,3 +14,5 @@ Section 1: Header
 Section 2: Feeds/Posts
 
 Section 3: Show Members/Doctors.
+
+On clicking a profile, go to profile page.
