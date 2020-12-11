@@ -1,0 +1,30 @@
+*,*::before,*::after
+{
+    box-sizing: border-box;
+}
+html,body{
+    margin: 0px;
+    padding: 0px;
+    height:100%;
+    width:100%;
+}
+.left
+{
+    display: flex;
+    background-color: #FF8E71;
+    flex-direction: column;
+    height: 100vh;
+    padding:7% 0;
+    justify-content: space-around;
+    width:25%;
+}
+.btn 
+{
+background-color:#fff;
+color: #FF8E71;
+border-radius: 15px;
+padding:3% 5%;
+font-size: 130%;
+font-weight: bolder;
+
+}
