@@ -16,8 +16,8 @@ function App() {
                    <Route path="/dashboard" component={Dashboard} /> 
                </Switch>
             </div>
+
         </BrowserRouter>
-       
     </div>
   );
 }
