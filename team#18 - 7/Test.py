@@ -1,5 +1,5 @@
 # Ref : https://github.com/DeepNEU/Multi-User-Personality-Electricity-Load-Forecasting
-
+# In this file we predict the energy consumption trends so that we can compute the threshold for usage.
 # Ploting packages
 import matplotlib.pyplot as plt
 from pandas.plotting import register_matplotlib_converters
