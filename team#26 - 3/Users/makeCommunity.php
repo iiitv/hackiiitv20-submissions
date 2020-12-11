@@ -21,6 +21,7 @@ if(isset($_SESSION['login_user_connect'])){
 		
 		$c_name = $_POST['Name'];
 		$c_disc = $_POST['Disc'];
+		$c_tags = $_POST['Tags'];
 		
 		$str = addslashes("Uploads/".$name);
 		
@@ -31,7 +32,7 @@ if(isset($_SESSION['login_user_connect'])){
 		define("TITLE", "Making community");
 		include("../Commen/header.php");
 		
-		$query = "INSERT INTO community (c_name, c_disc, c_admin_id, c_image) VALUES ('$c_name', '$c_disc', $id, '$str')";
+		$query = "INSERT INTO community (c_name, c_disc, c_admin_id, c_image, tags) VALUES ('$c_name', '$c_disc', $id, '$str', '$tags')";
 			
 		if($data = $conn->query($query)){
 				

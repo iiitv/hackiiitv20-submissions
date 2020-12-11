@@ -2,14 +2,34 @@
 
 session_start();
 
-if(isset($_SESSION['signup_r']) && isset($_SESSION['signup_login'])){
+if(isset($_SESSION['signup_login']) && isset($_SESSION['login_user_connect'])){
 
-    $name = $_POST['Name'];
-    $email = $_POST['Email'];
-    $password = $_POST['Pass1'];
-
+    $email = $_POST['Eu'];
+	$password = $_POST['Password'];
+    
     require_once("Database/dbconnect_connect.php");
     
+	$query = "SELECT `role`, `dob` FROM `users` WHERE `email` = '$email'";
+	
+	if($data = $conn->query($query)){
+		
+		if($data->num_rows == 1){
+			
+			$result = $data->fetch_assoc();
+			$role = $result['role'];
+			$dob = $result['dob'];
+			
+			if($role != "" && $dob != ""){
+				
+				header("Location:login.php");
+				
+			}
+			
+		}
+		
+	}
+	
+	
     $query = "SELECT `u_id`, `u_password`, `real_name` FROM `users` WHERE email = '$email'";
     
     if($data = $conn->query($query)){
@@ -26,18 +46,13 @@ if(isset($_SESSION['signup_r']) && isset($_SESSION['signup_login'])){
                 
                 $id = $result['u_id'];
                 $name = $result['real_name'];
-                $url = base64_encode($id."&".$name);
                 
-                $url1 = base64_encode($id."&".$email."&".$name);
-                $_SESSION['login_user_connect'] = $url1;
-                //header("Location:Users/profile.php?name=".$url);
-				
 				include("Commen/headerDetails.php");
 ?>
 
 <div class="w3-content w3-light-gray" style="max-width:400px">
 <div class="w3-center w3-xlarge w3-padding-16">
-Your details
+Fill bellow details to go ahead
 </div>
 <center>
 	<div class="w3-text-red" id="details-error"></div>
@@ -66,7 +81,7 @@ DOB
 	<input type="date" id="dob" class="w3-input w3-round-xxlarge w3-border w3-hover-border-black" required>
 </div>
 <div class="w3-section w3-center w3-padding-16">
-	<button type="button" class="kel-button w3-black w3-round w3-padding w3-border-black w3-blue w3-hover-green" onclick="join('<?php echo $email ?>')">Join</button>
+	<button type="button" class="kel-button w3-black w3-round w3-padding w3-border-black w3-blue w3-hover-green" onclick="joinLogin('<?php echo $email ?>')">Join</button>
 </div>
 </form>
 </div>

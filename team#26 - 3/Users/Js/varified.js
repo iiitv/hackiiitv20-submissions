@@ -53,6 +53,7 @@ let makeCommunity = () => {
 	let name = document.getElementById("name").value;
 	let disc = document.getElementById("disc").value;
 	let image = document.getElementById("fileToUpload").value;
+	let tags = document.getElementById("tags").value;
 	
 	let error = document.getElementById("makeError");
 	let loader = document.getElementById("makeLoader");
@@ -76,6 +77,14 @@ let makeCommunity = () => {
 		return false;
 	}
 	
+	if(tags == ""){
+		
+		alert("Fill details");
+		error.innerHTML = "Fill details";
+		return false;
+		
+	}
+	
 	if(checkd.check(name)){
 		
 		error.innerHTML = "Fill proper details";
@@ -86,6 +95,13 @@ let makeCommunity = () => {
 		
 		error.innerHTML = "Fill proper details";
 		return false;
+	}
+	
+	if(checkd.check(tags)){
+		
+		error.innerHTML = "Fill proper details";
+		return false;
+		
 	}
 	else{
 		

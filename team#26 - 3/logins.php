@@ -16,28 +16,17 @@ if(isset($_SESSION['signup_r']) && isset($_SESSION['signup_login'])){
     
     if($data = $conn->query($query)){
         
-        if($data->num_rows <= 0){
-            echo "Incorrect email";
-        }
-        else if($data->num_rows == 1){
+        if($data->num_rows == 1){
             
-            $result = $data->fetch_assoc();
-            $dbpass = $result['u_password'];
+			$result = $data->fetch_assoc();
+            $id = $result['u_id'];
+            $name = $result['real_name'];
+            $url = base64_encode($id."&".$name);
             
-            if(password_verify($password, $dbpass)){
-                
-                $id = $result['u_id'];
-                $name = $result['real_name'];
-                $url = base64_encode($id."&".$name);
-                
-                $url1 = base64_encode($id."&".$email."&".$name);
-                $_SESSION['login_user_connect'] = $url1;
-                header("Location:Users/profile.php?name=".$url);
-               
-            }
-            else{
-                echo "Incorrect password";
-            }
+            $url1 = base64_encode($id."&".$email."&".$name);
+            $_SESSION['login_user_connect'] = $url1;
+            header("Location:Users/profile.php?name=".$url);
+            
             
         }
         else{

@@ -102,7 +102,11 @@ if(isset($_SESSION['login_user_connect']) && isset($_REQUEST['name'])){
 			<input type="file" name="fileToUpload" id="fileToUpload" accept="image/x-png,image/gif,image/jpeg" required>
 		</div>
 		<div class="w3-section w3-padding">
-			<textarea class="w3-input w3-border" id="disc" rows="10" name="Disc" placeholder="Describe the community" required></textarea>
+			<textarea class="w3-input w3-border" id="disc" rows="6" name="Disc" placeholder="Describe the community" required></textarea>
+		</div>
+		<div class="w3-section w3-padding">
+		Add tags seperated with comma
+			<textarea class="w3-input w3-border" id="tags" name="Tags" placeholder="Tags" required></textarea>
 		</div>
 		<div class="w3-center w3-section">
 			<button class="w3-button w3-blue kel-button" onclick="makeCommunity()">Add</button>

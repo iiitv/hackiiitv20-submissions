@@ -13,11 +13,11 @@ session_start();
 <!DOCTYPE html>
 <html>
 	<head>
-	    <title>Community | Discussion can happen here</title>
+	    <title><? echo $c_name ?>Community | Discussion can happen here</title>
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" async>
 		<link href="https://fonts.googleapis.com/css2?family=Literata&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="../Community.css">
+    <link rel="stylesheet" href="../CSS/Community.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="../CSS/kel.css">
 		<style>

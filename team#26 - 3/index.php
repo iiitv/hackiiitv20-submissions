@@ -33,7 +33,7 @@ session_start();
 <!-- First Grid: Logo & About -->
 	
 	<div class="w3-row w3-center kel-heading" style="">
-		ToConnect
+		HealthCare
 	</div>
 	<div class="w3-row" style="margin-top:50px;">
 	
@@ -49,10 +49,10 @@ session_start();
 			</center>
 			<img src="https://www.w3schools.com/w3images/avatar3.png" class="w3-margin w3-circle" alt="Person" style="width:50%">
 			<div class="w3-section">
-			  <input class="w3-input w3-round-xxlarge w3-border w3-hover-border-black" placeholder="email or username" style="width:100%;" type="text" id="eu" required>
+			  <input class="w3-input w3-round-xxlarge w3-border w3-hover-border-black" placeholder="email" style="width:100%;" type="text" id="eu" name="Email" required>
 			</div>
 			<div class="w3-section">
-			  <input type="password" class="w3-input w3-round-xxlarge w3-border w3-hover-border-black" placeholder="password" style="width:100%;" id="password" required>
+			  <input type="password" class="w3-input w3-round-xxlarge w3-border w3-hover-border-black" placeholder="password" style="width:100%;" id="password" name="Password" required>
 			</div>
 			<div class="w3-section">
 				<button type="button" onclick="loginCheck()" class="kel-button w3-black w3-round w3-padding w3-border-black w3-black">LogIn</button>
