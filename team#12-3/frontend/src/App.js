@@ -8,10 +8,12 @@ import Navbar from './components/Navbar';
 import UserRegistration from './pages/UserRegistration';
 import DoctorRegistration from './pages/DoctorRegistration';
 import Login from './pages/Login';
-import DonateBlood from './pages/DonateBlood';
+import DonateBloodHospitals from './pages/DonateBloodHospitals';
 import Logout from './pages/Logout';
+import ProtectedRoute from './utilities/ProtectedRoute';
+import DonateBloodDetails from './pages/DonateBloodDetails';
 
-function App() {
+function App(props) {
   return (
     <React.Fragment>
       <Navbar/>
@@ -20,8 +22,9 @@ function App() {
         <Route path="/userRegistration" component={UserRegistration} />
         <Route path="/doctorRegistration" component={DoctorRegistration} />
         <Route path="/login" component={Login} />
-        <Route path="/donateBlood" component={DonateBlood} />
         <Route path="/logout" component={Logout} />
+        <ProtectedRoute path="/user/donateBloodHospitals" component={DonateBloodHospitals} role="user" {...props} />
+        <ProtectedRoute path="/user/donateBlood/:id" component={DonateBloodDetails} role="user" {...props} />
         <Route path="/:path" component={NotFoundPage} />
         <Route path="/" component={Home} />
         <Redirect to='/:path' />

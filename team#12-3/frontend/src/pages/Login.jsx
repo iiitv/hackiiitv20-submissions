@@ -212,7 +212,7 @@ class Login extends Component {
                         </div>
                     </div>
                     <div className="card col-lg-5 mx-auto my-4 bg-secondary" style={{borderWidth: '3px', borderColor: 'black'}}>
-                        <h4 className="pt-3 mx-auto">Doctor Login</h4>
+                        <h4 className="pt-3 mx-auto">Hospital/Doctor Login</h4>
                         <hr className="w-50 mx-auto" />
                         <div className="card-img-top mx-auto" style={{width: '200px'}} >
                             {/* <LoginRecruiter/> */}

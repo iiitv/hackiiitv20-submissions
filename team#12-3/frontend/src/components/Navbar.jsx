@@ -50,7 +50,7 @@ class Navbar extends Component {
                                     Donate
                                     </a>
                                     <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <Link className="dropdown-item" to="/donateBlood">Donate Blood</Link>
+                                    <Link className="dropdown-item" to="/user/donateBloodHospitals">Donate Blood</Link>
                                     <Link className="dropdown-item" to="/donateOrgan">Donate Organ</Link>
                                     </div>
                                 </li>
