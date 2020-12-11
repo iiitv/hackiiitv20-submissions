@@ -15,6 +15,7 @@ class Questionnaire extends Component {
         let prob = event.target.problem;
         let val = event.target.value;
         let symptom = event.target.symptoms;
+        let previous = event.target.previous;
         this.setState({[prob]: val});  //add other variables here
     }
     render() {
