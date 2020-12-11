@@ -21,7 +21,7 @@ if(isset($_SESSION['login_user_connect'])){
 		
 		$c_name = $_POST['Name'];
 		$c_disc = $_POST['Disc'];
-		$c_tags = $_POST['Tags'];
+		$c_tags = addslashes($_POST['Tags']);
 		
 		$str = addslashes("Uploads/".$name);
 		
@@ -32,18 +32,27 @@ if(isset($_SESSION['login_user_connect'])){
 		define("TITLE", "Making community");
 		include("../Commen/header.php");
 		
-		$query = "INSERT INTO community (c_name, c_disc, c_admin_id, c_image, tags) VALUES ('$c_name', '$c_disc', $id, '$str', '$tags')";
+		$query = "INSERT INTO community (c_name, c_disc, c_admin_id, c_image, tags, count) VALUES ('$c_name', '$c_disc', $id, '$str', '$c_tags', 1)";
 			
 		if($data = $conn->query($query)){
 				
 			echo "Community created";
 			$last_id = $conn->insert_id;
-			$url = base64_encode($c_name."".$last_id);
-			header("Location:community.php?name=".$url);
+			$url = base64_encode($c_name."&".$last_id);
+			
+			$qry = "INSERT INTO community_user VALUES ($last_id, $id)";
+			
+			if($data = $conn->query($qry)){
+				header("Location:community.php?name=".$url);
+			}
+			else{
+				echo "Something went wrong";
+			}
 			
 		}
 		else{
 			echo "Something went wrong.";
+			
 		}
 		$conn->close();
 		

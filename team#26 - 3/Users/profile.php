@@ -25,62 +25,9 @@ if(isset($_SESSION['login_user_connect']) && isset($_REQUEST['name'])){
 		</style>
 	</head>
 <body>
-<div class="w3-modal" id="editun">
-    <div class="w3-modal-content w3-animate-zoom w3-card-4" style="max-width:500px">
-      <header class="w3-container w3-<?php echo "blue" ?>"> 
-        <span onclick="document.getElementById('editun').style.display='none'" 
-        class="w3-button w3-display-topright w3-xlarge">&times;</span>
-        <h2>My Account</h2>
-      </header>
-      <form class="w3-container">
 <?php
-
-    $query1 = "SELECT real_name FROM users WHERE u_id = $id";
-    
-    if($data1 = $conn->query($query1)){
-        
-        $result = $data1->fetch_assoc();
+	include("Needs/editModal.php");
 ?>
-   
-        <center>
-        	<div class="w3-text-red" id="up-error"></div>
-        	<div class="loader" id="up-loader" style="display:none"></div>
-        </center>
-        <table class="w3-table w3-margin-top">
-            <tr>
-                <td class="w3-large" style="text-align:right;vertical-align: middle;">Username: </td>
-                <td><input class="w3-border w3-input" id="u_name" value="<?php echo $result['real_name'] ?>"></td>
-            </tr>
-        
-             <tr style="margin-top:30px;">
-                <td class="w3-large" style="text-align:right;vertical-align: middle;">Current Pass: </td>
-                <td><input class="w3-border w3-input" id="pass" type="password" placeholder="Current Password"></td>
-            </tr>
-            <tr>
-                <td class="w3-large" style="text-align:right;vertical-align: middle;">New Pass: </td>
-                <td><input class="w3-border w3-input" id="newPas" type="password" placeholder="New Password"></td>
-            </tr>
-            <tr>
-                <td class="w3-large" style="text-align:right;vertical-align: middle;">Again new Pass: </td>
-                <td><input class="w3-border w3-input" id="newAga" type="password" placeholder="New Password Again"></td>
-            </tr> 
-            
-        </table>
-<?php
-    }
-    else{
-        echo "something went wrong";
-    }
-?>
-        <hr>
-        <button type="button" class="w3-button w3-right w3-margin-bottom w3-margin-left w3-border w3-round w3-<?php echo "blue" ?>" onclick="updateProfile()"><i class="fa fa-pencil-square-o"></i> Update</button>
-        <button type="button" onclick="document.getElementById('editun').style.display='none'" class="w3-button w3-right w3-margin-bottom w3-border w3-round"><i class="fa fa-times"></i> Cancel</button>
-        
-      </form>
-      
-    </div>
-</div>
-
 <div class="w3-modal" id="createCommunity">
 	<div class="w3-modal-content w3-animate-zoom w3-card-4" style="max-width:500px">
       <header class="w3-container"> 
@@ -133,34 +80,48 @@ include("../Commen/lobbyheader.php")
     </a>
 </div>
 </div>
+<hr style="border:1px solid gray">
+<center>
+<div class="" id="myCommunities">
+<h2>
+My Communities
+</h2>
+<?php
+$qry = "SELECT DISTINCT c_name, c_disc, c_image, community.c_id FROM community INNER JOIN community_user WHERE community_user.u_id = $id";
 
-<div class="w3-row w3-center" id="myCommunities">
-<div class='w3-padding w3-animate-zoom w3-quarter'>
-    <a onclick="document.getElementById('editun').style.display='block'" class="kel-hover-2" style="text-decoration:none">
-    <div class='w3-light-gray w3-padding-32 w3-text-blue w3-xlarge'>
-    <div><i class="w3-jumbo"></i></div>
-    <div>Cancer</div>
-    </div>
-    </a>
+if($data = $conn->query($qry)){
+	
+	if($data->num_rows == 0){
+		
+	}
+	else{
+		while($result = $data->fetch_assoc()){
+?>
+<div class='w3-padding w3-animate-zoom w3-light-gray w3-margin-top' style="display:inline-block; width:400px;">
+<?php
+$c_id = $result['c_id'];
+$c_name = $result['c_name'];
+$url = base64_encode($c_name."&".$c_id);
+?>
+	<a href="community.php?name=<?php echo $url ?>" style="text-decoration:none;cursor:pointer">
+	<div class="w3-container w3-margin-bottom">
+		<div style="background-image:url('<?php echo $result['c_image'] ?>');width:100%;cursor:pointer;padding-top:200px" alt="<?php echo $result['c_name'] ?>" class="">
+		</div>
+		<div class="w3-container w3-white">
+			<p><b><?php echo $c_name ?></b></p>
+			<p style="min-height:100px;max-height:100px;overflow:hidden"><?php echo $result['c_disc'] ?></p>
+		</div>
+	</div>
+	</a>
+	
 </div>
-<div class='w3-padding w3-animate-zoom w3-quarter'>
-    <a onclick="document.getElementById('editun').style.display='block'" class="kel-hover-2" style="text-decoration:none">
-    <div class='w3-light-gray w3-padding-32 w3-text-blue w3-xlarge'>
-    <div><i class="3-jumbo"></i></div>
-    <div>Covid</div>
-    </div>
-    </a>
+<?php
+		}
+	}
+}
+?>
 </div>
-<div class='w3-padding w3-animate-zoom w3-quarter'>
-    <a onclick="document.getElementById('editun').style.display='block'" class="kel-hover-2" style="text-decoration:none">
-    <div class='w3-light-gray w3-padding-32 w3-text-blue w3-xlarge'>
-    <div><i class="w3-jumbo"></i></div>
-    <div>Cancer</div>
-    </div>
-    </a>
-</div>
-</div>
-
+</center>
 </div>
 </center>
 <script src="../Js/check.js"></script>
