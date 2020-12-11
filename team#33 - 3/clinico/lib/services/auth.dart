@@ -1,22 +1,14 @@
 import 'package:clinico/model/user.dart';
-import 'package:clinico/pages/signin/signinbutton.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/foundation.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthServices {
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = new GoogleSignIn();
-  final FirebaseFirestore _db = FirebaseFirestore.instance;
-  String status;
-  AuthServices({this.status});
-
-
 
   MyUser _userFromFirebase(User user){
-
-      return user!=null?MyUser(uid:user.uid,photoURL: user.photoURL,displayName: user.displayName,email: user.email,status: status):null;
+      return user!=null?MyUser(uid:user.uid,photoURL: user.photoURL,displayName: user.displayName,email: user.email):null;
   }
 
   //stream for auth state change
