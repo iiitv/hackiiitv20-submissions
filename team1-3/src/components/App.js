@@ -320,6 +320,32 @@ class App extends Component {
             <br />
             <br />
             {/* 2  */}
+
+            <form onSubmit={this.createDoctor}>
+              <h3>CreateDoctor</h3>
+              <div class="form-group">
+                Doctor's Name:
+                <input
+                  type="text"
+                  name="createDoctorname"
+                  class="form-control"
+                  placeholder="Enter Name*"
+                  value={createDoctorname}
+                  onChange={this.changeHandler}
+                />
+              </div>
+
+              <div class="form-group">
+                <button
+                  class="btn btn-lg btn-primary btn-block text-uppercase"
+                  type="submit"
+                >
+                  Create
+                </button>
+              </div>
+            </form>
+
+            
             <form onSubmit={this.verifyDoctor}>
               <h3>VerifyDoctor</h3>
               <div class="form-group">
@@ -347,57 +373,7 @@ class App extends Component {
             <br />
             <br />
             {/* 3 */}
-            <h1 className="text-center">Public Section</h1>
-            <form onSubmit={this.doctorDetails}>
-              <h3>Doctor's Details</h3>
-              <div class="form-group">
-                Doctor's address:
-                <input
-                  type="text"
-                  name="doctorDetailsaddr"
-                  class="form-control"
-                  placeholder="Enter Address*"
-                  value={doctorDetailsaddr}
-                  onChange={this.changeHandler}
-                />
-              </div>
-
-              <div class="form-group">
-                <button
-                  class="btn btn-lg btn-primary btn-block text-uppercase"
-                  type="submit"
-                >
-                  Check
-                </button>
-              </div>
-            </form>
-            <br />
-            <br />
-            <br />
-            {/* 4 */}
-            <form onSubmit={this.patientDetails}>
-              <h3>Patient's Details</h3>
-              <div class="form-group">
-                Patient's address:
-                <input
-                  type="text"
-                  class="form-control"
-                  name="patientDetailsaddr"
-                  placeholder="Enter Address*"
-                  value={patientDetailsaddr}
-                  onChange={this.changeHandler}
-                />
-              </div>
-
-              <div class="form-group">
-                <button
-                  class="btn btn-lg btn-primary btn-block text-uppercase"
-                  type="submit"
-                >
-                  Check
-                </button>
-              </div>
-            </form>
+            
           </div>
         </div>
         <br />
@@ -407,32 +383,6 @@ class App extends Component {
         <div>
           <h1 className="text-center">Doctor Section</h1>
           <div className="container col-5 justify-content-center">
-            <br />
-            <br />
-            {/* 1 */}
-            <form onSubmit={this.createDoctor}>
-              <h3>CreateDoctor</h3>
-              <div class="form-group">
-                Doctor's Name:
-                <input
-                  type="text"
-                  name="createDoctorname"
-                  class="form-control"
-                  placeholder="Enter Name*"
-                  value={createDoctorname}
-                  onChange={this.changeHandler}
-                />
-              </div>
-
-              <div class="form-group">
-                <button
-                  class="btn btn-lg btn-primary btn-block text-uppercase"
-                  type="submit"
-                >
-                  Create
-                </button>
-              </div>
-            </form>
             <br />
             <br />
             <br />
@@ -562,6 +512,61 @@ class App extends Component {
             <br />
             <br />
             <br />
+
+            <h1 className="text-center">Public Section</h1>
+            <br/>
+            <br/>
+            <br/>
+            <form onSubmit={this.doctorDetails}>
+              <h3>Doctor's Details</h3>
+              <div class="form-group">
+                Doctor's address:
+                <input
+                  type="text"
+                  name="doctorDetailsaddr"
+                  class="form-control"
+                  placeholder="Enter Address*"
+                  value={doctorDetailsaddr}
+                  onChange={this.changeHandler}
+                />
+              </div>
+
+              <div class="form-group">
+                <button
+                  class="btn btn-lg btn-primary btn-block text-uppercase"
+                  type="submit"
+                >
+                  Check
+                </button>
+              </div>
+            </form>
+            <br />
+            <br />
+            <br />
+            {/* 4 */}
+            <form onSubmit={this.patientDetails}>
+              <h3>Patient's Details</h3>
+              <div class="form-group">
+                Patient's address:
+                <input
+                  type="text"
+                  class="form-control"
+                  name="patientDetailsaddr"
+                  placeholder="Enter Address*"
+                  value={patientDetailsaddr}
+                  onChange={this.changeHandler}
+                />
+              </div>
+
+              <div class="form-group">
+                <button
+                  class="btn btn-lg btn-primary btn-block text-uppercase"
+                  type="submit"
+                >
+                  Check
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </React.Fragment>
