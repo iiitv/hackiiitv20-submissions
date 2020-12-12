@@ -1,0 +1,11 @@
+main{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+}
+/* .left__contain{
+    width: 25%;
+}
+.right__contain{
+    width: 75%;
+} */

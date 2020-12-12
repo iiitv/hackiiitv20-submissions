@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.left {
+  display: flex;
+  background-color: #ff8e71;
+  flex-direction: column;
+  height: 100vh;
+  padding: 7% 0;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+}
+.compare__btn {
+  padding: 5px 40px;
+  font-size: 130%;
+  color: #ff8e71;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
+}

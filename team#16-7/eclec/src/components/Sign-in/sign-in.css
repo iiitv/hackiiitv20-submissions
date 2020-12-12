@@ -1,0 +1,31 @@
+.signin__form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%,#ff8e71), color-stop(50%,white), color-stop(0%,#888));
+}
+.logo__img{
+  height: 150px;
+  width: 150px;
+}
+
+.login__in {
+  width: 30%;
+  border: 1px solid #888;
+  height: 6vh;
+  font-family: "montserrat";
+  margin-top:1%;
+}
+.submit__btn{
+  background-color: #ff8e71;
+  padding: 5px 20px;
+  border-radius: 10px;
+  margin-top:30%;
+  color: white;
+  font-size:20px;
+  font-family: "montserrat";
+  border: none;
+}
