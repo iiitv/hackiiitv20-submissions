@@ -4,9 +4,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-
 import './homePage.dart';
 import '../widgets/auth_forms_widget.dart';
+// import 'package:geoflutterfire/geoflutterfire.dart';
 
 class AuthScreen extends StatefulWidget {
   static const String routeName = '/authscreen';
@@ -15,13 +15,13 @@ class AuthScreen extends StatefulWidget {
 }
 
 class _AuthScreenState extends State<AuthScreen> {
+  UserCredential authResult;
   final _auth = FirebaseAuth.instance;
   final _scaffoldKey = GlobalKey<ScaffoldState>();
   bool _isLoading = false;
 
   void _authFormSubmit(String userName, String password, String email,
       File imageFile, bool isLogin) async {
-    UserCredential authResult;
     try {
       setState(() {
         _isLoading = true;
@@ -41,13 +41,14 @@ class _AuthScreenState extends State<AuthScreen> {
 
         // await ref.putFile(imageFile);
         // final url=await ref.getDownloadURL();
-
+        // GeoFirePoint point = geo.point(latitude: lat, longitude: lng);
         await FirebaseFirestore.instance
-            .collection('users')
+            .collection('user')
             .doc(authResult.user.uid)
             .set({
           'username': userName,
           'email': email,
+
           // 'imageUrl':url,
         });
       }

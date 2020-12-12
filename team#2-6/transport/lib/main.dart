@@ -11,6 +11,7 @@ void main() {
   WidgetsFlutterBinding.ensureInitialized();
   // Firebase.initializeApp();
   runApp(MyApp());
+  
 }
 
 class MyApp extends StatelessWidget {

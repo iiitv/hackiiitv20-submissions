@@ -31,6 +31,7 @@ dependencies:
   google_sign_in: ^4.5.6
   geolocation: ^1.1.2
   flutter_map: ^0.10.1+1
+  geoflutterfire: ^2.2.1
 
 dev_dependencies:
   flutter_test:
