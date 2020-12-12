@@ -13,18 +13,7 @@ function RightPart() {
         priority:""
     };
     const [options,setoptions]=useState(default1);
-    const [arr1,setarr1]=useState([{
-        name:"",
-        min:"",
-        max:"",
-        power:"",
-        cost:""
-    }]);
-    const defaultOutput = {
-        name:"",
-        time:""
-    }
-    const [outputFormat,setoutputFormat] = useState(defaultOutput)
+    // const [outputFormat,setoutputFormat] = useState(defaultOutput)
     const [output,setOutput] = useState([{}]);
     function handleChange(event)
     {
@@ -59,34 +48,33 @@ function RightPart() {
         var days=0.03
         return days*power*hrs;
     }
-    function handleOutput(){
-        //avg of previous bills 
+    function handleOutput(event){
         var prevBillAvg = 546;
         var baseCharge = 45;
-        //per day bill cost 
         var perDayCost = (prevBillAvg-baseCharge)/30;
-        //energy consumption perday
         var perDayConsumptionUnits = (perDayCost/3);
-        //unit = consumption/1000
         var perDayConsumption = perDayConsumptionUnits*1000;
         var AppliancesNo = arr.length;
         var firstBreak = AppliancesNo/3;
         var secondBreak = 2*firstBreak;
-        // arr.map((value,i)=>{
-        //     if(i<firstBreak){
-        //         value.time = ((value.min+value.max)/2)-10;
-        //     }
-        //     else if(i>firstBreak && i<secondBreak){
-        //         value.time = ((value.min+value.max)/2)-20;
-        //     }
-        //     else{
-        //         value.time = ((value.min+value.max)/2)-30;
-        //     }
-        // })
-        console.log(arr);
-
-        var dis = document.getElementById('output__table');
-        dis.style.display="block";
+        arr.map((value,i)=>{
+            var temp="";
+            const prop=value.time;
+            console.log(prop);
+            if(i<firstBreak){
+                temp = ((value.min+value.max)/2)-10;
+            }
+            else if(i>firstBreak && i<secondBreak){
+                temp = ((value.min+value.max)/2)-20;
+            }
+            else{
+                temp = ((value.min+value.max)/2)-30;
+            }
+            setarr(
+                (prevvalue)=>{return [...prevvalue]}
+            );
+        })
+    
     }
     return (
         <div>
@@ -125,9 +113,8 @@ function RightPart() {
                 })
             }
         </table>
-        <button type="submit" className="btn">Calculate</button>
         </div>
-        <div className="page">
+        {/* <div className="page"> */}
         
             {/* {arr.map((value,i)=>{
                    

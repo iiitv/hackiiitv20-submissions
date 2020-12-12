@@ -37,7 +37,6 @@
 }
 .page
 {
-    height:100vh;
     font-family: "montserrat";
 }
 th{
@@ -65,4 +64,8 @@ td{
 .output__table
 {
     display: none;
+}
+#ouput_table
+{
+    display: block;
 }
