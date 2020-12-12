@@ -12,8 +12,8 @@ function App() {
             <div>
                <Switch>
                    <Route exact path='/' component={Home} />
-                  {/* <Route path='/login' component={Login} />    
-                   <Route path='/Sign_up' component={Registration} /> */}
+                   <Route exact path="/login" component={Login} />
+                   <Route excat path ="/Sign_up" component={Registration} />
                    <Route path="/dashboard" component={Dashboard} />
                    <Route path="/comparison" component={Compare} /> 
                </Switch>

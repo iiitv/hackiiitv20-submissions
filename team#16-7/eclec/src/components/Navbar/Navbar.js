@@ -6,7 +6,9 @@ import "./Navbar.css"
     render() {
         return (
             <div className="nav">
-            <ul>
+
+            <ul> 
+            {/* <img  className="logo__img" src="./Images/eclec.png"></img> */}
           <NavLink exact activeClassName="current" to="/">
             <li>
               <button className="home__btn">Home</button>
