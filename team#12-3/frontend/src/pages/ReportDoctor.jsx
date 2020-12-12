@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import jwtDecode from 'jwt-decode';
 import { Input } from 'semantic-ui-react';
+import {ToastContainer, toast} from 'react-toastify';
 
 class ReportDoctor extends Component {
     state = { 
@@ -27,19 +28,19 @@ class ReportDoctor extends Component {
 
         const report = {...this.state.report};
         report[name] = value;
-        this.setState({ report, error });
+        this.setState({ report });
     }
 
     doSubmit = async (e) => {
         e.preventDefault();
         try {
             const {_id} = jwtDecode(localStorage.getItem('token'));
-            const report = {
+            const obj = {
                 doctorName: this.state.report.doctor,
                 userId: _id, 
                 reason: this.state.report.reason
             };
-            const response = await axios.post('http://localhost:9000/api/report/', report);
+            const response = await axios.post('http://localhost:9000/api/report/addReport', obj);
             toast.success("Hospital/Doctor Reported");
             const report = {
                 doctor: '',
@@ -56,6 +57,7 @@ class ReportDoctor extends Component {
     render() { 
         return ( 
             <div className="container my-4">
+                <ToastContainer/>
                 <h2 className="text-center mb-4">Report Hospital/Doctor</h2>
     
                 <form className="mx-auto" style={{width: '350px'}} onSubmit={this.doSubmit}>
