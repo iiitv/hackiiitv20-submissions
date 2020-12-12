@@ -12,9 +12,9 @@ mainFrame = Tk()
 frame1 = LabelFrame(mainFrame, text = "HealthCare", padx = 30, pady = 30)
 frame1.pack()
 
-# mainImage = ImageTk.PhotoImage(Image.open("a.PNG"))
-# labelImg = Label(frame1, image = mainImage)
-# labelImg.pack()
+mainImage = ImageTk.PhotoImage(Image.open("a.jpeg"))
+labelImg = Label(frame1, image = mainImage)
+labelImg.pack()
 
 # this function is for finding the deficients(if it is even a word)...
 
@@ -42,19 +42,19 @@ Def2 = {
     }
 
 Def3 = {
-    "Vitamin A": ["Apple","Ball","Balls"],
-    "Vitamin B":["Apple","Ball","Balls"],
-    "Vitamin C":["Apple","Ball","Balls"],
-    "Vitamin D":["Apple","Ball","Balls"],
-    "Iodine":["Apple","Ball","Balls"],
-    "Iron":["Apple","Ball","Balls"]
+    "Vitamin A": ["Diary Products","Carrot","Fish",'Brocolli','Chicken'],
+    "Vitamin B":["Milk","Egg","Red Meat","Spinach","Kale"],
+    "Vitamin C":["Citrus Fruit","Peppers","Kiwi","Strawberry","Sprouts"],
+    "Vitamin D":["Light","Salmon","Mushroom","Tuna","Egg yolk"],
+    "Iodine":["Iodinzed Salt","Cord","Dairy products","Tuna","Banana"],
+    "Iron":["Spinach","Beans","Tofu","Dried fruit","baked Potatoes"]
 }
 def print_def(out):
     newWin = Tk()
-    inframe7 = LabelFrame(newWin, text = "Summary", padx = 30, pady = 30)
+    inframe7 = LabelFrame(newWin, text = "Recommended Food", padx = 30, pady = 30)
 
     for i in out:
-        label1 = Label(inframe7, text = "Deficiency :"+str(i)+"\n1."+str(Def3[str(i)][0])+"\n2."+str(Def3[str(i)][1])+"\n3."+str(Def3[str(i)][2]))
+        label1 = Label(inframe7, text = "Deficiency :"+str(i)+"\n1."+str(Def3[str(i)][0])+"\n2."+str(Def3[str(i)][1])+"\n3."+str(Def3[str(i)][2])+"\n4."+str(Def3[str(i)][3]))
         label1.config(font = (60))
         label1.pack()
     inframe7.pack()
@@ -95,8 +95,36 @@ def store(entry1, entry2, entry3, entry4):
     inlabel4.pack()
 
     out = findDef("".join(entry1.lower().split()), "".join(entry2.lower().split()), "".join(entry3.lower().split()), "".join(entry4.lower().split()))
+    inframe7 = LabelFrame(newWin, text = "Possible symptoms are due to lack of following...")
+    mLabel = Label(inframe7, text = "Results based on your input")
+    mLabel.pack()
+    lenc = 0
+    if(lenc < len(out)):
+        lenc += 1
+        labelVit1 = Label(inframe7, text = "1:  " + str(out[0]))
+        labelVit1.pack()
+    if(lenc < len(out)):
+        lenc += 1
+        labelVit2 = Label(inframe7, text = "2:  " + str(out[1]))
+        labelVit2.pack()
+    if(lenc < len(out)):
+        lenc += 1
+        labelVit3 = Label(inframe7, text = "3:  " + str(out[2]))
+        labelVit3.pack()
+    if(lenc < len(out)):
+        lenc += 1
+        labelVit4 = Label(inframe7, text = "4:  " + str(out[3]))
+        labelVit1.pack()
+
     inframe6.pack()
-    newWin.geometry("500x500")
+    inframe7.pack()
+    if len(out) < 4:
+        inframe8 = LabelFrame(newWin, text = "WARNING!")
+        labelnull = Label(inframe8, text = "If you don't seem to find your symptoms," + 
+        "please contact a specialist in case of avoiding fatalitties!")
+        labelnull.pack()
+        inframe8.pack()
+    newWin.geometry("700x700")
     print_def(out)
         
 
@@ -125,7 +153,7 @@ def checkStore():
     labelH = Label(inframe0, text = "Scurvy")
     labelH.grid(row = 2, column = 3)
     inframe0.pack()
-
+    
     inframe1 = LabelFrame(storeFrame, text = "Symptom 1", padx = 30, pady = 30)
     entry1 = Entry(inframe1, width = 30)
     entry1.pack()
@@ -151,7 +179,6 @@ def checkStore():
     but3.config(width = 20, height = 2, font = (30))
     but3.pack()
     inframe5.pack()
-
     storeFrame.geometry("700x700")
     storeFrame.mainloop
 
