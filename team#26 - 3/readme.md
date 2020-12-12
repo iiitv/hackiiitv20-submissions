@@ -11,6 +11,8 @@ Key functionalities:
 - Add friend request to fellow community members
 - Chat with community members
 And some other basics...
+<br>
+<b>Chat scripts work on end to end encyption with private key encryption.</b>
 
 Template images.
 
