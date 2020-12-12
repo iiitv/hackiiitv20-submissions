@@ -10,6 +10,7 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -45,7 +46,7 @@ class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
 
         ((ViewHolder) holder).youtubeWebEmbed.setWebChromeClient(new WebChromeClient());
         ((ViewHolder) holder).youtubeWebEmbed.getSettings().setPluginState(WebSettings.PluginState.ON);
@@ -71,6 +72,17 @@ class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ViewHolder> {
             ((ViewHolder) holder).youtubeWebEmbed.loadDataWithBaseURL("", html, mimeType, encoding, "");
         }
 
+        ((ViewHolder) holder).fullscreenBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context,VideoFullScreenActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("vId",videoId.get(position));
+                intent.putExtra("vType",videoIdT.get(position));
+                context.startActivity(intent);
+            }
+        });
+
     }
 
     public String getHTML(String vid)
@@ -91,7 +103,7 @@ class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ViewHolder> {
                 + "src=\"http://www.youtube.com/embed/"
                 + vid
                 + "?controls=1&showinfo=0&showsearch=0&modestbranding=0" +
-                "&autoplay=1&fs=1&vq=hd720\" " + "frameborder=\"0\" allowfullscreen></iframe>"
+                "&autoplay=1&fs=1&vq=hd720\" " + "frameborder=\"0\" allow=\"encrpted-media;picture-in-picture\" allowfullscreen></iframe>"
                 + "</body>"
                 + "</html>";
 
@@ -115,7 +127,7 @@ class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ViewHolder> {
                 + "\" "
                 + "src=\"http://www.youtube.com/embed/videoseries?list="
                 + vid.trim()
-                + "\" frameborder=\"0\" allow=\"autoplay;encrpted-media\" allowfullscreen></iframe>"
+                + "\" frameborder=\"0\" allow=\"autoplay;encrpted-media;picture-in-picture\" allowfullscreen></iframe>"
                 + "</body>"
                 + "</html>";
 
@@ -142,6 +154,7 @@ class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ViewHolder> {
 
         WebView youtubeWebEmbed;
         CardView cardView;
+        Button fullscreenBtn;
 
 
         public ViewHolder(@NonNull View itemView) {
@@ -149,6 +162,7 @@ class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ViewHolder> {
 
             cardView = itemView.findViewById(R.id.cardView_video);
             youtubeWebEmbed = itemView.findViewById(R.id.youtubeWebembedItem);
+            fullscreenBtn = itemView.findViewById(R.id.fullscreenBtn);
 
 
         }
@@ -156,7 +170,7 @@ class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ViewHolder> {
 
     }
 
-    
+
 
 
 }

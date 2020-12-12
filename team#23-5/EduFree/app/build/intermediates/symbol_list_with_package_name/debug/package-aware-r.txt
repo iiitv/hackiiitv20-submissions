@@ -892,6 +892,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable app_logo
+drawable black_05dp_square_border
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -900,6 +901,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable button_background
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1096,6 +1098,8 @@ id fitXY
 id flip
 id focusCrop
 id forever
+id fullWebView
+id fullscreenBtn
 id gone
 id graph
 id graph_wrap
@@ -1230,7 +1234,6 @@ id toolbar
 id top
 id topPanel
 id topicRecycler
-id topic_text
 id transitionToEnd
 id transitionToStart
 id triangle
@@ -1294,6 +1297,7 @@ layout activity_important
 layout activity_main
 layout activity_sign_new_user
 layout activity_topic
+layout activity_video_full_screen
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog

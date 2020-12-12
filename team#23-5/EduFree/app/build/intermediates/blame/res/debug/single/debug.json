@@ -40,6 +40,10 @@
         "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\build\\intermediates\\res\\merged\\debug\\drawable_button_background.xml.flat",
+        "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\drawable\\button_background.xml"
+    },
+    {
         "merged": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
         "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
@@ -100,6 +104,10 @@
         "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
     },
     {
+        "merged": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_video_full_screen.xml.flat",
+        "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\layout\\activity_video_full_screen.xml"
+    },
+    {
         "merged": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\build\\intermediates\\res\\merged\\debug\\layout_website_item.xml.flat",
         "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\layout\\website_item.xml"
     },
@@ -110,6 +118,10 @@
     {
         "merged": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\build\\intermediates\\res\\merged\\debug\\drawable_black_05dp_square_border.xml.flat",
+        "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\drawable\\black_05dp_square_border.xml"
     },
     {
         "merged": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_app_logo.jpg.flat",

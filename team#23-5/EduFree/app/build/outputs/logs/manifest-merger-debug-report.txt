@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-39:12
+ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-41:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\320ba95cd82781ff3cb949a64a3a71bd\constraintlayout-2.0.4\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\a9a5717d0f42ca3c4a9743c6aaec4980\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-ads:19.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e8b0d19d33ad613eebe2acc3aed9aa5c\jetified-firebase-ads-19.6.0\AndroidManifest.xml:2:1-9:12
@@ -92,20 +92,20 @@ MERGED from [com.facebook.fresco:imagepipeline-base:2.3.0] C:\Users\hp\.gradle\c
 MERGED from [com.facebook.fresco:fbcore:2.3.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\ce42ca20b6cae55f8b88292958f3b9a4\jetified-fbcore-2.3.0\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.soloader:soloader:0.9.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\5aecfb23ce82ce10d9315d0a17f61ce4\jetified-soloader-0.9.0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.android.gms:play-services-ads-base:19.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\6659d1c072c1416c262f21c8985f77ec\jetified-play-services-ads-base-19.6.0\AndroidManifest.xml:2:1-9:12
-INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-39:12
-INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-39:12
+INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-41:12
 	package
 		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:3:5-23
 		INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml
 		INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml
-		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-39:12
+		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-41:12
 		INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml
-		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-39:12
+		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:1-41:12
 		INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:2:11-69
@@ -172,7 +172,7 @@ ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\
 	android:name
 		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:10:22-73
 application
-ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:12:5-37:19
+ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:12:5-39:19
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\320ba95cd82781ff3cb949a64a3a71bd\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\320ba95cd82781ff3cb949a64a3a71bd\constraintlayout-2.0.4\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-ads:19.6.0] C:\Users\hp\.gradle\caches\transforms-2\files-2.1\e8b0d19d33ad613eebe2acc3aed9aa5c\jetified-firebase-ads-19.6.0\AndroidManifest.xml:7:5-20
@@ -251,16 +251,22 @@ MERGED from [com.google.android.gms:play-services-ads-base:19.6.0] C:\Users\hp\.
 		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:18:9-40
 	android:usesCleartextTraffic
 		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:19:9-44
-activity#edu.free.TopicActivity
-ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:21:9-50
+activity#edu.free.VideoFullScreenActivity
+ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:20:9-21:52
+	android:screenOrientation
+		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:21:13-50
 	android:name
-		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:21:19-48
+		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:20:19-58
+activity#edu.free.TopicActivity
+ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:22:9-51
+	android:name
+		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:22:19-48
 activity#edu.free.ImportantActivity
-ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:23:9-54
+ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:23:9-55
 	android:name
 		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:23:19-52
 activity#edu.free.CourseActivity
-ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:24:9-51
+ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:24:9-52
 	android:name
 		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:24:19-49
 activity#edu.free.HomeActivity
@@ -272,25 +278,25 @@ ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\
 	android:name
 		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:26:19-54
 meta-data#com.google.android.gms.ads.APPLICATION_ID
-ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:27:9-29:70
+ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:28:9-30:70
 	android:value
-		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:29:13-67
+		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:30:13-67
 	android:name
-		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:28:13-69
+		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:29:13-69
 activity#edu.free.MainActivity
-ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:30:9-36:20
+ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:32:9-38:20
 	android:name
-		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:30:19-47
+		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:32:19-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:31:13-35:29
+ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:33:13-37:29
 action#android.intent.action.MAIN
-ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:32:17-69
+ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:34:17-69
 	android:name
-		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:32:25-66
+		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:34:25-66
 category#android.intent.category.LAUNCHER
-ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:34:17-77
+ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:36:17-77
 	android:name
-		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:34:27-74
+		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:36:27-74
 uses-sdk
 INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml

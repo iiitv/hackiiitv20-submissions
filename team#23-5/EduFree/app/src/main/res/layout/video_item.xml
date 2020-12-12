@@ -20,8 +20,18 @@
             android:layout_width="match_parent"
             android:layout_height="220dp"
             android:visibility="visible"
-            android:scrollbars="horizontal"
+            android:scrollbars="vertical"
             tools:ignore="NotSibling" />
+
+        <Button
+            android:id="@+id/fullscreenBtn"
+            android:layout_below="@id/youtubeWebembedItem"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/black_05dp_square_border"
+            android:text="Click to fullscreen"
+            android:elevation="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
 
     </RelativeLayout>
