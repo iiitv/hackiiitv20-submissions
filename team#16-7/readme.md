@@ -1,8 +1,10 @@
   # Eclec
 
-Foobar is a Python library for dealing with word pluralization.
+A web-app to measure up your power usage as well as save some bucks..
 
-__Theme__ :  Smart power-grid management system
+  # Theme 
+
+  Smart power-grid management system
  
 __Overview__: it is basically a website having some computational power to provide users with information regarding their household energy demands.
 
