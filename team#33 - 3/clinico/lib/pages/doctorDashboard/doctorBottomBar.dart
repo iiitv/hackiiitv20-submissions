@@ -62,7 +62,8 @@ class _DoctorBottomState extends State<DoctorBottom> {
               icon: Icon(Icons.notifications_active),
               title: Text("Notifications")),
           BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle), title: Text("User")),
+              icon: Icon(Icons.local_hospital),
+              title: Text("Appointment Counter")),
         ],
       ),
     );
