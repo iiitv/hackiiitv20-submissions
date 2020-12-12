@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="registeration.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body>
+    
+<div class="container">
+  <form>
+    <div class="row">
+      <h4>Account</h4>
+      <div class="input-group input-group-icon">
+        <input id="name" type="text" placeholder="Full Name"/>
+        <div class="input-icon"><i class="fa fa-user"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="email" placeholder="Email Adress"/>
+        <div class="input-icon"><i class="fa fa-envelope"></i></div>
+      </div>
+      <div class="input-group input-group-icon">
+        <input id="password" type="password" placeholder="Password"/>
+        <div class="input-icon"><i class="fa fa-key"></i></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-half">
+        <h4>Date of Birth</h4>
+        <div class="input-group">
+          <div class="col-third">
+            <input type="text" placeholder="DD"/>
+          </div>
+          <div class="col-third">
+            <input type="text" placeholder="MM"/>
+          </div>
+          <div class="col-third">
+            <input type="text" placeholder="YYYY"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-half">
+        <h4>Gender</h4>
+        <div class="input-group">
+          <input type="radio" name="gender" value="male" id="gender-male"/>
+          <label for="gender-male">Male</label>
+          <input type="radio" name="gender" value="female" id="gender-female"/>
+          <label for="gender-female">Female</label>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <h4>Contact Details
+          <input id="phone" type="text" placeholder="Phone"/>
+          <input id="ephone" type="text" placeholder="Emergency Phone"/>
+        </h4>
+      </div>
+    </div>
+    <div class="row">
+      <h4>Aadhaar Number
+        <input id="aadhaar" type="text" placeholder="Aadhaar No."/>
+      </h4>
+    </div>
+    <div class="row">
+      <h4>Payment Details</h4>
+      <div class="input-group">
+        <input type="radio" name="payment-method" value="card" id="payment-method-card" checked="true"/>
+        <label for="payment-method-card"><span><i class="fa fa-cc-visa"></i>Credit Card</span></label>
+        <input type="radio" name="payment-method" value="paypal" id="payment-method-paypal"/>
+        <label for="payment-method-paypal"> <span><i class="fa fa-cc-paypal"></i>Paypal</span></label>
+      </div>
+      <div class="input-group input-group-icon">
+        <input type="text" placeholder="Card Number"/>
+        <div class="input-icon"><i class="fa fa-credit-card"></i></div>
+      </div>
+      <div class="col-half">
+        <div class="input-group input-group-icon">
+          <input type="text" placeholder="Card CVC"/>
+          <div class="input-icon"><i class="fa fa-user"></i></div>
+        </div>
+      </div>
+      <div class="col-half">
+        <div class="input-group">
+          <select>
+            <option>01 Jan</option>
+            <option>02 Jan</option>
+          </select>
+          <select>
+            <option>2015</option>
+            <option>2016</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+  </form>     
+</div>  
+    <div class="row">
+      <h4>Terms and Conditions</h4>
+      <div class="input-group">
+        <input type="checkbox" id="terms"/>
+        <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
+        <centre><button id="register" onclick="myfunction()" type="submit" class="registerbtn"><strong><h4>Register</h4></strong></button></centre>
+      </div>
+    </div>
+  </form>
+
+    <h4>Login Page</h4><br>    
+    <div class="login">    
+    <form id="login" method="get" action="login.php">    
+        <label><b><h4>User Name</h4>     
+        </b>    
+        </label>    
+        <input type="text" name="Uname" id="name" placeholder="Name">    
+        <br><br>    
+        <label><b><h4>Password  </h4>   
+        </b>    
+        </label>    
+        <input type="Password" name="Pass" id="password" placeholder="Password">    
+        <br><br>    
+        <input id="login" onclick="valid()" type="button" name="log"  value="Log In Here">       
+        <br><br>    
+        <input type="checkbox" id="check">    
+        <span>Remember me</span>    
+        <br><br>    
+          
+    
+</div>
+<script src="script.js"></script>
+
+  </body> 
+</html>
