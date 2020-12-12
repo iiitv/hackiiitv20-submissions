@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import "./style.css";
 function RightPart() {
     const [arr,setarr]=useState([{}]);
+    const [timearr,setTimearray] =  useState([{}]);
     const default1={
         name:"",
         min:"",
@@ -56,17 +57,25 @@ function RightPart() {
         var AppliancesNo = arr.length;
         var firstBreak = AppliancesNo/3;
         var secondBreak = 2*firstBreak;
-        // arr.map((value,i)=>{
-        //     if(i<firstBreak){
-        //         value.time = ((value.min+value.max)/2)-10;
-        //     }
-        //     else if(i>firstBreak && i<secondBreak){
-        //         value.time = ((value.min+value.max)/2)-20;
-        //     }
-        //     else{
-        //         value.time = ((value.min+value.max)/2)-30;
-        //     }
+        var timeArray = [];
+        arr.map((value,i)=>{
+            if(i<firstBreak){
+               timeArray.push((value.min+value.max)/2-10)
+            }
+            else if(i>firstBreak && i<secondBreak){
+                timeArray.push((value.min+value.max)/2-10)
+            }
+            else{
+                timeArray.push((value.min+value.max)/2-10)
+            }
+        })
+        timeArray.map((value))
+         
+        // timeArray.map((value)=>{
+        //        setarr((prevvalue)=>{[...prevvalue,time:value]
+        //        })
         // })
+
         console.log(arr);
 
         var dis = document.getElementById('output__table');

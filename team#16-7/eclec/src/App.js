@@ -16,6 +16,7 @@ function App() {
                    <Route excat path ="/Sign_up" component={Registration} />
                    <Route path="/dashboard" component={Dashboard} />
                    <Route path="/comparison" component={Compare} /> 
+                   <Route path="/dashboard" component={Dashboard} />
                </Switch>
             </div>
 

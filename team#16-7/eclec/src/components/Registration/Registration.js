@@ -4,6 +4,7 @@ import React,{useState} from "react";
 // import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./registration.css";
 import axios from "axios"
+import { NavLink } from "react-router-dom";
 function Registration()
 {
     const obj={
@@ -68,28 +69,7 @@ return <div className="center">
     <input type="text" name="state" placeholder="Enter your state" value={state.state} onChange={handleChange}>
         </input>
     </div>
-    {/* <div className="row1">
-    <div >
-    <label for="country">country</label><br></br>
-       <select id="country" name="countrychoose" required onChange={handleChange}>
-           <option>Choose...</option>
-           <option value="India">India</option>
-       </select>
-    </div>
-    <div >
-    <label for="state">State</label><br></br>
-       <select id="state" name="state"required>
-           <option value="Choose...">Choose...</option>
-           <option value="Haryana">Haryana</option>
-       </select>
-    </div>
-    <div >
-        <label for="zip">Zip Code</label><br></br>
-        <textarea id="zip" rows="1" cols="6" name="zipcode" required value={state.zipcode} onChange={handleChange}>
-        </textarea> 
-    </div>
-    </div> */}
-    <button type="submit" onClick={handleSubmit} className="btn">Submit</button>
+   <NavLink exact activeClassName="current" to="/dashboard">  <button type="submit" onClick={handleSubmit} className="btn">Submit</button></NavLink> 
     
 </div>
 }
