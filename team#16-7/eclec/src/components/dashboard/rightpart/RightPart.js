@@ -9,9 +9,10 @@ function RightPart() {
         min:"",
         max:"",
         power:"",
-        time:"",
+        // time:"",
         priority:""
     };
+    var array=[];
     const [options,setoptions]=useState(default1);
     // const [outputFormat,setoutputFormat] = useState(defaultOutput)
     const [output,setOutput] = useState([{}]);
@@ -49,6 +50,7 @@ function RightPart() {
         return days*power*hrs;
     }
     function handleOutput(event){
+        const arr=[];
         var prevBillAvg = 546;
         var baseCharge = 45;
         var perDayCost = (prevBillAvg-baseCharge)/30;
@@ -57,10 +59,9 @@ function RightPart() {
         var AppliancesNo = arr.length;
         var firstBreak = AppliancesNo/3;
         var secondBreak = 2*firstBreak;
+        var temp;
         arr.map((value,i)=>{
-            var temp="";
-            const prop=value.time;
-            console.log(prop);
+            temp="";
             if(i<firstBreak){
                 temp = ((value.min+value.max)/2)-10;
             }
@@ -70,11 +71,18 @@ function RightPart() {
             else{
                 temp = ((value.min+value.max)/2)-30;
             }
-            setarr(
-                (prevvalue)=>{return [...prevvalue]}
-            );
+            array.push(temp);
         })
-    
+        console.log(arr);
+        console.log(array);
+        console.log(temp);
+        // arr.map((value,index)=>{
+        //     setarr(()=>{
+        //         return [value,array[index]]
+        //     })
+        // }
+        // )
+        
     }
     return (
         <div>
