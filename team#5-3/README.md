@@ -1,0 +1,1 @@
+Our project is based on theme Smart Healthcare. Main idea of our project is to provide data so that fast treatment will available.

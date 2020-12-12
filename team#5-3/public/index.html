@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        canvas{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <video id= "videoInput" width="720p" height="550p" muted controls></video>
+    <!-- <script> var exports = {}; </script> -->
+    <!-- <script> var require = {}; </script> -->
+    <script defer async src="./javascript/face-api.min.js"></script>
+    <script defer async src="./javascript/script.js"></script>
+    <script type="module" defer async src="./javascript/search.js"></script>
+</body>
+</html>
