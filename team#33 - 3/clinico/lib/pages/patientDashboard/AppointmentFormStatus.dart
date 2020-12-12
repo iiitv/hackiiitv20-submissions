@@ -1,14 +1,24 @@
+import 'package:clinico/model/appointment.dart';
+import 'package:clinico/services/backend.dart';
 import 'package:clinico/shared/loading.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class AppointmentFormStatus extends StatefulWidget {
+  Appointment appointment;
+  String msg;
+  int appointmentNumber;
+  AppointmentFormStatus({this.appointment}) {
+    msg = appointment.confirmed
+        ? "Your Appointment Number is ${appointment.appointmentNumber}"
+        : "Your Appointment in ${appointment.clinicName} is pending";
+  }
   @override
   _AppointmentFormStatusState createState() => _AppointmentFormStatusState();
 }
 
 class _AppointmentFormStatusState extends State<AppointmentFormStatus> {
   bool isLoading = false;
-
   @override
   void initState() {
     super.initState();
@@ -19,7 +29,9 @@ class _AppointmentFormStatusState extends State<AppointmentFormStatus> {
     setState(() {
       isLoading = true;
     });
-
+    DocumentSnapshot doc =
+        await doctorCollection.doc(widget.appointment.doctorId).get();
+    widget.appointmentNumber = doc.data()["counter"];
     setState(() => isLoading = false);
   }
 
@@ -46,7 +58,7 @@ class _AppointmentFormStatusState extends State<AppointmentFormStatus> {
                         ),
                         Center(
                           child: Text(
-                            "Clinic's Name",
+                            widget.appointment.clinicName,
                             style: TextStyle(
                               fontSize: 30,
                             ),
@@ -57,7 +69,8 @@ class _AppointmentFormStatusState extends State<AppointmentFormStatus> {
                         ),
                         Center(
                           child: Text(
-                            "Current Appointment Number : ",
+                            "Current Appointment Number : " +
+                                widget.appointmentNumber.toString(),
                             style: TextStyle(
                               fontSize: 22,
                             ),
@@ -71,7 +84,7 @@ class _AppointmentFormStatusState extends State<AppointmentFormStatus> {
                           height: 30,
                         ),
                         Text(
-                          'Your Appointment Number : ',
+                          widget.msg,
                           style: TextStyle(
                             fontSize: 18,
                           ),
@@ -80,7 +93,7 @@ class _AppointmentFormStatusState extends State<AppointmentFormStatus> {
                           height: 30,
                         ),
                         Text(
-                          'Name : Darshan Hande',
+                          'Name : ' + widget.appointment.name,
                           style: TextStyle(
                             fontSize: 18,
                           ),
@@ -89,7 +102,7 @@ class _AppointmentFormStatusState extends State<AppointmentFormStatus> {
                           height: 30,
                         ),
                         Text(
-                          'Age : 19',
+                          'Age : ' + widget.appointment.age.toString(),
                           style: TextStyle(
                             fontSize: 18,
                           ),
@@ -98,7 +111,7 @@ class _AppointmentFormStatusState extends State<AppointmentFormStatus> {
                           height: 30,
                         ),
                         Text(
-                          'Gender : Male',
+                          'Gender : ' + widget.appointment.gender,
                           style: TextStyle(
                             fontSize: 18,
                           ),
@@ -116,7 +129,7 @@ class _AppointmentFormStatusState extends State<AppointmentFormStatus> {
                           height: 10,
                         ),
                         Text(
-                          'Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments ',
+                          widget.appointment.comment,
                           style: TextStyle(
                             fontSize: 18,
                           ),
@@ -130,10 +143,18 @@ class _AppointmentFormStatusState extends State<AppointmentFormStatus> {
                             fontSize: 18,
                           ),
                         ),
+                        SizedBox(
+                          height: 20,
+                        ),
                         Container(
-                          child: Image.network(
-                            'image.url',
-                            height: 300,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.network(
+                                '${widget.appointment.stringimage}',
+                                height: 800,
+                              ),
+                            ],
                           ),
                         ),
                       ],
