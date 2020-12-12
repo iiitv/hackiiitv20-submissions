@@ -109,8 +109,14 @@ class _AppState extends State<HomePage> {
           }
         }
         try {
+          String userName = auth.currentUser.displayName;
+          String email = auth.currentUser.email;
+          print(userName);
+          print(email);
           GeoFirePoint point = geo.point(latitude: lat, longitude: lng);
-          await firestore.collection('user').doc(auth.currentUser.uid).set({
+          await firestore.collection('user').doc(auth.currentUser.uid).update({
+            // 'username': userName,
+            // 'email': email,
             'Location': point.data,
           });
         } catch (err) {
