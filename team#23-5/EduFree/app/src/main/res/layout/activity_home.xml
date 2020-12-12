@@ -32,6 +32,17 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/important_button"
         android:text="click here to attempt quizzes"/>
+
+    <TextView
+        android:id="@+id/courseHead"
+        android:layout_below="@id/quiz_btn"
+        android:padding="5dp"
+        android:text="Select Course"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
     <Spinner
         android:layout_marginTop="5dp"
         android:elevation="16dp"
@@ -39,7 +50,7 @@
         android:spinnerMode="dialog"
         android:popupBackground="@android:color/white"
         android:padding="2dp"
-        android:layout_below="@id/quiz_btn"
+        android:layout_below="@id/courseHead"
         android:id="@+id/spinnerMenu"
         android:layout_width="match_parent"
         android:gravity="center"

@@ -893,6 +893,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable app_logo
 drawable appicon
+drawable appiconew
 drawable black_05dp_square_border
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -1057,6 +1058,7 @@ id collapseActionView
 id content
 id contentPanel
 id cos
+id courseHead
 id courseRecycler
 id custom
 id customPanel
