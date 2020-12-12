@@ -1,4 +1,5 @@
 Our idea is based on theme 6 which is Intelligent Transportation System for smart cities
+
 Currently the whole world is going through a Pandemic. With no vaccines available till now, Social Distancing is the only way to save ourselves from this pandemic. 
 With lockdowns being lifted across the globes, it has become necessary for people to go to work by putting their lives on risk. Not many are blessed with personal vehicles and have to use public transport for travel. 
 
@@ -15,7 +16,9 @@ Images -
 
 ![alt text](https://github.com/Chaitanya-Soni/hackiiitv20-submissions/blob/team%2328/team%2328%20-%206/SafeTravel/Hackathon/IMG-20201211-WA0027.jpg?raw=true)
 
+
 ![alt text](https://github.com/Chaitanya-Soni/hackiiitv20-submissions/blob/team%2328/team%2328%20-%206/SafeTravel/Hackathon/IMG-20201211-WA0030.jpg?raw=true)
+
 
 ![alt text](https://github.com/Chaitanya-Soni/hackiiitv20-submissions/blob/team%2328/team%2328%20-%206/SafeTravel/Hackathon/IMG-20201211-WA0028.jpg?raw=true)
 
