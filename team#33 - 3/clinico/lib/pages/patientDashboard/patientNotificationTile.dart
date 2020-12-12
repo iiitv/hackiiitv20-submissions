@@ -1,11 +1,18 @@
+import 'package:clinico/model/appointment.dart';
 import 'package:flutter/material.dart';
 
 class PatNotTile extends StatelessWidget {
+  Appointment appointment;
+  String msg="";
+  PatNotTile({this.appointment}){
+    msg = appointment.confirmed?"Your Appointment in ${appointment.clinicName} is confirmed":"Your Appointment in ${appointment.clinicName} is pending";
+  }
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text("Abc Clinic Confirm Your Appointment"),
-      subtitle: Text("send on 9-12-2020 at 11.00 pm"),
+    return Card(
+      child: ListTile(
+        title: Text(msg),
+      ),
     );
   }
 }

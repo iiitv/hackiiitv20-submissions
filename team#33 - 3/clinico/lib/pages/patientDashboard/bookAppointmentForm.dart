@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:clinico/model/appointment.dart';
 import 'package:clinico/model/user.dart';
 import 'package:clinico/pages/patientDashboard/notification.dart';
@@ -52,6 +51,7 @@ class _BookAppointmentState extends State<BookAppointment> {
         age:int.parse(age),
         gender: gender,
         comment: comment,
+        clinicName:widget.doctor.clinicName,
         image: image
       );
       await Backend().bookAppointment(appoit,widget.doctor.uid,currentUser.uid);

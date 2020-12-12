@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:clinico/pages/patientDashboard/patientNotificationTile.dart';
 import 'package:uuid/uuid.dart';
 import 'package:clinico/model/appointment.dart';
 import 'package:clinico/model/user.dart';
@@ -63,10 +64,11 @@ class Backend{
         "comment":appoint.comment,
         "image":media,
         "confirmed":false,
-        "TokenNumber":0,
+        "appointmentNumber":0,
         "time":DateTime.now().millisecondsSinceEpoch,
         "patientId":patientId,
-        "patientAppointmentId":postID
+        "patientAppointmentId":postID,
+        "clinicName":appoint.clinicName
     });
 
     await patientCollection.doc(patientId).collection("appointment").doc(postID).set({
@@ -76,9 +78,10 @@ class Backend{
         "comment":appoint.comment,
         "image":media,
         "confirmed":false,
-        "TokenNumber":0,
+        "appointmentNumber":0,
         "time":DateTime.now().millisecondsSinceEpoch,
-        "patientId":patientId
+        "doctorId":doctorId,
+        "clinicName":appoint.clinicName
     });
   }
 
@@ -139,6 +142,43 @@ class Backend{
         "email":user.email,
         "photoURL":user.photoURL,
       });
+    }
+
+    showPatientNotification(String patientId){
+       return StreamBuilder(
+         stream: patientCollection.doc(patientId).collection("appointment").orderBy("time",descending:true).snapshots(),
+         builder: (context,snapshot){
+           if(!snapshot.hasData){
+             return Loading();
+           }
+           List<PatNotTile> allPatientNotification = new List();
+           snapshot.data.docs.forEach((doc){
+              allPatientNotification.add(
+                PatNotTile(
+                  appointment: Appointment(
+                    name:doc.data()["name"],
+                    gender:doc.data()["gender"],
+                    age:doc.data()["age"],
+                    comment:doc.data()["comment"],
+                    stringimage:doc.data()["image"],
+                    confirmed:doc.data()["confirmed"],
+                    appointmentNumber:doc.data()["appointmentNumber"],
+                    clinicName:doc.data()["clinicName"],
+                    doctorId: doc.data()["doctorId"]
+                  ),
+                )
+              );
+           });
+           if(allPatientNotification.isEmpty){
+             return Center(
+               child:Text("No Notification")
+             );
+           }
+           return ListView(
+             children: allPatientNotification,
+           );
+         },
+       );
     }
 
     SearchHospital(String key){
