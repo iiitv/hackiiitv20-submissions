@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8EBF4"
+    tools:context=".ConductorSideStatus">
+
+    <ImageView
+        android:id="@+id/bgStatus"
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        app:srcCompat="@drawable/bgstatus" />
+
+    <TextView
+        android:id="@+id/txtBusName"
+        android:layout_width="196dp"
+        android:layout_height="62dp"
+        android:textSize="32sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="42dp"
+        android:text="GJ 01 H 4690" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="162dp"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="87dp"
+        android:text="Current Bus Status" />
+
+    <ImageView
+        android:id="@+id/plus"
+        android:layout_width="91dp"
+        android:layout_height="89dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="263dp"
+        android:layout_marginEnd="49dp"
+        app:srcCompat="@drawable/ic_baseline_arrow_circle_up_24" />
+
+    <ImageView
+        android:id="@+id/minus"
+        android:layout_width="91dp"
+        android:layout_height="89dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="264dp"
+        android:layout_marginEnd="274dp"
+        app:srcCompat="@drawable/ic_baseline_arrow_circle_down_24" />
+
+    <TextView
+        android:id="@+id/txtNoOfSeats"
+        android:layout_width="87dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="275dp"
+        android:layout_marginEnd="163dp"
+        android:text="35"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="54sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtStatusUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bgStatus"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="59dp"
+        android:text="Update the Live Status Below: "
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/txtBusStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bgStatus"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="255dp"
+        android:text="Current State of Bus: "
+        android:textColor="#000000"
+        android:textSize="24sp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="276dp"
+        android:layout_height="47dp"
+        android:layout_below="@+id/txtBusStatus"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="36dp" />
+
+
+</RelativeLayout>

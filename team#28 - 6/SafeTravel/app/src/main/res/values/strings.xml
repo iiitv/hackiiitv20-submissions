@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SafeTravel</string>
+    <string name="API_KEY_GCP">AIzaSyDFcftSJMgeWfpzwgauetVkyHO1ykJwfZE</string>
+    <string-array name="status">
+
+        <item>Not Started Yet</item>
+        <item>Running State</item>
+        <item>Completed Journey</item>
+
+    </string-array>
+</resources>
