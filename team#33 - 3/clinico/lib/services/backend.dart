@@ -214,7 +214,7 @@ class Backend{
                     confirmed:doc.data()["confirmed"],
                     appointmentNumber:doc.data()["appointmentNumber"],
                     clinicName:doc.data()["clinicName"],
-                    patientId: doc.data()["doctorId"],
+                    patientId: doc.data()["patientId"],
                     patientAppointmentId:doc.data()["patientAppointmentId"],
                     doctorAppointmentId:doc.id
                   ),
@@ -230,7 +230,7 @@ class Backend{
                     confirmed:doc.data()["confirmed"],
                     appointmentNumber:doc.data()["appointmentNumber"],
                     clinicName:doc.data()["clinicName"],
-                    patientId: doc.data()["doctorId"],
+                    patientId: doc.data()["patientId"],
                     patientAppointmentId:doc.data()["patientAppointmentId"],
                     doctorAppointmentId:doc.id
                   ),
