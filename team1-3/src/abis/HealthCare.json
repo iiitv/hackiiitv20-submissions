@@ -3015,7 +3015,7 @@
     "src": "0:2249:0"
   },
   "legacyAST": {
-    "absolutePath": "/C/Users/eshaa/Desktop/HackIIITV/hackiiitv20-submissions/team1-3/src/contracts/HealthCare.sol",
+    "absolutePath": "/C/Users/user/Desktop/hackiiitv20-submissions/team1-3/src/contracts/HealthCare.sol",
     "exportedSymbols": {
       "HealthCare": [
         214
