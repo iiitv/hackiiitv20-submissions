@@ -5,7 +5,7 @@
 
 	- Studious Bot that joins google meet with camera and microphone turned of
 
-## REQUIREMENTS 
+## ⭐REQUIREMENTS 
 - With Python installed, Open cmd as administrator and run the following command to install Selenium <img src="https://github.com/nirala69/hackiiitv20-submissions/blob/master/team%233%20-%20%7B5%7D/Images/selenium_logo.png" width="40" align='right'>
      ```
      pip install selenium
@@ -17,18 +17,18 @@
     ```
     
 
-## How to use
+## ⭐How to use
 	
 - Replace email, password and driver_path(Mind the Backslashes 😜) and Discord webhook token with yours.
 - for linux and max user download .[chrome driver](https://chromedriver.chromium.org/downloads)
 - Run main.py file.
 - Replace meeting link and Schedule it according to yours.
 
-## Working Code
+## ⭐Working Code
 <hr>
 <p align = "center">
     <a href = "">
 <img src="https://github.com/nirala69/hackiiitv20-submissions/blob/master/team%233%20-%20%7B5%7D/Images/discord.jpeg" width="200" align='center'>
         </a>
 
-## HAVE A NICE DAY ☕
+## 💘 HAVE A NICE DAY ☕
