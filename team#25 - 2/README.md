@@ -1,3 +1,5 @@
+# Emergengy Alert
+
 Our project is all about helping women whenever they feel rape threat or any emergency condition .
 Once the person registers on our app or website we would be sending a "ring" consisting of button that has a in built gps tracker in it .
 And when person presses that button continuously for 3 times it would mail us a location coordinates of that person .
