@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "621864101520",
+    "project_id": "hackiiitv-75b02",
+    "storage_bucket": "hackiiitv-75b02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621864101520:android:22bced8cb6002e66be5a15",
+        "android_client_info": {
+          "package_name": "com.example.team_31"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621864101520-ojs8nojmrn8nu766cjs6gobkpf2hfumc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.team_31",
+            "certificate_hash": "10b3bc54d71bb92c4837cd83d0511cadc23d1295"
+          }
+        },
+        {
+          "client_id": "621864101520-lg7ui3luave16t40el741kpf40pim5ov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv8urc9zNKA7tO3tQE2K55B2joWeH_fxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621864101520-lg7ui3luave16t40el741kpf40pim5ov.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
