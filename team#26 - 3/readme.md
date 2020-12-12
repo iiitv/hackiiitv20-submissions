@@ -10,7 +10,8 @@ Key functionalities:
 - Post in community
 - Add friend request to fellow community members
 - Chat with community members
-And some other basics...
+And some other basics...<br>
+Here is the link of site: deployed in cloud. ![CareConnect](http://careconnect.centralus.cloudapp.azure.com/)
 <br>
 <b>Chat scripts work on end to end encyption with private key encryption.</b>
 
