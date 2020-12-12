@@ -5,7 +5,7 @@ class ConfirmAppointment extends StatefulWidget {
   @override
   _ConfirmAppointmentState createState() => _ConfirmAppointmentState();
 }
-
+ 
 class _ConfirmAppointmentState extends State<ConfirmAppointment> {
   TextEditingController appointmentNumberController =
       new TextEditingController();
@@ -115,6 +115,15 @@ class _ConfirmAppointmentState extends State<ConfirmAppointment> {
                         ),
                         SizedBox(
                           height: 30,
+                        ),
+                        // Container(
+                        //   child: Image.network(
+                        //     'image.url',
+                        //     height: 300,
+                        //   ),
+                        // ),
+                        SizedBox(
+                          height:30
                         ),
                         TextFormField(
                           controller: appointmentNumberController,
