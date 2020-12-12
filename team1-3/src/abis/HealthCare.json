@@ -3015,11 +3015,7 @@
     "src": "0:2249:0"
   },
   "legacyAST": {
-<<<<<<< HEAD
-    "absolutePath": "/C/Users/user/Desktop/hackiiitv20-submissions/team1-3/src/contracts/HealthCare.sol",
-=======
     "absolutePath": "/C/Users/eshaa/Desktop/HackIIITV/hackiiitv20-submissions/team1-3/src/contracts/HealthCare.sol",
->>>>>>> cced2339a20ac391e63313cfd54544deae9ab9b7
     "exportedSymbols": {
       "HealthCare": [
         214
@@ -5787,21 +5783,12 @@
     "5777": {
       "events": {},
       "links": {},
-<<<<<<< HEAD
-      "address": "0x24c0B4E8AB2e30E9A1E660c1085A47338b8dff5A",
-      "transactionHash": "0xd48ec6974266515c06b6a7970a6ef240d1e57ee5138fddef72091e662e42736c"
-    }
-  },
-  "schemaVersion": "3.3.2",
-  "updatedAt": "2020-12-11T16:54:53.029Z",
-=======
-      "address": "0xA7B298190Ce7483C09f0EAE8a768dB5fd414D307",
-      "transactionHash": "0xe0749c6992846f6f2981dc2d323ca1b1fee0f1095bc5a3f09d5737594e730476"
+      "address": "0x045108CE3B1A2a56718Ffd08dDD0eE98A254d417",
+      "transactionHash": "0xdd0a513183eed22473d299880b82eb874c8b0b20c48c0298549aca3b66fc5021"
     }
   },
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-12-11T17:14:16.688Z",
->>>>>>> cced2339a20ac391e63313cfd54544deae9ab9b7
+  "updatedAt": "2020-12-12T03:16:28.648Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

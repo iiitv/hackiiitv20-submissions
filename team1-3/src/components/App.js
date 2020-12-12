@@ -265,8 +265,24 @@ class App extends Component {
         toast.success("Doctor: " + res["2"]);
         toast.info("Title: " + res["3"]);
         toast.info("Description: " + res["4"]);
+        toast.info("Image Address: " + <img src= {`https://ipfs.infura.io/ipfs/${res["5"]}`} alt="img"/> + res["5"]);
+        
       });
   };
+
+  // test = (e) => {
+  //   e.preventDefault();
+  //   this.setState({
+  //     showhealthNoteaddr: "",
+  //   });
+  //   this.state.healthCare.methods
+  //     .healthNotes(this.state.showhealthNoteaddr)
+  //     .call()
+  //     .then(function(res) {
+  //       // console.log(res);
+  //     toast.info("Image Address: " + <img src= {`https://ipfs.infura.io/ipfs/${res["5"]}`} alt="img"/> + res["5"]);   
+  //   });
+  // };
   render() {
     const {
       createDoctorname,
@@ -471,7 +487,6 @@ class App extends Component {
                   placeholder="Add file*"
                   // value={writeFile}
                   onChange={this.captureFile}
-                  multiple
                 />
               </div>
 
@@ -542,7 +557,7 @@ class App extends Component {
               </div>
             </form>
             <br />
-            <br />
+            <br /> 
             <br />
             {/* 4 */}
             <form onSubmit={this.patientDetails}>
