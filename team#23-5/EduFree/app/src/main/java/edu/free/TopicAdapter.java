@@ -58,6 +58,7 @@ class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ViewHolder> {
         ((ViewHolder) holder).youtubeWebEmbed.setVerticalScrollBarEnabled(false);
         ((ViewHolder) holder).youtubeWebEmbed.getSettings().setBuiltInZoomControls(true);
 
+
         final String mimeType = "text/html";
         final String encoding = "UTF-8";
         String id = videoId.get(position);
@@ -154,6 +155,8 @@ class TopicAdapter extends RecyclerView.Adapter<TopicAdapter.ViewHolder> {
 
 
     }
+
+    
 
 
 }

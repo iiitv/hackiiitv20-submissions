@@ -17,13 +17,15 @@
         android:layout_height="wrap_content"/>
 
     <Button
+        android:layout_marginTop="2dp"
+        android:background="@drawable/button_background"
         android:id="@+id/important_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
         android:text="click here to go to important websites"/>
     <Spinner
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="55dp"
         android:elevation="16dp"
         android:background="@drawable/spinner_bg"
         android:spinnerMode="dialog"

@@ -17,16 +17,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
-        <activity android:name=".TopicActivity"/>
-
-        <activity android:name=".ImportantActivity"/>
-        <activity android:name=".CourseActivity"/>
+        <activity android:name=".VideoFullScreenActivity"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".TopicActivity" />
+        <activity android:name=".ImportantActivity" />
+        <activity android:name=".CourseActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".SignNewUserActivity" />
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-8103108161786269~3509276389" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
