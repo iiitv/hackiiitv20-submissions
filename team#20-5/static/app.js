@@ -21,8 +21,9 @@ const capture = document.getElementById('capture');
 
 function addLocalVideo() {
     Twilio.Video.createLocalVideoTrack().then(track => {
-        let video = document.getElementById('local').firstChild;
+        let video = document.getElementById('myVideo');
         let trackElement = track.attach();
+        console.log(video);
         trackElement.addEventListener('click', () => { zoomTrack(trackElement); });
         video.appendChild(trackElement);
     });
@@ -31,22 +32,29 @@ function addLocalVideo() {
 
 function capture1() {
     var canvas = document.getElementById('canvas');
-    // var canvas1 = document.getElementById('canvas1');     
-    var video = document.getElementById('local').firstChild.firstChild;
-    // var video1 = document.getElementById('local');
-    console.log(video);
+    var video = document.getElementById('myVideo').firstChild;
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
     canvas.getContext('2d').drawImage(video, 0, 0, video.videoWidth, video.videoHeight);  
-    // canvas1.getContext('2d').drawImage(video1, 0, 0, video1.videoWidth, video1.videoHeight);
     var img1 = canvas.toDataURL();
-    conv.sendMessage("https://i.pinimg.com/originals/83/f9/37/83f937b69f30bb886ab8a03390da6771.jpg");
+    console.log(img1);
+    $.ajax({
+                url: '/process1',
+                data: {
+                    imageBase64 : img1                    
+                },
+                type: 'POST',
+                success: function(data){
+                    // $("#result").text("Predicted Output : "+data);
+                    // canvas.getContext('2d').drawImage(video, 0, 0, video.videoWidth, video.videoHeight); 
+                    console.log("success!!")
+                    // console.log(data)
+                    conv.sendMessage(data);
+                } 
+            })
 
-    // canvas.toBlob() = (blob) => {
-    //   const img = new Image();
-    //   img.src = window.URL.createObjectUrl(blob);
-    //   console.log(window.URL.createObjectUrl(blob));
-    };
+    // conv.sendMessage("https://i.pinimg.com/originals/83/f9/37/83f937b69f30bb886ab8a03390da6771.jpg");
+};
 
 function connectButtonHandler(event) {
     event.preventDefault();
@@ -309,4 +317,4 @@ addLocalVideo();
 button.addEventListener('click', connectButtonHandler);
 shareScreen.addEventListener('click', shareScreenHandler);
 toggleChat.addEventListener('click', toggleChatHandler);
-chatInput.addEventListener('keyup', onChatInputKey)
+chatInput.addEventListener('keyup', onChatInputKey);
