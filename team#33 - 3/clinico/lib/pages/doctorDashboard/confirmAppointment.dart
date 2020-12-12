@@ -1,11 +1,15 @@
+import 'package:clinico/model/appointment.dart';
 import 'package:clinico/shared/loading.dart';
 import 'package:flutter/material.dart';
 
 class ConfirmAppointment extends StatefulWidget {
+  Appointment appointment;
+  String msg;
+  ConfirmAppointment({this.appointment, this.msg});
   @override
   _ConfirmAppointmentState createState() => _ConfirmAppointmentState();
 }
- 
+
 class _ConfirmAppointmentState extends State<ConfirmAppointment> {
   TextEditingController appointmentNumberController =
       new TextEditingController();
@@ -22,6 +26,7 @@ class _ConfirmAppointmentState extends State<ConfirmAppointment> {
     String appointment = appointmentNumberController.text.trim();
     setState(() => validAppointmentNumber = appointment.isNotEmpty);
     int appointmentNumber = int.parse(appointment);
+    Navigator.pop(context);
   }
 
   @override
@@ -47,20 +52,9 @@ class _ConfirmAppointmentState extends State<ConfirmAppointment> {
                         ),
                         Center(
                           child: Text(
-                            "Clinic's Name",
+                            widget.appointment.clinicName,
                             style: TextStyle(
                               fontSize: 30,
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 30,
-                        ),
-                        Center(
-                          child: Text(
-                            "Current Appointment Number : ",
-                            style: TextStyle(
-                              fontSize: 22,
                             ),
                           ),
                         ),
@@ -72,7 +66,7 @@ class _ConfirmAppointmentState extends State<ConfirmAppointment> {
                           height: 30,
                         ),
                         Text(
-                          'Name : Darshan Hande',
+                          'Name : ' + widget.appointment.name,
                           style: TextStyle(
                             fontSize: 18,
                           ),
@@ -81,7 +75,7 @@ class _ConfirmAppointmentState extends State<ConfirmAppointment> {
                           height: 30,
                         ),
                         Text(
-                          'Age : 19',
+                          'Age : ' + widget.appointment.age.toString(),
                           style: TextStyle(
                             fontSize: 18,
                           ),
@@ -90,7 +84,7 @@ class _ConfirmAppointmentState extends State<ConfirmAppointment> {
                           height: 30,
                         ),
                         Text(
-                          'Gender : Male',
+                          'Gender : ' + widget.appointment.gender,
                           style: TextStyle(
                             fontSize: 18,
                           ),
@@ -108,7 +102,7 @@ class _ConfirmAppointmentState extends State<ConfirmAppointment> {
                           height: 10,
                         ),
                         Text(
-                          'Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments Comments ',
+                          widget.appointment.comment,
                           style: TextStyle(
                             fontSize: 18,
                           ),
@@ -116,15 +110,27 @@ class _ConfirmAppointmentState extends State<ConfirmAppointment> {
                         SizedBox(
                           height: 30,
                         ),
-                        // Container(
-                        //   child: Image.network(
-                        //     'image.url',
-                        //     height: 300,
-                        //   ),
-                        // ),
-                        SizedBox(
-                          height:30
+                        Text(
+                          'Payment Screenshot : ',
+                          style: TextStyle(
+                            fontSize: 18,
+                          ),
                         ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Container(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Image.network(
+                                '${widget.appointment.stringimage}',
+                                height: 800,
+                              ),
+                            ],
+                          ),
+                        ),
+                        SizedBox(height: 20),
                         TextFormField(
                           controller: appointmentNumberController,
                           keyboardType: TextInputType.number,
