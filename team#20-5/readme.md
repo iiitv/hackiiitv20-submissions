@@ -1,4 +1,6 @@
-## Online Education
+# Online Education
+
+## Introduction
 Education in rural areas has never seen a leverage in teaching styles.
 Lack of Good Teachers and old teaching methods made it even worse in the pandemic.
 Skilled teachers have loction barriers and theey do hasitate to reach the rural areas.
@@ -15,3 +17,15 @@ Now a student can project the outlines on a piece of paper and himself do some c
 This will work turn by turn and a blackboard chat system is formed.More interactive and more encouraging.
 
 This would be hard to implement completly, but can be given a good try.
+
+## Snapshots of our working application
+
+<!-- ![output](final.jpeg|width=100) -->
+
+
+<img src="final.jpeg" width="150" height="300">&emsp;  &emsp; <img src="final1.jpeg" width="150" height="300"> &emsp;  &emsp; <img src="final3.jpeg" width="370" height="300">
+
+
+## Snapshots of our prototpye
+
+<img src="prototype1.jpeg" width="150" height="300">&emsp;  &emsp; <img src="prototype2.jpeg" width="150" height="300"> &emsp;  &emsp; <img src="prototype3.jpeg" width="150" height="300">&emsp;  &emsp; <img src="prototype4.jpeg" width="150" height="300">&emsp;  &emsp; <img src="prototype5.jpeg" width="150" height="300">
