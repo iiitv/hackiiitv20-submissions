@@ -294,21 +294,21 @@ function onChatInputKey(ev) {
     }
 };
 
-document.getElementById('toggle_camera').addEventListener('click', event => {
-  const videoConstraints = {
-    facingMode: 'environment'
-  };
-  const constraints = {
-    video: videoConstraints,
-    audio: false
-  };
-});
+// document.getElementById('toggle_camera').addEventListener('click', event => {
+//   const videoConstraints = {
+//     facingMode: 'environment'
+//   };
+//   const constraints = {
+//     video: videoConstraints,
+//     audio: false
+//   };
+// });
 
 
 
 function parseURL(message) {
     // if(something)
-    
+    alert(message)
     document.getElementById("myImg").src = message;
 }
 
