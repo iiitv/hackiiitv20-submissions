@@ -93,6 +93,18 @@ class _HospitalProfileState extends State<HospitalProfile> {
                       ),
                       Center(
                         child: Text(
+                          'Current appointment number being attended to : ' +
+                              doctor.counter.toString(),
+                          style: TextStyle(
+                            fontSize: 24,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Center(
+                        child: Text(
                           'Dr. ' + doctor.displayName,
                           style: TextStyle(
                             fontSize: 24,
