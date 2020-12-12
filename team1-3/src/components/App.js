@@ -100,7 +100,7 @@ class App extends Component {
       writeNotepaddr: "",
       writeNotetitle: "",
       writeNotedesc: "",
-      FileHash: "QmPAraKFw2RVPrTpUybE7zzvQv6AbMuTJDMRrxaNZrfXkH",
+      FileHash: "QmWvDDAa6pdVdfQ8KetxEG8jEd5CLSpKmqdzvMozwWgsMo",
       // QmPAraKFw2RVPrTpUybE7zzvQv6AbMuTJDMRrxaNZrfXkH
       //7
       showhealthNoteaddr: "",

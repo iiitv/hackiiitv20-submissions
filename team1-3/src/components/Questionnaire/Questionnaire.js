@@ -160,63 +160,23 @@ class Questionnaire extends Component {
           </Form.Group>
           <Form.Group controlId="formGroupText">
             <Form.Label>High Blood Pressure</Form.Label>
-            <Form.Check
-              type="radio"
-              label="Yes"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
-            <Form.Check
-              type="radio"
-              label="No"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
+            <Form.Check aria-label="option 1" label="Yes" />
+            <Form.Check aria-label="option 2" label="No"/>
           </Form.Group>
           <Form.Group controlId="formGroupPassword">
             <Form.Label>High Cholesterol</Form.Label>
-            <Form.Check
-              type="radio"
-              label="Yes"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
-            <Form.Check
-              type="radio"
-              label="No"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
+            <Form.Check aria-label="option 1" label="Yes" />
+            <Form.Check aria-label="option 2" label="No"/>
           </Form.Group>
           <Form.Group controlId="formGroupPassword">
             <Form.Label>Diabetes</Form.Label>
-            <Form.Check
-              type="radio"
-              label="Yes"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
-            <Form.Check
-              type="radio"
-              label="No"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
+            <Form.Check aria-label="option 1" label="Yes" />
+            <Form.Check aria-label="option 2" label="No"/>
           </Form.Group>
           <Form.Group controlId="formGroupPassword">
             <Form.Label>Bleeding disorder</Form.Label>
-            <Form.Check
-              type="radio"
-              label="Yes"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
-            <Form.Check
-              type="radio"
-              label="No"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
+            <Form.Check aria-label="option 1" label="Yes" />
+            <Form.Check aria-label="option 2" label="No"/>
           </Form.Group>
           <br/>
           <br/>
@@ -240,8 +200,6 @@ class Questionnaire extends Component {
             </div>
           </Form>
         </div>
-        
-
         //take problem, past, diagnosis etc
         );
     }
