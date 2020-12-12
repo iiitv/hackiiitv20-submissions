@@ -1,14 +1,32 @@
-# Google Meet Bot
 
-	- Bot for google meet to join meetings.
+# Bot 🤖 that attend Online Class 
 
-# Requirments
 
-	- Run following command in CMD: `python -m pip install selenium --user`.
-	- You also require chrome driver which you can download from here: https://chromedriver.chromium.org/downloads
+	- Studious Bot that joins google meet with camera and microphone turned of
 
-# How to use
+## REQUIREMENTS 
+- With Python installed, Open cmd as administrator and run the following command to install Selenium <img src="https://github.com/nirala69/hackiiitv20-submissions/blob/master/team%233%20-%20%7B5%7D/Images/selenium_logo.png" width="400" align='right'>
+     ```
+     pip install selenium
+     ```
+- Google Chrome(can run on other Browser also but respective drivers are needed to be installed)
+- Discord webhook
+    ```
+    pip install dhooks
+    ```
+    
+
+## How to use
 	
-	- Replace email, password and driver_path with yours.
-	- Run main.py file.
-	
+- Replace email, password and driver_path(Mind the Backslashes 😜) and Discord webhook token with yours.
+- for linux and max user download .[chrome driver](https://chromedriver.chromium.org/downloads)
+- Run main.py file.
+- Replace meeting link and Schedule it according to yours.
+
+## Working Code
+<p align = "center">
+    <a href = "">
+<img src="https://github.com/nirala69/hackiiitv20-submissions/blob/master/team%233%20-%20%7B5%7D/Images/discord.jpeg" width="400" align='center'>
+        </a>
+
+## HAVE A NICE DAY ☕
