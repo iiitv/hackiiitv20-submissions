@@ -12,7 +12,7 @@
     <div class="row">
       <h4>Account</h4>
       <div class="input-group input-group-icon">
-        <input type="text" placeholder="Full Name"/>
+        <input id="name" type="text" placeholder="Full Name"/>
         <div class="input-icon"><i class="fa fa-user"></i></div>
       </div>
       <div class="input-group input-group-icon">
@@ -20,7 +20,7 @@
         <div class="input-icon"><i class="fa fa-envelope"></i></div>
       </div>
       <div class="input-group input-group-icon">
-        <input type="password" placeholder="Password"/>
+        <input id="password" type="password" placeholder="Password"/>
         <div class="input-icon"><i class="fa fa-key"></i></div>
       </div>
     </div>
@@ -52,14 +52,14 @@
     <div class="row">
       <div class="col">
         <h4>Contact Details
-          <input type="text" placeholder="Phone"/>
-          <input type="text" placeholder="Emergency Phone"/>
+          <input id="phone" type="text" placeholder="Phone"/>
+          <input id="ephone" type="text" placeholder="Emergency Phone"/>
         </h4>
       </div>
     </div>
     <div class="row">
       <h4>Aadhaar Number
-        <input type="text" placeholder="Aadhaar No."/>
+        <input id="aadhaar" type="text" placeholder="Aadhaar No."/>
       </h4>
     </div>
     <div class="row">
@@ -93,15 +93,42 @@
         </div>
       </div>
     </div>
+
+  </form>     
+</div>  
     <div class="row">
       <h4>Terms and Conditions</h4>
       <div class="input-group">
         <input type="checkbox" id="terms"/>
         <label for="terms">I accept the terms and conditions for signing up to this service, and hereby confirm I have read the privacy policy.</label>
-        <button type="submit" class="registerbtn"><strong>Register</strong></button>
+        <centre><button id="register" onclick="myfunction()" type="submit" class="registerbtn"><strong><h4>Register</h4></strong></button></centre>
       </div>
     </div>
   </form>
+
+    <h4>Login Page</h4><br>    
+    <div class="login">    
+    <form id="login" method="get" action="login.php">    
+        <label><b><h4>User Name</h4>     
+        </b>    
+        </label>    
+        <input type="text" name="Uname" id="name" placeholder="Name">    
+        <br><br>    
+        <label><b><h4>Password  </h4>   
+        </b>    
+        </label>    
+        <input type="Password" name="Pass" id="password" placeholder="Password">    
+        <br><br>    
+        <input id="login" onclick="valid()" type="button" name="log"  value="Log In Here">       
+        <br><br>    
+        <input type="checkbox" id="check">    
+        <span>Remember me</span>    
+        <br><br>    
+          
+    
 </div>
+
+<script src="script.js"></script>
+
   </body> 
 </html>
