@@ -1,10 +1,14 @@
+import 'package:clinico/pages/doctorDashboard/confirmAppointment.dart';
 import 'package:flutter/material.dart';
 
 class DocNotTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => ConfirmAppointment()));
+      },
       child: Padding(
         padding: const EdgeInsets.fromLTRB(15, 8, 15, 8),
         child: ListTile(
