@@ -10,3 +10,4 @@ team#3  theme 5(Online Education)
 - python
 - Leadership quality
 - Data Saving Hacks
+- management skills
