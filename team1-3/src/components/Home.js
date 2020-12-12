@@ -17,7 +17,10 @@ function Home() {
             }}>
             <h1 style={{padding:'20px',
             color:'#007bff'
-        }}>Smart healthcare</h1>
+        }}>Aztec-Lifeline</h1>
+           <h1 style={{padding:'20px',
+            color:'#007bff'
+        }}>A Decentralized Smart Healthcare System</h1>
             <div style={{display:"flex",
                 justifyContent:'space-around',
                 alignItems:'center',
@@ -26,8 +29,8 @@ function Home() {
                 width:'30%'
                 }}>
             
-                <Link style={{textDecoration:"none"}} to="/app"><Button style={{width:'100px'}} variant="outline-primary" size="lg">App</Button></Link>
-                <Link to="/ques"><Button style={{width:'100px'}} variant="outline-primary" size="lg">Ques</Button></Link>
+                <Link style={{textDecoration:"none"}} to="/app"><Button style={{width:'100px'}} variant="outline-primary" size="lg">Login</Button></Link>
+                <Link to="/ques"><Button style={{width:'200px'}} variant="outline-primary" size="lg">Consultation</Button></Link>
             </div>
         </div>
         

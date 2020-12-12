@@ -100,7 +100,7 @@ class App extends Component {
       writeNotepaddr: "",
       writeNotetitle: "",
       writeNotedesc: "",
-      FileHash: "QmPAraKFw2RVPrTpUybE7zzvQv6AbMuTJDMRrxaNZrfXkH",
+      FileHash: "QmWvDDAa6pdVdfQ8KetxEG8jEd5CLSpKmqdzvMozwWgsMo",
       // QmPAraKFw2RVPrTpUybE7zzvQv6AbMuTJDMRrxaNZrfXkH
       //7
       showhealthNoteaddr: "",
@@ -296,9 +296,10 @@ class App extends Component {
     return (
       <React.Fragment>
         <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="/">BlockHealth</Navbar.Brand>
+          <Navbar.Brand href="/">Aztec-Lifeline
+          </Navbar.Brand>
           <Nav className="mr-auto">
-            <Nav.Link href="/">Blockchain powered Health Records</Nav.Link>
+            <Nav.Link href="/">A Decentralized Smart Healthcare System</Nav.Link>
           </Nav>
           <Nav className="mr-sm-2 account-name">
             Current account : {this.state.account}
@@ -309,7 +310,7 @@ class App extends Component {
         <br />
         {/* ADMIN SECTION */}
         <div className="text-center">
-          <h1>Welcome to BlockHealth</h1>
+          <h1>Welcome to Aztec-Lifeline</h1>
           <img src={Logo} alt="logo" />
         </div>
         <br />
@@ -523,7 +524,7 @@ class App extends Component {
             </form>
             <br />
             <br />
-            <br />
+            <br /> 
           </div>
         </div>
       </React.Fragment>
