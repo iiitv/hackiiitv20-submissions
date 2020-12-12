@@ -1,4 +1,4 @@
-initial commit file for team 21 woth topic smart healthcare
+Link for hack: https://medhelp.netlify.app/
 
 We have edited the api from:
 Symptom Checker: https://apimedic.com/
