@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Form,Button } from 'react-bootstrap'
+import './ques.css'
 
-//This questionnaire is for the patient to fill and doctors to detect
 class Questionnaire extends Component {
     constructor(props) {
         super(props);
@@ -12,13 +12,7 @@ class Questionnaire extends Component {
           previous: '',
         };
     }
-    myChangeHandler = (event) => {
-        let prob = event.target.problem;
-        let val = event.target.value;
-        let symptom = event.target.symptoms;
-        let previous = event.target.previous;
-        this.setState({[prob]: val});  
-    }
+    
 
     onSubmitHandler = (object) => {
       this.setState({
@@ -38,55 +32,93 @@ class Questionnaire extends Component {
       }
 
         return (
-        <form onSubmit={()=>this.onSubmitHandler(obj)}>
-
+        <div className="container">
+          <center><h1>Consultation Form</h1></center>
+          <br/>
+          <br/>
+          <Form onSubmit={()=>this.onSubmitHandler(obj)}>
+          <Form.Group controlId="formGroupEmail">
+            <Form.Label>Enter your age</Form.Label>
+            <Form.Control onChange={(e)=>obj.age=e.target.value} type="email" placeholder="Enter age" />
+          </Form.Group>
+          <Form.Group controlId="formGroupPassword">
+            <Form.Label>Enter your symptoms</Form.Label>
+            <Form.Control onChange={(e)=>obj.symptoms=e.target.value} type="password" placeholder="Symptoms" />
+          </Form.Group>
+          <Form.Group controlId="formGroupPassword">
+            <Form.Label>Description of your problems</Form.Label>
+            <Form.Control onChange={(e)=>obj.problem=e.target.value} type="password" placeholder="problem" />
+          </Form.Group>
+          <Form.Group controlId="formGroupPassword">
+            <Form.Label>Enter details of any previous history of related problems:</Form.Label>
+            <Form.Control onChange={(e)=>obj.previous=e.target.value} type="password" placeholder="Problems" />
+          </Form.Group>
+          <Form.Group controlId="formGroupPassword">
+            <Form.Label>High Blood Pressure</Form.Label>
+            <Form.Check
+              type="radio"
+              label="Yes"
+              name="formHorizontalRadios"
+              id="formHorizontalRadios2"
+            />
+            <Form.Check
+              type="radio"
+              label="No"
+              name="formHorizontalRadios"
+              id="formHorizontalRadios2"
+            />
+          </Form.Group>
+          <Form.Group controlId="formGroupPassword">
+            <Form.Label>High Cholesterol</Form.Label>
+            <Form.Check
+              type="radio"
+              label="Yes"
+              name="formHorizontalRadios"
+              id="formHorizontalRadios2"
+            />
+            <Form.Check
+              type="radio"
+              label="No"
+              name="formHorizontalRadios"
+              id="formHorizontalRadios2"
+            />
+          </Form.Group>
+          <Form.Group controlId="formGroupPassword">
+            <Form.Label>Diabetes</Form.Label>
+            <Form.Check
+              type="radio"
+              label="Yes"
+              name="formHorizontalRadios"
+              id="formHorizontalRadios2"
+            />
+            <Form.Check
+              type="radio"
+              label="No"
+              name="formHorizontalRadios"
+              id="formHorizontalRadios2"
+            />
+          </Form.Group>
+          <Form.Group controlId="formGroupPassword">
+            <Form.Label>Bleeding disorder</Form.Label>
+            <Form.Check
+              type="radio"
+              label="Yes"
+              name="formHorizontalRadios"
+              id="formHorizontalRadios2"
+            />
+            <Form.Check
+              type="radio"
+              label="No"
+              name="formHorizontalRadios"
+              id="formHorizontalRadios2"
+            />
+          </Form.Group>
+          <br/>
+          <br/>
+          <center><Button onClick={()=>this.onSubmitHandler(obj)} as="input" type="button" value="Submit" />{' '}</center>
+        </Form>
+        </div>
         
-        <p>Enter your age:</p>
-        <input
-          type='text'
-          name='age'
-          onChange={(e)=> obj.age = e.target.value}
-        />
-        <p>Enter your symptoms:</p>
-        <input
-          type='text'
-          name='symptoms'
-          onChange={(e)=> obj.symptoms = e.target.value}
-        />
-        <p>Desciption of your problem:</p>
-        <input
-          type='text'
-          name='problem'
-          onChange={(e)=> obj.problem = e.target.value}
-        />
-        <p>Enter details of any previous history of related problems:</p>
-        <input
-          type='text'
-          name='previous'
-          onChange={(e)=> obj.previous = e.target.value}
-        />
-        
-        </form>
-//         <Form>
-//   <Form.Group controlId="formBasicEmail">
-//     <Form.Label>Email address</Form.Label>
-//     <Form.Control type="email" placeholder="Enter email" />
-//     <Form.Text className="text-muted">
-//       We'll never share your email with anyone else.
-//     </Form.Text>
-//   </Form.Group>
-
-//   <Form.Group controlId="formBasicPassword">
-//     <Form.Label>Password</Form.Label>
-//     <Form.Control type="password" placeholder="Password" />
-//   </Form.Group>
-//   <Form.Group controlId="formBasicCheckbox">
-//     <Form.Check type="checkbox" label="Check me out" />
-//   </Form.Group>
-//   <Button variant="primary" type="submit">
-//     Submit
-//   </Button>
-// </Form>
 
         //take problem, past, diagnosis etc
         );
