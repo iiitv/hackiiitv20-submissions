@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Complaint</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body{
+        font-family: sans-serif;
+      }
+
+      a{
+        text-decoration: none;
+      }
+    
+      .head{
+      padding: 30px;
+       min-height: 70vh;
+       background-color: #51D88b;
+       color:white;
+     }
+     input[type=submit]{
+       color:white;
+       background-color: #00be9c;
+       width:50%;
+       min-height: 30vh;
+     }
+    .head h1{
+      padding: 30px 0px;
+    }
+
+.btn {
+  border: 2px solid gray;
+  color: gray;
+  background-color: white;
+  padding: 8px 20px;
+  border-radius: 0px;
+  font-size: 20px;
+  font-weight: bold;
+  width:50%;
+  min-height: 30vh;
+  cursor: pointer;
+}
+
+#btn2 {
+  background-color: indigo;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  margin-top: 1rem;
+
+}
+#floatleft{
+  background-color: rgb(123, 41, 230);
+  cursor: pointer;
+  float:left;
+  min-height:30vh;
+  width:50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+#floatright{
+  float:right;
+  width: 50%;
+}
+.card-wrapper{
+            width: 70%;
+        }
+        .user-wrapper-top{
+            color:white;
+            min-height: 50vh;
+            width: 30%;
+            background-color: #C70039;
+            position:fixed;
+            top:0;
+            right:0;
+            text-align: center;
+            padding: 20px;
+        }
+        .user-wrapper-bottom{
+            background-color: #28324B;
+            min-height: 50vh;
+            position:fixed;
+            bottom:0;
+            right:0;
+            padding: 20px;
+            width: 30%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .user-wrapper-top img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+        .user-wrapper-top h2{
+            padding: 20px 0;
+        }
+        .user-wrapper-top a{
+          display:block;
+          margin: 40px auto;
+          width: 50%;
+          padding: 10px;
+          font-size: 20px;
+        }
+        .user-wrapper-bottom a{
+          display:block;
+          margin: 20px 0;
+          width: 100%;
+          padding: 10px;
+          font-size: 20px;
+        }
+        
+        a{
+          background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            text-align: center;
+            font-family: sans-serif;
+        }
+
+        button{
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+    </style>
+
+</head>
+<body>
+  <div class="card-wrapper">
+    <form action="/adminproblem" method="POST" enctype="multipart/form-data">
+      <div class="head" style="background-color: #ffc300;">
+        <h1 style="font-family:sans-serif;font-size: 3vw;">What's Bothering You?</h1>
+        <br><textarea name="post" rows="20" cols="135"></textarea><br><br>
+        <label for="tag" value="Complaint" type="hidden"></label>
+        <br>
+    </div>
+
+
+   
+
+         <input id="btn" type="file" name="postphoto" id="inp" hidden/>
+         <label id="floatleft" for="btn" style="font-family: sans-serif;color: white;font-size:2.5vw;">Upload an Image</label>
+
+<div id="floatright"></div>
+         <input type='submit' style="font-family:sans-serif;font-size: 2.5vw;cursor: pointer;">
+</div>
+       
+    </form>
+
+  </div>
+
+    <div class="user-wrapper-top">
+      <img src="data:image/png;base64,<%=userprofilepic.profilephoto%>" alt="profilepic">
+       <h1><%=user.name%></h1>
+       <h3>@<%=user.username%></h3>
+       <a href="/logout">Log Out</a>
+  </div>
+  <div class="user-wrapper-bottom">
+      <a href="/announcements">Announcements</a>
+      <a href="/usercomplaints">View Old Issues</a>
+  </div>
+    
+</body>
+</html>
