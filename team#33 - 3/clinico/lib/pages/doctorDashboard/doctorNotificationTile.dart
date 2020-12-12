@@ -1,7 +1,13 @@
+import 'package:clinico/model/appointment.dart';
 import 'package:clinico/pages/doctorDashboard/confirmAppointment.dart';
 import 'package:flutter/material.dart';
 
 class DocNotTile extends StatelessWidget {
+  Appointment appointment;
+  String msg;
+  DocNotTile({this.appointment}){
+    msg = appointment.confirmed?"You Confirmed ${appointment.name} Appointment":"${appointment.name} wants to book appointment.";
+  }
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -9,13 +15,11 @@ class DocNotTile extends StatelessWidget {
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => ConfirmAppointment()));
       },
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(15, 8, 15, 8),
-        child: ListTile(
-          title: Text("Abc Clinic Confirm Your Appointment"),
-          subtitle: Text("send on 9-12-2020 at 11.00 pm"),
-        ),
-      ),
+      child: Card(
+          child: ListTile(
+            title: Text(msg),
+          ),
+        )
     );
   }
 }

@@ -1,4 +1,5 @@
-import 'package:clinico/pages/doctorDashboard/doctorNotificationTile.dart';
+import 'package:clinico/pages/role.dart';
+import 'package:clinico/services/backend.dart';
 import 'package:flutter/material.dart';
 
 class ShowBooking extends StatelessWidget {
@@ -6,7 +7,7 @@ class ShowBooking extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title:Text("Your Appointment"),backgroundColor: Colors.indigo,),
-      body:DocNotTile()
+      body:Backend().showDoctorNotification(currentUser.uid)
     );
   }
 }
