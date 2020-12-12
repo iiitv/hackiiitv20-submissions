@@ -5,7 +5,7 @@ Sign-up option: Make account for self/friend/relative || [Join as Doctor]
 If first Login Home Page: Join a community; 
 Later Login Home page: My Community;
 
-Search Community (If not result: create new community)
+Search Community (If not in the result: create new community)
 
 ### After Entering a Community (Clicking a community in my communities) ###
 
