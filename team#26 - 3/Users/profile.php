@@ -125,6 +125,7 @@ $url = base64_encode($c_name."&".$c_id);
 </div>
 </center>
 <script src="../Js/check.js"></script>
+<script src="Js/search.js"></script>
 <script src="Js/varified.js"></script>
 
 </body>

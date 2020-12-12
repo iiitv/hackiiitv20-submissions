@@ -15,13 +15,14 @@ if(isset($_SESSION['login_user_connect']) && isset($_REQUEST['name'])){
 	$dts_comm = explode("&",base64_decode($url));
 	$c_name = $dts_comm[0];
 	$c_id = $dts_comm[1];
+	
 ?>
 <?php
 define("TITLE", $c_name." Community | Discussion can happen here");
 include("../Commen/header.php");
 ?>
 <body class="w3-theme-l5">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="../Js/jquery.min.js"></script>
   
   <!-- Page Container -->
 <?php

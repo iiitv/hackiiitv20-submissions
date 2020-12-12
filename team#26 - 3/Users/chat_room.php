@@ -115,6 +115,7 @@ let room_id = <?php echo $room_id ?>;
 </script>
 <script src="../Js/check.js"></script>
 <script src="Js/varified.js"></script>
+<script src="Js/refresh.js"></script>
 
 <?php
 
