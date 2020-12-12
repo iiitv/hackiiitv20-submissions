@@ -152,11 +152,11 @@ class Questionnaire extends Component {
           </Form.Group>
           <Form.Group controlId="formGroupText">
             <Form.Label>Description of your problems</Form.Label>
-            <Form.Control onChange={(e)=>obj.problem=e.target.value} type="text" placeholder="problem" />
+            <Form.Control onChange={(e)=>obj.problem=e.target.value} type="text" placeholder="Problems" />
           </Form.Group>
           <Form.Group controlId="formGroupText">
             <Form.Label>Enter details of any previous history of related problems:</Form.Label>
-            <Form.Control onChange={(e)=>obj.previous=e.target.value} type="text" placeholder="Problems" />
+            <Form.Control onChange={(e)=>obj.previous=e.target.value} type="text" placeholder="Previous History" />
           </Form.Group>
           <Form.Group controlId="formGroupText">
             <Form.Label>High Blood Pressure</Form.Label>
