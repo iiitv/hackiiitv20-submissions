@@ -1,4 +1,4 @@
-![Screenshot](Screenshot 2020-12-12 at 2.12.00 PM.png) 
+![Screenshot](screenshot.png) 
   
   <img src="icon.png" align="right" />
   
