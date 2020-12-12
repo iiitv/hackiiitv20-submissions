@@ -1,5 +1,4 @@
 .right{
-    width: 75%;
     margin-left: 25%;
     position: absolute;
 }
@@ -26,11 +25,13 @@
 {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     width: 100%;
+    text-align: center;
     margin:2% auto;
 }
+/* .row td{
+    width: 20%;
+} */
 .table
 {
     width:100%;
@@ -44,7 +45,7 @@ th{
     color: white;
     text-align: center;
     background-color: lawngreen;
-    width: 20%;
+    width: 40%;
 }
 td{
     background-color: wheat;

@@ -20,7 +20,6 @@ handleChange=(e)=>{
 }
 handleSubmit=()=>{
   const {usrname,usremail,password} = this.state;
-  //console.log(state);
   const details ={
       usrname,usremail,password
   }

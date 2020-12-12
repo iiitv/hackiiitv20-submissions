@@ -3,6 +3,7 @@ import "./style.css";
 function RightPart() {
 
     const [arr,setarr]=useState([{}]);
+    const [timearr,setTimearray] =  useState([{}]);
     const default1={
         name:"",
         min:"",
@@ -48,39 +49,49 @@ function RightPart() {
         var days=0.03
         return days*power*hrs;
     }
-    function handleOutput(event){
-        const arr=[];
-        var prevBillAvg = 546;
+    var prevBillAvg = 546;
         var baseCharge = 45;
         var perDayCost = (prevBillAvg-baseCharge)/30;
         var perDayConsumptionUnits = (perDayCost/3);
         var perDayConsumption = perDayConsumptionUnits*1000;
-        var AppliancesNo = arr.length;
+        var AppliancesNo = 10;
         var firstBreak = AppliancesNo/3;
         var secondBreak = 2*firstBreak;
-        var temp;
-        arr.map((value,i)=>{
-            temp="";
-            if(i<firstBreak){
-                temp = ((value.min+value.max)/2)-10;
-            }
-            else if(i>firstBreak && i<secondBreak){
-                temp = ((value.min+value.max)/2)-20;
-            }
-            else{
-                temp = ((value.min+value.max)/2)-30;
-            }
-            array.push(temp);
-        })
-        console.log(arr);
-        console.log(array);
-        console.log(temp);
+    function handleOutput(event){
+        const arr=[];
+        // var prevBillAvg = 546;
+        // var baseCharge = 45;
+        // var perDayCost = (prevBillAvg-baseCharge)/30;
+        // var perDayConsumptionUnits = (perDayCost/3);
+        // var perDayConsumption = perDayConsumptionUnits*1000;
+        // var AppliancesNo = arr.length;
+        // var firstBreak = AppliancesNo/3;
+        // var secondBreak = 2*firstBreak;
+        // var temp;
+        // arr.map((value,i)=>{
+        //     temp="";
+        //     if(i<firstBreak){
+        //         temp = ((value.min+value.max)/2)-10;
+        //     }
+        //     else if(i>firstBreak && i<secondBreak){
+        //         temp = ((value.min+value.max)/2)-20;
+        //     }
+        //     else{
+        //         temp = ((value.min+value.max)/2)-30;
+        //     }
+        //     array.push(temp);
+        // })
+        // console.log(arr);
+        // console.log(array);
+        // console.log(temp);
         // arr.map((value,index)=>{
         //     setarr(()=>{
         //         return [value,array[index]]
         //     })
         // }
         // )
+        var dis = document.getElementById("output__table");
+        dis.style.display="block"
         
     }
     return (
@@ -142,11 +153,43 @@ function RightPart() {
          {
              arr.map((value,i)=>{
                  if(i!=0){
+
+                     if(i<firstBreak){
                 return <tr className="row">
                         <td>{value.name}</td>
-                        <td>{value.time}</td>
+                        <td>{Number(Number(value.min)+Number(value.max))-10}</td>
                     </tr>
+                     }
+                     else if(i<firstBreak && i<secondBreak){
+                        return <tr className="row">
+                        <td>{value.name}</td>
+                        <td>{Number(Number(value.min)+Number(value.max))-20}</td>
+                    </tr>
+
+                     }
+                     else{
+                        return <tr className="row">
+                        <td>{value.name}</td>
+                        <td>{Number(Number(value.min)+Number(value.max))-30}</td>
+                    </tr>
+                     }
+                    
+                    
+                    }
+                /* else if(i>Number(firstBreak) && i < Number(secondBreak)){
+                    return  <tr className="row">
+                         <td>{value.name}</td>
+                        <td>{Number(Number(value.min)+Number(value.max))-20}</td>
+                     </tr>
+
                  }
+                 else{
+                   return  <tr className="row">
+                         <td>{value.name}</td>
+                        <td>{Number(Number(value.min)+Number(value.max))-30}</td>
+                     </tr>*/
+
+                 
              })
          }
          </div>
