@@ -15,7 +15,6 @@ class Index extends Component {
             <RightSection />
             </div>
             <div className="right__contain">
-           
             <LeftSection />
             </div>
             </div>

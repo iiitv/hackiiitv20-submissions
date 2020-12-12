@@ -1,32 +1,39 @@
-*,*::before,*::after
-{
-    box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
-html,body{
-    margin: 0px;
-    padding: 0px;
+html,
+body {
+  margin: 0px;
+  padding: 0px;
 }
 
-.left
-{
-    display: flex;
-    background-color: #FF8E71;
-    flex-direction: column;
-    height: 100vh;
-    padding:7% 0;
-    justify-content: space-around;
-    align-items: center;
-    width:25%;
+.left {
+  display: flex;
+  background-color: #ff8e71;
+  flex-direction: column;
+  height: 100vh;
+  padding: 7% 0;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
 }
-.leftComp
-{
-background-color:#fff;
-color: #FF8E71;
-border-radius: 15px;
-padding:3% 1%;
-width: 50%;
-border: none;
-font-size: 130%;
-font-weight: bolder;
-
+.leftComp {
+  background-color: #fff;
+  color: #ff8e71;
+  border-radius: 15px;
+  padding: 3px 20px;
+  width: 50%;
+  border: none;
+  font-size: 130%;
+  font-weight: bolder;
+}
+.compare__btn {
+  padding: 5px 40px;
+  font-size: 130%;
+  color: #ff8e71;
+  background-color: #fff;
+  border: none;
+  border-radius: 15px;
 }

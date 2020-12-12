@@ -56,17 +56,17 @@ function RightPart() {
         var AppliancesNo = arr.length;
         var firstBreak = AppliancesNo/3;
         var secondBreak = 2*firstBreak;
-        arr.map((value,i)=>{
-            if(i<firstBreak){
-                value.time = ((value.min+value.max)/2)-10;
-            }
-            else if(i>firstBreak && i<secondBreak){
-                value.time = ((value.min+value.max)/2)-20;
-            }
-            else{
-                value.time = ((value.min+value.max)/2)-30;
-            }
-        })
+        // arr.map((value,i)=>{
+        //     if(i<firstBreak){
+        //         value.time = ((value.min+value.max)/2)-10;
+        //     }
+        //     else if(i>firstBreak && i<secondBreak){
+        //         value.time = ((value.min+value.max)/2)-20;
+        //     }
+        //     else{
+        //         value.time = ((value.min+value.max)/2)-30;
+        //     }
+        // })
         console.log(arr);
 
         var dis = document.getElementById('output__table');

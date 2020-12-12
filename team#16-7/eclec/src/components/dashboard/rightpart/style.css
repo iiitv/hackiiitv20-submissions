@@ -17,6 +17,9 @@
     padding:1% 5%;
     margin:1% auto;
     color:#fff;
+    font-family: "montserrat";
+    border-radius:15px ;
+    font-weight: 400;
     background-color: rgb(240, 3, 51);
 }
 .row
@@ -31,24 +34,29 @@
 .table
 {
     width:100%;
+    font-family: "montserrat";
 }
 th{
     font-size: 17px;
     color: white;
     text-align: center;
     background-color: lawngreen;
+    width: 20%;
 }
 td{
     background-color: wheat;
     text-align: center;
+    width: 20%;
 }
 .output__btn{
     background-color: red;
     border-radius: 10px;
     padding: 5px 15px;
-    margin-left: 45%;
+    margin-left: 42%;
     border: none;
+    font-family: "montserrat";
     color: white;
+    padding:1% 5%;
 }
 .output__table{
     display: none;
