@@ -30,13 +30,7 @@ function sendEmail(){
     From : "himanshu446267@gmail.com",
     Subject : "Emergency",
     Body : "latlon"
-}).then(function(response){
-    if(response == 'OK')
-    {
-        alert("Mail sent successfully");
-    }
-    else{
-        alert(response.statusText);
-    }
-});
+}).then(
+    message => alert("mail sent successfully")
+);
 }
