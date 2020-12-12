@@ -1,0 +1,6 @@
+ Disease 
+  ->Chemical burn          
+  ->Sunburn
+ Cure
+ ->immersion of cool water
+ ->Eye flushing  

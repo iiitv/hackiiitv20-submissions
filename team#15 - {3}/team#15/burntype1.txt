@@ -1,0 +1,11 @@
+
+  Disease
+   ->Sunburns
+   ->Scalding                                                          
+   ->partial Thickness
+  Cure  
+   ->Honey can be safe for minor burn
+   ->Cool tap water and apply cold
+   ->Apply petroleum jelly two three time daily
+
+                                                         

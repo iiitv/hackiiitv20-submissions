@@ -1,0 +1,8 @@
+Disease
+->Gastroesophageal Reflux Disease (GERD) 
+->Gastroenteritis.
+->Ulcers
+Cure
+->Tests for digestive problems can include colonoscopy, upper GI endoscopy.
+->Avoid fizzy drinks
+->Avoid foods that cause gas

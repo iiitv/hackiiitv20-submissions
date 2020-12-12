@@ -1,0 +1,20 @@
+#compilation files
+*.out
+*.exe
+*.hex
+
+#extention files
+*.vscode
+*.py
+*.lock
+*.cpp
+
+# Module 
+*.mod*
+*.cmd
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo

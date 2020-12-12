@@ -1,0 +1,23 @@
+Common Types of Medications
+In case of an allergic reaction towards any medicine, patients may experience the following signs and symptoms
+
+1)Hives
+2)Rash
+3)Swelling of mouth, lips, and face
+List of medications
+1)Non Steroidal Anti Inflammatory drugs (NSAIDs):     Used for relief from pain
+2)Antacids          :Used to treat hyperacidity           
+3)Anti-helmintics   :Used to treat worm infestation
+4)Antibiotics       :Used to treat bacterial infections
+5)Anti-diarrheal    :To relive or treat diarrhea
+6)Anti-diabetic     :To manage diabetes
+7)Anti-emetics      :To relive or treat nausea and vomiting
+8)Anti-histamine    :To treat allergies
+9)Anti-hypertensive :To manage high blood pressure 
+10)Anti-pyretic Drugs:To treat fever
+11)Anti-tussive Agents:To treat a cough
+12)Contraceptives    :Medications used to prevent pregnancy
+13)Decongestants     :To reduce nasal congestion or swelling
+14)Electrolytes      :To treat conditions which cause electrolyte disturbances such as vomiting and diarrhea
+15)Vaccines          :Agents which provide protection against certain infections
+ 
