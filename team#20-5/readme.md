@@ -1,4 +1,4 @@
-# Online Education
+<div align="center" ><h1> ONBOARD </h1></div>
 
 ## Introduction
 Education in rural areas has never seen a leverage in teaching styles.
