@@ -158,38 +158,23 @@ function RightPart() {
                      if(i<firstBreak){
                 return <tr className="row">
                         <td>{value.name}</td>
-                        <td>{Number(Number(value.min)+Number(value.max))-10}</td>
+                        <td>{Number(((Number(value.min)*60)+(Number(value.max)*60))/2)-10}</td>
                     </tr>
                      }
                      else if(i<firstBreak && i<secondBreak){
                         return <tr className="row">
                         <td>{value.name}</td>
-                        <td>{Number(Number(value.min)+Number(value.max))-20}</td>
+                        <td>{Number(((Number(value.min)*60)+(Number(value.max)*60))/2)-20}</td>
                     </tr>
 
                      }
                      else{
                         return <tr className="row">
                         <td>{value.name}</td>
-                        <td>{Number(Number(value.min)+Number(value.max))-30}</td>
+                        <td>{Number(((Number(value.min)*60)+(Number(value.max)*60))/2)-30}</td>
                     </tr>
                      }
-                    
-                    
-                    }
-                /* else if(i>Number(firstBreak) && i < Number(secondBreak)){
-                    return  <tr className="row">
-                         <td>{value.name}</td>
-                        <td>{Number(Number(value.min)+Number(value.max))-20}</td>
-                     </tr>
-
-                 }
-                 else{
-                   return  <tr className="row">
-                         <td>{value.name}</td>
-                        <td>{Number(Number(value.min)+Number(value.max))-30}</td>
-                     </tr>*/
-
+                }
                  
              })
          }
