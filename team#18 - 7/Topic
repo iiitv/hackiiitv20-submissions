@@ -1,7 +1,16 @@
-Smart power-grid management system
-Our project revolves around smart power distribution to keep the daily power consumption of a user in check.
-We aimed at predicting the future usage of power/energy using the known historical data of a location. For the purpose of this we used concepts of machine learning: Sequential Regression, LSTM Layer.
-The idea is that once we determine the predicted energy consumption which becomes a threshold, we set a base price per unit of energy consumed.
+SMART POWER-GRID MANAGEMENT SYSTEM
+
+Our project revolves around smart power distribution and regulation of the price of electricity accordingly, to minimize the wastage of energy.
+We aimed at predicting the future daily usage of power/energy in a city using the known historical data of a location.
+For the purpose of this we used concepts of machine learning: Sequential Regression, LSTM Layer.
+
+As we all know that energy companies only produce and supply fixed amount of electricity, and if there is a sudden surge in demand then they would have to buy electricty at much higher rates and then supply it to the consumers. 
+According to our hack, the idea is that once we determine the predicted energy consumption which becomes a threshold, we set a base price per unit of energy consumed
+(say Rs. x/unit for a regular month of November). For December, which is a cold month and has a huge energy consumption during “CHRISTMAS” and “New Year’s holiday”
+the base rate becomes Rs. x.10/unit) 
 As long as a consumer's usage does not cross this threshold value he/she pays as per the base price but if this usage exceeds the threshold the consumer would be charged a price higher than the base price for all the extra units used.
+(Now as the historical data shows that a consumers will use Y units energy in November and predicting on past 15 years of trend there will be consumption of Y+30 units in December.
+ We are already charging Rs x.10/unit on regular usage, but if the consumer passes their threshold they will be charge Rs. x.40/unit  for Y to Y+10 and  Rs. x.60/unit for Y+10 to Y+30)
 The customers would be notified of their power usage in case they cross the threshold limit.
-This method would keep a consumer aware and conscious of his/her power requirements which would lead to its judicial usage.
+
+This method would keep a consumer aware and conscious of his/her power requirements which would lead to its judicial usage and will be profitable for the energy companies, especially in India where most energy companies suffer huge losses.
