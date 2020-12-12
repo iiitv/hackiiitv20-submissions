@@ -523,7 +523,7 @@ class App extends Component {
             </form>
             <br />
             <br />
-            <br />
+            <br /> 
           </div>
         </div>
       </React.Fragment>
