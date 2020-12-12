@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Help Chatroom</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/views/chat/assets/css/styles.min.css">
+</head>
+
+<body>
+  <div class="bootstrap_chat">
+    <div class="container py-5 px-4">
+      <header class="text-center">
+        <h1 class="display-4 text-white">HackIIITV</h1>
+      </header>
+
+      <div class="row rounded-lg overflow-hidden shadow">
+        <!-- Chat Box-->
+        <div class="col-12 px-0">
+          <div class="px-4 py-5 chat-box bg-white" id="messages">
+            <%chat.messages.forEach(ele=>{%>
+              <%if(ele.by===user.name){%>
+                <div class="media w-50 ml-auto mb-3">
+                  <div class="media-body">
+                    <div class="bg-primary rounded py-2 px-3 mb-2">
+                      <p style="color: azure;">You</p>
+                      <p class="text-small mb-0 text-white"><%=ele.message%></p>
+                    </div>
+                    <p class="small text-muted"><%=ele.timestamp%></p>
+                  </div>
+                </div>
+                <%}else{%>
+                  <div class="media w-50 mb-3">
+                    <div class="media-body ml-3">
+                      <div class="bg-light rounded py-2 px-3 mb-2">
+                        <p style="color: darkgreen;"><%=ele.by%></p>
+                        <p class="text-small mb-0 text-muted"><%=ele.message%></p>
+                      </div>
+                      <p class="small text-muted"><%=ele.timestamp%></p>
+                    </div>
+                  </div>
+                <%}%>
+            <%})%>
+          </div>
+
+          <!-- Typing area -->
+          <form id="chatform" action="" class="bg-light">
+            <div class="input-group">
+              <input type="text" placeholder="Type a message" aria-describedby="button-addon2"
+                class="form-control rounded-0 border-0 py-4 bg-light" id="m" autocomplete="off">
+              <div class="input-group-append">
+                <button id="button-addon2" type="submit" class="btn btn-link"> <i
+                    class="fa fa-paper-plane"></i></button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  Invite User:<form action="/invitetochat/<%=roomid%>" method="POST">
+    <input type="email" name="email" placeholder="E-mail">
+    <input type="submit">
+  </form>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+    $(function() {
+    var socket = io();
+    $('#chatform').submit(function (e) {
+        e.preventDefault(); //prevent page reload whenever form is submitted
+        socket.emit('chat message', $('#m').val()); //emit message to the server
+        $('#m').val(''); //empty form input after sending message
+        return false;
+    });
+    socket.on('chat message', function(data) {
+        if (data.user=="<%=user.name%>") {
+          $('#messages').append(`<div class="media w-50 ml-auto mb-3">
+              <div class="media-body">
+                <div class="bg-primary rounded py-2 px-3 mb-2">
+                  <p style="color: azure;">You</p>
+                  <p class="text-small mb-0 text-white">${data.msg}</p>
+                </div>
+                <p class="small text-muted">${data.timestamp}</p>
+              </div>
+            </div>`)
+        }
+        else {
+          $('#messages').append(`<div class="media w-50 mb-3">
+              <div class="media-body ml-3">
+                <div class="bg-light rounded py-2 px-3 mb-2">
+                  <p style="color: darkgreen;">${data.user}</p>
+                  <p class="text-small mb-0 text-muted">${data.msg}</p>
+                </div>
+                <p class="small text-muted">${data.timestamp}</p>
+              </div>
+            </div>`)
+        }
+        $("#messages").animate({ scrollTop: $("#messages")[0].scrollHeight}, 10);
+    });
+    socket.on('user connect', function(msg) {
+        $('#messages').append($('<li>').text(msg));
+    });
+    socket.on('user disconnect', function(msg) {
+        $('#messages').append($('<li>').text(msg));
+    });
+});
+  </script>
+</body>
+
+</html>
