@@ -23,6 +23,10 @@ class fstpg extends State<MyCustomForm> {
     return isUser;
   }
 
+  static bool getAuthority() {
+    return isAuthority;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,6 +108,7 @@ class fstpg extends State<MyCustomForm> {
                                       setState(
                                         () {
                                           isUser = true;
+                                          isAuthority = false;
                                         },
                                       ),
                                       Navigator.pushNamed(
@@ -119,6 +124,12 @@ class fstpg extends State<MyCustomForm> {
                                   RaisedButton(
                                       child: Text("Sign in As Authorities"),
                                       onPressed: () => {
+                                            setState(
+                                              () {
+                                                isUser = false;
+                                                isAuthority = true;
+                                              },
+                                            ),
                                             Navigator.pushNamed(
                                               context,
                                               AuthScreen.routeName,

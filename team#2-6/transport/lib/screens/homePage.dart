@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:geoflutterfire/geoflutterfire.dart';
 import './fstpg.dart';
 import './complaint.dart';
+import '../pickers/user_image_picker.dart';
 // import 'package:flutter_map/flutter_map.dart';
 
 // class HomePage extends StatelessWidget {
@@ -151,24 +152,31 @@ class _AppState extends State<HomePage> {
         home: Scaffold(
             appBar: AppBar(title: Text("Location Services")),
             body: Align(
-              child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text(_locationMessage),
-                    FlatButton(
-                        onPressed: () {
-                          _getCurrentLocation();
-                        },
-                        color: Colors.green,
-                        child: Text("Find Location")),
-                    SizedBox(height: 20),
-                    FlatButton(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                  Text(_locationMessage),
+                  FlatButton(
                       onPressed: () {
-                        Navigator.of(context).pushNamed(Comp.routeName);
+                        _getCurrentLocation();
                       },
-                      child: Text('Register Complaint'),
-                    )
-                  ]),
-            )));
+                      color: Colors.green,
+                      child: Text("Find Location")),
+                  SizedBox(height: 20),
+                  (fstpg.getUser() == true && fstpg.getAuthority() == false)
+                      ? FlatButton(
+                          onPressed: () {
+                            Navigator.of(context)
+                                .pushNamed(UserImagePicker.routeName);
+                          },
+                          child: Text('Register Complaint'),
+                        )
+                      : FlatButton(
+                          onPressed: () {
+                            Navigator.of(context).pushNamed(Comp.routeName);
+                          },
+                          child: Text('see Complaint'),
+                        )
+                ]))));
   }
 }

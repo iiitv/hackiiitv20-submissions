@@ -4,7 +4,7 @@ import './homepage.dart';
 import './auth_screen.dart';
 
 class Comp extends StatefulWidget {
-  static const routeName = '/compPage';
+  static const String routeName = '/compPage';
   @override
   CompState createState() => CompState();
 }
@@ -58,9 +58,6 @@ class CompState extends State<Comp> {
                   ),
                 ),
               ),
-              SizedBox(
-                height: 20,
-              ),
 
               Center(
                 child: Card(
@@ -70,7 +67,7 @@ class CompState extends State<Comp> {
                   ),
                   color: Color(0XFF292E49),
                   child: Padding(
-                    padding: const EdgeInsets.all(40.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -82,7 +79,7 @@ class CompState extends State<Comp> {
                           ),
                           child: Padding(
                               padding: const EdgeInsets.symmetric(
-                                  horizontal: 20.0, vertical: 30),
+                                  horizontal: 20.0, vertical: 10),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
@@ -127,9 +124,6 @@ class CompState extends State<Comp> {
                                           }),
                                 ], //edit here
                               )),
-                        ),
-                        SizedBox(
-                          height: 20,
                         ),
                       ],
                     ),

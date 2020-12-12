@@ -8,6 +8,7 @@ import 'package:transport/screens/splash_screen.dart';
 import './screens/auth_screen.dart';
 import 'screens/auth_screen.dart';
 import './screens/complaint.dart';
+import './pickers/user_image_picker.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -45,6 +46,7 @@ class MyApp extends StatelessWidget {
         HomePage.routeName: (ctx) => HomePage(),
         MyCustomForm.routeName: (context) => MyCustomForm(),
         Comp.routeName: (context) => Comp(),
+        UserImagePicker.routeName: (ctx) => UserImagePicker(),
         // EventDetailsPage.routeName: (context) => EventDetailsPage(),
       },
 
