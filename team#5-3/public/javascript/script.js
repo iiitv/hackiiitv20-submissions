@@ -77,4 +77,5 @@ function loadLabeledImages() {
     )
 }
 
+console.log(res);
 module.exports.name = res
