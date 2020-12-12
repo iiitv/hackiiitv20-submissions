@@ -17,22 +17,25 @@ import numpy as np
 import json
 
 
-import contextlib 
-  
-try: 
-    from urllib.parse import urlencode           
-except ImportError: 
-    from urllib import urlencode 
-try: 
-    from urllib.request import urlopen 
-  
-except ImportError: 
-    from urllib.request import urlopen
-    # from urllib2 import urlopen 
-  
-import sys 
+import requests
+import sys
+import traceback
+import urllib
 
 
+class UrlShortenTinyurl:
+    URL = "http://tinyurl.com/api-create.php"
+
+    def shorten(self, url_long):
+        try:
+            url = self.URL + "?" \
+                + urllib.parse.urlencode({"url": url_long})
+            res = requests.get(url)
+            print("STATUS CODE:", res.status_code)
+            # print("   LONG URL:", url_long)
+            print("  SHORT URL:", res.text)
+        except Exception as e:
+            raise
 
 
 
@@ -79,11 +82,6 @@ def get_chatroom(name):
 #     cv2.imwrite('51IgH_result.png', image_rgd_nobg)
 
 
-
-def make_tiny(url): 
-    request_url = ('http://tinyurl.com/api-create.php?' + urlencode({'url':url}))     
-    with contextlib.closing(urlopen(request_url)) as response:                       
-        return response.read().decode('utf-8 ')
 
 
 
@@ -136,18 +134,41 @@ def process1():
     output.close()
 
 
-    src = cv2.imread(r'C:\Users\Dell\Desktop\twillio\flask-twilio-video\output.png', cv2.IMREAD_UNCHANGED)
+    # src = cv2.imread(r'C:\Users\Dell\Desktop\twillio\flask-twilio-video\output.png', cv2.IMREAD_UNCHANGED)
 
-    bgr = src[:,:,:3] # Channels 0..2
-    gray = cv2.cvtColor(bgr, cv2.COLOR_BGR2GRAY)
+    # bgr = src[:,:,:3] # Channels 0..2
+    # gray = cv2.cvtColor(bgr, cv2.COLOR_BGR2GRAY)
 
-    # Some sort of processing...
+    # # Some sort of processing...
 
-    bgr = cv2.cvtColor(gray, cv2.COLOR_GRAY2BGR)
-    alpha = src[:,:,3] # Channel 3
-    result = np.dstack([bgr, alpha]) # Add the alpha channel
+    # bgr = cv2.cvtColor(gray, cv2.COLOR_GRAY2BGR)
+    # alpha = src[:,:,3] # Channel 3
+    # result = np.dstack([bgr, alpha]) # Add the alpha channel
 
-    cv2.imwrite('51IgH_result.png', result)
+    # cv2.imwrite('51IgH_result.png', result)
+
+
+
+
+
+
+
+    URL = "https://slazzer.com/api/v1/remove_image_background"
+    PATH = 'output.png'
+    API_KEY = "a912d027380043c494f4e2dd27b3d6f2"
+
+    image_file = {'source_image_file': open(PATH, 'rb')}
+    headers = {'API-KEY': API_KEY}
+    response = requests.post(URL, files=image_file, headers=headers)
+
+    ans = response.json()['output_image_url']
+
+
+
+
+
+
+    
 
     # remove_background(r'E:\flask-twilio-video\output.png'))
 
@@ -169,13 +190,37 @@ def process1():
     # img.putdata(newData)
     # img.save("update.png", "PNG")
 
-    b = result.tolist()
+    # b = result.tolist()
 
 
-    for tinyurl in map(make_tiny, b):                    
-        print(tinyurl)
+    # ans=''
+    # with open("51IgH_result.png", "rb") as file:
+    #     url = "https://api.imgbb.com/1/upload"
+    #     payload = {
+    #         "key": 'f458d32e54f5653de50e29f07a931015',
+    #         "image": base64.b64encode(file.read()),
+    #     }
+    #     res = requests.post(url, payload)
+    #     print(res.json())
+    #     ans=res.json()['data']['url']
 
-    return json.dumps(b)
+
+    return ans
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
