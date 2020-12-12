@@ -1,3 +1,5 @@
+<p align="center"><a href="https://day8.github.io/re-frame" target="_blank" rel="noopener noreferrer"><img src="docs/images/logo/re-frame-colour.png?raw=true" alt="re-frame logo"></a></p>  
+  
   <img src="icon.png" align="right" />
   
   # Eclec     [![Brain_Not_Found](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/Ohh-404-BrainNotFound)
