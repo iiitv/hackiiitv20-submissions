@@ -315,7 +315,6 @@ class App extends Component {
         <br />
         <br />
         <div>
-          <h1 className="text-center">Admin Section</h1>
           <div className="container col-5 justify-content-center">
             <div className="text-center">
               <Button onClick={this.dCount} variant="success">
@@ -333,7 +332,7 @@ class App extends Component {
             <br />
             <br />
             {/* 2  */}
-
+            <h1 className="text-center">Admin Section</h1>
             <form onSubmit={this.createDoctor}>
               <h3>CreateDoctor</h3>
               <div class="form-group">
@@ -525,61 +524,6 @@ class App extends Component {
             <br />
             <br />
             <br />
-
-            <h1 className="text-center">Public Section</h1>
-            <br/>
-            <br/>
-            <br/>
-            <form onSubmit={this.doctorDetails}>
-              <h3>Doctor's Details</h3>
-              <div class="form-group">
-                Doctor's address:
-                <input
-                  type="text"
-                  name="doctorDetailsaddr"
-                  class="form-control"
-                  placeholder="Enter Address*"
-                  value={doctorDetailsaddr}
-                  onChange={this.changeHandler}
-                />
-              </div>
-
-              <div class="form-group">
-                <button
-                  class="btn btn-lg btn-primary btn-block text-uppercase"
-                  type="submit"
-                >
-                  Check
-                </button>
-              </div>
-            </form>
-            <br />
-            <br /> 
-            <br />
-            {/* 4 */}
-            <form onSubmit={this.patientDetails}>
-              <h3>Patient's Details</h3>
-              <div class="form-group">
-                Patient's address:
-                <input
-                  type="text"
-                  class="form-control"
-                  name="patientDetailsaddr"
-                  placeholder="Enter Address*"
-                  value={patientDetailsaddr}
-                  onChange={this.changeHandler}
-                />
-              </div>
-
-              <div class="form-group">
-                <button
-                  class="btn btn-lg btn-primary btn-block text-uppercase"
-                  type="submit"
-                >
-                  Check
-                </button>
-              </div>
-            </form>
           </div>
         </div>
       </React.Fragment>
