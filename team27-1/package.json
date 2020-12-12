@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
-  "author": "Shreyansh-Mishra, vikiwarrior, yagya-rawal, vatsal-08",
+  "author": "Shreyansh-Mishra, Tej1562, vikiwarrior,  yagya-rawal",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -22,6 +22,7 @@
     "multer": "^1.4.2",
     "multer-gridfs-storage": "^4.2.0",
     "nodemailer": "^6.4.16",
+    "nodemon": "^2.0.6",
     "socket.io": "^2.3.0",
     "validator": "^13.1.17"
   }
