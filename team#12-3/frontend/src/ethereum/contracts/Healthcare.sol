@@ -13,6 +13,12 @@ abstract contract EIP20 {
 contract HealthCare {
     
     EIP20 instanceEIP20;
+    address public manager;
+    
+    constructor(address addressEIP20) {
+        instanceEIP20 = EIP20(addressEIP20);
+        manager = msg.sender;
+    }
     
     receive() external payable {
     }

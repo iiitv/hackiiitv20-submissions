@@ -22,7 +22,7 @@ class Navbar extends Component {
         return ( 
             <nav className="navbar navbar-expand-lg navbar-dark text-white">
                 <div className="container-fluid">
-                    <Link className="navbar-brand" to="/" style={{marginRight: '0'}}>HealthyLife</Link>
+                <Link className="navbar-brand mr-5" to="/" style={{fontSize: '30px'}}>HealthyLife</Link>
                     
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
@@ -38,7 +38,6 @@ class Navbar extends Component {
                             </React.Fragment> }
                             { doctor && 
                             <React.Fragment>
-                                <NavLink className="nav-link" to="/doctor/jobs">Jobs</NavLink>
                                 <li className="nav-item dropdown">
                                     <a className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Donations
