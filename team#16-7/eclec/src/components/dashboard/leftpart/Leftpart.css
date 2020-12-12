@@ -19,16 +19,6 @@ body {
   align-items: center;
   width: 25%;
 }
-.leftComp {
-  background-color: #fff;
-  color: #ff8e71;
-  border-radius: 15px;
-  padding: 3px 20px;
-  width: 50%;
-  border: none;
-  font-size: 130%;
-  font-weight: bolder;
-}
 .compare__btn {
   padding: 5px 40px;
   font-size: 130%;

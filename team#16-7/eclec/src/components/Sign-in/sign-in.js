@@ -36,6 +36,7 @@ handleSubmit=()=>{
     return (
       <div>
        <div className="signin__form">
+         
        <img className=" logo__img" src="./Images/eclec.png"></img>
          <input className="login__in" type="text" placeholder="Enter your name" value={this.state.usrname} name="usrname" onChange={this.handleChange} />
          <input  className="login__in" type="email" placeholder="Enter your email" value={this.state.usremail} name="usremail" onChange={this.handleChange} />

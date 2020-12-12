@@ -48,7 +48,7 @@ function Registration()
     }
 return <div className="center">
     <img src="./Images/eclec.png" alt="logo" className="myimg"></img>
-    <div className="row">
+    {/* <div className="row">
         <input type="text" name="fname" placeholder="Enter First Name" value={state.fname} onChange={handleChange}/>
     </div>
     <div className="row">
@@ -68,8 +68,15 @@ return <div className="center">
     <div className="row">
     <input type="text" name="state" placeholder="Enter your state" value={state.state} onChange={handleChange}>
         </input>
-    </div>
-   <NavLink exact activeClassName="current" to="/dashboard">  <button type="submit" onClick={handleSubmit} className="btn">Submit</button></NavLink> 
+    </div> */}
+        <input type="text" name="fname" placeholder="Enter First Name" value={state.fname} onChange={handleChange} />
+        <input type="text" name="lname" placeholder="Enter Last Name" value={state.lname} onChange={handleChange}></input>
+        <input type="email" name="email" placeholder="Enter Email" value={state.email} onChange={handleChange}></input>
+        <input type="password" name="password" placeholder="Enter your password" value={state.password} onChange={handleChange} />
+        <input type="text" name="address" placeholder="Enter your address" value={state.address} onChange={handleChange} />
+        <input type="text" name="state" placeholder="Enter your state" value={state.state} onChange={handleChange} />
+        
+   <NavLink exact activeClassName="current" to="/dashboard">  <button type="submit" onClick={handleSubmit} className="myButton">Submit</button></NavLink> 
     
 </div>
 }

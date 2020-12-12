@@ -57,8 +57,11 @@ function RightPart() {
         var AppliancesNo = 10;
         var firstBreak = AppliancesNo/3;
         var secondBreak = 2*firstBreak;
+
+
+
     function handleOutput(event){
-        const arr=[];
+        arr.sort((a, b) => (a.priority > b.priority) ? 1 : -1)
         // var prevBillAvg = 546;
         // var baseCharge = 45;
         // var perDayCost = (prevBillAvg-baseCharge)/30;
@@ -98,16 +101,15 @@ function RightPart() {
         <div>
         <div className="right">
         <div className="page">
-        <h1>Enter details about your appliance</h1>
+        <h1 className="heading">Enter details about your appliance</h1>
         <div class="input">
-        <input type="text" placeholder="Ent
-        er appliance name" onChange={handleChange}  name="name" value={options.name} required />
+        <input type="text" placeholder="Enter appliance name" onChange={handleChange}  name="name" value={options.name} required />
         <input type="number" min="1" placeholder="Enter minimum hours" onChange={handleChange} name="min" value={options.min} required/>
         <input type="number" placeholder = "Enter maximum hours " onChange={handleChange} name="max" value={options.max} required/>
         <input type= "number" placeholder = "Enter Power usage(in Watt)" onChange={handleChange} name="power" value={options.power} required/> 
         <input type= "number" placeholder = "Enter usage priority" onChange={handleChange} name="priority" value={options.priority} required/> 
         </div>
-        <button type="submit" onClick={addMore} className="btn">Add Appliance in list </button>    
+        <button type="submit" onClick={addMore} className="btn">input</button>    
         <table className="table">
             <tr className="row">
             <th>Appliance Name</th>
@@ -145,10 +147,11 @@ function RightPart() {
                 }
             )} */}
         <button type="submit" className="output__btn" onClick={handleOutput}>Get output </button>
+        <h1 className="heading">Consumption every day</h1>
         <div className="output__table" id="output__table">
         <tr className="row">
             <th>Appliance Name</th>
-            <th>Usable amount of time</th>
+            <th>Usable amount of time(In Minutes)</th>
             </tr>
          {
              arr.map((value,i)=>{
