@@ -127,46 +127,12 @@ class _DetailsScreenState extends State<DetailsScreen> {
                               color: MyColors.orange,
                             ),
                             Text("(${doctorInfo[0].reviewCount} Reviews)"),
-                            Expanded(
-                              child: FlatButton(
-                                child: FittedBox(
-                                  child: Text(
-                                    "See all reviews",
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .button
-                                        .copyWith(color: MyColors.blue),
-                                  ),
-                                ),
-                                onPressed: () {},
-                              ),
-                            )
                           ],
                         ),
-                        Text(
-                          "About",
-                          style: Theme.of(context).textTheme.subtitle,
-                        ),
+
                         Wrap(
                           children: <Widget>[
-                            Text(
-                              "${doctorInfo[widget.id].about}",
-                              maxLines: _showMoreAbout ? null : 1,
-                            ),
-                            FlatButton(
-                              child: Text(
-                                _showMoreAbout ? "See Less" : "See More",
-                                style: Theme.of(context)
-                                    .textTheme
-                                    .button
-                                    .copyWith(color: MyColors.blue),
-                              ),
-                              onPressed: () {
-                                setState(() {
-                                  _showMoreAbout = !_showMoreAbout;
-                                });
-                              },
-                            )
+
                           ],
                         ),
                         Text(
@@ -245,10 +211,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(25.0),
                             ),
-                            color: MyColors.blue,
+                            color: Colors.purple,
                             child: Text(
                               "Make An Appointement",
-                              style: Theme.of(context).textTheme.button,
+                              style:TextStyle(color: Colors.white),
                             ),
                             onPressed: () {},
                           ),

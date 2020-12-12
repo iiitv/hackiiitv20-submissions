@@ -15,12 +15,91 @@ class MyColors {
       blue = Color(0xff40beee);
 }
 
+class PreInfo{
+  String name,time , date;
+  PreInfo({this.name,this.time,this.date});
+}
+List<PreInfo> preList=[
+  PreInfo(
+      name:'Dr Aryan Yadav',
+      time: '10:30 AM',
+      date: '21 December'
+  ),
+
+];
+class Vcinfo{
+  String name,link,time,date;
+  Vcinfo({this.name,this.link,this.time,this.date});
+}
+
+
+List<Vcinfo> vc=[
+  Vcinfo(
+    name:'Dr Aryan Yadav',
+    link:'http://meet.google.com/sxu-qsfa-jsas',
+    time: '12:20 PM',
+    date: '21 December'
+  ),
+  Vcinfo(
+      name:'Dr Kartik',
+      link:'http://meet.google.com/jdfu-qiffm-jds',
+      time: '02:30 PM',
+      date: '25 December'
+  ),
+  Vcinfo(
+      name:'Dr Monica',
+      link:'http://meet.google.com/jxu-dsva-jew',
+      time: '11:10 PM',
+      date: '28 December'
+  ),
+  Vcinfo(
+      name:'Dr Gulati',
+      link:'http://meet.google.com/jxu-aifs-jes',
+      time: '12:20 PM',
+      date: '2 January'
+  ),
+];
+
+class NearBy{
+String name,loc,dis;
+NearBy({this.name,this.loc,this.dis});
+
+}
+
+
+List<NearBy> near=[
+NearBy(
+  name: 'Sanjiwani chemist',
+  dis:'1.2 Km',
+  loc:'Gurugram',
+),
+  NearBy(
+    name: 'Balaji Mdicos',
+    dis:'1.8 Km',
+    loc:'Gurugram',
+  ),
+  NearBy(
+    name: 'Apollo pharmacy',
+    dis:'2.2 Km',
+    loc:'Gurugram',
+  ),
+  NearBy(
+    name: 'KD chemist',
+    dis:'3.6 Km',
+    loc:'Gurugram',
+  ),
+
+
+
+
+
+];
 class DoctorInfo {
   final String name,
       image,
       type,
       reviewCount,
-      about,
+
       workingHours,
       patientsCount,
       experience,
@@ -33,7 +112,7 @@ class DoctorInfo {
     this.type,
     this.reviews,
     this.reviewCount,
-    this.about,
+
     this.workingHours,
     this.patientsCount,
     this.experience,
@@ -44,34 +123,54 @@ class DoctorInfo {
 List<DoctorInfo> doctorInfo = [
   DoctorInfo(
     image:
-    "https://image.freepik.com/vecteurs-libre/contexte-du-docteur_1270-84.jpg",
-    about:
-    "Aur bete kya haal hai XD",
-    certifications: "10",
-    experience: "15",
-    name: "Dr Mashur Gulati",
-    patientsCount: "385",
-    reviewCount: "1320",
-    reviews: 4.3,
-    type: "General Practitioner",
+    "https://image.freepik.com/free-vector/doctors-concept-illustration_114360-1515.jpg",
+
+    certifications: "5",
+    experience: "12",
+    name: "Dr Aryan Yadav",
+    patientsCount: "38",
+    reviewCount: "180",
+    reviews: 5,
+    type: 'Gyno',
     workingHours: "Mon - Fri 09:00 - 17:00",
   ),
   DoctorInfo(
     image:
-    "https://image.freepik.com/vecteurs-libre/contexte-du-docteur_1270-84.jpg",
-    about:
-    "Aur bete kya haal hai XD",
-    certifications: "10",
-    experience: "15",
-    name: "Dr Mashur Gulati",
-    patientsCount: "385",
-    reviewCount: "1320",
-    reviews: 4.3,
-    type: "General Practitioner",
+    "https://image.freepik.com/free-vector/doctors-concept-illustration_114360-1515.jpg",
+    certifications: "1",
+    experience: "3",
+    name: "Dr Monica",
+    patientsCount: "38",
+    reviewCount: "300",
+    reviews: 3,
+    type: "ENT",
     workingHours: "Mon - Fri 09:00 - 17:00",
   ),
 
-
+  DoctorInfo(
+    image:
+    "https://image.freepik.com/free-vector/doctors-concept-illustration_114360-1515.jpg",
+    certifications: "5",
+    experience: "8",
+    name: "Dr Kartik",
+    patientsCount: "85",
+    reviewCount: "132",
+    reviews: 3.2,
+    type: "Heart Surgeon",
+    workingHours: "Mon - Fri 09:00 - 17:00",
+  ),
+  DoctorInfo(
+    image:
+    "https://image.freepik.com/free-vector/doctors-concept-illustration_114360-1515.jpg",
+    certifications: "12",
+    experience: "50",
+    name: "Dr Mashur Gulati",
+    patientsCount: "1",
+    reviewCount: "1",
+    reviews: 5,
+    type: "General Practitioner",
+    workingHours: "Mon - Fri 09:00 - 17:00",
+  ),
 ];
 
 List<OnBoardingInstructions> onBoardingInstructions = [

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:health/widget.dart';
+import 'package:health/screens/appointment/widget.dart';
 
-import '../global.dart';
+import '../../global.dart';
 
 class Appointment extends StatefulWidget {
   @override

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'global.dart';
-import 'details.dart';
+import '../../global.dart';
+import '../../details.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
-import 'global.dart';
+import '../../global.dart';
 
 class DoctorContainer extends StatelessWidget {
   final int id;
@@ -28,12 +28,10 @@ class DoctorContainer extends StatelessWidget {
           children: <Widget>[
             SizedBox(
               height: 51,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(9.0),
-                child: Image.network(
-                  "${doctorInfo[id].image}",
-                ),
-              ),
+              child: CircleAvatar(
+                radius: 50,
+              backgroundColor: Colors.white,
+              child: Image(image: AssetImage('images/pic3.jpg'),),)
             ),
             SizedBox(width: 9),
             Expanded(
@@ -86,11 +84,12 @@ class DoctorContainer extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .button
-                          .copyWith(color: MyColors.darkGreen),
+                          .copyWith(color: Colors.white
+                      ),
                     ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(5.0),
-                      color: Color(0xffdbf3e8),
+                      color: Colors.purple,
                     ),
                   ),
                 )

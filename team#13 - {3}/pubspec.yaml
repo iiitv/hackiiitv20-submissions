@@ -22,11 +22,13 @@ environment:
 
 dependencies:
   firebase_auth: ^0.18.3+1
-  cloud_firestore: ^0.14.3+1
   firebase_core: ^0.5.2+1
+  cloud_firestore: ^0.14.4
   http: ^0.12.0+4
   firebase_storage: ^5.1.0
   smooth_star_rating: 1.0.4+2
+  image_cropper: ^1.3.1
+  image_picker: ^0.6.7+15
   flutter:
     sdk: flutter
 
@@ -53,6 +55,8 @@ flutter:
     - images/pic.jpg
     - images/picProfile.png
     - images/picHead.jpg
+    - images/bg.jpg
+    - images/pic3.jpg
 
   fonts:
     - family: FjallaOne
