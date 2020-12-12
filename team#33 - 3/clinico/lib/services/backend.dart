@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:clinico/pages/doctorDashboard/doctorNotificationTile.dart';
 import 'package:clinico/pages/patientDashboard/patientNotificationTile.dart';
 import 'package:uuid/uuid.dart';
 import 'package:clinico/model/appointment.dart';
@@ -179,6 +180,73 @@ class Backend{
            );
          },
        );
+    }
+
+    showDoctorNotification(String doctorId){
+      return StreamBuilder(
+        stream:doctorCollection.doc(doctorId).collection("appointment").orderBy("time",descending:true).snapshots(),
+        builder:(context,snapshot){
+          if(!snapshot.hasData){
+            return Loading();
+          }
+          List<DocNotTile> waitingTile = new List();
+          List<DocNotTile> confirmedTile = new List();
+          snapshot.data.docs.forEach((doc){
+            doc.data()["confirmed"]?confirmedTile.add(
+                DocNotTile(
+                  appointment: Appointment(
+                    name:doc.data()["name"],
+                    gender:doc.data()["gender"],
+                    age:doc.data()["age"],
+                    comment:doc.data()["comment"],
+                    stringimage:doc.data()["image"],
+                    confirmed:doc.data()["confirmed"],
+                    appointmentNumber:doc.data()["appointmentNumber"],
+                    clinicName:doc.data()["clinicName"],
+                    patientId: doc.data()["doctorId"],
+                    patientAppointmentId:doc.data()["patientAppointmentId"],
+                    doctorAppointmentId:doc.id
+                  ),
+                )
+              ):waitingTile.add(
+                DocNotTile(
+                  appointment: Appointment(
+                    name:doc.data()["name"],
+                    gender:doc.data()["gender"],
+                    age:doc.data()["age"],
+                    comment:doc.data()["comment"],
+                    stringimage:doc.data()["image"],
+                    confirmed:doc.data()["confirmed"],
+                    appointmentNumber:doc.data()["appointmentNumber"],
+                    clinicName:doc.data()["clinicName"],
+                    patientId: doc.data()["doctorId"],
+                    patientAppointmentId:doc.data()["patientAppointmentId"],
+                    doctorAppointmentId:doc.id
+                  ),
+                )
+              );
+          });
+          return Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: ListView(
+              children: [
+                SizedBox(height:10),
+                Text("Pending Appointment",style: TextStyle(fontSize:17),),
+                SizedBox(height:20),
+                waitingTile.isEmpty?Center(child: Text("No Pending Appointment")):Column(
+                  children:waitingTile
+                ),
+                SizedBox(height:40),
+                Text("Booked Appointment",style: TextStyle(fontSize:17)),
+                SizedBox(height:20),
+                confirmedTile.isEmpty?Center(child: Text("No Appointment Booked")):Column(
+                  children:confirmedTile
+                ),
+              ],
+            ),
+          );
+        }
+      );
     }
 
     SearchHospital(String key){
