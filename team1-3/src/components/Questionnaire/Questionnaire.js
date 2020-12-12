@@ -87,8 +87,8 @@ class Questionnaire extends Component {
         );
     }
 }
-  
+//take problem, past, diagnosis etc
+
 // ReactDOM.render(<Questionnaire />, document.getElementById('root'));
 
-
-export default Questionnaire
+export default Questionnaire;

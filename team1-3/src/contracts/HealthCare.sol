@@ -8,9 +8,7 @@ contract HealthCare {
         admin = msg.sender;
     }
 
-
     modifier adminCheck() {
-
         require(msg.sender == admin);
         _;
     }
@@ -90,6 +88,37 @@ contract HealthCare {
             _title,
             _description,
             _file
+        );
+    }
+    uint256 public QuestionCount = 0;
+    mapping(uint256 => Questionnaire) public questions;
+    struct Questionnaire {
+        uint256 id;
+        // address patient;
+        // address doctor;
+        string problem;
+        string symptoms;
+        string previous;
+        uint256 age;
+    }
+
+    function writeQuestion(
+        // address _patient,
+        uint256 _age,
+        string memory _symptoms,
+        string memory _problems,
+        string memory _previous
+    ) public {
+        
+        // require(doctors[msg.sender].isVerified == true);
+        
+        questions[QuestionCount] = Questionnaire(
+            QuestionCount,
+            // _patient,
+            _problems,
+             _symptoms,
+             _previous,
+             _age
         );
     }
 }

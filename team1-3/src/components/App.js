@@ -12,7 +12,7 @@
  * call() -> read from blockchain
  * send() -> spill it onto the blockchain
  */
-
+import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import React, { Component } from "react";
 import "./App.css";
 import HealthCare from "../abis/HealthCare.json";
@@ -101,6 +101,7 @@ class App extends Component {
       writeNotetitle: "",
       writeNotedesc: "",
       FileHash: "QmPAraKFw2RVPrTpUybE7zzvQv6AbMuTJDMRrxaNZrfXkH",
+      // QmPAraKFw2RVPrTpUybE7zzvQv6AbMuTJDMRrxaNZrfXkH
       //7
       showhealthNoteaddr: "",
     };
@@ -204,9 +205,9 @@ class App extends Component {
       .send({ from: this.state.account });
   };
   //6
-  writeNote =  async (e) => {
+  writeNote = (e) => {
     e.preventDefault();
-     ipfs.add(this.state.buffer, (error,result)=>{
+      ipfs.add(this.state.buffer, (error,result)=>{
       console.log('ipfs result', result)
 
       if(error){
@@ -229,7 +230,7 @@ class App extends Component {
       writeNotepaddr: "",
       writeNotetitle: "",
       writeNotedesc: "",
-      FileHash: "",
+      // FileHash: "",
     });
     
     console.log(this.state.FileHash)
@@ -265,24 +266,20 @@ class App extends Component {
         toast.success("Doctor: " + res["2"]);
         toast.info("Title: " + res["3"]);
         toast.info("Description: " + res["4"]);
-        toast.info("Image Address: " + <img src= {`https://ipfs.infura.io/ipfs/${res["5"]}`} alt="img"/> + res["5"]);
+
+        const CustomToastWithLink = () => (
+          <div>
+            <a className="link" href={`https://ipfs.infura.io/ipfs/${res["5"]}`}> Link </a>
+          </div>
+        );
+ 
+        // toast.info("Image Address: " + <a href ={`https://ipfs.infura.io/ipfs/${res["5"]}`}> Link </a>);
+        console.log(`https://ipfs.infura.io/ipfs/${res["5"]}`);
+        toast.info(CustomToastWithLink);
         
       });
   };
 
-  // test = (e) => {
-  //   e.preventDefault();
-  //   this.setState({
-  //     showhealthNoteaddr: "",
-  //   });
-  //   this.state.healthCare.methods
-  //     .healthNotes(this.state.showhealthNoteaddr)
-  //     .call()
-  //     .then(function(res) {
-  //       // console.log(res);
-  //     toast.info("Image Address: " + <img src= {`https://ipfs.infura.io/ipfs/${res["5"]}`} alt="img"/> + res["5"]);   
-  //   });
-  // };
   render() {
     const {
       createDoctorname,
@@ -318,7 +315,6 @@ class App extends Component {
         <br />
         <br />
         <div>
-          <h1 className="text-center">Admin Section</h1>
           <div className="container col-5 justify-content-center">
             <div className="text-center">
               <Button onClick={this.dCount} variant="success">
@@ -336,7 +332,7 @@ class App extends Component {
             <br />
             <br />
             {/* 2  */}
-
+            <h1 className="text-center">Admin Section</h1>
             <form onSubmit={this.createDoctor}>
               <h3>CreateDoctor</h3>
               <div class="form-group">
@@ -528,61 +524,6 @@ class App extends Component {
             <br />
             <br />
             <br />
-
-            <h1 className="text-center">Public Section</h1>
-            <br/>
-            <br/>
-            <br/>
-            <form onSubmit={this.doctorDetails}>
-              <h3>Doctor's Details</h3>
-              <div class="form-group">
-                Doctor's address:
-                <input
-                  type="text"
-                  name="doctorDetailsaddr"
-                  class="form-control"
-                  placeholder="Enter Address*"
-                  value={doctorDetailsaddr}
-                  onChange={this.changeHandler}
-                />
-              </div>
-
-              <div class="form-group">
-                <button
-                  class="btn btn-lg btn-primary btn-block text-uppercase"
-                  type="submit"
-                >
-                  Check
-                </button>
-              </div>
-            </form>
-            <br />
-            <br /> 
-            <br />
-            {/* 4 */}
-            <form onSubmit={this.patientDetails}>
-              <h3>Patient's Details</h3>
-              <div class="form-group">
-                Patient's address:
-                <input
-                  type="text"
-                  class="form-control"
-                  name="patientDetailsaddr"
-                  placeholder="Enter Address*"
-                  value={patientDetailsaddr}
-                  onChange={this.changeHandler}
-                />
-              </div>
-
-              <div class="form-group">
-                <button
-                  class="btn btn-lg btn-primary btn-block text-uppercase"
-                  type="submit"
-                >
-                  Check
-                </button>
-              </div>
-            </form>
           </div>
         </div>
       </React.Fragment>
