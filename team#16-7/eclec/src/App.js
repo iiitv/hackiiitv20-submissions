@@ -4,10 +4,11 @@ import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import Login from "./components/Sign-in/sign-in"
 import Registration from "./components/Registration/Registration"
 import Dashboard from "./components/dashboard/Index"
+import RightPart from "./components/dashboard/rightpart/RightPart"
 function App() {
   return (
     <div className="App">
-     <BrowserRouter>
+     {/* <BrowserRouter>
             <div>
                <Switch>
                    <Route exact path='/' component={Home} />
@@ -17,7 +18,8 @@ function App() {
                </Switch>
             </div>
 
-        </BrowserRouter>
+        </BrowserRouter> */}
+        <RightPart />
     </div>
   );
 }
