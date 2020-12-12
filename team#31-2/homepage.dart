@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:team_31/sentmeassage.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -12,19 +12,13 @@ class _HomePageState extends State<HomePage>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Fluter Send Mail '),
+        title: Text('Thank You'),
+        centerTitle: true,
       ),
-      body: Center(
-        child: MaterialButton(
-          color: Colors.purple,
-          child: Text(
-            'Send Mail',
-            style: TextStyle(color: Colors.white),
-          ),
-          onPressed: () {
-            sendMail();
-          },
-        ),
+      body: Center
+      (
+       child: Text("Thank You For Registering. In case of emergency in your locality, you will be notified via Email.",style: TextStyle(fontSize: 30),),
+
       ),
     );
   }
