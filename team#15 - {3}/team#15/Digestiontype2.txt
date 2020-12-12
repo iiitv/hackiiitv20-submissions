@@ -1,0 +1,10 @@
+Disease
+->Hemorrhoids
+->Chronic Constipation
+-> Diarrhea
+
+Cure
+->Eat and drink slowly.
+->Quit smoking
+->Exercise more
+->Avoid sweeteners that cause gas such as fructose and sorbitol.
