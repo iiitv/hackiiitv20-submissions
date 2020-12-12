@@ -1,166 +1,91 @@
-import React, { Component } from "react";
-// import "./App.css";
-import HealthCare from "../../abis/HealthCare.json";
-import Web3 from "web3";
-import { Navbar, Nav, Button } from "react-bootstrap";
-// import "./App.css";
-// import Logo from "../assets/images.png";
-import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-const ipfsClient = require("ipfs-http-client");
-const ipfs = ipfsClient({
-  host: "ipfs.infura.io",
-  port: 5001,
-  protocol: "https"
-});
+import React, { Component } from 'react'
+import {Form,Button } from 'react-bootstrap'
+import './ques.css'
 
-toast.configure();
-//This questionnaire is for the patient to fill and doctors to detect
 class Questionnaire extends Component {
-  async componentWillMount() {
-    await this.loadWeb3();
-    await this.loadBlockchainData();
-    // await this.showAdmin();
-  }
-
-  async loadWeb3() {
-    if (window.ethereum) {
-      window.web3 = new Web3(window.ethereum);
-      await window.ethereum.enable();
-    } else if (window.web3) {
-      window.web3 = new Web3(window.web3.currentProvider);
-    } else {
-      window.alert("Non-Ethereum Browser detected! Please use Meta-Mask.");
+    constructor(props) {
+        super(props);
+        this.state = {
+          problem: '',
+          age: '',
+          symptoms: '',
+          previous: '',
+        };
     }
-  }
-  async loadBlockchainData() {
-    const web3 = window.web3;
-    //load current account
-    const accounts = await web3.eth.getAccounts();
-    this.setState({
-      account: accounts[0]
-    });
-    console.log(accounts);
+    
 
-    // Netword ID
-    const networkId = await web3.eth.net.getId();
-    const networkData = HealthCare.networks[networkId];
-
-    if (networkData) {
-      const healthCare = web3.eth.Contract(HealthCare.abi, networkData.address);
+    onSubmitHandler = (object) => {
       this.setState({
-        healthCare
-      });
-    } else {
-      window.alert(
-        "HealthCare contract has not yet been deployed on the blockchain."
-      );
+        problem:object.problem,
+        age:object.age,
+        symptoms:object.symptoms,
+        previous:object.previous
+      })
     }
+    render() {
 
-    // Address = Address of the User (from metamask)
-    // ABI = Application Binary Interface (smart contract is stored as bytecode under specific address known as contract address. ABI accesses it)
-  }
-  constructor(props) {
-    super(props);
-    this.state = {
-      // address: "",
-      problem: "",
-      age: "",
-      symptoms: "",
-      previous: "",
-      showquestion: ""
-    };
-  }
-  myChangeHandler = (event) => {
-    let prob = event.target.problem;
-    let val = event.target.value;
-    let symptom = event.target.symptoms;
-    let previous = event.target.previous;
-    this.setState({ [prob]: val }); //add other variables here
-  };
+      let obj = {
+          problem: '',
+          age: '',
+          symptoms: '',
+          previous: '',
+      }
 
-  submitQuestion = (e) => {
-    e.preventDefault();
-    this.setState({
-      // address: "",
-      problem: "",
-      age: "",
-      symptoms: "",
-      previous: ""
-    });
-    this.state.healthCare.methods
-      .writeQuestion(
-        // this.state.address,
-        this.state.age,
-        this.state.symptoms,
-        this.state.problem,
-        this.state.previous
-      )
-      .send({ from: this.state.account });
-      console.log(this.state.age);
-      console.log(this.state.symptoms);
-      console.log(this.state.problem);
-      console.log(this.state.previous);
-  };
-  showQuestion = (e) => {
-    e.preventDefault();
-    this.setState({
-      showquestion: ""
-    });
-    this.state.healthCare.methods
-      .questions(this.state.showquestion)
-      .call()
-      .then(function (res) {
-        // console.log(res);
-        toast.success("Problem: " + res["1"], {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined
-        });
-        toast.success("Symptom: " + res["2"]);
-        toast.info("Previous: " + res["3"]);
-        toast.info("Age: " + res["4"]);
-      });
-  }
-
-  render() {
-    return (
-      <div>
-      <form onSubmit={this.submitQuestion}>
-        {/* <p>Patient's Address:</p>
-        <input type="text" name="address" onChange={this.myChangeHandler} /> */}
-        <p>Enter your age:</p>
-        <input type="text" name="age" onChange={this.myChangeHandler} />
-        <p>Enter your symptoms:</p>
-        <input type="text" name="symptoms" onChange={this.myChangeHandler} />
-        <p>Desciption of your problem:</p>
-        <input type="text" name="problem" onChange={this.myChangeHandler} />
-        <p>Enter details of any previous history of related problems:</p>
-        <input type="text" name="previous" onChange={this.myChangeHandler} />
-        <input type="submit" />
-      </form>
-        
-        <form onSubmit={this.showQuestion}>
-            <h3>Show Health Record Details</h3>
-            <div class="form-group">
-              Input:
-              <input
-                type="text"
-                name="showquestion"
-                class="form-control"
-                placeholder="Enter Your Input*"
-                // value={showquestion}
-                onChange={this.changeHandler}
-              />
+        return (
+        <div className="container">
+          <center><h1>Consultation Form</h1></center>
+          <br/>
+          <br/>
+          <Form onSubmit={()=>this.onSubmitHandler(obj)}>
+            
+          <Form.Group controlId="formGroupEmail">
+            <Form.Label>Enter your age</Form.Label>
+            <Form.Control onChange={(e)=>obj.age=e.target.value} type="email" placeholder="Enter age" />
+          </Form.Group>
+          <Form.Group controlId="formGroupPassword">
+            <Form.Label>Enter your symptoms</Form.Label>
+            <Form.Control onChange={(e)=>obj.symptoms=e.target.value} type="password" placeholder="Symptoms" />
+          </Form.Group>
+          <Form.Group controlId="formGroupPassword">
+            <Form.Label>Description of your problems</Form.Label>
+            <Form.Control onChange={(e)=>obj.problem=e.target.value} type="password" placeholder="problem" />
+          </Form.Group>
+          <Form.Group controlId="formGroupPassword">
+            <Form.Label>Enter details of any previous history of related problems:</Form.Label>
+            <Form.Control onChange={(e)=>obj.previous=e.target.value} type="password" placeholder="Problems" />
+          </Form.Group>
+          <div>
+            <Form.Group controlId="formGroupPassword">
+            <Form.Label>High Blood Pressure</Form.Label>
+            <Form.Check aria-label="option 1" label="Yes" />
+            <Form.Check aria-label="option 2" label="No"/>
+          </Form.Group>
             </div>
-          </form>
+          <Form.Group controlId="formGroupPassword">
+            <Form.Label>High Cholesterol</Form.Label>
+            <Form.Check aria-label="option 1" label="Yes" />
+            <Form.Check aria-label="option 2" label="No"/>
+          </Form.Group>
+          <Form.Group controlId="formGroupPassword">
+            <Form.Label>Diabetes</Form.Label>
+            <Form.Check aria-label="option 1" label="Yes" />
+            <Form.Check aria-label="option 2" label="No"/>
+          </Form.Group>
+          <Form.Group controlId="formGroupPassword">
+            <Form.Label>Bleeding disorder</Form.Label>
+            <Form.Check aria-label="option 1" label="Yes" />
+            <Form.Check aria-label="option 2" label="No"/>
+          </Form.Group>
+          <br/>
+          <br/>
+          <center><Button onClick={()=>this.onSubmitHandler(obj)} as="input" type="button" value="Submit" />{' '}</center>
+        </Form>
         </div>
-    );
-  }
+        
+
+        //take problem, past, diagnosis etc
+        );
+    }
 }
 //take problem, past, diagnosis etc
 
