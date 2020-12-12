@@ -47,7 +47,7 @@ app.route('/doctor')
       Experiance:req.body.Experiance
     })
 
-    doc.save(res.render("success"));
+    doc.save(res.redirect('/'));
   })
 
 app.route('/logindoc')
@@ -98,7 +98,7 @@ app.route('/member')
         age: req.body.age
       })
 
-      memb.save(res.render("success"))
+      memb.save(res.redirect('/'))
   })
 
 app.route('/loginmem')
