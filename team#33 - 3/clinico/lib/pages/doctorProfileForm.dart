@@ -7,7 +7,9 @@ import 'package:flutter/material.dart';
 
 class DoctorProfileForm extends StatefulWidget {
   MyUser user;
-  DoctorProfileForm({this.user});
+  Doctor doctor;
+  bool isEdit;
+  DoctorProfileForm({this.user,this.doctor,this.isEdit});
   @override
   _DoctorProfileFormState createState() => _DoctorProfileFormState();
 }
@@ -21,6 +23,20 @@ class _DoctorProfileFormState extends State<DoctorProfileForm> {
   TextEditingController paymentMethodController = new TextEditingController();
   TextEditingController bioController = new TextEditingController();
   bool validClinicName = true,validTiming = true,validAdd = true,validFee = true,validPayMeth = true,isLoading = false;
+
+  @override
+  void initState(){
+    super.initState();
+    if(widget.isEdit){
+      clinicNameController.text = widget.doctor.clinicName;
+      educationalQualificationController.text = widget.doctor.educationalQualification;
+      timingController.text = widget.doctor.timing;
+      addressController.text = widget.doctor.address;
+      feeController.text = widget.doctor.fee;
+      paymentMethodController.text = widget.doctor.paymentMethod;
+      bioController.text = widget.doctor.bio;
+    }
+  }
 
   void saveDoctorDetail()async{
     String clinicName = clinicNameController.text.trim();
@@ -38,11 +54,13 @@ class _DoctorProfileFormState extends State<DoctorProfileForm> {
       validPayMeth = paymentMethod.isNotEmpty;
     });
     if(validClinicName && validTiming &&validAdd &&validFee &&validPayMeth){
-      currentUser = widget.user;
-      currentUser.isDoctor = true;
+      if(!widget.isEdit){
+        currentUser = widget.user;
+        currentUser.isDoctor = true;
+      }
       setState(()=>isLoading = true);
        Doctor doctor = new Doctor(
-         uid:widget.user.uid,
+         uid:widget.isEdit?widget.doctor.uid:widget.user.uid,
          clinicName:clinicName,
          educationalQualification:educationalQualification,
          timing:timing,
@@ -50,11 +68,11 @@ class _DoctorProfileFormState extends State<DoctorProfileForm> {
          fee:fee,
          paymentMethod:paymentMethod, 
          bio:bio,
-         displayName:widget.user.displayName,
-         email:widget.user.email,
-         photoURL:widget.user.photoURL
+         displayName:widget.isEdit?widget.doctor.displayName:widget.user.displayName,
+         email:widget.isEdit?widget.doctor.email:widget.user.email,
+         photoURL:widget.isEdit?widget.doctor.photoURL:widget.user.photoURL
        );
-       await Backend().addDoctorInDataBase(doctor);
+       widget.isEdit?await Backend().updateDoctorData(doctor):await Backend().addDoctorInDataBase(doctor);
        Navigator.pop(context);
        Navigator.pop(context);
        Navigator.push(context,MaterialPageRoute(builder:(BuildContext context)=>DoctorBottom()));
@@ -65,7 +83,8 @@ class _DoctorProfileFormState extends State<DoctorProfileForm> {
     return Container(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Create Your Profile"),
+          backgroundColor: Colors.indigo,
+          title: Text(widget.isEdit?"Edit Your Profile":"Create Your Profile"),
         ),
         body: isLoading?Loading():Container(
           child: Padding(
@@ -77,7 +96,7 @@ class _DoctorProfileFormState extends State<DoctorProfileForm> {
                     child: Container(
                       margin: EdgeInsets.only(top: 20),
                       child: CircleAvatar(
-                        backgroundImage: NetworkImage(widget.user.photoURL),
+                        backgroundImage: NetworkImage(widget.isEdit?widget.doctor.photoURL:widget.user.photoURL),
                         radius: 50,
                       ),
                     ),
@@ -85,13 +104,13 @@ class _DoctorProfileFormState extends State<DoctorProfileForm> {
                   Center(
                     child: Container(
                       margin: EdgeInsets.only(top: 20),
-                      child: Text(widget.user.displayName)
+                      child: Text(widget.isEdit?widget.doctor.displayName:widget.user.displayName)
                     ),
                   ),
                   Center(
                     child: Container(
                       margin: EdgeInsets.only(top: 20),
-                      child: Text(widget.user.email)
+                      child: Text(widget.isEdit?widget.doctor.email:widget.user.email)
                     ),
                   ),
                   SizedBox(height: 40),
@@ -211,7 +230,7 @@ class _DoctorProfileFormState extends State<DoctorProfileForm> {
                             const Color(0xFF2A75BC),
                           ])),
                       child: Text(
-                        "Submit",
+                        widget.isEdit?"Edit":"Submit",
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
                     ),

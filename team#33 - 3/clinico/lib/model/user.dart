@@ -8,6 +8,7 @@ class MyUser {
 }
 
 class Doctor{
-   String clinicName,educationalQualification ,timing ,address, fee, paymentMethod, bio,uid,displayName,email,photoURL ;
-   Doctor({this.uid,this.displayName,this.email,this.photoURL,this.clinicName,this.educationalQualification ,this.timing ,this.address, this.fee, this.paymentMethod, this.bio});
+   String clinicName,educationalQualification ,timing ,address, fee, paymentMethod, bio,uid,displayName,email,photoURL;
+   int counter;
+   Doctor({this.uid,this.displayName,this.email,this.photoURL,this.clinicName,this.educationalQualification ,this.timing ,this.address, this.fee, this.paymentMethod, this.bio,this.counter});
 }

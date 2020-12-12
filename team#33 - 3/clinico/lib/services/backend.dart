@@ -8,6 +8,8 @@ final CollectionReference doctorCollection =
     FirebaseFirestore.instance.collection('doctors');
 final CollectionReference patientCollection =
     FirebaseFirestore.instance.collection('patients');
+final CollectionReference doctornotificationCollection =
+    FirebaseFirestore.instance.collection('doctornotification');
 
 class Backend{
     Future<void> addDoctorInDataBase(Doctor doctor)async{
@@ -22,9 +24,23 @@ class Backend{
          "displayName":doctor.displayName,
          "email":doctor.email,
          "photoURL":doctor.photoURL,
-         "searchedText":doctor.clinicName.toLowerCase()
+         "searchedText":doctor.clinicName.toLowerCase(),
+         "counter":0
       });
     }
+
+  Future<void> updateDoctorData(Doctor doctor)async{
+     await doctorCollection.doc(doctor.uid).update({
+         "clinicName":doctor.clinicName,
+         "educationalQualification":doctor.educationalQualification,
+         "timing":doctor.timing,
+         "address":doctor.address,
+         "fee":doctor.fee,
+         "paymentMethod":doctor.paymentMethod, 
+         "bio":doctor.bio,
+         "searchedText":doctor.clinicName.toLowerCase(),
+      });
+  }
 
   showAllHospitalCard() {
     return StreamBuilder(
@@ -49,6 +65,7 @@ class Backend{
                 photoURL: doc.data()["photoURL"],
                 timing: doc.data()["timing"],
                 uid: doc.id,
+                counter:doc.data()["counter"]
               ),
             ));
           });
