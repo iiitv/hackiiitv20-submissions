@@ -1,4 +1,5 @@
 const video = document.getElementById('videoInput')
+// var x = null
 
 Promise.all([
     faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
@@ -21,7 +22,7 @@ function start() {
 async function recognizeFaces() {
 
     const labeledDescriptors = await loadLabeledImages()
-    console.log(labeledDescriptors)
+   // console.log(labeledDescriptors)
     const faceMatcher = new faceapi.FaceMatcher(labeledDescriptors, 0.7)
 
 
@@ -49,10 +50,13 @@ async function recognizeFaces() {
                 const box = resizedDetections[i].detection.box
                 const drawBox = new faceapi.draw.DrawBox(box, { label: result.toString() })
                 drawBox.draw(canvas)
-                var res = result.toString();
-                //console.log(x);
+                
             })
+            
+            
         }, 100)
+        //exports.name = 'Hello World'
+        
 
 
         
@@ -77,5 +81,6 @@ function loadLabeledImages() {
     )
 }
 
-console.log(res);
-module.exports.name = res
+// console.log(x)
+// module.exports = "Hello World"
+//module.exports.name = res
