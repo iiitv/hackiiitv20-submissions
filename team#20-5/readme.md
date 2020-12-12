@@ -29,3 +29,12 @@ This would be hard to implement completly, but can be given a good try.
 ## Snapshots of our prototpye
 
 <img src="prototype1.jpeg" width="150" height="300">&emsp;  &emsp; <img src="prototype2.jpeg" width="150" height="300"> &emsp;  &emsp; <img src="prototype3.jpeg" width="150" height="300">&emsp;  &emsp; <img src="prototype4.jpeg" width="150" height="300">&emsp;  &emsp; <img src="prototype5.jpeg" width="150" height="300">
+
+
+
+## Team Members
+
+* Jainil Shah
+* Adit Alware
+* Abhinav Gupta
+* Harish Suthar
