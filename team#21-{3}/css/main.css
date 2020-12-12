@@ -1009,3 +1009,13 @@ body {
     @media only screen and (max-width: 56.25em) {
       .book__form {
         width: 100%; } }
+
+.soln {
+  padding: 5rem; }
+
+.no-bg {
+  background-image: none;
+  color: bisque; }
+
+.medData {
+  color: whitesmoke; }
