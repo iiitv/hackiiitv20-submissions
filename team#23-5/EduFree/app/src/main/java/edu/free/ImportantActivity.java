@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -14,23 +15,32 @@ import android.webkit.URLUtil;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ImportantActivity extends AppCompatActivity {
 
     WebView webView;
     ProgressBar progressBar;
-    String url;
+    String url,heading;
+    TextView headingTxtView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_important);
 
+        headingTxtView = findViewById(R.id.important_text);
         webView = (WebView) findViewById(R.id.important_website_web);
         progressBar = findViewById(R.id.progress_bar);
 
-        url = "https://devparmar1.github.io/linksite";
+        Intent intent = getIntent();
+        url = intent.getStringExtra("url");
+        heading = intent.getStringExtra("heading");
+
+        //url = "https://devparmar1.github.io/linksite";
+
+        headingTxtView.setText(heading);
 
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setAllowFileAccess(true);

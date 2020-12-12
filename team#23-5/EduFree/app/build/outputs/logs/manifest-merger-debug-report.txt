@@ -244,7 +244,7 @@ MERGED from [com.google.android.gms:play-services-ads-base:19.6.0] C:\Users\hp\.
 	android:roundIcon
 		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:16:9-54
 	android:icon
-		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:14:9-42
+		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:14:9-41
 	android:allowBackup
 		ADDED from G:\AndroidStudio Workspace\hackiiitv20-submissions\team#23-5\EduFree\app\src\main\AndroidManifest.xml:13:9-35
 	android:theme

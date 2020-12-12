@@ -48,7 +48,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
 
     AlertDialog.Builder builder;
 
-    Button impBtn;
+    Button impBtn,quizBtn;
 
     Spinner spinner;
     String Type;
@@ -68,6 +68,7 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         courseRecycler = findViewById(R.id.courseRecycler);
         spinner = findViewById(R.id.spinnerMenu);
         impBtn = (Button) findViewById(R.id.important_button);
+        quizBtn = findViewById(R.id.quiz_btn);
 
 
         toolbar = findViewById(R.id.toolbar);
@@ -90,7 +91,22 @@ public class HomeActivity extends AppCompatActivity implements AdapterView.OnIte
         impBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),ImportantActivity.class));
+                Intent intent = new Intent(getApplicationContext(),ImportantActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("url","https://devparmar1.github.io/linksite");
+                intent.putExtra("heading","Important Websites and Resources");
+                startActivity(intent);
+            }
+        });
+
+        quizBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),ImportantActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra("url","https://devparmar1.github.io/Quizsite");
+                intent.putExtra("heading","Important Quizzes");
+                startActivity(intent);
             }
         });
 

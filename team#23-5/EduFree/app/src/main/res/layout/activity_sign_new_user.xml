@@ -9,7 +9,7 @@
     <ImageView
         android:layout_alignParentTop="true"
         android:id="@+id/logo"
-        android:background="@drawable/app_logo"
+        android:background="@drawable/appicon"
         android:layout_width="170dp"
         android:layout_marginTop="170dp"
         android:layout_centerHorizontal="true"

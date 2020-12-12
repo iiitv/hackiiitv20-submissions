@@ -24,14 +24,22 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
         android:text="click here to go to important websites"/>
+    <Button
+        android:layout_marginTop="2dp"
+        android:background="@drawable/button_background"
+        android:id="@+id/quiz_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/important_button"
+        android:text="click here to attempt quizzes"/>
     <Spinner
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="5dp"
         android:elevation="16dp"
         android:background="@drawable/spinner_bg"
         android:spinnerMode="dialog"
         android:popupBackground="@android:color/white"
         android:padding="2dp"
-        android:layout_below="@id/toolbar"
+        android:layout_below="@id/quiz_btn"
         android:id="@+id/spinnerMenu"
         android:layout_width="match_parent"
         android:gravity="center"

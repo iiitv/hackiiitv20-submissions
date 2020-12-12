@@ -64,6 +64,10 @@
         "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_appicon.jpg.flat",
+        "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\drawable-v24\\appicon.jpg"
+    },
+    {
         "merged": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "G:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team#23-5\\EduFree\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },

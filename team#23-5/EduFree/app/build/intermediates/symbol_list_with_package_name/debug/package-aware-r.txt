@@ -892,6 +892,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable app_logo
+drawable appicon
 drawable black_05dp_square_border
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
@@ -1161,6 +1162,7 @@ id progBar
 id progress_bar
 id progress_circular
 id progress_horizontal
+id quiz_btn
 id radio
 id ratio
 id rectangles
