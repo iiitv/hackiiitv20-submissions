@@ -1,0 +1,203 @@
+<%- include('partials/header') %>
+
+
+<section id="first">
+
+<div class="container-fluid">
+
+
+<nav class="navbar  navbar-expand-lg navbar-dark">
+  <a class="navbar-brand" href=""><h1>Queries</h1> <p class="slogan">Learn together,Grow together</p></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+       <a class="nav-link" style="color:black;"  href="#third">About us</a>
+      </li>
+      <li class="nav-item">
+         <a class="nav-link" href="#second" style="color:black;">Benefits</a>
+      </li>
+      <li class="nav-item">
+       <a class="nav-link" href="#fourth" style="color:black;">Contact us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+</div>
+
+<div class="row">
+
+
+  <div class="col-lg-6 segment">
+    <h1 class="big-heading">Connect with your peers and start learning</h1>
+
+    <a class="btn btn-info btn-lg" href="/register" role="button">Register</a>
+    <a class="btn btn-dark btn-lg" href="/login" role="button">Login</a>
+  </div>
+
+  <div class="col-lg-6">
+
+  </div>
+
+</div>
+
+
+</section>
+<section id = "second">
+<section class="white-section" id="features">
+
+ <div class="container-fluid">
+
+   <div class="row">
+     <div class="feature-box col-lg-4">
+
+       <i class="icon fa fa-question fa-4x" aria-hidden="true"></i>
+       <h3 class="feature-title">Ask your doubts.</h3>
+       <p>Ask your doubts with your peers</p>
+     </div>
+
+     <div class="feature-box col-lg-4">
+       <i class="icon fas fa-bullseye fa-4x"></i>
+       <h3 class="feature-title">Clear concept</h3>
+       <p>Clear your concept,Get better at your subject</p>
+     </div>
+
+     <div class="feature-box col-lg-4">
+       <i class="icon fas fa-heart fa-4x"></i>
+       <h3 class="feature-title">Help others</h3>
+       <p>Help others and polish your own concepts</p>
+     </div>
+   </div>
+
+
+ </div>
+</section>
+<section id = "third">
+   <!--Carousel Wrapper-->
+ <div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
+   <!--Indicators-->
+   <ol class="carousel-indicators">
+     <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+     <li data-target="#carousel-example-2" data-slide-to="1"></li>
+     <li data-target="#carousel-example-2" data-slide-to="2"></li>
+   </ol>
+   <!--/.Indicators-->
+   <!--Slides-->
+   <div class="carousel-inner" role="listbox">
+     <div class="carousel-item active">
+       <div class="view">
+         <img class="d-block w-100" src="Images/pic45.jpg" height ="500px"  alt="First slide">
+         <div class="mask rgba-black-dark"></div>
+       </div>
+       <div class="carousel-caption">
+
+       </div>
+     </div>
+     <div class="carousel-item">
+       <!--Mask color-->
+       <div class="view">
+         <img class="d-block w-100" src="Images/pic2.jpg" height ="500px" alt="Second slide">
+         <div class="mask rgba-black-light"></div>
+       </div>
+       <div class="carousel-caption">
+
+       </div>
+     </div>
+     <div class="carousel-item">
+       <!--Mask color-->
+       <div class="view">
+         <img class="d-block w-100" src="Images\pic3.jpg" hieght ="500px"  alt="Third slide">
+         <div class="mask rgba-black-light"></div>
+       </div>
+       <div class="carousel-caption">
+
+       </div>
+     </div>
+   </div>
+   <!--/.Slides-->
+   <!--Controls-->
+   <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+     <span class="sr-only">Previous</span>
+   </a>
+   <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+     <span class="sr-only">Next</span>
+   </a>
+   <!--/.Controls-->
+ </div>
+ <!--/.Carousel Wrapper-->
+
+ </section>
+
+
+<br />
+
+<div id="fourth">
+
+  <div class="container contact-form">
+            <div class="contact-image">
+                <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+            </div>
+            <form method="post">
+                <h3>Drop Us a Message</h3>
+               <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" />
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <textarea name="txtMsg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </form>
+</div>
+
+</div>
+
+
+<footer>
+
+<h4><i class="far fa-copyright"></i> Made with <i class="fas fa-heart" color=black></i> by Moonlight Coders</h4>
+
+</footer>
+
+
+
+
+<%- include('partials/footer') %>
+
+
+
+
+
+
+<!-- <a class="btn btn-light btn-lg" href="/register" role="button">Register</a>
+<a class="btn btn-dark btn-lg" href="/login" role="button">Login</a> -->
+
+
+<!-- <div class="jumbotron centered">
+  <div class="container">
+    <!-- <i class="fas fa-key fa-6x"></i> -->
+    <!-- <h1 class="display-3">Queries</h1>
+    <p class="lead">Learn together,grow together</p>
+    <hr>
+
+  </div>
+</div> -->

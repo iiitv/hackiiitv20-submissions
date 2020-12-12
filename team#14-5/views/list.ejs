@@ -1,0 +1,59 @@
+<%- include('partials/header') %>
+
+<div class="profstyle">
+  <div class="container ">
+
+    <nav class="navbar  navbar-expand-lg navbar-dark">
+      <a class="navbar-brand brand " style="color: white;" href="">Queries</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item login">
+           <a class="nav-link" href="#footer"> <i class="fa fa-circle fa-2x" color="gold" aria-hidden="true" ></i><p style="color:white;"> <%= peerCoins %></p></a>
+          </li>
+          <li class="nav-item login ">
+             <a class="nav-link" href="/offers" style="color:white;">Redeem</a>
+          </li>
+          <li class="nav-item login ml-5">
+           <a class="nav-link" href="#cta" style="color:white;">Your Queries</a>
+          </li>
+          <li class="nav-item login ml-5">
+           <a class="nav-link" href="#cta" style="color:white;"> Your submissions</a>
+          </li>
+          <li class="nav-item login ml-5">
+           <a class="nav-link" href="#cta"> <i class="fa fa-user fa-2x" color="white" aria-hidden="true"></i>You</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container mt-5">
+     <h1 style="color:white;"> Hello <%= peerName %>   </h1>    <!-- name -->
+     <img src="Images/circle-cropped.png" alt="profile image">
+  <h3 style="color:white;">Your Coins Amount is: <%= peerCoins %> </h3>
+
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include('partials/footer') %>
