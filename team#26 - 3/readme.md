@@ -1,20 +1,67 @@
-Login/Sign-up Page
+# Care Connect
+An *online platform* for mental support communities to the patients of any kind of disease. :wave:
 
-Sign-up option: Make account for self/friend/relative || [Join as Doctor] 
+It is made using PHP, MySQL, Ajax, HTML, CSS, and JavaScript. :zap:
 
-If first Login Home Page: Join a community; 
-Later Login Home page: My Community;
+It is deployed using Microsoft Azure's VM instance and Lamp server.
+Key functionalities:
+- Registered user can join a community.
+- Create a community
+- Post in community
+- Add friend request to fellow community members
+- Chat with community members
+And some other basics...
 
-Search Community (If not in the result: create new community)
+Template images.
 
-### After Entering a Community (Clicking a community in my communities) ###
+Below are the login and registration pages.
+<p align="center">
+  
+  <img src="https://github.com/Kelta-King/Kelta-King/blob/master/Images/login.PNG" title="Login Page">
+<br>
+  <img src="https://github.com/Kelta-King/Kelta-King/blob/master/Images/Registration.PNG" title="Registration Page">
+  
+</p>
+Lobby page
+<p align="center">
+  
+  <img src="https://github.com/Kelta-King/Kelta-King/blob/master/Images/lobby.PNG" title="Registration Page">
 
-Section 1: Header
+</p>
+Search Community to join..
+<p align="center">
+  
+  <img src="https://github.com/Kelta-King/Kelta-King/blob/master/Images/searchAndJoin.PNG" title="Registration Page">
 
-Section 2: Feeds/Posts
+</p>
+<br>
+Community area
+<p align="center">
+  
+  <img src="https://github.com/Kelta-King/Kelta-King/blob/master/Images/communityArea.PNG" title="Registration Page">
 
-Section 3: Show Members/Doctors.
+</p>
+Chat area
+<p align="center">
+  
+  <img src="https://github.com/Kelta-King/Kelta-King/blob/master/Images/chatAreaOne.PNG" title="Registration Page">
+  <br>
+  <img src="https://github.com/Kelta-King/Kelta-King/blob/master/Images/chatAreaTwo.PNG" title="Registration Page">
+  
 
-On clicking a profile, go to profile page.
+</p>
+User profiles
+<p align="center">
+  
+  <img src="https://github.com/Kelta-King/Kelta-King/blob/master/Images/personalProfile.PNG" title="Registration Page">
+  <img src="https://github.com/Kelta-King/Kelta-King/blob/master/Images/otherUserProfile.PNG" title="Registration Page">
+  
 
-We also allow sending messages within a community.
+</p>
+Friend request area
+<p align="center">
+  
+  <img src="https://github.com/Kelta-King/Kelta-King/blob/master/Images/friendRequestArea.PNG" title="Registration Page">
+  
+
+</p>
