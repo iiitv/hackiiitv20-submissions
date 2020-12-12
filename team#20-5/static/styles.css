@@ -41,8 +41,15 @@ html, body {
 }
 .participant div video:not(.trackZoomed) {
     width: 400px;
-    height: 400px;
+    height: 308px;
 }
+
+
+video {
+    width: 400px !important;
+    height: 308px !important;
+} 
+
 .participant .label {
     background-color: #ddd;
     padding: 2px;
@@ -92,10 +99,4 @@ html, body {
     margin-bottom: 10px;
     line-height: 1em;
     max-height: 1px;
-}
-
-.imageDiv img{
-    z-index: 2;
-    position: absolute;
-    opacity: 0.5;
 }
