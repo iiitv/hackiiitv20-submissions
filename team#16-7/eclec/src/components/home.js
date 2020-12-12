@@ -8,9 +8,6 @@ import Navbar from "./Navbar/Navbar"
             <div>
             <Navbar />
             <FrontPage />
-
-            
-                
             </div>
         )
     }

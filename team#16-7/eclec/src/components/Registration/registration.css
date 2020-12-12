@@ -16,7 +16,6 @@ textarea
 }
 input{
     width: 100%;
-    height:100%;
     padding: 10px 10px;
     text-align: center;
     border: 3px solid #D3D3D3;
@@ -29,11 +28,8 @@ input{
 }
 .row
 {
-    max-width: 960px;
-    min-width: 30%;
+    max-width: 500px;
     width: 30%;
-    margin:20px auto;
-    margin-bottom: 1.1%;
     border-radius: 5px;
 }
 .row1
@@ -41,15 +37,14 @@ input{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     max-width:60%;
     margin:0 auto;
 }
 
 .myimg
 {
-    width: 5%;
-    height: 5%;
+    width: 8%;
+    height: 6%;
     display: block;
     margin: auto;
     margin-bottom: 0.5%;
@@ -60,7 +55,7 @@ input{
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 5%;
     
 }
 

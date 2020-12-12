@@ -21,6 +21,7 @@ app.use(
 app.post('/Sign_up', function(req, res, next) {
   // res.send('respond with a resource');
 //  console.log(req.body.fname)
+console.log(req.body)
   mongoose.connect('mongodb+srv://creator:nnNN@@22@cluster0.xayvg.mongodb.net/eclec_user/UserId',{ 
     useNewUrlParser: true, 
     useCreateIndex: true, 
