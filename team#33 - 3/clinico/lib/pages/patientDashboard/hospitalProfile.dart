@@ -41,6 +41,7 @@ class _HospitalProfileState extends State<HospitalProfile> {
       paymentMethod: doc.data()["paymentMethod"],
       photoURL: doc.data()["photoURL"],
       timing: doc.data()["timing"],
+      counter: doc.data()["counter"],
       uid: widget.uid,
     );
     setState(() => isLoading = false);
@@ -94,8 +95,18 @@ class _HospitalProfileState extends State<HospitalProfile> {
                       ),
                       Center(
                         child: Text(
-                          'Current appointment number being attended to : ' +
-                              doctor.counter.toString(),
+                          'Current appointment number being attended to : ',
+                          style: TextStyle(
+                            fontSize: 24,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Center(
+                        child: Text(
+                          doctor.counter.toString(),
                           style: TextStyle(
                             fontSize: 24,
                           ),
@@ -139,7 +150,7 @@ class _HospitalProfileState extends State<HospitalProfile> {
                       ),
                       Center(
                         child: Text(
-                          'Address : ' + doctor.address,
+                          'Address : ',
                           style: TextStyle(
                             fontSize: 24,
                           ),
@@ -150,7 +161,29 @@ class _HospitalProfileState extends State<HospitalProfile> {
                       ),
                       Center(
                         child: Text(
-                          'Timing : ' + doctor.timing,
+                          doctor.address,
+                          style: TextStyle(
+                            fontSize: 24,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Center(
+                        child: Text(
+                          'Timing : ',
+                          style: TextStyle(
+                            fontSize: 24,
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Center(
+                        child: Text(
+                          doctor.timing,
                           style: TextStyle(
                             fontSize: 24,
                           ),
