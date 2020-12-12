@@ -4,7 +4,6 @@ require('dotenv').config()
 const express = require('express');
 //import body parser, to handle JSON in request bodys
 var bodyParser = require('body-parser');
-const http = require('http');
 const CryptoJS = require('crypto-js');
 const jwt = require('jsonwebtoken');
 //create an express app
@@ -30,6 +29,7 @@ var Profilephotos = require('./objects/profilephotos.js');
 const post = require('./objects/post.js');
 //set json spaces to 2, used when serving JSON data
 app.set('json spaces', 2);
+const http = require('http');
 //make public a static directory, to serve static files
 app.use(express.static('public'));
 //set view engine to ejs, which allows to embed JS into HTML
@@ -477,3 +477,11 @@ app.use(function (req, res, next) {
     });
 });
 
+app.get('/keepalive', (req, res) => {
+    res.send('Ping Recieved ' + Date.now())
+    console.log('Ping Recieved ' + Date.now());
+})
+
+setInterval(function () {
+    http.get(process.env.hosturl + '/keepalive');
+}, 30000)
