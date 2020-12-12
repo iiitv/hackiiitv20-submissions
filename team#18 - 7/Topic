@@ -1,1 +1,7 @@
 Smart power-grid management system
+Our project revolves around smart power distribution to keep the daily power consumption of a user in check.
+We aimed at predicting the future usage of power/energy using the known historical data of a location. For the purpose of this we used concepts of machine learning: Sequential Regression, LSTM Layer.
+The idea is that once we determine the predicted energy consumption which becomes a threshold, we set a base price per unit of energy consumed.
+As long as a consumer's usage does not cross this threshold value he/she pays as per the base price but if this usage exceeds the threshold the consumer would be charged a price higher than the base price for all the extra units used.
+The customers would be notified of their power usage in case they cross the threshold limit.
+This method would keep a consumer aware and conscious of his/her power requirements which would lead to its judicial usage.
