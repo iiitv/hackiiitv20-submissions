@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import jwtDecode from 'jwt-decode';
 import axios from 'axios';
-import { Label } from 'semantic-ui-react';
+import { Button, Label } from 'semantic-ui-react';
 
 class UserNotifications extends Component {
     state = { 
@@ -13,9 +13,22 @@ class UserNotifications extends Component {
         try {
             const {_id} = jwtDecode(localStorage.getItem('token'));
             const bloodDonationRequest = await axios.get(`http://localhost:9000/api/bloodDonation/user/${_id}`); 
-            const doctor = await axios.get(`http://localhost:9000/api/doctor/${bloodDonationRequest.data.hospitalId}`);
-            console.log(bloodDonationRequest.data);
-            this.setState({ bloodDonationRequest: bloodDonationRequest.data, doctor: doctor.data });
+            if(bloodDonationRequest.data) {
+                const doctor = await axios.get(`http://localhost:9000/api/doctor/${bloodDonationRequest.data.hospitalId}`);
+                console.log(bloodDonationRequest.data);
+                this.setState({ bloodDonationRequest: bloodDonationRequest.data, doctor: doctor.data });
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    claimCoins = async () => {
+        try {
+            const { _id} = jwtDecode(localStorage.getItem('token'));
+            const complete = await axios.post(`http://localhost:9000/api/user/completeBloodDonation/${_id}`);
+            const deleteRequest = await axios.post(`http://localhost:9000/api/bloodDonation/remove/${this.state.bloodDonationRequest._id}`);
+            this.setState({bloodDonationRequest: ''});
         } catch (error) {
             console.log(error);
         }
@@ -38,6 +51,11 @@ class UserNotifications extends Component {
                     <br/><br/>
                     <label style={{color: 'red'}}>Appointment Time : </label>
                     <span> {this.state.bloodDonationRequest.appointmentTime}</span>
+                    <br></br>
+                    { this.state.bloodDonationRequest.result ? 
+                    <Button color="green" size="small" className="mt-2 px-2" onClick={this.claimCoins}>Claim Coins</Button>
+                    : null
+                    }
                 </Label>
                 : <h4>No Notifications for Blood Donation</h4>
                 }

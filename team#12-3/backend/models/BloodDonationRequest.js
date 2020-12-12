@@ -13,7 +13,8 @@ const bloodDonationRequestSchema = new mongoose.Schema({
         type: String
     },
     result: {
-        type: Boolean
+        type: Boolean,
+        default: false
     },
     appointmentDate: {
         type: String

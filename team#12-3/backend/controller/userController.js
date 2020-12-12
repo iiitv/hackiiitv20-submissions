@@ -109,4 +109,18 @@ const donateBloodRequest = async (req,res) => {
     }
 }
 
-module.exports = { getList, get, register, update, remove, login, donateBloodRequest};
+const completeBloodDonation = async (req,res) => {
+    try{
+        console.log('in completeBloodDonation api');
+        const updatedUser = await User.findByIdAndUpdate(req.params.id, 
+            { $set: {
+                currentBloodDonationHospital: "",
+                currentBloodDonationRequest: false
+            } } );
+        res.json(updatedUser);
+    }catch(err){
+        res.json(err);
+    }
+}
+
+module.exports = { getList, get, register, update, remove, login, donateBloodRequest, completeBloodDonation};

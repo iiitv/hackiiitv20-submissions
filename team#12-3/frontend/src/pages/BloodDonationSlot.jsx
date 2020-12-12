@@ -98,6 +98,16 @@ class BloodDonationSlot extends Component {
         }
     }
 
+    confirmBloodDonation = async () => {
+        try {
+            console.log("in confirmBloodDonation");
+            const confirmDonation = await axios.post("http://localhost:9000/api/bloodDonation/confirmBloodDonation/" + this.props.match.params.id);
+            this.props.history.push("/doctor/bloodDonations");
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     render() { 
         return ( 
             <React.Fragment>
@@ -139,7 +149,7 @@ class BloodDonationSlot extends Component {
                         </div>
                         <div className='row mt-2'>
                             <div className="mx-auto">
-                                <Button color="blue">Blood Donated</Button>
+                                <Button color="blue" onClick={this.confirmBloodDonation}>Blood Donated</Button>
                             </div>
                         </div>
                     </div>

@@ -12,5 +12,7 @@ router.get('/getRequest/:id', bloodDonationController.getRequest);
 // router.post('/login', bloodDonationController.login);
 router.post('/new', bloodDonationController.donateBloodRequest);
 router.post('/fixSlot', bloodDonationController.fixSlot);
+router.post('/confirmBloodDonation/:id', bloodDonationController.confirmBloodDonation);
+router.post('/remove/:id', bloodDonationController.remove);
 
 module.exports = router;
