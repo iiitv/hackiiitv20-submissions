@@ -1,4 +1,5 @@
 import 'package:clinico/model/user.dart';
+import 'package:clinico/pages/patientDashboard/bookAppointmentForm.dart';
 import 'package:clinico/services/backend.dart';
 import 'package:clinico/shared/loading.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -169,7 +170,9 @@ class _HospitalProfileState extends State<HospitalProfile> {
                             ),
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context,MaterialPageRoute(builder:(BuildContext context)=>BookAppointment(doctor:doctor)));
+                        },
                       ),
                     ),
                   ],
