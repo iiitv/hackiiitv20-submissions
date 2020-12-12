@@ -19,18 +19,14 @@ function myfunction()
 function showPosition(position) {
     console.log(`Latitude: ${position.coords.latitude}`);
     console.log(`Longitude: ${position.coords.longitude}`);
-    console.log(id);
-    console.log(p);
     latlon = "Latitude: "+position.coords.latitude+", Longitude: "+position.coords.longitude;
     sendEmail();
 }
 
 function sendEmail(){
     Email.send({
-    Host : "smtp.gmail.com",
-    Username : "himanshu446267@gmail.com",
-    Password : "Him@n$hu44626748",
-    To : 'himanshu446267@gmail.com',
+    SecureToken : "4f6d01bd-edb4-48bd-be43-3a87d5960616",
+    To : "himanshu446267@gmail.com",
     From : "himanshu446267@gmail.com",
     Subject : "Emergency",
     Body : "latlon"

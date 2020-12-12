@@ -6,8 +6,7 @@ document.getElementById("login").addEventListener("click", (e) => {
     e.preventDefault();
 });
 
-const id;
-const p;
+
 
     class Node{
         constructor(n, pass, ph, eph, aadh)
