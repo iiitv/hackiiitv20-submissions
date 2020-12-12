@@ -78,7 +78,7 @@ Community: <b><?php echo $c_name ?></b>
 		  </p>
 <?php
 	$p_id = $result['p_id'];
-	$qry1 = "SELECT u_id FROM post_user_like WHERE p_id = $p_id";
+	$qry1 = "SELECT u_id FROM post_user_like WHERE p_id = $p_id AND u_id = $id";
 	$x = false;
 	if($data2 = $conn->query($qry1)){
 		
@@ -88,7 +88,7 @@ Community: <b><?php echo $c_name ?></b>
 		
 	}
 ?>
-          <button type="button" class="w3-button w3-blue w3-hover-green w3-margin-bottom <?php if($x){echo "w3-green";} ?>" onclick="like(<?php echo $result['p_id'] ?>)">
+          <button type="button" class="w3-button w3-blue w3-hover-green w3-margin-bottom <?php if($x){echo "w3-green";} ?>" id="<?php echo $result['p_id'] ?>_btn" onclick="like(<?php echo $result['p_id'] ?>)">
 		  <span id="<?php echo $result['p_id'] ?>"><?php echo $result['likes'] ?></span> <i class="fa fa-thumbs-up"></i> Like<?php if($x){echo "d";} ?></button>
         </div>
 <?php
@@ -103,10 +103,28 @@ Community: <b><?php echo $c_name ?></b>
 
             <!-- Right Column -->
             <div class="w3-col m2">
-			
-				<div class="w3-card w3-round w3-xlarge w3-center w3-margin-bottom w3-padding-16 kel-hover w3-green" style="cursor:pointer;">
-					<i class="fa fa-comments"></i> chatroom
-				</div>
+<?php
+	//chat rroom's url
+	$qury = "SELECT room_id FROM room_commu WHERE c_id = $c_id";
+	if($data = $conn->query($qury)){
+		
+		$result = $data->fetch_assoc();
+		$room_id = $result['room_id'];
+		
+		$url = base64_encode($room_id."&".$c_name."&".$c_id);
+		
+		$link = "chat_room.php?name=".$url;
+?>
+
+<div class="w3-card w3-round w3-xlarge w3-center w3-margin-bottom w3-padding-16 kel-hover w3-green"
+ style="cursor:pointer;" onclick="window.open('<?php echo $link ?>', '_self')">
+	<i class="fa fa-comments"></i> chatroom
+</div>
+
+<?php
+	}
+?>
+				
 			  
               <div class="w3-card w3-round w3-white w3-center">
                 <div class="w3-container">

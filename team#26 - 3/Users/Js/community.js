@@ -64,6 +64,7 @@ let addPost = (c_id) => {
 let like = (p_id) => {
 	
 	let likes = document.getElementById(p_id).innerHTML;
+	let btn = document.getElementById(p_id+"_btn");
 	
 	let xhttp = new XMLHttpRequest();
 	let str = "p_id="+p_id;
@@ -76,6 +77,7 @@ let like = (p_id) => {
 			}
 			else{
 				document.getElementById(p_id).innerHTML = this.responseText;
+				btn.className += "w3-green";
 				
 			}
 		}

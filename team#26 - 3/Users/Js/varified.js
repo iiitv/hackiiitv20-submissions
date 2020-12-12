@@ -112,3 +112,134 @@ let makeCommunity = () => {
 	}	
 	
 }
+
+let srch = document.getElementById('search_val');
+srch.addEventListener("input", () => {
+	
+	let val = document.getElementById('search_val').value;
+	let search_answeres = document.getElementById('search_answers');
+	
+	myFunction2(true);
+	
+	let str = "val="+val;
+	let xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		
+		if(this.readyState == 4 && this.status == 200){
+			
+			if(this.responseText.length > 20){
+				search_answeres.innerHTML = this.responseText;
+			}
+			else{
+				search_answeres.innerHTML = "<div class='w3-center w3-padding'>No communities</div>";
+			}
+		
+		}
+	}
+	xhttp.open("POST", "Action/search.php", true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send(str);
+	
+});
+
+let join = (c_id) => {
+	
+	if(!confirm("Want to join this community?")){
+		
+	}
+	else{
+		
+		let str = "c_id="+c_id;
+		let xhttp = new XMLHttpRequest();
+		xhttp.onreadystatechange = function() {
+			
+			if(this.readyState == 4 && this.status == 200){
+				
+				if(this.responseText.includes("community.php")){
+					
+					alert("Congratulations! You are in!");
+					
+					window.open(this.responseText, "_self");
+					
+				}
+				else{
+					alert(this.responseText);
+				}
+			
+			}
+		}
+		xhttp.open("POST", "Action/join.php", true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xhttp.send(str);
+		
+	}
+	
+}
+
+let scrollUpdate = () => {
+    
+	var element = document.getElementById("chats");
+	element.scrollTop = element.scrollHeight;
+
+}    
+    
+let send = (room_id, id) => {
+    
+	let msg = document.getElementById("sender").value;
+	if(msg == "" || msg == " "){
+        
+		return;
+        
+	}
+    
+	let str = "msg="+msg+"&u_id="+id +"&room_id="+room_id;
+	let xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+			
+		if(this.readyState == 4 && this.status == 200){
+				
+			if(this.responseText.length == "not"){
+				
+				alert("We are having some trouble in sending this message");
+				return;
+			}
+				
+			document.getElementById("sender").value="";
+			document.getElementById("chats").innerHTML += this.responseText;
+			scrollUpdate();
+		}
+	}
+	xhttp.open("POST", "Action/sendMsg.php", true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send(str);
+	scrollUpdate();
+
+}
+    
+let refresh = () =>{
+    
+	let str = "room_id="+room_id;
+	let xhttp = new XMLHttpRequest();
+	let data = document.getElementById("chats").innerHTML;
+	xhttp.onreadystatechange = function() {
+			
+		if(this.readyState == 4 && this.status == 200){
+			
+			if(this.responseText.length == "not2"){
+				
+				alert("We are having some trouble in sending this message");
+				return;
+			}
+				
+			document.getElementById("chats").innerHTML = this.responseText;
+			if(data != document.getElementById("chats").innerHTML){
+				scrollUpdate();
+			}
+		}
+	}
+	xhttp.open("POST", "Action/getMsg.php", true);
+	xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhttp.send(str);
+
+}    
+setInterval(refresh, 1000);
