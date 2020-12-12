@@ -9,11 +9,11 @@ class DoctorBottom extends StatefulWidget {
 }
 
 class _DoctorBottomState extends State<DoctorBottom> {
- PageController pageController;
-  int pageIndex=0;
+  PageController pageController;
+  int pageIndex = 0;
 
   @override
-  void initState(){
+  void initState() {
     super.initState();
     pageController = PageController();
   }
@@ -24,43 +24,45 @@ class _DoctorBottomState extends State<DoctorBottom> {
     super.dispose();
   }
 
-  void onPageChanged(int pageIndex){
-    setState(()=>{
-      this.pageIndex = pageIndex,
-    }
-    );
+  void onPageChanged(int pageIndex) {
+    setState(() => {
+          this.pageIndex = pageIndex,
+        });
   }
 
-  onTap(int pageIndex){
+  onTap(int pageIndex) {
     pageController.animateToPage(
       pageIndex,
       duration: Duration(milliseconds: 200),
       curve: Curves.ease,
-      );
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:PageView(
-          children:<Widget>[
-          DoctorDashboard(),
-          ShowBooking(),
-          DoctorCounter()
-        ],
+      body: PageView(
+        children: <Widget>[DoctorDashboard(), ShowBooking(), DoctorCounter()],
         controller: pageController,
         onPageChanged: onPageChanged,
         physics: NeverScrollableScrollPhysics(),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        currentIndex:pageIndex,
+        currentIndex: pageIndex,
         unselectedItemColor: Colors.grey[700],
         selectedItemColor: Colors.indigo,
         onTap: onTap,
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home,),label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.notifications_active),label: "Notifications"),
-          BottomNavigationBarItem(icon: Icon(Icons.account_circle),label: "User"),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+              ),
+              title: Text("Home")),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.notifications_active),
+              title: Text("Notifications")),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.account_circle), title: Text("User")),
         ],
       ),
     );
