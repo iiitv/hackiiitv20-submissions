@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import './homePage.dart';
 import '../widgets/auth_forms_widget.dart';
+import './fstpg.dart';
 // import 'package:geoflutterfire/geoflutterfire.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -42,8 +43,10 @@ class _AuthScreenState extends State<AuthScreen> {
         // await ref.putFile(imageFile);
         // final url=await ref.getDownloadURL();
         // GeoFirePoint point = geo.point(latitude: lat, longitude: lng);
+        // if (fstpg.getUser())
+        // {
         await FirebaseFirestore.instance
-            .collection('user')
+            .collection(fstpg.getUser() ? 'user' : 'Authority')
             .doc(authResult.user.uid)
             .set({
           'username': userName,
@@ -74,6 +77,8 @@ class _AuthScreenState extends State<AuthScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // final args = ModalRoute.of(context).settings.arguments;
+
     return Scaffold(
       key: _scaffoldKey,
       backgroundColor: Theme.of(context).primaryColor,

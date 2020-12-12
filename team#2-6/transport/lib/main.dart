@@ -2,16 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:transport/screens/auth_screen.dart';
+import 'package:transport/screens/fstpg.dart';
 import 'package:transport/screens/homePage.dart';
 import 'package:transport/screens/splash_screen.dart';
 import './screens/auth_screen.dart';
 import 'screens/auth_screen.dart';
+import './screens/complaint.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   // Firebase.initializeApp();
   runApp(MyApp());
-  
 }
 
 class MyApp extends StatelessWidget {
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
           //               }
           //             }
           // return
-          return AuthScreen();
+          return MyCustomForm();
           //       });
           // return CircularProgressIndicator();
         },
@@ -42,8 +43,11 @@ class MyApp extends StatelessWidget {
       routes: {
         AuthScreen.routeName: (context) => AuthScreen(),
         HomePage.routeName: (ctx) => HomePage(),
+        MyCustomForm.routeName: (context) => MyCustomForm(),
+        Comp.routeName: (context) => Comp(),
         // EventDetailsPage.routeName: (context) => EventDetailsPage(),
       },
+
       // StreamBuilder(
       //     stream: FirebaseAuth.instance.authStateChanges(),
       //     builder: (ctx, userSnapshot) {

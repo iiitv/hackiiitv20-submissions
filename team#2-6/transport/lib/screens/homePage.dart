@@ -4,7 +4,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/services.dart';
 import 'package:geoflutterfire/geoflutterfire.dart';
-
+import './fstpg.dart';
+import './complaint.dart';
 // import 'package:flutter_map/flutter_map.dart';
 
 // class HomePage extends StatelessWidget {
@@ -114,7 +115,10 @@ class _AppState extends State<HomePage> {
           print(userName);
           print(email);
           GeoFirePoint point = geo.point(latitude: lat, longitude: lng);
-          await firestore.collection('user').doc(auth.currentUser.uid).update({
+          await firestore
+              .collection(fstpg.getUser() ? 'user' : 'Authority')
+              .doc(auth.currentUser.uid)
+              .update({
             // 'username': userName,
             // 'email': email,
             'Location': point.data,
@@ -129,13 +133,21 @@ class _AppState extends State<HomePage> {
     });
   }
 
-  // This widget is the root of your application.
-  @override
   Widget build(BuildContext context) {
     print(auth.currentUser.uid);
 
     return MaterialApp(
         title: 'Flutter Demo',
+        // return MaterialApp(
+        // title: 'Flutter Demo',
+
+        // home: Scaffold(
+        //     appBar: AppBar(title: Text("Location Services")),
+        // home: Scaffold(
+        // appBar: AppBar(title: Text("Location Services")),
+        // home: Scaffold(
+        // appBar:
+
         home: Scaffold(
             appBar: AppBar(title: Text("Location Services")),
             body: Align(
@@ -148,7 +160,14 @@ class _AppState extends State<HomePage> {
                           _getCurrentLocation();
                         },
                         color: Colors.green,
-                        child: Text("Find Location"))
+                        child: Text("Find Location")),
+                    SizedBox(height: 20),
+                    FlatButton(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(Comp.routeName);
+                      },
+                      child: Text('Register Complaint'),
+                    )
                   ]),
             )));
   }
