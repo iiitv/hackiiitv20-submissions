@@ -323,5 +323,9 @@ packages:
     source: hosted
     version: "2.1.0-nullsafety.3"
 sdks:
+<<<<<<< HEAD
   dart: ">=2.10.0-110 <2.11.0"
+=======
+  dart: ">=2.9.0-14.0.dev <3.0.0"
+>>>>>>> 8dcd3d5d9fcb814c3494989c9db5b0557bd2ed1b
   flutter: ">=1.16.0 <2.0.0"
