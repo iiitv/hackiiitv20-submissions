@@ -1,6 +1,8 @@
+import { Button } from 'bootstrap';
 import React,{useState} from 'react'
 import "./style.css";
 function RightPart() {
+
     const [arr,setarr]=useState([{}]);
     const default1={
         name:"",
@@ -9,6 +11,13 @@ function RightPart() {
         power:""
     };
     const [options,setoptions]=useState(default1);
+    const [arr1,setarr1]=useState([{
+        name:"",
+        min:"",
+        max:"",
+        power:"",
+        cost:""
+    }]);
     function handleChange(event)
     {
         const name=event.target.name;
@@ -32,14 +41,23 @@ function RightPart() {
             return {...default1};
         }
         );
-       
-
+    }
+    //Currently algorithm is working on average values.
+    function algorithmForPower(props)
+    {
+        var hrs=(props.min+props.max)/2;
+        var power=props.power;
+        //Currently expecting days to be 30,will definitely change for applianes which we don't use regularyly
+        var days=0.03
+        return days*power*hrs;
     }
     return (
         <div className="right">
+        <div className="page">
         <h1>Enter details about your appliance</h1>
         <div class="input">
-        <input type="text" placeholder="Enter appliance name" onChange={handleChange}  name="name" value={options.name} required />
+        <input type="text" placeholder="Ent
+        er appliance name" onChange={handleChange}  name="name" value={options.name} required />
         <input type="number" min="1" placeholder="Enter minimum hours" onChange={handleChange} name="min" value={options.min} required/>
         <input type="number" placeholder = "Enter maximum hours " onChange={handleChange} name="max" value={options.max} required/>
         <input type= "number" placeholder = "Enter Power usage(in Watt)" onChange={handleChange} name="power" value={options.power} required/> 
@@ -66,6 +84,21 @@ function RightPart() {
                 })
             }
         </table>
+        <button type="submit" className="btn">Calculate</button>
+        </div>
+        <div className="page">
+        <h1>Final Result is as follows</h1>
+            {arr.map((value,i)=>{
+                   
+
+                   setarr1(
+                       ()=>{
+                           return [...arr];
+                       }
+                   );
+                }
+            )}
+        </div>
         </div>
     );
 }
