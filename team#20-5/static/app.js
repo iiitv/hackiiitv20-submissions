@@ -308,8 +308,8 @@ function onChatInputKey(ev) {
 
 function parseURL(message) {
     // if(something)
-    alert(message)
-    document.getElementById("myImg").src = message;
+    if(message.startsWith("https"))
+        document.getElementById("myImg").src = message;
 }
 
 
