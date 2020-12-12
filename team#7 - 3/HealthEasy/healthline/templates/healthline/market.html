@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>HealthEasy</title>
+
+    <link href= "/static/healthline/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href= "/static/healthline/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href= "/static/healthline/css/myStyle.css" rel="stylesheet">
+    <link href= "/static/healthline/css/bootstrap-social.css" rel="stylesheet">
+    <link href="/static/healthline/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                 <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/healthline/">HealthEasy</a>
+                </div>
+
+                   <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href=""span class="glyphicon glyphicon-home" aria-hidden="true" ></span> Home</a></li>
+                    <li><a href=""><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a></li>
+                    <li class="dropdown">
+                    <li><a href=""><span class="glyphicon glyphicon-list-alt"></span> Report</a></li>
+                    <li><a href=""><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right" role="sign in" method= "POST">
+                      {% csrf_token %}
+
+                  </div>
+              </div>
+        </nav>
+
+    <header class="jumbotron" class="row-header">
+
+        <!-- Main component for a primary marketing message or call to action -->
+
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-xs-12 col-sm-6">
+                    <h1>A complete digital hospital for patients<br> </h1>
+                    <p style="padding:40px;"></p>
+                    <p>Here patients can book appointment with doctors</p>
+                    <p>It provides one-to-one interface between patients and doctors</p>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                <p style="padding:20px;"></p>
+                <img src="/static/healthline/images/heart.jpg" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                <p style="padding:49px;"></p>
+
+                </div>
+            </div>
+        </div>
+
+    </header >
+
+
+         {% if all_docters %}
+         {% for docter in all_docters%}
+         <div class="row-content">
+                <div class="col-xs-12 col-sm-3 col-sm-push-9">
+                    <p style="padding:20px;"></p>
+                    <h3 align=center> </h3>
+                </div>
+                <div class="col-xs-12 col-sm-9 col-sm-pull-3">
+                <div class="media">
+                <div class="media-left media-middle">
+                <a href="#">
+                <img class="media-object img-thumbnail" src="/static/healthline/images/apun.png" alt="poster" height="200" width="200">
+                </a>
+                </div>
+                <div class="media-body">
+
+                    <h2><span class="label label-danger label-xs">{{docter.docter_name}}</span></h2>
+                    <p><span class="badge">Type</span> <h4>  :{{docter.docter_type}} </h4></p>
+                    <p><span class="badge">Experience</span> <h4>:    {{docter.doctor_exp}}</h4></p>
+
+
+                    <p><a class="btn btn-primary btn-xs" href="films.html">Book Appointment &raquo;</a></p>
+                </div>
+            </div>
+           </div>
+          </div>
+          {% endfor %}
+          {% else %}
+          <p>No doctors To show</p>
+          {% endif %}
+
+
+
+
+
+
+
+
+
+
+
+    <footer class="row-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-5 col-xs-offset-1 col-sm-2 col-sm-offset-1">
+                    <h5 class="white">Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-6 col-sm-5">
+                    <h5 class="white">Our Address</h5>
+                    <address class="white">
+                      G-4 D block Sabar Institute Of Technology<br>
+                      IIIT Vadodara , Himmatnagar<br>
+                      Gujarat<br>
+
+                      <i class="fa fa-envelope"></i>:
+                        <a href="">atishay990@gmail.com</a>
+                   </address>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="nav navbar-nav" style="padding: 40px 10px;">
+                        <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+                <div class="col-xs-12">
+                    <p style="padding:10px;"></p>
+                    <p  class="white"align=center>@ production of Atishay Jain</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

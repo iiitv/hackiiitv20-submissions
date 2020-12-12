@@ -1,0 +1,13 @@
+ <div class="media">
+                <div class="media-left media-middle">
+                <a href="#">
+                <img class="media-object img-thumbnail" ng-src={{dish.image}} alt="uthapizza">
+                </a>
+                </div>
+                <div class="media-body">
+                <h2 class="media-heading">{{dish.name}}
+                <span class="label label-danger label-xs">{{dish.label}}</span>
+                <span class="badge">{{dish.price|currency}}</span>
+                </h2>
+                </div>
+                </div>

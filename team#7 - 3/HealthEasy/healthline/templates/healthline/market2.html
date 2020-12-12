@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>healthline</title>
+
+    <link href= "/static/healthline/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href= "/static/healthline/bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href= "/static/healthline/css/myStyle.css" rel="stylesheet">
+    <link href= "/static/healthline/css/bootstrap-social.css" rel="stylesheet">
+    <link href="/static/healthline/bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                 <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/healthline/">HealthEasy</a>
+                </div>
+
+                   <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true" ></span> Home</a></li>
+                    <li><a href="aboutus.html"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a></li>
+                    <li class="dropdown">
+                    <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span> Report</a></li>
+                    <li><a href="contactus.html"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right" role="sign in" method= "POST">
+                      {% csrf_token %}
+
+                  </div>
+              </div>
+        </nav>
+
+    <header class="jumbotron" class="row-header">
+
+        <!-- Main component for a primary marketing message or call to action -->
+
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-xs-12 col-sm-6">
+                    <h1>Digital ecosystem for Doctors</h1>
+                    <p style="padding:40px;"></p>
+                    <p>Offer your service by registering in below form. Without any third hand intervention, you communication with patient will be encrypted on to one end</p>
+                    <p>Everything is transparent!</p>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                <p style="padding:20px;"></p>
+                <img src="/static/healthline/images/st.jpg" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-2">
+                <p style="padding:49px;"></p>
+
+            </div>
+        </div>
+
+    </header >
+
+
+    <div class="row row-content">
+             <div class="col-xs-12">
+                <h1>For Doctors</h1>
+             </div>
+              <div class="col-xs-12 col-sm-9">
+                  <form class="form-horizontal" role="form" action="" method="POST">
+                  <div class="form-group">
+                  <label for="firstname" class="col-sm-2 control-label"> Name</label>
+                  <div class="col-sm-10">
+                  <input type="text" class="form-control" id="docter_name" name="docter_name" placeholder="Enter your Name"></div>
+                  </div>
+                  <div class="form-group">
+                  <label for="lastname" class="col-sm-2 control-label">Speciality</label>
+                  <div class="col-sm-10">
+                  <input type="text" class="form-control" id="docter_type" name="docter_type" placeholder="Enter your speciality">
+                  </div>
+                  </div>
+
+
+              <div class="form-group">
+              <label for="telnum" class="col-sm-2 control-label">Contact Tel.</label>
+              <div class="col-xs-5 col-sm-4 col-md-3">
+              <div class="input-group">
+              <div class="input-group-addon">(</div>
+              <input type="tel" class="form-control" id="areacode" name="areacode" placeholder="Area code">
+              <div class="input-group-addon">)</div>
+              </div>
+              </div>
+              <div class="col-xs-7 col-sm-6 col-md-7">
+              <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel number"></div>
+              </div>
+              <div class="form-group">
+              <label for="price" class="col-sm-2 control-label">Experience (in years)</label>
+              <div class="col-sm-10">
+              <input type="text" class="form-control" id="docter_exp" name="docter_exp" placeholder="Enter your ecperience in medical (in years)">
+              </div>
+              </div>
+              <div class="form-group">
+              <div class="checkbox col-sm-5 col-sm-offset-2">
+              <label class="checkbox-inline">
+              <input type="checkbox" name="approve" value="">
+              <strong> May we contact you</strong>
+              </label>
+              </div>
+              <!-- <div class="col-sm-3 col-sm-offset-1">
+              <select class="form-control">
+              <option>Tel.</option>
+              <option>Email</option>
+              </select> -->
+              </div>
+              </div>
+
+
+              <!-- <div class="form-group">
+              <label for="image" class="col-sm-2 control-label">Docter image</label>
+              <div class="col-sm-10">
+              <input class="form-control" type="file" id="docter_image" name="docter_image" rows="12"></input>
+              </div>
+              </div> -->
+
+              <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-2">
+              <button type="submit" class="btn btn-primary" value="POST">Submit</button>
+              </div>
+              </div>
+              </form>
+              </div>
+               <div class="col-xs-12 col-sm-3">
+                  <p style="padding:20px;"></p>
+              </div>
+         </div>
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
