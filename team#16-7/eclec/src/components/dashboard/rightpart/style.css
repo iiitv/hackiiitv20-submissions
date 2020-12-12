@@ -26,8 +26,12 @@
     display: flex;
     flex-direction: row;
     width: 100%;
+    text-align: center;
     margin:2% auto;
 }
+/* .row td{
+    width: 20%;
+} */
 .table
 {
     width:100%;
