@@ -182,6 +182,17 @@ class Backend{
        );
     }
 
+    Future<void> confirmBooking(String doctorId,String patientId,int appointmentNumber,String patientAppointmentId,String doctorAppointmentId)async{
+      await doctorCollection.doc(doctorId).collection("appointment").doc(doctorAppointmentId).update({
+        "confirmed":true,
+        "appointmentNumber":appointmentNumber
+      });
+      await patientCollection.doc(patientId).collection("appointment").doc(patientAppointmentId).update({
+        "confirmed":true,
+        "appointmentNumber":appointmentNumber
+      });
+    }
+
     showDoctorNotification(String doctorId){
       return StreamBuilder(
         stream:doctorCollection.doc(doctorId).collection("appointment").orderBy("time",descending:true).snapshots(),
@@ -203,7 +214,7 @@ class Backend{
                     confirmed:doc.data()["confirmed"],
                     appointmentNumber:doc.data()["appointmentNumber"],
                     clinicName:doc.data()["clinicName"],
-                    patientId: doc.data()["doctorId"],
+                    patientId: doc.data()["patientId"],
                     patientAppointmentId:doc.data()["patientAppointmentId"],
                     doctorAppointmentId:doc.id
                   ),
@@ -219,7 +230,7 @@ class Backend{
                     confirmed:doc.data()["confirmed"],
                     appointmentNumber:doc.data()["appointmentNumber"],
                     clinicName:doc.data()["clinicName"],
-                    patientId: doc.data()["doctorId"],
+                    patientId: doc.data()["patientId"],
                     patientAppointmentId:doc.data()["patientAppointmentId"],
                     doctorAppointmentId:doc.id
                   ),

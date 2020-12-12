@@ -1,4 +1,6 @@
 import 'package:clinico/model/appointment.dart';
+import 'package:clinico/pages/role.dart';
+import 'package:clinico/services/backend.dart';
 import 'package:clinico/shared/loading.dart';
 import 'package:flutter/material.dart';
 
@@ -25,8 +27,12 @@ class _ConfirmAppointmentState extends State<ConfirmAppointment> {
   void confirmAppointmentNumber() async {
     String appointment = appointmentNumberController.text.trim();
     setState(() => validAppointmentNumber = appointment.isNotEmpty);
-    int appointmentNumber = int.parse(appointment);
-    Navigator.pop(context);
+    if(validAppointmentNumber){
+      setState(() => isLoading = true);
+      int appointmentNumber = int.parse(appointment);
+      await Backend().confirmBooking(currentUser.uid,widget.appointment.patientId,appointmentNumber,widget.appointment.patientAppointmentId,widget.appointment.doctorAppointmentId);
+      Navigator.pop(context);
+    }
   }
 
   @override
