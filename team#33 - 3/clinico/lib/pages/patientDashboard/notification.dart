@@ -5,8 +5,12 @@ class ShowNotification extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title:Text("Your Appointment"),backgroundColor: Colors.indigo,),
-      body:PatNotTile()
-    );
+        appBar: AppBar(
+          title: Text("Your Appointments"),
+          backgroundColor: Colors.indigo,
+        ),
+        body: ListView(children: [
+          for (int i = 0; i <= 10; i++) PatNotTile(),
+        ]));
   }
 }
