@@ -1,39 +1,52 @@
 <!doctype html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-    </head>
-    <body>
-        <h1>Flask & Twilio Video Conference</h1>
-        <form>
-            <label for="username">Name: </label>
-            <input type="text" name="username" id="username">
-            <button id="join_leave">Join call</button>
-            <button id="share_screen" disabled>Share screen</button>
-            <button id="toggle_chat" disabled>Toggle chat</button>
-            <!-- <button id="toggle_chat" disabled>Toggle chat</button> -->
-        </form>
-        <p id="count">Disconnected.</p>
-        <div id="root">
 
-            <div id="container" class="container">
-                <div id="local" class="participant"><div></div><div id="one" class="label"></div></div>
-                <!-- more participants will be added dynamically here -->
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <h1>Flask & Twilio Video Conference</h1>
+    <form>
+        <label for="username">Name: </label>
+        <input type="text" name="username" id="username">
+        <button id="join_leave">Join call</button>
+        <button id="share_screen" disabled>Share screen</button>
+        <button id="toggle_chat" disabled>Toggle chat</button>
+        <button id="toggle_camera">Toggle Camera</button>
+        <!-- <button id="toggle_chat" disabled>Toggle chat</button> -->
+    </form>
+    <p id="count">Disconnected.</p>
+    <div id="root">
+        <div id="container" class="container">
+            <div id="local" class="participant">
+                <div id="myVideo"></div>
+                <div id="one" class="label"></div>
             </div>
-            <canvas id="canvas"></canvas>
-            <button id="capture" disabled onclick="capture1()">Capture</button>
-            <div id="chat">
-                <div id="chat-scroll">
-                    <div id="chat-content">
-                        <!-- chat content will be added dynamically here -->
-                    </div>
-                </div>
-                <input id="chat-input" type="text">
-            </div>
+            <div id="imageDiv"><img src="#" id="myImg" style="width: 400px; height: 308px; position: absolute; left: 9px; top: 227px; opacity: 0.5"></div>
+            <!-- more participants will be added dynamically here -->
         </div>
+        <canvas id="canvas"></canvas>
+        <button id="capture" disabled onclick="capture1()">Capture</button>
+        <div id="chat">
+            <div id="chat-scroll">
+                <div id="chat-content">
+                    <!-- chat content will be added dynamically here -->
+                </div>
+            </div>
+            <input id="chat-input" type="text">
+        </div>
+    </div>
 
-        <script src="https://media.twiliocdn.com/sdk/js/video/releases/2.3.0/twilio-video.min.js"></script>
-        <script src="https://media.twiliocdn.com/sdk/js/conversations/releases/1.0.0/twilio-conversations.min.js"></script>
-        <script src="{{ url_for('static', filename='app.js') }}"></script>
-    </body>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
+    <script src="https://media.twiliocdn.com/sdk/js/video/releases/2.3.0/twilio-video.min.js"></script>
+    <script src="https://media.twiliocdn.com/sdk/js/conversations/releases/1.0.0/twilio-conversations.min.js"></script>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+
 </html>
