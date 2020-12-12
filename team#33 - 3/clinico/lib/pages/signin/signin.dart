@@ -47,7 +47,7 @@ class _SignInPageState extends State<SignInPage> {
                       ],
                     ),
                     SizedBox(
-                      height: 40,
+                      height: 70,
                     ),
                     Center(
                       child: Text(
