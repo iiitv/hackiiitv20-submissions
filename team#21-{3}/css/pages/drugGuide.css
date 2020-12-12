@@ -1,0 +1,8 @@
+.no-bg {
+  background-image: none;
+  color: bisque; }
+
+.medData {
+  display: block;
+  color: whitesmoke;
+  padding: 2rem; }

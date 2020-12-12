@@ -1010,12 +1010,11 @@ body {
       .book__form {
         width: 100%; } }
 
-.soln {
-  padding: 5rem; }
-
 .no-bg {
   background-image: none;
   color: bisque; }
 
 .medData {
-  color: whitesmoke; }
+  display: block;
+  color: whitesmoke;
+  padding: 2rem; }
