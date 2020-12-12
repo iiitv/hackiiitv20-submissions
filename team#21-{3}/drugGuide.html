@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet" />
+  <!-- Dev Version -->
+  <link rel="stylesheet" href="css/icon-font.css" />
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- Deployment Version -->
+  <!-- <link rel="stylesheet" href="css/style.css" /> -->
+
+
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+  <title>MedHelp | Online medical consultant </title>
+</head>
+
+<body>
+
+
+  <main>
+    <section class="section-book symptom-checker">
+      <div class="header__logo-box">
+        <a href="index.html" >
+        <img src="img/Heart_2.png" alt="logo" class="header__logo sub_logo"/></a>
+      </div>
+      <div class="row">
+        <div class="book">
+          <div class="book__form">
+            <form action="#" class="form">
+              <div class="u-margin-bottom-medium">
+                <h2 class="heading-secondary">Drug Guide</h2>
+              </div>
+              <div class="form__group">
+                <input type="text" class="form__input" id="drugname" placeholder="Drug Name" required />
+                <label for="name" class="form__label">Drug Name</label>
+              </div>
+              <!-- <div class="form__group">
+                <input type="text" class="form__input" id="age" placeholder="Date of Birth" required />
+                <label for="age" class="form__label">Date Of birth</label>
+              </div>
+              <div class="form__group u-margin-bottom-medium">
+                <div class="form__radio--group">
+                  <input type="radio" class="form__radio--input" id="malRad" name="size" />
+                  <label for="malRad" class="form__radio--label">
+                    <span class="form__radio--button"> </span>
+                    Male
+                  </label>
+                </div>
+                <div class="form__radio--group">
+                  <input type="radio" class="form__radio--input" id="femRad" name="size" />
+                  <label for="femRad" class="form__radio--label">
+                    <span class="form__radio--button"> </span>
+                    Female
+                  </label>
+                </div>
+              </div> -->
+              <div class="form__group">
+                <button class="btn btn--green" onclick=run()>Find &rarr;</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="soln"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__logo-box">
+      <a href="index.html" >
+      <picture class="footer__logo">
+        <source srcset="img/favicon.png 1x, img/favicon.png 2x" media="(max-width : 37.5em">
+        <img srcset="img/favicon.png 1x, img/favicon.png 2x" alt="Full Logo" />
+      </picture>
+      </a>
+    </div>
+    <div class="row">
+      <div class="col-1-of-2">
+        <div class="footer__navigation">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Company</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Contact us</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Careers</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Privacy</a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Terms</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-1-of-2">
+        <p class="footer__copyright">
+          &copy; 2020 <a href="#" class="footer__link">Lucifer@HackIIITV</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
