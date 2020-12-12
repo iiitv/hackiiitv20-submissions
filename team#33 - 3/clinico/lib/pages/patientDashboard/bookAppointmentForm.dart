@@ -93,8 +93,7 @@ class _BookAppointmentState extends State<BookAppointment> {
             ),
             (image==null)
             ?Text("no file selected")
-            :GestureDetector(
-              child:Hero(
+            :Hero(
                   tag: "heroImage",
                   child: AspectRatio(
                       aspectRatio: 0.85,
@@ -108,7 +107,6 @@ class _BookAppointmentState extends State<BookAppointment> {
                       ),
                   )
               ),
-            )
           ]
         ),
       ),
