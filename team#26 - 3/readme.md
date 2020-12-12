@@ -17,4 +17,4 @@ Section 3: Show Members/Doctors.
 
 On clicking a profile, go to profile page.
 
-We also allow sending messages.
+We also allow sending messages within a community.
