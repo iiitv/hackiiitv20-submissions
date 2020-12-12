@@ -9,52 +9,75 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
-
   bool isLoading = false;
-  void toggleLoading(){
-    setState(()=>isLoading = !isLoading);
+  void toggleLoading() {
+    setState(() => isLoading = !isLoading);
   }
 
   @override
   Widget build(BuildContext context) {
-    return isLoading?Loading():Scaffold(
-      body: SafeArea(
-        child: Container(
-          color: Colors.indigo,
-          child: Column(
-            children: [
-              Stack(
-                children: [
-                  Container(
-                    height: MediaQuery.of(context).size.height*.5,
-                    width: MediaQuery.of(context).size.width,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: const Radius.circular(40),
-                          bottomRight: const Radius.circular(40),
-                        )
+    return isLoading
+        ? Loading()
+        : Scaffold(
+            body: SafeArea(
+              child: Container(
+                color: Colors.indigo,
+                child: Column(
+                  children: [
+                    Stack(
+                      children: [
+                        Container(
+                          height: MediaQuery.of(context).size.height * .5,
+                          width: MediaQuery.of(context).size.width,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: const Radius.circular(40),
+                                bottomRight: const Radius.circular(40),
+                              )),
+                        ),
+                        Center(
+                          child: Container(
+                            child: Image.asset(
+                              'assets/signin.png',
+                              height: 300,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ),
-                  Center(
-                    child: Container(
-                      child: Image.asset('assets/signin.png', height: 300,),
+                    SizedBox(
+                      height: 40,
                     ),
-                  ),
-                ],
+                    Center(
+                      child: Text(
+                        "Welcome to Clinico!",
+                        style:
+                            TextStyle(color: Colors.amber[300], fontSize: 40),
+                      ),
+                    ),
+                    // SizedBox(
+                    //   height: 40,
+                    // ),
+                    // Center(
+                    //   child: Text(
+                    //     "Join Us From Google",
+                    //     style: TextStyle(color: Colors.white, fontSize: 24),
+                    //   ),
+                    // ),
+                    SizedBox(
+                      height: 100,
+                    ),
+                    Center(
+                      child: SignButton(
+                        name: "Sign in With Google ",
+                        toggleLoading: toggleLoading,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              SizedBox(height: 40,),
-              Center(
-                child: Text("Join Us From Google",),
-              ),
-              SizedBox(height: 20,),
-              Center(
-                child: SignButton(name: "Sign in Wigh Google ",toggleLoading: toggleLoading,),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
+            ),
+          );
   }
 }
