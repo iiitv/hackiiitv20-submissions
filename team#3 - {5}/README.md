@@ -1,7 +1,7 @@
 
 # Bot 🤖 that attends Online Classes on google meet
 <hr>
-- Studious Bot that joins google meet with camera and microphone turned off and notifies us on aur discord server when it joins or leave any class.
+- Studious Bot that joins google meet with camera and microphone turned off and notifies us on our discord server when it joins or leave any class.
 
 ## ⭐REQUIREMENTS 
 - With Python installed, Open cmd as administrator and run the following command to install Selenium <img src="https://github.com/nirala69/hackiiitv20-submissions/blob/master/team%233%20-%20%7B5%7D/Images/selenium_logo.png" width="40" align='right'>
