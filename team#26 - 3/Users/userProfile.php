@@ -26,6 +26,7 @@ session_start();
     }
 </style>
 <?php
+	$url = base64_encode($id."&".$name);
 	include("../Commen/generalHeader.php");
 ?>
   <?php

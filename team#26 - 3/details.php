@@ -61,15 +61,30 @@ Are you Doctor or patient?
 		<option value="other" class="w3-text-black">Other</option>
 	</select>
 </div>
+<center>
+<div class="w3-section w3-padding">
+<label for="file" class="w3-blue w3-padding" style="display:inline-block;cursor:pointer;">
+	<i class="fa fa-image"></i> Upload Profile Picture
+</label>
+<input id="file" type="file" accept="image/x-png,image/gif,image/jpeg" style="display:none;"/>
+</div>
+</center>
+<div id="status" class="w3-center">
+</div>
 <div class="w3-section w3-margin w3-padding">
 DOB
 	<input type="date" id="dob" class="w3-input w3-round-xxlarge w3-border w3-hover-border-black" required>
+</div>
+<div class="w3-section w3-margin w3-padding">
+About Me
+	<textarea id="aboutMe" rows="5" class="w3-input w3-round-xxlarge w3-border w3-hover-border-black"></textarea>
 </div>
 <div class="w3-section w3-center w3-padding-16">
 	<button type="button" class="kel-button w3-black w3-round w3-padding w3-border-black w3-blue w3-hover-green" onclick="join('<?php echo $email ?>')">Join</button>
 </div>
 </form>
 </div>
+<script src="Js/jquery.min.js"></script>
 <script src="Js/check.js"></script>
 <script src="Js/details.js">
 </script>

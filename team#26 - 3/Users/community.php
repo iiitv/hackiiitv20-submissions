@@ -62,16 +62,22 @@ Community: <b><?php echo $c_name ?></b>
 
 <?php
 
-	$qry = "SELECT users.u_id, users.real_name, post.p_id, post.p_data, post.likes, post.time FROM post INNER JOIN users ON post.u_id = users.u_id WHERE c_id = $c_id ORDER BY time DESC LIMIT 10";
+	$qry = "SELECT users.u_id, users.u_dp, users.real_name, post.p_id, post.p_data, post.likes, post.time FROM post INNER JOIN users ON post.u_id = users.u_id WHERE c_id = $c_id ORDER BY time DESC LIMIT 10";
 	
 	if($data = $conn->query($qry)){
 
 		while($result = $data->fetch_assoc()){
+			$img = $result['u_dp'];
+?><?php
+	$url = base64_encode($result['u_id']."&".$result['real_name']);
 ?>
         <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
-          <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px">
+          <a href="otherProfile.php?name=<?php echo $url ?>" style="text-decoration:none;">
+		  <img src="<?php echo $img ?>" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:60px;height:60px">
           <span class="w3-right w3-opacity"></span>
+
           <h5><?php echo $result['real_name'] ?></h5><br>
+		  </a>
           <hr class="w3-clear">
           <p>
 		  <?php echo htmlspecialchars_decode($result['p_data']) ?>
@@ -130,7 +136,7 @@ Community: <b><?php echo $c_name ?></b>
                 <div class="w3-container">
                   <h4><strong>Doctors</strong></h4>
 <?php
-$qry = "SELECT real_name FROM users INNER JOIN community_user ON users.u_id = community_user.u_id WHERE community_user.c_id = $c_id AND users.role = 'doctor'";
+$qry = "SELECT real_name, users.u_id FROM users INNER JOIN community_user ON users.u_id = community_user.u_id WHERE community_user.c_id = $c_id AND users.role = 'doctor'";
 
 if($data = $conn->query($qry)){
 	
@@ -140,8 +146,11 @@ if($data = $conn->query($qry)){
 	else{
 		
 		while($result = $data->fetch_assoc()){
+			$u_id = $result['u_id'];
+			$real_name = $result['real_name'];
+			$url = base64_encode($u_id."&".$real_name);
 ?>
-        <p><?php echo "Dr. ".$result['real_name'] ?></p>
+        <a href="otherProfile.php?name=<?php echo $url ?>"><p><?php echo "Dr. ".$result['real_name'] ?></p></a>
 <?php
 	}
 		
@@ -158,7 +167,7 @@ if($data = $conn->query($qry)){
                   <div class="w3-container">
                     <h4><strong>Members</strong></h4>
 <?php
-$qry = "SELECT real_name FROM users INNER JOIN community_user ON users.u_id = community_user.u_id WHERE community_user.c_id = $c_id AND users.role <> 'doctor'";
+$qry = "SELECT real_name, users.u_id FROM users INNER JOIN community_user ON users.u_id = community_user.u_id WHERE community_user.c_id = $c_id AND users.role <> 'doctor'";
 
 if($data = $conn->query($qry)){
 	
@@ -168,8 +177,11 @@ if($data = $conn->query($qry)){
 	else{
 		
 		while($result = $data->fetch_assoc()){
+			$u_id = $result['u_id'];
+			$real_name = $result['real_name'];
+			$url = base64_encode($u_id."&".$real_name);
 ?>
-        <p><?php echo $result['real_name'] ?></p>
+        <a href="otherProfile.php?name=<?php echo $url ?>"><p><?php echo $result['real_name'] ?></p></a>
 <?php
 	}
 		

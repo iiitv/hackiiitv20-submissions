@@ -24,7 +24,7 @@
 </button>
 
 <div class="w3-dropdown-click w3-bar-item w3-right w3-<?php echo "blue" ?> w3-hover-<?php echo "blue" ?>">
-<button class="kel-hover-2 w3-button w3-blue w3-hover-blue" onclick="myFunction()" title="Options" >
+<button class="kel-hover-2 w3-button w3-blue w3-hover-blue" onclick="myFunction()" title="" >
     <i class="fa fa-caret-down"></i>
 </button>
 
@@ -34,11 +34,29 @@
     </div>
 </div>
 
-<button class="kel-hover-2 w3-right w3-xlarge w3-button w3-hover-blue" onclick="" title="Options" >
-    <i class="fa fa-envelope-o"></i>
+<button class="kel-hover-2 w3-right w3-xlarge w3-button w3-hover-blue" 
+onclick="window.open('friendRequests.php?name=<?php echo $url ?>', '_self')" title="friend requests" >
+<?php
+$y = false;
+$qry = "SELECT * FROM `friendrequest` WHERE receiver_id = $id AND status_request = 'pending'";
+if($d = $conn->query($qry)){
+	if($d->num_rows >= 1){
+		$y = true;
+	}
+}
+?>
+    <i class="fa fa-user-o <?php if($y){echo 'w3-text-black';}?>"></i>
+</button>
+
+<button class="kel-hover-2 w3-right w3-xlarge w3-button w3-hover-blue" 
+onclick="window.open('chats.php?name=<?php echo $url ?>', '_self')" title="chats" >
+    <i class="fa fa-envelope"></i>
 </button>
 
 </header>
+<?php
+	include("Needs/editModal.php");
+?>
 <script>
 function myFunction() {
 

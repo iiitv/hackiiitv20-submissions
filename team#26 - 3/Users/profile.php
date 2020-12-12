@@ -64,6 +64,7 @@ if(isset($_SESSION['login_user_connect']) && isset($_REQUEST['name'])){
 </div>
 
 <?php 
+$url = "";
 include("../Commen/lobbyheader.php")
 ?>
 <center>
