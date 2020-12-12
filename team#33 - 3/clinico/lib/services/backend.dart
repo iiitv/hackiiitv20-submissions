@@ -1,9 +1,18 @@
+import 'dart:io';
+import 'package:uuid/uuid.dart';
+import 'package:clinico/model/appointment.dart';
 import 'package:clinico/model/user.dart';
 import 'package:clinico/pages/patientDashboard/hospitalCard.dart';
 import 'package:clinico/shared/loading.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:image/image.dart' as Im;
 
+var uuid = Uuid();
+
+FirebaseStorage storageRef = FirebaseStorage.instance;
 final CollectionReference doctorCollection =
     FirebaseFirestore.instance.collection('doctors');
 final CollectionReference patientCollection =
@@ -42,6 +51,37 @@ class Backend{
       });
   }
 
+  Future<void> bookAppointment(Appointment appoint,String doctorId,String patientId)async{
+    final postID = uuid.v4();
+    var image = await compressImage(appoint.image, postID);
+    var let = await uploadImage(image, postID);
+    var media = let;
+    await doctorCollection.doc(doctorId).collection("appointment").add({
+        "name":appoint.name,
+        "gender":appoint.gender,
+        "age":appoint.age,
+        "comment":appoint.comment,
+        "image":media,
+        "confirmed":false,
+        "TokenNumber":0,
+        "time":DateTime.now().millisecondsSinceEpoch,
+        "patientId":patientId,
+        "patientAppointmentId":postID
+    });
+
+    await patientCollection.doc(patientId).collection("appointment").doc(postID).set({
+        "name":appoint.name,
+        "gender":appoint.gender,
+        "age":appoint.age,
+        "comment":appoint.comment,
+        "image":media,
+        "confirmed":false,
+        "TokenNumber":0,
+        "time":DateTime.now().millisecondsSinceEpoch,
+        "patientId":patientId
+    });
+  }
+
   showAllHospitalCard() {
     return StreamBuilder(
         stream: doctorCollection.snapshots(),
@@ -71,6 +111,26 @@ class Backend{
           });
           return Column(children: allhospital);
         });
+  }
+
+  Future compressImage(_image, postId) async {
+    Directory temDir = await getTemporaryDirectory();
+    final temPath = temDir.path;
+    Im.Image imageFile = Im.decodeImage(_image.readAsBytesSync());
+    final compressImageFile = File('$temPath/img_$postId.jpg')
+      ..writeAsBytesSync(Im.encodeJpg(imageFile, quality: 85));
+    _image = compressImageFile;
+    return _image;
+  }
+
+  Future<String> uploadImage(_image, postId) async {
+    int id = new DateTime.now().millisecondsSinceEpoch;
+    UploadTask uploadTask =
+        storageRef.ref().child('post$id _$postId.jpg').putFile(_image);
+
+    String downloadURL =  await (await uploadTask).ref.getDownloadURL();
+
+    return downloadURL;
   }
 
     Future<void> AddPatient(MyUser user)async{

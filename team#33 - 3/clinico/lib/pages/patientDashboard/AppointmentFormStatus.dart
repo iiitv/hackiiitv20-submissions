@@ -121,6 +121,21 @@ class _AppointmentFormStatusState extends State<AppointmentFormStatus> {
                             fontSize: 18,
                           ),
                         ),
+                        SizedBox(
+                          height: 30,
+                        ),
+                        Text(
+                          'Payment Screenshot : ',
+                          style: TextStyle(
+                            fontSize: 18,
+                          ),
+                        ),
+                        Container(
+                          child: Image.network(
+                            'image.url',
+                            height: 300,
+                          ),
+                        ),
                       ],
                     ),
                   ),
