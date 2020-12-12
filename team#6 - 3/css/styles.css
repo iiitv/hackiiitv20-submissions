@@ -1,0 +1,76 @@
+html{
+    background-color: 	#00ffff
+}
+
+body {
+  font-family: "Montserrat";
+  text-align: center;
+  background-color: 	#00ffff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat-Bold";
+  background-color: 	#00ffff
+}
+.big-heading{
+  text-align: center;
+  margin-top: 5%;
+  margin-right: 5%;
+}
+.colored{
+  background-color: 	#00ffff
+}
+.doc{
+  margin-top: 120px;
+  margin-left: 38%;
+    background-color: 	#00ffff;
+}
+.pat{
+  margin-top: 60px;
+  margin-left: 38%;
+  background-color: 	#00ffff
+}
+.home-button-sign{
+    background-color: 	#00ffff
+}
+.home-button-log{
+    background-color: 	#00ffff
+}
+
+
+
+input[type=text],
+input[type=password] {
+    width: auto;
+    padding: 12px 12px;
+    margin: 8px 43%;
+    text-align: center;
+
+}
+
+
+
+
+
+.avatar {
+    width: 10%;
+    border-radius: 20%;
+    margin-top: 7%;
+    margin-bottom: 3%;
+    margin-left: 46%;
+    background-color: 	#00ffff;
+}
+
+.container {
+    background-color: 	#00ffff;
+
+    text-align: center;
+}
+
+.psw {
+    float: right;
+    padding-top: 16px;
+}
+.sb{
+  margin-left: 45%;
+}
