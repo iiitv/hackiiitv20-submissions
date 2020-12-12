@@ -31,6 +31,9 @@
 .table
 {
     width:100%;
+}
+.page
+{
     font-family: "montserrat";
 }
 th{
@@ -55,6 +58,11 @@ td{
     color: white;
     padding:1% 5%;
 }
-.output__table{
+.output__table
+{
     display: none;
 }
+/* #output_table
+{
+    display: block;
+} */

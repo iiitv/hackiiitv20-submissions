@@ -1,6 +1,8 @@
+import { Button } from 'bootstrap';
 import React,{useState} from 'react'
 import "./style.css";
 function RightPart() {
+
     const [arr,setarr]=useState([{}]);
     const [timearr,setTimearray] =  useState([{}]);
     const default1={
@@ -8,15 +10,12 @@ function RightPart() {
         min:"",
         max:"",
         power:"",
-        time:"",
+        // time:"",
         priority:""
     };
+    var array=[];
     const [options,setoptions]=useState(default1);
-    const defaultOutput = {
-        name:"",
-        time:""
-    }
-    const [outputFormat,setoutputFormat] = useState(defaultOutput)
+    // const [outputFormat,setoutputFormat] = useState(defaultOutput)
     const [output,setOutput] = useState([{}]);
     function handleChange(event)
     {
@@ -41,52 +40,80 @@ function RightPart() {
             return {...default1};
         }
         );
-       
-
     }
-    function handleOutput(){
-        //avg of previous bills 
+    //Currently algorithm is working on average values.
+    function algorithmForPower(props)
+    {
+        var hrs=(props.min+props.max)/2;
+        var power=props.power;
+        //Currently expecting days to be 30,will definitely change for applianes which we don't use regularyly
+        var days=0.03
+        return days*power*hrs;
+    }
+    function handleOutput(event){
+        const arr=[];
         var prevBillAvg = 546;
         var baseCharge = 45;
-        //per day bill cost 
         var perDayCost = (prevBillAvg-baseCharge)/30;
-        //energy consumption perday
         var perDayConsumptionUnits = (perDayCost/3);
-        //unit = consumption/1000
         var perDayConsumption = perDayConsumptionUnits*1000;
         var AppliancesNo = arr.length;
         var firstBreak = AppliancesNo/3;
         var secondBreak = 2*firstBreak;
-        var timeArray = [];
+// <<<<<<< HEAD
+//         var timeArray = [];
+//         arr.map((value,i)=>{
+//             if(i<firstBreak){
+//                timeArray.push((value.min+value.max)/2-10)
+//             }
+//             else if(i>firstBreak && i<secondBreak){
+//                 timeArray.push((value.min+value.max)/2-10)
+//             }
+//             else{
+//                 timeArray.push((value.min+value.max)/2-10)
+//             }
+//         })
+//         timeArray.map((value))
+         
+//         // timeArray.map((value)=>{
+//         //        setarr((prevvalue)=>{[...prevvalue,time:value]
+//         //        })
+//         // })
+
+// =======
+        var temp;
         arr.map((value,i)=>{
+            temp="";
             if(i<firstBreak){
-               timeArray.push((value.min+value.max)/2-10)
+                temp = ((value.min+value.max)/2)-10;
             }
             else if(i>firstBreak && i<secondBreak){
-                timeArray.push((value.min+value.max)/2-10)
+                temp = ((value.min+value.max)/2)-20;
             }
             else{
-                timeArray.push((value.min+value.max)/2-10)
+                temp = ((value.min+value.max)/2)-30;
             }
+            array.push(temp);
         })
-        timeArray.map((value))
-         
-        // timeArray.map((value)=>{
-        //        setarr((prevvalue)=>{[...prevvalue,time:value]
-        //        })
-        // })
-
         console.log(arr);
-
-        var dis = document.getElementById('output__table');
-        dis.style.display="block";
+        console.log(array);
+        console.log(temp);
+        // arr.map((value,index)=>{
+        //     setarr(()=>{
+        //         return [value,array[index]]
+        //     })
+        // }
+        // )
+        
     }
     return (
         <div>
         <div className="right">
+        <div className="page">
         <h1>Enter details about your appliance</h1>
         <div class="input">
-        <input type="text" placeholder="Enter appliance name" onChange={handleChange}  name="name" value={options.name} required />
+        <input type="text" placeholder="Ent
+        er appliance name" onChange={handleChange}  name="name" value={options.name} required />
         <input type="number" min="1" placeholder="Enter minimum hours" onChange={handleChange} name="min" value={options.min} required/>
         <input type="number" placeholder = "Enter maximum hours " onChange={handleChange} name="max" value={options.max} required/>
         <input type= "number" placeholder = "Enter Power usage(in Watt)" onChange={handleChange} name="power" value={options.power} required/> 
@@ -116,6 +143,19 @@ function RightPart() {
                 })
             }
         </table>
+        </div>
+        {/* <div className="page"> */}
+        
+            {/* {arr.map((value,i)=>{
+                   
+
+                   setarr1(
+                       ()=>{
+                           return [...arr];
+                       }
+                   );
+                }
+            )} */}
         <button type="submit" className="output__btn" onClick={handleOutput}>Get output </button>
         <div className="output__table" id="output__table">
         <tr className="row">

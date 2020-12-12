@@ -4,6 +4,7 @@ import {BrowserRouter,Route,Switch} from 'react-router-dom'
 import Login from "./components/Sign-in/sign-in"
 import Registration from "./components/Registration/Registration"
 import Dashboard from "./components/dashboard/Index"
+import RightPart from "./components/dashboard/rightpart/RightPart"
 import Compare from "./components/dashboard/rightpart/Ranking"
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
             <div>
                <Switch>
                    <Route exact path='/' component={Home} />
+
                    <Route exact path="/login" component={Login} />
                    <Route excat path ="/Sign_up" component={Registration} />
                    <Route path="/dashboard" component={Dashboard} />
