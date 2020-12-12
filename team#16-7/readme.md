@@ -1,4 +1,4 @@
-<p align="center"><a href="https://day8.github.io/re-frame" target="_blank" rel="noopener noreferrer"><img src="eclec.png" alt="re-frame logo"></a></p>  
+ 
   
   <img src="icon.png" align="right" />
   
