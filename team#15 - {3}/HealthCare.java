@@ -1,124 +1,118 @@
-import java.util.*;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.Image;
-import java.awt.event.ActionEvent;
-import java.awt.event.*;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPasswordField;
-import javax.swing.JTextField;
+package AlleviateAidAdvisory;
 
-import java.io.*;
-import javax.imageio.ImageIO;
-import javax.swing.*;
-import java.awt.image.BufferedImage;
+import java.util.Scanner;
 
-
-class LoginPage  implements ActionListener  {
+public class HealthCare   {
+   
+	public static void main (String args[])
+	{
+		int choice, authenticated = 0 , choice2, choice3;
+		Scanner Sc = new Scanner(System.in);
 	
-	
-
-	JFrame frame= new JFrame();
-	
-	JButton loginButton=new JButton("Login");
-	JButton resetButton=new JButton("Reset");
-	JTextField userIDField=new JTextField();
-	JPasswordField userPasswordField=new JPasswordField(); 
-	JLabel userIDLabel=new JLabel("userID:");
-	JLabel userPasswordLabel=new JLabel("Password");
-	JLabel messageLabel=new JLabel("WELCOME ");
-	
-	static String USERID, PASS;
-	
-	HashMap<String,String>logininfo =new HashMap<String,String>();
-	
-	LoginPage(HashMap<String,String>loginInfoOriginal){
+		System.out.println("#### WELCOME TO ONLINE HEALTHCARE SYSTEM ####");
 		
-		logininfo=loginInfoOriginal;
-		userIDLabel.setBounds(50, 100, 75, 25);
-		userPasswordLabel.setBounds(50, 150, 75, 25);
-		
-		
-		messageLabel.setBounds(125,250,250,35);
-		messageLabel.setFont(new Font(null,Font.ITALIC,25));
-		userIDField.setBounds(125, 100, 200, 25);
-		userPasswordField.setBounds(125, 150, 200, 25);
-		
-		loginButton.setBounds(125, 200, 100, 25);
-		loginButton.setFocusable(false);
-		loginButton.addActionListener(this);
-		
-		resetButton.setBounds(225, 200, 100, 25);
-		resetButton.setFocusable(false);
-		resetButton.addActionListener(this);
-		
-		ImageIcon background_image=new ImageIcon("E:/Images/Image1.jpeg");
-		
-		Image img=background_image.getImage();
-		Image temp_img=img.getScaledInstance(900,600,Image.SCALE_SMOOTH);
-		background_image=new ImageIcon(temp_img);
-		JLabel background=new JLabel("",background_image,JLabel.RIGHT);
-		background.setBounds(400,100, 900, 600);
-		frame.getContentPane().add(background);
-		
-		frame.add(userIDLabel);
-		frame.add(userPasswordLabel);
-		frame.add(userIDField);
-		frame.add(userPasswordField);
-		frame.add(messageLabel);
-		frame.add(loginButton);
-		frame.add(resetButton);
-		frame.add(messageLabel);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setSize(1500,1000);
-		frame.setLayout(null);
-		frame.setVisible(true);
-		
-	    frame.pack();
-	    frame.setLocation(400,200);
-	    frame.setVisible(true);
-		
+		while(true) {
 			
-	}
-
-	@Override
-	public void actionPerformed(ActionEvent e)  {
+			System.out.println("\n1> Login");
+			System.out.println("2> Register");
+			System.out.println("3> Exit");
 		
-		if(e.getSource()==resetButton) {
-			userIDField.setText("");
-			userPasswordField.setText("");
-		}
-		if(e.getSource()==loginButton) {
-			String userID=userIDField.getText();
-			String password=String.valueOf(userPasswordField.getPassword());
-			USERID = userID;
-			PASS = password;
-			
-			if(logininfo.containsKey(userID)) {
-				if(logininfo.get(userID).equals(password)) {
-					messageLabel.setForeground(Color.green);
-					messageLabel.setText("LOGIN SUCCESSFULL");
+			choice = Sc.nextInt();
+		
+			if(choice == 1) {
+				
+				boolean T = AllUser.CheckUser();
+				
+				if(T == true) {
+                    authenticated = 1;
+                	AllUser idpassword = new AllUser();
+					LoginPage loginPage = new LoginPage(idpassword.getLoginInfo());
 					
-					frame.dispose();
-				}
-					
-					else {
-					messageLabel.setForeground(Color.red);
-					messageLabel.setText(" WRONG Password");
 					
 				}
+				else {
+					System.out.println("You do not have an account...Register First.");
+				}
 			}
-			else {
-				messageLabel.setForeground(Color.red);
-				messageLabel.setText("Username not found");
+			else if(choice == 2) {
+				 AllUser.CreateUser();
+	             //authenticated = 1;
+				
 			}
-		}
-	}
-	
-	
-	public static String getInfo() {
-		return USERID;
+			else if(choice == 3) {
+				break;
+			}
+			/*
+			else if(choice == 4) {
+				AllUser.print();
+			}
+			else if(choice == 5) {
+				AllUser.printfamily();
+			}
+			else if(choice == 6) {
+				System.out.println(AllUser.getIndex());
+			}*/
+			
+			
+			
+			if(authenticated == 1) {
+				
+				System.out.println("\n\n##### WELCOME ######");
+				
+				while(true) {
+					
+					System.out.println("\n  1> Display Your Profile");
+					System.out.println("  2> Add Family Member");
+					System.out.println("  3> Family Member Profile");
+					System.out.println("  4> Health");
+					System.out.println("  5> Logout");
+					
+					choice2 = Sc.nextInt();
+					
+					if(choice2 == 1) {
+						AllUser.SetIndex(LoginPage.getInfo());
+						int a = AllUser.getIndex();
+						AllUser.Profile(a);
+					}
+					else if(choice2 == 2) {
+						AllUser.SetIndex(LoginPage.getInfo());
+						do {
+							AllUser.AddFamilyMembers();
+							
+							System.out.println("\n     1> add More Members");
+							System.out.println("     2> back to home screem");
+							
+							choice3 = Sc.nextInt();
+							if(choice3 == 2) {
+								break;
+							}
+							
+						} while(true);
+						
+						
+						
+					}
+					
+					else if(choice2 == 3) {
+						//AllUser.SetIndex(LoginPage.getInfo());
+						AllUser.FamilyProfile(AllUser.getIndex());
+					}
+					else if(choice2 == 4) {
+						
+						Application a= new Application();
+						a.Health();
+							
+					}
+					else if(choice2 == 5) {
+						break;
+					}
+					
+					
+				}//inner while loop ends
+				
+			}
+			
+		}//outer while loop ends		
+		
 	}
 }
