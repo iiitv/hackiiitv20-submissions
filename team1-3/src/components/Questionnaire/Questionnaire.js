@@ -37,6 +37,7 @@ class Questionnaire extends Component {
           <br/>
           <br/>
           <Form onSubmit={()=>this.onSubmitHandler(obj)}>
+            
           <Form.Group controlId="formGroupEmail">
             <Form.Label>Enter your age</Form.Label>
             <Form.Control onChange={(e)=>obj.age=e.target.value} type="email" placeholder="Enter age" />
@@ -53,65 +54,27 @@ class Questionnaire extends Component {
             <Form.Label>Enter details of any previous history of related problems:</Form.Label>
             <Form.Control onChange={(e)=>obj.previous=e.target.value} type="password" placeholder="Problems" />
           </Form.Group>
-          <Form.Group controlId="formGroupPassword">
+          <div>
+            <Form.Group controlId="formGroupPassword">
             <Form.Label>High Blood Pressure</Form.Label>
-            <Form.Check
-              type="radio"
-              label="Yes"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
-            <Form.Check
-              type="radio"
-              label="No"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
+            <Form.Check aria-label="option 1" label="Yes" />
+            <Form.Check aria-label="option 2" label="No"/>
           </Form.Group>
+            </div>
           <Form.Group controlId="formGroupPassword">
             <Form.Label>High Cholesterol</Form.Label>
-            <Form.Check
-              type="radio"
-              label="Yes"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
-            <Form.Check
-              type="radio"
-              label="No"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
+            <Form.Check aria-label="option 1" label="Yes" />
+            <Form.Check aria-label="option 2" label="No"/>
           </Form.Group>
           <Form.Group controlId="formGroupPassword">
             <Form.Label>Diabetes</Form.Label>
-            <Form.Check
-              type="radio"
-              label="Yes"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
-            <Form.Check
-              type="radio"
-              label="No"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
+            <Form.Check aria-label="option 1" label="Yes" />
+            <Form.Check aria-label="option 2" label="No"/>
           </Form.Group>
           <Form.Group controlId="formGroupPassword">
             <Form.Label>Bleeding disorder</Form.Label>
-            <Form.Check
-              type="radio"
-              label="Yes"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
-            <Form.Check
-              type="radio"
-              label="No"
-              name="formHorizontalRadios"
-              id="formHorizontalRadios2"
-            />
+            <Form.Check aria-label="option 1" label="Yes" />
+            <Form.Check aria-label="option 2" label="No"/>
           </Form.Group>
           <br/>
           <br/>
