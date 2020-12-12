@@ -1,0 +1,10 @@
+#Sat Dec 12 14:44:25 IST 2020
+base.2=G\:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team\#23-5\\EduFree\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+path.2=classes2.dex
+base.1=G\:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team\#23-5\\EduFree\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+path.1=classes.dex
+base.0=G\:\\AndroidStudio Workspace\\hackiiitv20-submissions\\team\#23-5\\EduFree\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex
