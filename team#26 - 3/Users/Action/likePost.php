@@ -22,6 +22,9 @@ if(isset($_SESSION['login_user_connect']) && isset($_REQUEST['p_id'])){
 			die();
 		}
 		
+		
+		
+		
 	}
 	
 	$qry = "SELECT likes FROM post WHERE p_id = $p_id";
