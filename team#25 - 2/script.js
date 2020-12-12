@@ -6,6 +6,9 @@ document.getElementById("login").addEventListener("click", (e) => {
     e.preventDefault();
 });
 
+const id;
+const p;
+
     class Node{
         constructor(n, pass, ph, eph, aadh)
         {
@@ -53,6 +56,7 @@ document.getElementById("login").addEventListener("click", (e) => {
                 if(curr.name == n)
                 {
                     flag1 = 1;
+                    id = n;
                     break;
                 }
                 else{
@@ -65,6 +69,7 @@ document.getElementById("login").addEventListener("click", (e) => {
                 if(curr.password == pass)
                 {
                     flag2 = 1;
+                    p = pass;
                     break;
                 }
                 else{
@@ -127,6 +132,8 @@ document.getElementById("login").addEventListener("click", (e) => {
     {
         LL.print();
     }
+
+    
 
     function valid()
     {

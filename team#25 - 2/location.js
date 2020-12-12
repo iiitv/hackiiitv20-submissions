@@ -19,6 +19,8 @@ function myfunction()
 function showPosition(position) {
     console.log(`Latitude: ${position.coords.latitude}`);
     console.log(`Longitude: ${position.coords.longitude}`);
+    console.log(id);
+    console.log(p);
     latlon = "Latitude: "+position.coords.latitude+", Longitude: "+position.coords.longitude;
     sendEmail();
 }
