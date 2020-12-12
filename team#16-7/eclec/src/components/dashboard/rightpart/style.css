@@ -35,8 +35,21 @@
 th{
     font-size: 17px;
     color: white;
+    text-align: center;
     background-color: lawngreen;
 }
 td{
     background-color: wheat;
+    text-align: center;
+}
+.output__btn{
+    background-color: red;
+    border-radius: 10px;
+    padding: 5px 15px;
+    margin-left: 45%;
+    border: none;
+    color: white;
+}
+.output__table{
+    display: none;
 }
