@@ -1,4 +1,7 @@
-Introducing : __Eclec__
+  # Eclec
+
+Foobar is a Python library for dealing with word pluralization.
+
 __Theme__ :  Smart power-grid management system
  
 __Overview__: it is basically a website having some computational power to provide users with information regarding their household energy demands.
@@ -16,4 +19,32 @@ We can also add features in which user’s family will get ranked in their colon
 
 Extended to this idea if the whole colony start using this website then we may provide this data to electricity supplier to maintain the demand of electricity supply after considering  the colony household needs. 
 
-  
+
+
+
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
+pip install foobar
+```
+
+## Usage
+
+```python
+import foobar
+
+foobar.pluralize('word') # returns 'words'
+foobar.pluralize('goose') # returns 'geese'
+foobar.singularize('phenomena') # returns 'phenomenon'
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
