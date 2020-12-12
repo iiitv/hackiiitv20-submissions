@@ -1,6 +1,6 @@
 var symid, gender, dob, i = 0;
 
-var authtoken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImdhbWVyYWtzMzM2NjUyQGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvc2lkIjoiNTY2NyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvdmVyc2lvbiI6IjEwOSIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbGltaXQiOiIxMDAiLCJodHRwOi8vZXhhbXBsZS5vcmcvY2xhaW1zL21lbWJlcnNoaXAiOiJCYXNpYyIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbGFuZ3VhZ2UiOiJlbi1nYiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvZXhwaXJhdGlvbiI6IjIwOTktMTItMzEiLCJodHRwOi8vZXhhbXBsZS5vcmcvY2xhaW1zL21lbWJlcnNoaXBzdGFydCI6IjIwMjAtMTItMTEiLCJpc3MiOiJodHRwczovL2F1dGhzZXJ2aWNlLnByaWFpZC5jaCIsImF1ZCI6Imh0dHBzOi8vaGVhbHRoc2VydmljZS5wcmlhaWQuY2giLCJleHAiOjE2MDc3Njg1NjcsIm5iZiI6MTYwNzc2MTM2N30.6Q-7WlEobHGrwK-4aVoZA73c_i93A92Vj1C-tzxXM2Q";
+var authtoken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImdhbWVyYWtzMzM2NjUyQGdtYWlsLmNvbSIsInJvbGUiOiJVc2VyIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvc2lkIjoiNTY2NyIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvdmVyc2lvbiI6IjEwOSIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbGltaXQiOiIxMDAiLCJodHRwOi8vZXhhbXBsZS5vcmcvY2xhaW1zL21lbWJlcnNoaXAiOiJCYXNpYyIsImh0dHA6Ly9leGFtcGxlLm9yZy9jbGFpbXMvbGFuZ3VhZ2UiOiJlbi1nYiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvZXhwaXJhdGlvbiI6IjIwOTktMTItMzEiLCJodHRwOi8vZXhhbXBsZS5vcmcvY2xhaW1zL21lbWJlcnNoaXBzdGFydCI6IjIwMjAtMTItMTEiLCJpc3MiOiJodHRwczovL2F1dGhzZXJ2aWNlLnByaWFpZC5jaCIsImF1ZCI6Imh0dHBzOi8vaGVhbHRoc2VydmljZS5wcmlhaWQuY2giLCJleHAiOjE2MDc3NzIyNzksIm5iZiI6MTYwNzc2NTA3OX0.brOi7lc30w0kKguH5FlaQaerBn1xP-uRrIyg0K8Vkdo";
 const api1 = `https://healthservice.priaid.ch/symptoms?token=${authtoken}&format=json&language=en-gb`;
 fetch(api1)
     .then(response => {
@@ -41,16 +41,16 @@ function find() {
             document.getElementById('soln').innerHTML = data.map(sol =>
                 `<div class="sympData">
                 
-                    <h2 class="heading-secondary no-bg" id="icdname">
+                    <h2 class="heading-tertiary no-bg" id="icdname">
                         ${sol.Issue.IcdName}
                     </h2>
-                    <p class="paragraph" id="solname">
+                    <p class="paragraph no-margin" id="solname">
                         ${sol.Issue.Name}
                     </p>
                     <br>
-                    <h2 class="heading-secondary no-bg">Solution</h2>
+                    <h2 class="heading-tertiary no-bg">Solution</h2>
                     ${sol.Specialisation.map(spe =>
-                    `<li>${spe.Name}</li>`
+                    `<li class="paragraph no-margin">${spe.Name}</li>`
                 ).join('')}
                 
                 <br><br>

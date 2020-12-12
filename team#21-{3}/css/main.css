@@ -677,13 +677,10 @@ body {
 .header {
   position: relative;
   height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(81, 173, 207, 0.8), rgba(2, 120, 174, 0.8)), url(../img/hero-small.jpg);
+  background-image: linear-gradient(to right bottom, rgba(81, 173, 207, 0.8), rgba(2, 120, 174, 0.8)), url(../img/try1.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
-  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (min-width: 125em) {
-    .header {
-      background-image: linear-gradient(to right bottom, rgba(81, 173, 207, 0.8), rgba(2, 120, 174, 0.8)), url(../img/hero.jpg); } }
   @media only screen and (max-width: 56.25em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); } }
@@ -1023,6 +1020,11 @@ body {
   display: block;
   color: whitesmoke;
   padding: 2rem; }
+  .sympData::selection {
+    color: #999999; }
 
 .sub_logo {
   margin: 2.5rem; }
+
+.no-margin:not(:last-child) {
+  margin-bottom: 0rem; }

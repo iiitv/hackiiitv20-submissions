@@ -11,6 +11,11 @@
   display: block;
   color: whitesmoke;
   padding: 2rem; }
+  .sympData::selection {
+    color: #999999; }
 
 .sub_logo {
   margin: 2.5rem; }
+
+.no-margin:not(:last-child) {
+  margin-bottom: 0rem; }
