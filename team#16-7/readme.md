@@ -1,6 +1,6 @@
   <img src="icon.png" align="right" />
   
-  # Eclec [![Brain_Not_Found](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/Ohh-404-BrainNotFound)
+  # Eclec     [![Brain_Not_Found](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/Ohh-404-BrainNotFound)
 
   A web-app to measure up your power usage as well as save some bucks..
 
@@ -31,4 +31,6 @@
   Extended to this idea if the whole colony start using this website then we may provide this data to electricity supplier to maintain the demand of electricity supply after considering  the colony household needs. 
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+[![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+
+[HACK](https://www.hackerearth.com/challenges/hackathon/)
