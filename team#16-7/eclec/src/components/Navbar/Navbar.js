@@ -9,6 +9,7 @@ import "./Navbar.css"
 
             <ul> 
             {/* <img  className="logo__img" src="./Images/eclec.png"></img> */}
+            <h1 className="header">Eclec</h1>
           <NavLink exact activeClassName="current" to="/">
             <li>
               <button className="home__btn">Home</button>

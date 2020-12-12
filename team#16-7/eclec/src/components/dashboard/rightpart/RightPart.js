@@ -1,4 +1,3 @@
-import { Button } from 'bootstrap';
 import React,{useState} from 'react'
 import "./style.css";
 function RightPart() {

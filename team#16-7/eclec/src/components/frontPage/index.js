@@ -8,18 +8,27 @@ class index extends Component {
         <div className="mid__section">
           <div className="content">
             <h1 className="head">
-              some random lines i do not know what to include but sill we will
-              include some reandon lines in it for surw
+            Measuring the energy consumption of Homes: using Arduino
             </h1>
             <h1 className="sub__head">
-              some random lines i do not know what to include but sill{' '}
+            💵💵 Let’s save some Bucks 💵💵{' '}
+    
             </h1>
+            <p className="pp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris ni</p>        
           </div>
           <div className="img__holder">
             <img className="lady__img" src="./Images/lady.png"></img>
           </div>
         </div>
+        <div class="footer">
+        <footer>
+        <p>💖 Made with Love 💖</p>
+        <p>404_Brain_Not_Found</p>
+        </footer>
+         </div>
       </div>
+    
+      
     );
   }
 }
