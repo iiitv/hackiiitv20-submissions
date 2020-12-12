@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.breejemodi.safetravel">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/stlogosquare"
@@ -9,7 +12,9 @@
         android:roundIcon="@drawable/stlogosquare"
         android:supportsRtl="true"
         android:theme="@style/Theme.SafeTravel">
-        <activity android:name=".BusStatusActivity"></activity>
+        <activity android:name=".GPSActivity"></activity>
+        <activity android:name=".ConductorSideStatus" />
+        <activity android:name=".BusStatusActivity" />
         <activity android:name=".registration.RegisterActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -18,7 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <service android:name=".LocationService"/>
+        <meta-data android:name="com.google.android.geo.API_KEY" android:value="${mapsApiKey}"/>
     </application>
 
 </manifest>
