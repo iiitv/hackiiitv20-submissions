@@ -1,5 +1,5 @@
 # Care Connect
-An *online platform* for mental support communities to the patients of any kind of disease. :wave:
+An *online platform* for mental support communities to the patients of any kind of disease. :wave:<br>
 This project is for advancing the Medical industry by Information technology by providing a community support to any disease's patient. For a long term disease patient, it is necessary for them to be stable in madicines as well as in mental health. So, in this plateform they can find a community of patients or thheir relatives who are experiencing the same illness from same disease. Now days, depression is also a major problem. It can also solve that problem by providing community support to those patients.
 <br>
 <b>Now let's come to the technical part.</b>
