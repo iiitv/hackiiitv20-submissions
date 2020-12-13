@@ -26,7 +26,7 @@ This would be hard to implement completly, but can be given a good try.
 <img src="final.jpeg" width="150" height="300">&emsp;  &emsp; <img src="final1.jpeg" width="150" height="300"> &emsp;  &emsp; <img src="final3.jpeg" width="370" height="300">
 
 
-## Snapshots of our prototpye
+## Snapshots of our prototype
 
 <img src="prototype1.jpeg" width="150" height="300">&emsp;  &emsp; <img src="prototype2.jpeg" width="150" height="300"> &emsp;  &emsp; <img src="prototype3.jpeg" width="150" height="300">&emsp;  &emsp; <img src="prototype4.jpeg" width="150" height="300">&emsp;  &emsp; <img src="prototype5.jpeg" width="150" height="300">
 
