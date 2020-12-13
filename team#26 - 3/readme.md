@@ -11,7 +11,8 @@ Key functionalities:
 - Add friend request to fellow community members
 - Chat with community members
 And some other basics...<br>
-Here is the link of site: deployed in cloud. ![CareConnect](http://careconnect.centralus.cloudapp.azure.com/)
+Here is the link of site: deployed in cloud. 
+<a href="http://careconnect.centralus.cloudapp.azure.com/">CareConnect</a>
 <br>
 <b>Chat scripts work on end to end encyption with private key encryption.</b>
 
