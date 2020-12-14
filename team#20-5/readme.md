@@ -18,6 +18,40 @@ This will work turn by turn and a blackboard chat system is formed.More interact
 
 This would be hard to implement completly, but can be given a good try.
 
+## Front End
+HTML CSS Javascript
+
+## Back End
+Flask
+
+# Setup/Installation
+
+1. [Create a Twilio account](https://www.twilio.com) (if you don't have one yet). It's free!
+2. [Generate an API Key](https://www.twilio.com/console/project/api-keys) for your account.
+
+```bash
+cd INSTALLATION_PATH # directory path where you want to clone and also the directory where you will write solutions
+git clone https://github.com/Abhinav1299/hackiiitv20-submissions/tree/team%2320 # or u can download and extact the zip file
+cd team#20-5 # move to the project directory
+cp .en.template .env # Copy paste the API Keys from your twillio account
+python -m venv venv # Making the virtual environment for installing dependencies(Optional) 
+venv\Scripts\activate # (For windows user) [ If you have made virtual environment ]
+source venv/Scripts/activate # (For bash user) [ If you have made virtual environment ]
+pip install -r requirement.txt # Installing the necessary dependencies 
+python app.py 
+```
+
+# Making it Public (Public server)
+Open another terminal for creating public server
+
+First Go to the base directory 
+```bash
+venv\Scripts\activate # (For windows user) [ If you have made virtual environment ]
+source venv/Scripts/activate # (For bash user) [ If you have made virtual environment ]
+ngrok http 5000 # It will run the public server which is running on the localhost 5000 
+```
+
+
 ## Snapshots of our working application
 
 <!-- ![output](final.jpeg|width=100) -->
