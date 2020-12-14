@@ -15,8 +15,13 @@ It is deployed using Microsoft Azure's VM instance and Lamp server.
 - Accept of delete friend requests.
 - Chat with community members.
 And some other basics...<br>
-Here is the link of site: deployed in cloud. 
-<a href="http://careconnect.centralus.cloudapp.azure.com/">CareConnect</a>
+Here is the link of site: deployed in cloud. <br>
+<b><a href="http://careconnect.centralus.cloudapp.azure.com/">CareConnect</a></b>
+<br>
+Or scan this QR code to go to the link...<br>
+<p align="center">
+<img src="https://github.com/Kelta-King/Kelta-King/blob/master/Images/CareConnectQR.jpeg" width="300" title="QR code of site">
+</p>
 <br>
 <b>Chat scripts work on end to end encyption with private key encryption.</b>
 
