@@ -19,36 +19,66 @@ This will work turn by turn and a blackboard chat system is formed.More interact
 This would be hard to implement completly, but can be given a good try.
 
 ## Front End
-HTML CSS Javascript
+We have used HTML, CSS, and Javascript for frontend part.
 
 ## Back End
-Flask
+We have used Flask for backend.
 
-# Setup/Installation
+## Setup/Installation
 
 1. [Create a Twilio account](https://www.twilio.com) (if you don't have one yet). It's free!
+
+
 2. [Generate an API Key](https://www.twilio.com/console/project/api-keys) for your account.
 
-```bash
-cd INSTALLATION_PATH # directory path where you want to clone and also the directory where you will write solutions
-git clone https://github.com/Abhinav1299/hackiiitv20-submissions/tree/team%2320 # or u can download and extact the zip file
-cd team#20-5 # move to the project directory
-cp .en.template .env # Copy paste the API Keys from your twillio account
-python -m venv venv # Making the virtual environment for installing dependencies(Optional) 
-venv\Scripts\activate # (For windows user) [ If you have made virtual environment ]
-source venv/Scripts/activate # (For bash user) [ If you have made virtual environment ]
-pip install -r requirement.txt # Installing the necessary dependencies 
-python app.py 
+3. Now, set the directory path where you want to clone and also the directory where you will write solutions
+
+```sh
+cd INSTALLATION_PATH 
+```
+4.  Clone this repository `git clone https://github.com/Abhinav1299/hackiiitv20-submissions/tree/team%2320`
+or u can download and extact the zip file.
+
+5. Move to the project directory
+```sh
+cd team#20-5
+```
+6. Copy paste the API Keys from your twillio account after making a copy of .env.template
+```sh
+cp .env.template .env
+```
+7. Create a virtual environment
+```sh
+pip install virtualenv
+virtualenv venv
+```
+- Activate virtual environment (macOS or Linux)
+```sh
+source venv/Scripts/activate
+```
+- Activate virtual environment (Windows)
+
+```sh
+venv\Scripts\activate 
+```
+8. Installing requirements
+```sh
+pip install -r requirement.txt
 ```
 
-# Making it Public (Public server)
-Open another terminal for creating public server
+9. Starting the backend server
+```sh
+python app.py 
+```
+10. Making a public server using ngrok
+- Open another terminal for creating public server
+- Move to the project directory 
+- Create virtual environment as above
+- start the server which will act as a public server for localhost 5000 
 
-First Go to the base directory 
-```bash
-venv\Scripts\activate # (For windows user) [ If you have made virtual environment ]
-source venv/Scripts/activate # (For bash user) [ If you have made virtual environment ]
-ngrok http 5000 # It will run the public server which is running on the localhost 5000 
+
+```sh
+ngrok http 5000
 ```
 
 
@@ -57,7 +87,8 @@ ngrok http 5000 # It will run the public server which is running on the localhos
 <!-- ![output](final.jpeg|width=100) -->
 
 
-<img src="final.jpeg" width="150" height="300">&emsp;  &emsp; <img src="final1.jpeg" width="150" height="300"> &emsp;  &emsp; <img src="final3.jpeg" width="370" height="300">
+<img src="image/1.jpeg" width="200" height="300">&emsp;  &emsp; <img src="image/2.jpeg" width="150" height="300"> 
+<img src="image/graph_output.png" width="200" height="300"> &emsp;  &emsp; <img src="image/3.jpeg" width="150" height="300">
 
 
 ## Snapshots of our prototype
