@@ -1,6 +1,6 @@
 # Care Connect
 An *online platform* for mental support communities to the patients of any kind of disease. :wave:<br>
-This project is for advancing the Medical industry by Information technology by providing a community support to any disease's patient. For a long term disease patient, it is necessary for them to be stable in madicines as well as in mental health. So, in this plateform they can find a community of patients or thheir relatives who are experiencing the same illness from same disease. Now days, depression is also a major problem. It can also solve that problem by providing community support to those patients.
+This project is for advancing the medical industry by information technology by providing community support to any patient. For a long term disease patient, it is necessary for them to be stable in medicines as well as in mental health. So, in this platform, they can find a community of patients, their relatives, or their friends who are experiencing the same illness from the same disease. Nowadays, depression is also a major problem. It can also solve that problem by providing community support to those patients.
 <br>
 <b>Now let's come to the technical part.</b>
 <br><br>
@@ -12,7 +12,7 @@ It is deployed using Microsoft Azure's VM instance and Lamp server.
 - Create a community.
 - Post in community.
 - Add friend request to fellow community members.
-- Accept of delete friend requests.
+- Accept or delete friend requests.
 - Chat with community members.
 And some other basics...<br>
 Here is the link of site: deployed in cloud. <br>
