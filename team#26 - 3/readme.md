@@ -106,12 +106,13 @@ Or scan this QR code to go to the link...<br>
 
 </p>
 
-<h2>Future Scaope (What features we can add to advance it)</h2>
+<h2>Future Scope</h2>
 - Recommender system to recommend new users to add them as friends based on features like illness, location (decreasing priority) by using Data mining concepts.<br>
 - For validation of the patients, the registered user will be required to upload a certificate or medical prescription from registered hospital certifying his illness<br>
 - Notify / call friends in times of emergency<br>
 - In the profile, his history can be recorded using the hospital data<br>
 - Can virtually talk with each other by Video conferencing.<br>
+- We can provid esuggetions about communities by using Data mining techniques.
 <br>
 <p>
   Hope you like the project. 😄
