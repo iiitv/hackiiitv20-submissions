@@ -15,6 +15,8 @@ It is deployed using Microsoft Azure's VM instance and Lamp server.
 - Accept or delete friend requests.
 - Chat with community members.
 And some other basics...<br>
+Here is the video link of care connect's demonstration. <br>
+<b><a href="https://drive.google.com/file/d/1_e0zk9CPA6ASbct3sjdOu7DSYQyt0-Pq/view">CareConnect demonstration video</a></b><br>
 Here is the link of site: deployed in cloud. <br>
 <b><a href="http://careconnect.centralus.cloudapp.azure.com/">CareConnect</a></b>
 <br>
