@@ -25,6 +25,18 @@ Or scan this QR code to go to the link...<br>
 <img src="https://github.com/Kelta-King/Kelta-King/blob/master/Images/CareConnectQR.jpeg" width="300" title="QR code of site">
 </p>
 <br>
+
+
+<h2>Future Scope</h2>
+- We are trying to secure Posts in community by implementing it through Blockchain technology. <br>
+- Recommender system to recommend new users to add them as friends based on features like illness, location (decreasing priority) by using Data mining concepts.<br>
+- We can provide suggetions about communities by using Data mining techniques.<br>
+- For validation of the patients, the registered user will be required to upload a certificate or medical prescription from registered hospital certifying his illness<br>
+- Notify / call friends in times of emergency<br>
+- In the profile, his history can be recorded using the hospital data<br>
+- Can virtually talk with each other by Video conferencing.<br>
+<br>
+
 <b>Chat scripts work on end to end encyption with private key encryption.</b>
 
 <p align="center"><b><br><h2 display="inline-block">Template images</h2></b></p>
@@ -108,14 +120,6 @@ Or scan this QR code to go to the link...<br>
 
 </p>
 
-<h2>Future Scope</h2>
-- Recommender system to recommend new users to add them as friends based on features like illness, location (decreasing priority) by using Data mining concepts.<br>
-- For validation of the patients, the registered user will be required to upload a certificate or medical prescription from registered hospital certifying his illness<br>
-- Notify / call friends in times of emergency<br>
-- In the profile, his history can be recorded using the hospital data<br>
-- Can virtually talk with each other by Video conferencing.<br>
-- We can provid esuggetions about communities by using Data mining techniques.
-<br>
 <p>
   Hope you like the project. 😄
 </p>
