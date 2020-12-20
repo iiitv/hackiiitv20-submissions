@@ -147,15 +147,9 @@ def process1():
 
     # cv2.imwrite('51IgH_result.png', result)
 
-
-
-
-
-
-
     URL = "https://slazzer.com/api/v1/remove_image_background"
     PATH = 'output.png'
-    API_KEY = "a912d027380043c494f4e2dd27b3d6f2"
+    API_KEY = ""
 
     image_file = {'source_image_file': open(PATH, 'rb')}
     headers = {'API-KEY': API_KEY}
@@ -163,12 +157,6 @@ def process1():
 
     ans = response.json()['output_image_url']
 
-
-
-
-
-
-    
 
     # remove_background(r'E:\flask-twilio-video\output.png'))
 
@@ -206,22 +194,6 @@ def process1():
 
 
     return ans
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':
