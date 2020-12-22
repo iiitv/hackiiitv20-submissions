@@ -63,7 +63,7 @@ venv\Scripts\activate
 ```
 8. Installing requirements
 ```sh
-pip install -r requirement.txt
+pip install -r requirements.txt
 ```
 
 9. Starting the backend server
