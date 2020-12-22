@@ -1,83 +1,29 @@
-# HackIIITV 20 Submission
-This repository contains the rules and code of conduct for __HackIIITV 2020__.
+# HelpingLives
+We built a blockchain based web application for __HACKIIITV20__.
 
 ## Contents
-- __[Contents](#contents)__
-- __[Requirements](#requirements-)__
-- __[Few pointers](#few-pointers-)__
-- __[How to submit?](#how-to-submit?-)__
-- __[Rules](HackIIITV_rules_and_timeline.pdf)__
-- __[Code of Conduct](CODE_OF_CONDUCT.md)__
-- __[Our Community](#our-community)__
-- __[Contact / Support](#contact--support)__
+- __[Description](#description)__
+- __[Tech Stack](#tech-stack)__
+- __[Use of Blockchain](#use-of-blockchain)__
 
-### Requirements
+### Description
 
-- __[GitHub account](https://github.com/login)__
-- Install __[git](https://git-scm.com/)__ for your repsective OS.
-- Make sure you are part of IIITV organisation on GitHub, else join __[here](http://getmein.glitch.me/)__
+We have built a blockchain based web application that provides user real cryptocurrency whenever they donate blood or organs. This will facilitate the people to donate blood more frequently as they will get rewarded with real ethers. We have also included the feature of reporting the doctors where a user/patient can report a hospital/doctor if they think that the doctor is doing unregistered medical practice (like happens in most of the villages), or if the hospital is charging unnecessary fees. If we get some minimum number of reports against the doctor then we will forward this case to the higher concerned authorities so that they can take strict action against such doctors.
 
-### Few pointers
+### Tech Stack
 
-- You can make at max one commit per hour.
-- Don't close your PR.
-- No commits after Hackathon ends will be entertained.
-- It is required from the teams to keep committing within __three__ hours of the previous commit to keep your hack backed up.  
-- Make sure your whole project is inside the folder of your team.
-- If you have time left, make sure you make a README.md 📄 😉(it will help others to understand your code)
+- MERN stack
+- Bootstrap
+- Semantic UI React
+- Ethereum Blockchain
+- Solidity
+- Infura  
+- Metamask
 
-### How to submit?
+### Use of Blockchain
 
-One member from each team have to follow this instructions:
-Follow the instructions in order:
-
-1. Fork this repository.
-
-2. Clone your fork, using
-    `git clone https://github.com/<your-username>/hackiiitv20-submissions.git`
-
-3. Change Directory to `hackiiitv20-submissions`, using
-    `cd hackiiitv20-submissions`
-
-4. Set remote to original repository using
-    `git remote add ups https://github.com/iiitv/hackiiitv20-submissions.git`
-
-5. Create a branch named `team#x`, where __"x"__ is your team number, using
-    `git checkout -b team#x`
-
-6. Add a folder with name `team#x - {Chosen_Theme_number}` in root directory. Make sure your whole hack is in folder `team#x - {Chosen_Theme_number}`.
-
-7. Now add this folder to your staging area, using
-    `git add "team#x - {Chosen_Theme_number}"`
-
-8. Now commit the changes using,
-    `git commit -m "Add team#x"`
-
-9. Push the changes using,
-    `git push`
-
-10. Open a pull request: As soon as the changes will be pushed, GUI of repository's main page will show a yellow banner saying you too open a Pull request, just click on it and you are done.
-
-For making changes to PR, just keep on repeating Step 6-9.
-
-### Rules
-
-- Keep your content as original as possible.
-- It is allowed to use available softwares/packages as a module, but they can't be your project.
-
-### Contact / Support
-
-- Write to us at: __[technical.committee@iiitvadodara.ac.in](mailto:technical.committee@iiitvadodara.ac.in)__
-- Join the discord server: __[HackIIITV](https://discord.gg/Rw4X9rYZgR)__
-
-### Our Community
-
-- Open source projects created by students at IIITV : [IIITV Open Source Org](https://github.com/iiitv)
-- Discord channel where we discuss topics related to DSA and Competitive Programming: [IIITVCC Discord Server Invite](https://discord.gg/pUPbVHF)
-- Join the Open Source Org and our Slack Channel to ask your doubts and discussion: [Get Me In](https://getmein.glitch.me/), [Slack](https://join.slack.com/t/iiitvadodara/shared_invite/zt-gx92qvc2-X_NREKMxP6f7DlyZuxzM_g)
-
-### Happy Hacking! 🖖
+We created __[ERC20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/)__ standard tokens for our application and named them __HealthCoin(HC)__. These tokens will be used to reward the users whenever they will donate blood or organ. The user can then convert these HealthCoins to real cryptocurrency ether, which are used for transactions on the ethereum blockchain. We have created a Healthcare __[smart contract](https://ethereum.org/en/developers/docs/smart-contracts/)__ which will govern the distribution of HealthCoins to the user whenever the blood bank confirms that the person has successfully donated the blood, and same goes for the organ donation. 
 
  ***
 
-<p align='center'>Made With ❤️ By <a href="https://github.com/iiitv">Team HackIIITV</a></p>
+<p align='center'>Made With ❤️ By Team Goat</p>
