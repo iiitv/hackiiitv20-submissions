@@ -34,10 +34,10 @@ class ReportDoctor extends Component {
     doSubmit = async (e) => {
         e.preventDefault();
         try {
-            const {_id} = jwtDecode(localStorage.getItem('token'));
+            const {email} = jwtDecode(localStorage.getItem('token'));
             const obj = {
                 doctorName: this.state.report.doctor,
-                userId: _id, 
+                userEmail: email, 
                 reason: this.state.report.reason
             };
             const response = await axios.post('http://localhost:9000/api/report/addReport', obj);
@@ -62,7 +62,7 @@ class ReportDoctor extends Component {
     
                 <form className="mx-auto" style={{width: '350px'}} onSubmit={this.doSubmit}>
                     <label>Hospital/Doctor</label>
-                    <Input list='doctorList' className="w-100" placeholder='Choose doctor...' />
+                    <Input list='doctorList' className="w-100" id="doctor" name="doctor" value={this.state.report.doctor} onChange={this.onChange} placeholder='Choose doctor...' />
                         <datalist id='doctorList'>
                         {this.state.doctorList.map(doctor => {
                             return <option key={doctor.name} value={doctor.name}>{doctor.name}</option>
@@ -70,7 +70,7 @@ class ReportDoctor extends Component {
                     </datalist>
                     <div className="form-group mt-3">
                         <label>Reason</label>
-                        <textarea name="reason" type="text" className="form-control" id="reason" value={this.state.reason} onChange={this.onChange} />
+                        <textarea name="reason" type="text" className="form-control" id="reason" value={this.state.report.reason} onChange={this.onChange} />
                     </div>
                     
                     <button type="submit" className="btn btn-primary my-2">Submit</button>

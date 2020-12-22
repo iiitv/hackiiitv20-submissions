@@ -20,8 +20,9 @@ class BloodDonationSlot extends Component {
         try {
             const request = await axios.get(`http://localhost:9000/api/bloodDonation/getRequest/${this.props.match.params.id}`);
             const user = await axios.get(`http://localhost:9000/api/user/${request.data.userId}`);
-            console.log(request.data);
-            this.setState({request: request.data, user: user.data})
+            const userData = {...user.data};
+            userData.dob = userData.dob.substring(0,10);
+            this.setState({request: request.data, user: userData});
         } catch (error) {
             console.log(error);
         }
@@ -108,6 +109,17 @@ class BloodDonationSlot extends Component {
         }
     }
 
+    bloodDonationDisapproved = async () => {
+        try {
+            console.log("in bloodDonationDisapproved");
+            const disapproveDonation = await axios.post("http://localhost:9000/api/bloodDonation/remove/" + this.props.match.params.id);
+            const updateUser = await axios.post("http://localhost:9000/api/user/completeBloodDonation/" + this.state.user._id);
+            this.props.history.push("/doctor/bloodDonations");
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
     render() { 
         return ( 
             <React.Fragment>
@@ -127,12 +139,12 @@ class BloodDonationSlot extends Component {
                             <span className='text-danger'>Email : </span>
                             <span className='text-dark'>{this.state.user.email}</span>
                         </div>
-                        <div className="col-lg-6">
+                        {/* <div className="col-lg-6">
                             <span className='text-danger'>Last Blood Donation Date : </span>
                             <span className='text-dark'>
                                 {this.state.user.lastBloodDonationDate ? this.state.user.lastBloodDonationDate : "(Donating first time)"}
                             </span>
-                        </div>
+                        </div> */}
                         
                     </div>
                     { this.state.request.appointmentTime ? 
@@ -149,7 +161,8 @@ class BloodDonationSlot extends Component {
                         </div>
                         <div className='row mt-2'>
                             <div className="mx-auto">
-                                <Button color="blue" onClick={this.confirmBloodDonation}>Blood Donated</Button>
+                                <Button color="blue" className="px-2" onClick={this.confirmBloodDonation}>Blood Donated</Button>
+                                <Button color="red" className="ml-1 px-2" onClick={this.bloodDonationDisapproved}>Disapproved</Button>
                             </div>
                         </div>
                     </div>

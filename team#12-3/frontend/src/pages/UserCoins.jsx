@@ -32,8 +32,7 @@ class UserCoins extends Component {
         e.preventDefault();
         this.setState({ loading2: true, disabled: true });
         try {
-            await instanceHealthcare.methods.convertCoinsToEther(this.state.coins).send({ from: this.state.account});
-            await instanceEIP20.methods.transfer(addressHealthcare, this.state.coins).send({ from: this.state.account });
+            await instanceEIP20.methods.convertCoinsToEther(this.state.coins).send({ from: this.state.account });
             const balance = parseInt(this.state.balance) - parseInt(this.state.coins);
             toast.success("Ethers transferred to your account successfully!");
             this.setState({ coins: '', balance, loading2: false, disabled: false });
@@ -56,12 +55,12 @@ class UserCoins extends Component {
                         <h3 className="mt-4 mb-0 pb-0" style={{ fontFamily: 'Goldman'}}>My HealthCoins</h3>
                         <hr className=" mx-auto w-25" />
                         <h4 className="mt-3">Account : {this.state.account}</h4>
-                        <h4 className="m-3">Balance : {this.state.balance} QC</h4>
+                        <h4 className="m-3">Balance : {this.state.balance} HC</h4>
                         <form>
                             <div className="input-group mx-auto" style={{width: '93%'}}>
                                 <input type="number" min="1" className="form-control font-weight-bold" style={{textAlign: 'center'}} value={this.state.coins} onChange={this.onChange} disabled={this.state.disabled} />
                                 <div className="input-group-append">
-                                    <span className="input-group-text">QC</span>
+                                    <span className="input-group-text"><strong>HC</strong></span>
                                 </div>
                             </div>
                             <span>{this.state.coins? <h5 className='m-3'>Ether Value : {this.state.coins * 0.01} ethers </h5> : null }</span>

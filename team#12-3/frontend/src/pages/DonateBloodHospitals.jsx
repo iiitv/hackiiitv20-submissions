@@ -54,7 +54,7 @@ class DonateBloodHospitals extends Component {
                 <div class="input-group mt-4">
                     <input className="form-control border-white" type='search' name='search' id='search' placeholder="Search by city" value={this.state.search} onChange={this.searchDoctor} autoComplete='off' />
                     <div class="input-group-append">
-                        <span class="input-group-text bg-white border border-white"><Icon name='search' className="mb-1 ml-2" /></span>
+                        <span className="input-group-text bg-white border border-white"><Icon name='search' className="mb-1 ml-2" /></span>
                     </div>
                 </div>
                 

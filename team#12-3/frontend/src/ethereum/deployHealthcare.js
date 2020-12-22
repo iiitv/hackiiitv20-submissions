@@ -14,6 +14,8 @@ const deployHealthcare = async () => {
 
     console.log('Deployed to address ',result.options.address); 
     // Rinkeby-
+    // 0x2a39265BfaDd7aBa09F7860c4C37Ae5Df708ec0D
+    // 0xc39ECf511A8Cfc904aB167247E6E5cAe0cD75299
 }
 
 deployHealthcare();

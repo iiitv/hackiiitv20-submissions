@@ -73,5 +73,12 @@ contract EIP20 {
         totalSupply += newCoins;
         balances[manager] += newCoins;
     }
+
+    function convertCoinsToEther(uint _value) public {
+        require(balances[msg.sender] >= _value);
+        balances[msg.sender] -= _value;
+        balances[manager] += _value;
+        payable(msg.sender).transfer(_value*0.01 ether);
+    }
     
 }

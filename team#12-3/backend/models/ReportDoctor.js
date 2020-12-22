@@ -4,7 +4,7 @@ const reportDoctorSchema = new mongoose.Schema({
     doctorName: {
         type: String
     },
-    userName: {
+    userEmail: {
         type: String,
         unique: true
     },

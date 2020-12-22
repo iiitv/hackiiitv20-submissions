@@ -26,8 +26,8 @@ class Home extends Component {
                 <hr className="w-25 mx-auto" />
                 { !user && !doctor && 
                 <div>
-                    <Link to="/userRegistration"><button className="btn btn-outline-primary mr-3">Register</button></Link>
-                    <Link to="/login"><button className="btn btn-outline-warning ml-2">Login</button></Link>
+                    <Link to="/userRegistration"><button className="btn btn-outline-warning mr-3" style={{fontWeight: 'bold', borderWidth: '2px'}}>Register</button></Link>
+                    <Link to="/login"><button className="btn btn-outline-primary ml-2" style={{fontWeight: 'bold', borderWidth: '2px'}}>Login</button></Link>
                 </div>
                 }
             </div>

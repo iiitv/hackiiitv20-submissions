@@ -25,7 +25,7 @@ const addReport = async (req,res) => {
         console.log('in addReport api');
         const report = new ReportDoctor({
             doctorName: req.body.doctorName,
-            userName: req.body.userName,
+            userEmail: req.body.userEmail,
             reason: req.body.reason
         });
         const obj = await report.save();
