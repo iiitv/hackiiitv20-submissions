@@ -5,8 +5,7 @@ const reportDoctorSchema = new mongoose.Schema({
         type: String
     },
     userEmail: {
-        type: String,
-        unique: true
+        type: String
     },
     reason: {
         type: String

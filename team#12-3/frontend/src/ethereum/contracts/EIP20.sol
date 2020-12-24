@@ -74,6 +74,9 @@ contract EIP20 {
         balances[manager] += newCoins;
     }
 
+    receive() external payable {
+    }
+
     function convertCoinsToEther(uint _value) public {
         require(balances[msg.sender] >= _value);
         balances[msg.sender] -= _value;

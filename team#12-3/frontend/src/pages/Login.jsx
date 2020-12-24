@@ -6,8 +6,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Button, Label } from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css';
 import 'react-toastify/dist/ReactToastify.css';
-// import LoginRecruiter from '../images/loginRecruiter';
-// import LoginUser from '../images/loginUser';
+import Doctor from '../images/doctor.svg';
+import Patient from '../images/patient.svg';
 
 class Login extends Component {
     state = { 
@@ -185,14 +185,14 @@ class Login extends Component {
     
     render() { 
         return ( 
-            <div >
+            <div>
                 <ToastContainer />
-                <div className="row mx-auto my-auto" style={{width: '850px'}}>
+                <div className="row mx-auto my-4" style={{width: '850px'}}>
                     <div className="card col-lg-5 mx-auto my-4 bg-secondary" style={{borderWidth: '3px', borderColor: 'black'}}>
                         <h4 className="pt-3 mx-auto">User Login</h4>
                         <hr className="w-50 mx-auto" />
                         <div className="card-img-top mx-auto" style={{width: '200px'}} >
-                            {/* <LoginUser /> */}
+                            <img src={Patient} width="140vw" />
                         </div>
                         <div className="card-body p-0 pt-3"> 
                             <form className="container my-auto" onSubmit={this.handleSubmitUser}>
@@ -214,8 +214,8 @@ class Login extends Component {
                     <div className="card col-lg-5 mx-auto my-4 bg-secondary" style={{borderWidth: '3px', borderColor: 'black'}}>
                         <h4 className="pt-3 mx-auto">Hospital/Doctor Login</h4>
                         <hr className="w-50 mx-auto" />
-                        <div className="card-img-top mx-auto" style={{width: '200px'}} >
-                            {/* <LoginRecruiter/> */}
+                        <div className="card-img-top mx-auto text-center" style={{width: '200px'}} >
+                            <img src={Doctor} width="140vw" />
                         </div>
                         <div className="card-body p-0 pt-3">
                             <form className="container my-auto" onSubmit={this.handleSubmitDoctor}>

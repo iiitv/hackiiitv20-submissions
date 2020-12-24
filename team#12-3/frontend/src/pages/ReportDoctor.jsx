@@ -65,7 +65,7 @@ class ReportDoctor extends Component {
                     <Input list='doctorList' className="w-100" id="doctor" name="doctor" value={this.state.report.doctor} onChange={this.onChange} placeholder='Choose doctor...' />
                         <datalist id='doctorList'>
                         {this.state.doctorList.map(doctor => {
-                            return <option key={doctor.name} value={doctor.name}>{doctor.name}</option>
+                            return <option key={doctor.name} value={doctor.name + ", " + doctor.address + ", " +doctor.city}>{doctor.name + ", " + doctor.address + ", " +doctor.city}</option>
                         })}
                     </datalist>
                     <div className="form-group mt-3">
